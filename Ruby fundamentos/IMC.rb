@@ -1,7 +1,11 @@
-puts "Digite a sua altura: "; var1 = gets.chomp.to_i
+puts "Digite a sua altura (cm): "
 
-puts"Digite o seu peso: "; var2 = gets.chomp.to_i
+var1 = gets.chomp.to_f
 
-result = (var1 * var2) / 80
+puts"Digite o seu pes (kg): "
 
-puts result
+var2 = gets.chomp.to_f
+
+result = var2 / (var1/100) ** 2
+
+puts "IMC = #{result}"
