@@ -41,3 +41,28 @@ print des2.chars
 # 4-Conta a ocorrência de caracteres
 
 puts des2.count("a")
+
+# 5-Maiúsculo e minúsculo
+
+puts des2.upcase
+puts des2.downcase
+puts des2.capitalize
+puts des2.swapcase
+puts des2.chop
+
+# 6-Verificar o índice
+
+puts des2.index("complicada")
+
+# 7-Alterar palavras
+
+puts des2.gsub("complicada", "personalidade forte")
+
+# 8-Outras operações
+
+puts "Ruby".center(10, "-")
+puts "=" * 20
+puts des2.incluide?("complicada")
+puts "  Ruby".lstrip
+puts "Ruby  ".rstrip
+puts " Ruby ".strip
