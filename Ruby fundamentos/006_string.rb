@@ -69,10 +69,9 @@ puts "=" * 20
 
 # Repete o caractere "=" 20 vezes, criando uma linha de separação
 
-puts des2.incluide?("complicada")
+puts des2.include?("complicada")
 
 # Verifica se a palavra "complicada" está presente na string (true ou false)
-# OBS: O método estava digitado errado como `incluide?`, o correto é `include?`
 
 puts "  Ruby".lstrip # Remove os espaços em branco do início da string -> "Ruby"
 
