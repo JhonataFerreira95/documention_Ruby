@@ -44,6 +44,24 @@ smaller_equal = num1 <= num2 # aqui o <= reoresenta o maior que ou igual
 puts ((2 > 4) and (3 > 1)) # Quando se utiliza o <and> ambos os lados precisam ser verdadeiros para retorna um valor true
 puts ((2 > 4) or (3 > 1)) # Quando se utiliza o <or> apenas um dos lados precisam ser verdadeiros para retorna um valor true
 
+puts ((2 > 4) && (3 > 1))   # O operador <&&> funciona igual ao <and>, mas tem maior precedência na execução das expressões
+puts ((2 > 4) || (3 > 1))   # O operador <||> funciona igual ao <or>, mas tem maior precedência na execução das expressões
+
+puts !(3 > 1)  # O operador <!> inverte o valor booleano da expressão; se for true, torna-se false, e vice-versa
+puts not(3 > 1) # O operador <not> também inverte o valor booleano, mas tem menor precedência que <!>
+
+# Exemplo de diferença de precedência
+resultado1 = false && true  # Avalia primeiro <&&>, então resultado1 = false
+resultado2 = false and true # Avalia primeiro <resultado2 = false>, depois ignora o <true>
+
+puts resultado1  # false
+puts resultado2  # false
+
+# Operador ternário (?:)
+idade = 18
+status = idade >= 18 ? "Maior de idade" : "Menor de idade"
+puts status  # "Maior de idade"
+
 # 6-Operadores Especiais 
 
 print (5..1).to_a # No Ruby, o operador <..> é usado para criar um intervalo inclusivo, ou seja, inclui ambos os extremos. Por exemplo, 1..5 representa os números de 1 a 5 (inclusive)
