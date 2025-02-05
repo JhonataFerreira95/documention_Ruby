@@ -51,6 +51,7 @@ puts !(3 > 1)  # O operador <!> inverte o valor booleano da expressão; se for t
 puts not(3 > 1) # O operador <not> também inverte o valor booleano, mas tem menor precedência que <!>
 
 # Exemplo de diferença de precedência
+
 resultado1 = false && true  # Avalia primeiro <&&>, então resultado1 = false
 resultado2 = false and true # Avalia primeiro <resultado2 = false>, depois ignora o <true>
 
@@ -58,6 +59,7 @@ puts resultado1  # false
 puts resultado2  # false
 
 # Operador ternário (?:)
+
 idade = 18
 status = idade >= 18 ? "Maior de idade" : "Menor de idade"
 puts status  # "Maior de idade"
