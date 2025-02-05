@@ -44,11 +44,11 @@ puts des2.count("a")
 
 # 5-Maiúsculo e minúsculo
 
-puts des2.upcase
-puts des2.downcase
-puts des2.capitalize
-puts des2.swapcase
-puts des2.chop
+puts des2.upcase # Converte todos os caracteres para MAIÚSCULAS -> "EXEMPLO DE TEXTO"
+puts des2.downcase # Converte todos os caracteres para minúsculas -> "exemplo de texto"
+puts des2.capitalize # Apenas a primeira letra fica maiúscula, o restante minúsculo -> "Exemplo de texto"
+puts des2.swapcase # Inverte maiúsculas e minúsculas -> "eXEMPLO DE tEXTO"
+puts des2.chop # Remove o último caractere da string -> "Exemplo de Text"
 
 # 6-Verificar o índice
 
