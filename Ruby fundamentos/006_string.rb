@@ -52,17 +52,30 @@ puts des2.chop # Remove o último caractere da string -> "Exemplo de Text"
 
 # 6-Verificar o índice
 
-puts des2.index("complicada")
+puts des2.index("complicada") # Retorna o índice (posição) onde a palavra "complicada" começa na string. Se a palavra não existir, retorna `nil`
+
 
 # 7-Alterar palavras
 
-puts des2.gsub("complicada", "personalidade forte")
+puts des2.gsub("complicada", "personalidade forte") # Substitui "complicada" por "personalidade forte" na string
 
 # 8-Outras operações
 
 puts "Ruby".center(10, "-")
+
+# Centraliza a palavra "Ruby" em um total de 10 caracteres, preenchendo com "-"
+
 puts "=" * 20
+
+# Repete o caractere "=" 20 vezes, criando uma linha de separação
+
 puts des2.incluide?("complicada")
-puts "  Ruby".lstrip
-puts "Ruby  ".rstrip
-puts " Ruby ".strip
+
+# Verifica se a palavra "complicada" está presente na string (true ou false)
+# OBS: O método estava digitado errado como `incluide?`, o correto é `include?`
+
+puts "  Ruby".lstrip # Remove os espaços em branco do início da string -> "Ruby"
+
+puts "Ruby  ".rstrip0 # Remove os espaços em branco do final da string -> "Ruby"
+
+puts " Ruby ".strip # Remove os espaços em branco do início e do fim da string -> "Ruby"
