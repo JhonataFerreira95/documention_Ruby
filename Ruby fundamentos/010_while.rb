@@ -6,22 +6,26 @@
 # end
 
 puts "Digite o nome do filme: "
-movie_name = gets.chomp
-qtd_rating = 0
-total_rating = 0
-rating = 0
-average = 0
+movie_name = gets.chomp # Captura o nome do filme e remove a quebra de linha
+qtd_rating = 0 # Contador de avaliações
+total_rating = 0 # Soma total das notas
+rating = 0 # Armazena a nota atual
+average = 0 # Média das avaliações
+
+# Loop para coletar notas até que o usuário insira -1
 
 while rating != -1
   puts "Informe a nota do filme: "
-  rating = gets.chomp.to_f
+  rating = gets.chomp.to_f # Lê a nota do usuário e converte para float
   
-  if rating != -1
+  if rating != -1 # Apenas processa notas válidas
     total_rating += rating
     qtd_rating += 1
-    average = total_rating / qtd_rating
+    average = total_rating / qtd_rating # Atualiza a média
   end
 end
+
+# Exibe a média formatada com duas casas decimais
 
 puts "Média das avaliações do filme #{movie_name} é %.2f" %average
 
