@@ -1,11 +1,13 @@
 puts "Digite o primeiro número: "
-num1 = gets.chomp.to_f
+num1 = gets.chomp.to_f # Lê o primeiro número e converte para float
 
 puts "Digite o segundo número: "
-num2 = gets.chomp.to_f
+num2 = gets.chomp.to_f # Lê o segundo número e converte para float
 
 puts "Digite a operação a ser realizada (+, -, *, /)"
-operação = gets.chomp
+operação = gets.chomp  # Lê o operador matemático
+
+# Estrutura condicional para verificar a operação escolhida
 
 if operação == "+"
   result = num1+num2
@@ -23,6 +25,8 @@ else
   puts "Você não digiou uma das 4 opcões listadas, tenten novamente!"
   result = 0
 end
+
+# Exibe o resultado formatado com 2 casas decimais
 
 puts "Resultado da sua operação é #{'%.2f' % result}" # Aqui nos <''> vamos formatar o número de casas decimais.
 
