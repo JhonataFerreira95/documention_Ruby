@@ -69,4 +69,4 @@ No Ruby, temos sim o tipo Boolean, mas ele não é uma classe separada.
 Em vez disso, usamos as constantes true e false, que pertencem às classes TrueClass e FalseClass, respectivamente.
 O tipo Boolean é uma subclasse da classe Object, que é a classe mãe de todas as classes no Ruby.
 
-end
+=end

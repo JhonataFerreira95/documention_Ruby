@@ -61,8 +61,15 @@ puts resultado2  # false
 # Operador ternário (?:)
 
 idade = 18
-status = idade >= 18 ? "Maior de idade" : "Menor de idade"
+status = idade >= 18 ? "Maior de idade" : "Menor de idade" 
 puts status  # "Maior de idade"
+
+=begin
+
+Se a condição for true, executa a expressão antes do :.
+Se a condição for false, executa a expressão depois do :.
+
+=end
 
 # 6-Operadores Especiais 
 
