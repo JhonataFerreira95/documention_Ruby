@@ -1,8 +1,7 @@
 # 1-Método para imprimir Hello World
-def Hello
 
+def Hello
   puts "Hello World"
-  
 end
 
 # Hello()
@@ -33,8 +32,22 @@ def create_movie
   price = gets.chomp.to_f
 
   puts "#{name} - R$ #{price}"
-
+  
 end
 
 create_movie()
 create_movie()
+
+
+def full_name
+
+  puts "Digite seu primeiro nome: "
+  fName = gets.chomp
+  puts "Digite seu sobrenome: "
+  lName = gets.chomp
+  nFull = fName + " " +lName
+  puts "Seu nome completo é: #{nFull}"
+  
+end
+
+full_name()
