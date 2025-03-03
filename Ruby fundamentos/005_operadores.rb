@@ -32,12 +32,12 @@ puts a,b
 
 # 4-Operadores de Comparação
 
-bigger = num1 > num2 # aqui o > reoresenta o maior que
-smaller = num1 < num2 # aqui o < reoresenta o menor que
+bigger = num1 > num2 # aqui o > representa o maior que
+smaller = num1 < num2 # aqui o < representa o menor que
 equal = num1 == num2 # aqui o == representa o igual
 differente = num1 != num2 # aqui o != representa o diferente igual
-bigger_equal = num1 >= num2 # aqui o >= reoresenta o maior que ou igual
-smaller_equal = num1 <= num2 # aqui o <= reoresenta o maior que ou igual
+bigger_equal = num1 >= num2 # aqui o >= representa o maior que ou igual
+smaller_equal = num1 <= num2 # aqui o <= representa o maior que ou igual
 
 # 5-Operadores Lógicos
 
