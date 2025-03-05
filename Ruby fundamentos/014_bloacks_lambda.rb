@@ -33,7 +33,7 @@ um argumento chamado number.
 # 2-Lambda, o que é? Lambda é uma função anônima que pode ter qualquer número de argumentos, mas
 # retorna apenas um valor.  
 
-power = lambda { |num| num ** 2 } #Função de potência de um número.
+power = lambda { |num| num ** 2 } # Função de potência de um número.
 puts power.call(4) # Retorna 16 no terminal.
 
 # Função de soma de dois são par.
@@ -44,7 +44,7 @@ puts funpar.call(5) # Retorna false no terminal, já que resto da divisão 5/2=1
 # Função que divide um número por outro.
 
 div = lambda { |a, b| a / b} 
-puts div.call(20, 10)# Retorna no console o resultado da divisão de 20/10=2.
+puts div.call(20, 10) # Retorna no console o resultado da divisão de 20/10=2.
 
 # Se perguntou o porque se chama função lambda? Te explico.
 # Ela não tem um nome definido, é geralmente atribuída para uma variável/referência.
