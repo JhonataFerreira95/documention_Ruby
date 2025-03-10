@@ -5,7 +5,7 @@ puts mov.class # retorna o hash no terminal.
 
 # Instanciando itens no hash.
 
-movie = {"name" => "Ousama raking", "year" => 2023} # Uma das forma de passar valores no hash.
+movie = {"name" => "Ousama raking", "year" => "2023"} # Uma das forma de passar valores no hash.
 puts movie
 
 # Outra forma de definir a chave.
@@ -30,7 +30,7 @@ end
 
 i = 0 # Váriavel de controle.
 
-while  i < movie2.lenght # Aqui o <lenght> verifica se o i é menor que o nosso hash.
+while  i < movie2.length # Aqui o <lenght> verifica se o i é menor que o nosso hash.
     puts "#{movie2.keys[i]}-#{movie2.values[i]}" # Imprimir os valores no terminal correspondente <key> e <values>.
     i += 1 # Para que o laço não seja infinito.
 end
