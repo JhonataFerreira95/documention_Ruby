@@ -337,3 +337,220 @@ end
 
 puts "Resultado da sua operação é #{'%.2f' % result}"
 ```
+
+### Blocks (Blocos)
+Blocos são trechos anônimos de código que aceitam entradas de argumentos e retornam um determinado valor.
+
+```ruby
+def hello
+  yield # yield é uma palavra reservada que chama o bloco.
+end
+
+hello {puts "Olá, mundo!"}
+hello {puts "Olá, mundo 2!"}
+hello {puts "Olá, mundo 3!"}
+```
+
+#### Outro exemplo com yield
+
+```ruby
+def one_two_three
+  yield 1
+  yield 2
+  yield 3
+end
+
+one_two_three { |number| puts number * 10 }
+```
+
+**Nota:** Os pipes `| |` são usados para passar argumentos para o bloco acima.
+
+### Arrays em Ruby
+
+#### Criação de Arrays
+
+```ruby
+movies = [] # Inicializa um array vazio.
+puts movies.class
+
+movies2 = Array.new # Outra forma de inicializar um array.
+puts movies2.class
+
+movies_test = ["Ousama Ranking", "Solo Leveling"] # Array com múltiplos valores.
+puts movies_test
+
+two_movies = Array.new(2, "Ousama Ranking") # Cria um array com dois valores iguais.
+puts two_movies
+```
+
+#### Utilizando exponenciação em Arrays
+
+```ruby
+numbers = Array.new(5) { |x| x ** 2 } 
+puts numbers # Saída: [0, 1, 4, 9, 16]
+```
+
+#### Diferentes formas de criar Arrays
+
+```ruby
+num = Array.[](1, 2, 3)
+puts num
+
+num2 = Array(1..5) # Usando operador de intervalo.
+puts num2
+```
+
+#### Arrays com múltiplos valores
+
+```ruby
+movie = ["Ranking of Kings", 2021, 50.00, true]
+puts movie
+```
+
+### Iterando sobre Arrays
+
+#### Usando `for`
+```ruby
+for mov in movies_test
+  puts mov
+end
+```
+
+#### Usando `while`
+```ruby
+i = 0
+while i < movies_test.length
+  puts movies_test[i]
+  i += 1
+end
+```
+
+#### Usando `each`
+```ruby
+movies_test.each { |a| puts a }
+```
+
+### Indexação e Atribuição em Arrays
+
+```ruby
+puts movies[0]   # Primeiro item
+puts movies[-1]  # Último item
+puts movies[1, 2] # Intervalo de valores
+
+movies[2] = "Scissor Seven" # Alterando um índice
+puts movies
+```
+
+#### Métodos úteis para Arrays
+
+```ruby
+puts movies.length  # Tamanho do array
+puts movies.first   # Primeiro item
+puts movies.last    # Último item
+
+movies << "Cowboy Bebop" # Adicionando valores
+puts movies
+
+puts movies.append("Bleach")
+puts movies.sort()    # Ordenação
+puts movies.shuffle() # Embaralhamento
+```
+
+### Recuperando índice e valor
+```ruby
+movies.each_with_index { |value, index| puts "#{index} - #{value}" }
+```
+
+### Hashes em Ruby
+
+#### Criando um Hash
+
+```ruby
+mov = Hash.new
+puts mov.class # Retorna Hash
+
+movie = {"name" => "Ousama Ranking", "year" => "2023"}
+puts movie
+
+movie2 = {:name => "Solo Leveling", :year => "2024"}
+puts movie2
+```
+
+### Iterando valores de um Hash
+
+#### Usando `keys` e `values`
+```ruby
+puts movie2.keys   # Retorna as chaves
+puts movie2.values # Retorna os valores
+```
+
+#### Usando `for`
+```ruby
+for key, value in movie2
+  puts "#{key} - #{value}"
+end
+```
+
+#### Usando `while`
+```ruby
+i = 0
+while i < movie2.length
+  puts "#{movie2.keys[i]} - #{movie2.values[i]}"
+  i += 1
+end
+```
+
+#### Usando `each`
+```ruby
+movie2.each { |key, value| puts "#{key} - #{value}" }
+```
+
+### Métodos úteis para Hashes
+
+```ruby
+puts movie.size   # Retorna tamanho do hash
+puts movie.length
+puts movie.to_a   # Converte o hash em array
+puts movie.max    # Maior chave-valor no hash
+puts movie.min    # Menor chave-valor no hash
+movie.store(:genre, "aventura") # Adiciona nova chave e valor ao hash
+puts movie.fetch("name")  # Recupera o valor da chave informada
+movie.clear() # Limpa o hash
+puts movie
+```
+
+### Lambda
+Lambda é uma função anônima que pode ter qualquer número de argumentos e um corpo de execução.
+
+```ruby
+lambda_example = lambda { |name| "Olá, #{name}!" }
+puts lambda_example.call("Mundo") # Retorna "Olá, Mundo!"
+
+multiply = lambda { |a, b| a * b }
+puts multiply.call(4, 5) # Retorna 20
+```
+
+### **Diferentes tipos de Lambdas:**
+#### Exemplo: Soma de dois números
+```ruby
+sum = lambda { |a, b| a + b }
+puts sum.call(10, 20) # Retorna 30
+```
+
+#### Função anônima que divide números
+```ruby
+div = lambda { |a, b| a / b }
+puts div.call(20, 4) # Retorna 5
+```
+
+#### Adicionando um novo item ao hash
+```ruby
+movie.store(:genre, "Aventura")
+puts movie
+```
+
+#### Limpa todos os itens do hash
+```ruby
+movie.clear()
+puts movie
+```
