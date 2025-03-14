@@ -199,3 +199,141 @@ puts "    Ruby    ".strip # Remove espaços extras no início e no fim da string
 puts "apple,banana,grape".split(",") # Divide a string em um array
 puts "=" * 20 # Repete a string especificada
 ```
+
+### Comparação de Números
+
+```ruby
+a = 100
+b = 200
+
+if a > b
+    puts "#{a} maior que #{b}" # Se a for maior que b, essa linha será executada.
+else
+    puts "#{b} maior que #{a}" # Se a e b forem iguais, essa linha será executada.
+end
+```
+
+### Entrada de Dados e Condições
+
+```ruby
+puts "Digite o seu nome do filme: " # Solicita ao usuário que digite o nome do filme
+name = gets.chomp # Captura a entrada do usuário e remove a quebra de linha
+
+puts "Digite o ano de lançamento: " # Solicita o ano de lançamento do filme
+ano = gets.chomp.to_i # Converte a entrada para um número inteiro
+
+puts "Digite a nota de classificação: " # Solicita a nota de classificação do filme
+classificacao = gets.chomp.to_f # Converte a entrada para um número decimal (float)
+
+if classificacao > 8.0 and ano > 2015 # Se a nota for maior que 8.0 e o filme for lançado após 2015, ele é recomendado 
+    puts "O filme #{name} é bom. Recomendo assisti-lo." 
+else
+    puts "O filme ainda não atingiu uma boa nota, por isso não recomendo." # Caso contrário, ele não é recomendado  
+end 
+```
+
+### Estruturas Condicionais - Case
+
+```ruby
+puts "Informe a idade: "
+idade = gets.chomp.to_i # Lê a entrada do usuário e converte para inteiro
+
+case idade 
+  when 0..2
+    puts "bebê"
+  when 3..6
+    puts "criança"
+  when 7..12
+    puts "pré-adolescente"
+  when 13..18
+    puts "Jovem adulto"
+  else
+    puts "adulto"
+end
+```
+
+### Estruturas de Repetição
+
+```ruby
+moviesList = ["Black desert", "pupilo azul", "principe deserdado", "Ji-gwi"]
+
+# Iterando valores de um Array
+moviesList.each do |movie|
+  puts movie
+end
+
+# Utilizando o break
+moviesList.each do |movie|
+  break if movie == "principe deserdado"
+  puts movie
+end
+
+# Utilizando o next
+moviesList.each do |movie|
+  next if movie == "pupilo azul"
+  puts movie
+end
+```
+
+### Métodos
+
+```ruby
+def Hello
+  puts "Hello World"
+end
+
+Hello()
+
+# Método para somar dois números
+def sum()
+  puts 5 + 4
+end
+
+sum()
+
+# Método para cadastrar um filme
+def create_movie
+  puts "Digite o nome do filme:"
+  name = gets.chomp
+  puts "Digite o ano de lançamento do filme:"
+  yearLaunch = gets.chomp.to_i
+  puts "Digite o preço do filme:"
+  price = gets.chomp.to_f
+  puts "#{name} - R$ #{price}"
+end
+
+create_movie()
+
+# Método com parâmetros
+def full_name(fname, lname)
+  puts "Nome completo: #{fname} #{lname}"
+end
+
+full_name("Rodrigo", "Silva")
+```
+
+### Operações Matemáticas
+
+```ruby
+puts "Digite o primeiro número: "
+num1 = gets.chomp.to_f
+puts "Digite o segundo número: "
+num2 = gets.chomp.to_f
+puts "Digite a operação a ser realizada (+, -, *, /)"
+operação = gets.chomp  
+
+if operação == "+"
+  result = num1 + num2
+elsif operação == "-"
+  result = num1 - num2
+elsif operação == "*"
+  result = num1 * num2
+elsif operação == "/"
+  result = num1 / num2
+else
+  puts "Você não digitou uma das 4 opções listadas, tente novamente!"
+  result = 0
+end
+
+puts "Resultado da sua operação é #{'%.2f' % result}"
+```
