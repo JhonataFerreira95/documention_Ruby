@@ -1,7 +1,7 @@
 # 1-Renomeando arquivos.
 
 # Para renomear o nome do arquivo utilizamos <File.rename>. Passamos o arquivo e nome com o caminho, depois passamos o caminho com o novo nome do arquivo.
-# File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de arquivos/Text/courses.txt") 
+File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de arquivos/Text/courses.txt") 
 
 # 2-Excluindo arquivo.
 
