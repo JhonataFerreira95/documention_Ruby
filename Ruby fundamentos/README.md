@@ -1,8 +1,55 @@
-# Documentação Ruby
+# Documentação do Ruby
 
 ## Índice
+## Índice
 
-1. [Lógica com Ruby](#lógica-com-ruby)
+1. [Conversão de Tipos](#conversão-de-tipos)
+2. [Concatenação e Exibição de Valores](#concatenação-e-exibição-de-valores)
+3. [Interpolação de Strings](#interpolação-de-strings)
+4. [Operadores Aritméticos](#operadores-aritméticos)
+5. [Operadores Lógicos](#operadores-lógicos)
+6. [Operadores Especiais](#operadores-especiais)
+7. [Manipulação de Strings](#manipulação-de-strings)
+8. [Outras Operações com Strings](#outras-operações-com-strings)
+9. [Comparação de Números](#comparação-de-números)
+10. [Entrada de Dados e Condições](#entrada-de-dados-e-condições)
+11. [Estruturas Condicionais - Case](#estruturas-condicionais---case)
+12. [Estruturas de Repetição](#estruturas-de-repetição)
+13. [Métodos](#métodos)
+14. [Operações Matemáticas](#operações-matemáticas)
+15. [Blocos (Blocks)](#blocks-blocos)
+16. [Arrays em Ruby](#arrays-em-ruby)
+17. [Indexação e Atribuição em Arrays](#indexação-e-atribuição-em-arrays)
+18. [Métodos úteis para Arrays](#métodos-úteis-para-arrays)
+19. [Recuperando índice e valor](#recuperando-índice-e-valor)
+20. [Hashes em Ruby](#hashes-em-ruby)
+21. [Iterando valores de um Hash](#iterando-valores-de-um-hash)
+22. [Métodos úteis para Hashes](#métodos-úteis-para-hashes)
+23. [Lambda](#lambda)
+24. [Diferentes tipos de Lambdas](#diferentes-tipos-de-lambdas)
+
+---
+
+## Conversão de Tipos
+```ruby
+puts "Informe o nome da sua classe:"
+name = gets.chomp.to_i # Converte a string para inteiro
+```
+
+## Concatenação e Exibição de Valores
+```ruby
+puts "Nome da classe: " + name.to_s
+puts "Ano de lançamento: " + yearLaunch.to_s
+puts "Preço da classe: " + price.to_s
+```
+
+## Interpolação de Strings
+```ruby
+puts "Nome da classe: #{name}"
+puts "Ano de lançamento: #{yearLaunch}"
+```
+
+## Operadores Arit
 
 
 ---
