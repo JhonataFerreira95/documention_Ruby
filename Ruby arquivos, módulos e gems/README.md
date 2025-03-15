@@ -2,24 +2,28 @@
 
 ## Índice
 
-1. [Arquivos](#Arquivos)
-2. [Módulos](#Módulos)
-3. [Gems](#Gems)
+1. [Arquivos](#manipulação-de-arquivos-no-ruby)
+2. [Módulos]()
+3. [Gems]()
 
 
 ---
 
 ## Introdução
-Lógica de programação é o alicerce primordial para uma carreira bem-sucedida na área de tecnologia. Dominar os conceitos básicos é essencial para construir soluções eficientes e robustas. Vamos explorar alguns dos tópicos fundamentais abordados, como tipos, gets, concatenação, operadores, strings, condicionais, laços de repetição, funções, parâmetros, blocks, lambda, arrays e hash.
+No Ruby, arquivos são manipulados para leitura, escrita e atualização de dados usando classes como `File` e `IO`.
 
-- **Lógica de programação:**
-  - Conceitos Básicos.
-  - Estruturas de Controle.
-  - Estruturas de Dados.
-  - Funções e Procedimentos.
-  - Lógica Booleana.
+Os módulos ajudam na organização e reutilização de código, funcionando como bibliotecas. Eles podem conter métodos e constantes, permitindo a implementação de `mixins` com `include` e `extend`.
+
+Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. Instaladas via `gem install` nome_da_gem, podem ser usadas com require.
+
+- **Arquivos, módulos, gems:**
+  - Manipulação de arquivos.
+  - Módulos úteis.
+  - Introdução a gems.
 
 ---
 
-## Lógica de Programação em Ruby
-Este repositório contém exemplos e explicações sobre os principais conceitos de lógica de programação utilizando a linguagem Ruby.
+## Manipulação de arquivos no Ruby
+Aqui damos inicios a manipulação de arquivo com ruby, iremos iniciar de uma formas simples lendo arquivos com `File.open`.
+
+### Lendo arquivos com Ruby.
