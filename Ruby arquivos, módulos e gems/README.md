@@ -65,7 +65,6 @@ File.open(file_path, "r") do |file|
 ```
 #### Escrevendo arquivos com Ruby.
 
-
 ```ruby
 
 # Aqui utilizamos o <File.open> para abrir o arquivo. Como estamos trabalhando com modo de escrita, não precisamo que o arquivos exista, já que iremos criar o mesmo.
@@ -78,6 +77,64 @@ File.open("../Manipulação de arquivos/Text/courses.txt", "w") do |file|
   file.write "Curso de Gems" # Diferença entre o <puts> e o <write> é meramente uma quebra de linha, já que o <puts> possuí nativamente a quebra de linha e o <write> não.
 
   file.puts "Curso de UML"
+end
+
+```
+
+#### Renomeando arquivo com Ruby.
+
+```ruby
+
+# Para renomear o nome do arquivo utilizamos <File.rename>. Passamos o arquivo e nome com o caminho, depois passamos o caminho com o novo nome do arquivo.
+
+File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de arquivos/Text/courses.txt") 
+
+```
+
+#### Deletando arquivos com Ruby.
+
+```ruby
+# Para excluir arquivos temos que verificar se ele ao menos existe. Para isso usamos uma condicional para verificar se ele existe ou não.
+
+if File.exist?("../Manipulação de arquivos/Text/cursosTI.txt") # Aqui verificamos se ele existe.
+
+  File.delete("../Manipulação de arquivos/Text/cursosTI.txt") # Como o arquivo em si não existe, ele nem entra na condição, não aparece nada no terminal.
+end
+
+```
+
+#### Argumentos com Ruby.
+
+##### Passando argumentos
+
+```ruby
+
+# Para ver o tipo do arg utilizamos o <.class>, para isso acontece você deve passar o argumento direto no terminal.
+
+ARGV.each { |arg| puts arg }
+
+# Vamos colocar um "óla" no terminal, a saída é exatamente assim <óla> quebra a linha e vem o tipo <string>. No argv, por padrão tudo vem em STRING.
+
+ARGV.each { |arg| puts arg.class } 
+
+```
+
+##### Potência de um número com ARGV.
+
+```ruby
+
+# Criamos um bloco com o <do>, passamos nossa variável com os pipes <|arg|>.
+
+ARGV.each do |arg| 
+
+# Convertendo o <arg> para inteiro, já que o <ARGV> por padrão é string, atribuímos o <arg.to_i> à variável <pot>.
+
+  pot = arg.to_i ** 2 
+
+# Aqui iremos ao terminal e passar o argumento no terminal, como visto acima. Passaremos um 4, isso deve retorna um 16 no terminal.
+
+  puts "Potência do número #{arg} é #{pot}" 
+  
 end
 
 ```
