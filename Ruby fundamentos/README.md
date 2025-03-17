@@ -556,7 +556,7 @@ movie2.each { |key, value| puts "#{key} - #{value}" }
 
 ```ruby
 puts movie.size   # Retorna tamanho do hash
-puts movie.length
+puts movie.length # tamanho (ou duração) de um objeto chamado
 puts movie.to_a   # Converte o hash em array
 puts movie.max    # Maior chave-valor no hash
 puts movie.min    # Menor chave-valor no hash
