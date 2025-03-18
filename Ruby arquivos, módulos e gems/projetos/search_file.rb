@@ -12,9 +12,12 @@ def search(key) # Criação do metódo com parâmentro.
   end
 end
 
+# Alternativa 1 para vizualizar o programa em execução, bem básica.
+
 puts "Busca palavras em arquivos!"
 puts "Digite uma palavra a ser procurada: "
 key = gets.chomp
 
 filename, linenumber = search(key) # Aqui passamos a variável ( <filname> == <file> linha 8) que representada na linha 8 e o mesmo vale para ( <linenumber> == <index> linha 8).
 puts "Arquivo: #{filename} Linha: #{linenumber}"
+
