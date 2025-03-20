@@ -23,3 +23,5 @@ end
 puts LengthConversions.miles_to_feet(10) # Para fazer a conversão de milhas para pés.
 puts LengthConversions.miles_to_inches(20) # Para fazer a conversão de milhas para polegas.
 puts LengthConversions.miles_to_centimers(30) # Para fazer a conversão de milhas para centímetros.
+
+
