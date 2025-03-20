@@ -5,10 +5,6 @@
 1. [Alternativa 1](#altertnativa-1)
 2. [Alternativa 2](#altertnativa-2)
 
-# Projeto criação de um módulo de conversão
-
-1. [Alternativa 1](#altertnativa-1)
-2. [Alternativa 2](#altertnativa-2)
 ---
 
 ## Introdução
@@ -77,3 +73,83 @@ else
 end
 
 ```
+
+# Projeto criação de um módulo de conversão
+
+## Índice
+
+1. [Milhas para pés](#milhas-para-pés)
+2. [Milhas para polegadas](#milhas-para-polegas)
+3. [Milhas para centímetros](#milhas-para-centímetros)
+4. [Testando o módulo](#testando-o-módulo)
+
+
+---
+
+## Introdução
+Aqui utilizei do que aprendi sobre, metódos, manipulação de arquivos com calculo simples para converte milhas para pés, polegadas e centímetros, reaproveitando o código e de fáicl entendimento.
+
+### Milhas para pés.
+
+```ruby
+
+module LengthConversions # Criação do nome do nosso módulo.
+  def self.miles_to_feet(miles) # Para indica que o metódo que foi criado, faz parte do meu módulo utilizamos o <self.(nome módulo)>.
+    miles * 5280 # Cálculo para converte milhas para pés.
+  end
+
+```
+
+### Milhas para polegas.
+
+```ruby
+
+def self.miles_to_inches(miles) # Para indica que o metódo que foi criado, faz parte do meu módulo utilizamos o <self.(nome módulo)>.
+    feet = miles_to_feet(miles) # Como ver, aqui não precisamos do <self.>, já que estamos execultando o módulo em si e não atribuindo. Criando a referência para reaproveitar o módulo <self.miles_to_feet>.
+    feet * 12 # Cálculo para converte milhas para polegadas. feet = 5280 * 12 = 63360.
+  end
+
+```
+### Milhas para centímetros.
+
+```ruby
+
+def self.miles_to_centimers(miles) # Para indica que o metódo que foi criado, faz parte do meu módulo utilizamos o <self.(nome módulo)>.
+    inches =  miles_to_inches(miles) # Como ver, aqui não precisamos do <self.>, já que estamos execultando o módulo em si e não atribuindo. Criando a referência para reaproveitar o módulo <self.miles_to_inches>.
+    inches * 2.54 # Cálculo para converte milhas para centímetros. inches = 63280 * 2.54 = 160934.
+  end
+end
+
+```
+
+### Testando o módulo.
+
+#### Aqui criei um arquivo chamado `main.rb` para testa o se o módulo está funcionando perfeitamente.
+
+#### Alternativa 1 para chamada do módulo.
+
+```ruby
+
+# Importando o módulo, alternativa 1.
+
+# Aqui utilizamos o <require> para importa o nosso módulo. Essa é uma das forma de importação de módulos. Como ele está no mesmo diretório do nosso <main> utilizamos <./>
+ require './conversao.rb' 
+
+puts LengthConversions.miles_to_feet(10) # Para fazer a conversão de milhas para pés.
+puts LengthConversions.miles_to_inches(20) # Para fazer a conversão de milhas para polegas.
+puts LengthConversions.miles_to_centimers(30) # Para fazer a conversão de milhas para centímetros.
+
+```
+#### Alternativa 2 para chamada do módulo.
+
+```ruby
+
+# Aqui utilizamos o <require_relative> para importa o modulo de forma relativa, ele precisa está no mesmo diretório para ser importado.
+ require_relative 'conversao'
+
+puts LengthConversions.miles_to_feet(10) # Para fazer a conversão de milhas para pés.
+puts LengthConversions.miles_to_inches(20) # Para fazer a conversão de milhas para polegas.
+puts LengthConversions.miles_to_centimers(30) # Para fazer a conversão de milhas para centímetros.
+
+```
+
