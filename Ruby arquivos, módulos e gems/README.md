@@ -1,9 +1,9 @@
-# Documentação do Ruby
+# Trabalhando com arquivos, módulos e gems
 
 ## Índice
 
 1. [Arquivos](#manipulação-de-arquivos-no-ruby)
-2. [Módulos]()
+2. [Módulos](#mo)
 3. [Gems]()
 
 
@@ -138,3 +138,5 @@ ARGV.each do |arg|
 end
 
 ```
+
+## Módulos
