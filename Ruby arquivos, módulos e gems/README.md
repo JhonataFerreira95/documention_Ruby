@@ -3,7 +3,7 @@
 ## Índice
 
 1. [Arquivos](#manipulação-de-arquivos-no-ruby)
-2. [Módulos](#mo)
+2. [Módulos](#módulos)
 3. [Gems]()
 
 
@@ -140,3 +140,7 @@ end
 ```
 
 ## Módulos
+
+## Módulos úteis com ruby
+Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`. 
+
