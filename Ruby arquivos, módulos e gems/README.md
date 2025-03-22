@@ -144,3 +144,22 @@ end
 ## Módulos úteis com ruby
 Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`. 
 
+### Utilizando o módulo Math.
+
+#### Para ver o tipo, no caso do <Math> ele é tipo módulo.
+
+```ruby
+
+puts Math.class # Retorna o tipo no terminal.
+
+# Para ver todo os metódos que tem dentro do <Math> utilizamos <.methods> e <.sort> para ordena os metódos.
+
+```
+
+#### Módulo para ver a raiz quadrada.
+
+```ruby
+
+puts Math.sqrt(4) # Passamos entre () o número desejado para a raiz quadrada.
+
+```
