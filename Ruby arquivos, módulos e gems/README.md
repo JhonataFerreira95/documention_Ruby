@@ -163,3 +163,59 @@ puts Math.class # Retorna o tipo no terminal.
 puts Math.sqrt(4) # Passamos entre () o número desejado para a raiz quadrada.
 
 ```
+
+#### Metódo para ver Pi.
+
+```ruby 
+
+puts Math::PI # Retorna o valor de PI no terminal.
+
+```
+
+### Cálculo a área de um círculo.
+
+```ruby
+
+def calcular_area(raio)
+    return Math::PI * raio ** 2 # cálculo para calcular a área de um círculo.
+end
+
+```
+
+### Cáculo perímetro de um círculo.
+
+
+```ruby
+
+def calcular_perimetro(raio)
+    return 2 * Math::PI * raio
+end
+
+```
+
+### Entrada de dados.
+
+```ruby
+
+puts "Digite o raio do círculo: "
+raio = gets.chomp.to_f # Para atualizar a entrada dizendo que o valor digitado é floot com <.to_f>.
+
+```
+
+### Execução da função.
+
+```ruby
+
+area = calcular_area(raio) # Aqui atribúimos a entrada do usuário para <area>
+perimetro = calcular_perimetro(raio) # Aqui atribúimos a entrada do usuário para <perimetro>
+
+```
+
+### exibindo os resultados.
+
+```ruby
+
+puts "Área do círculo com raio #{raio} é #{area.round(2)}" # Exibição com duas casa decímais com <.round(2)>.
+puts "Perímetro do círculo com raio #{raio} é #{perimetro.round(2)}" # Exibição com duas casa decímais com <.round(2)>.
+
+```
