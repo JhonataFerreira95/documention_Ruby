@@ -11,6 +11,7 @@ puts Math.methods.sort
 puts Math.sqrt(4) # Passamos entre () o número desejado para a raiz quadrada.
 
 # Metódo para ver Pi.
+# Quando passamos <::>, siginifica que estamos querendo utilizar um módulos com os primeiros <:> e no segundo a referência do metódo que vamos usar, que no caso seria <PI>.
 
 puts Math::PI # Retorna o valor de PI no terminal.
 
