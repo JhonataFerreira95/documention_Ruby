@@ -5,7 +5,7 @@ require 'net/http' # Para fazer a requisição do módulo <HTTP>.
 # Para enviar uma requisição para internet.
 # Para fazer a requisição, precisamos de uma url. Essa url é padronizada pela <URI>
 
-url = URI.parse('https://www.exemple.com') # Para a requisição utilizamos o <URI> e para permissão de endereço utilizamos o <.parse> para passar o link do site onde faremos a requisição.
+url = URI.parse('https://www.google.com') # Para a requisição utilizamos o <URI> e para permissão de endereço utilizamos o <.parse> para passar o link do site onde faremos a requisição.
 # Retorna informações que pedimos na requisição do site, que será o seu domínio.
 
 puts url 
@@ -62,7 +62,7 @@ response = http.request(request) # faz uma solicitação <HTTP> usando um objeto
 # Status code, 100~500. 100=Código de informação. 200=Código de sucesso. 300=Código de redirecionamento. 400=Código de erro no lado do cliente. 500=Código de erro no lado do servidor.
 
 if response.is_a?(Net::HTTPSuccess) # Estamos verificando se ouver código de sucesso ou seja, código 200. Quando o servidor vai responder para o cliente, ele pode responde de 5 formas.
-  puts "Status #{response.code} #{response.menssage}" # Caso esteja tudo ok, vai retorna o código e a messagem.
+  puts "Status #{response.code} #{response.message}" # Caso esteja tudo ok, vai retorna o código e a messagem.
   puts response.body # Aqui vamos retorna o corpo dos dados.
 else
   puts "A requisição falhou com status #{response.code}" # Aqui vamos utilizar o else para retorna a falha do status code.
