@@ -20,7 +20,7 @@ puts des2
 puts des2.length 
 puts des.size
 
-#  1-Indexação
+# 1-Indexação
 
 puts des2[0]
 puts des2[-1]

@@ -15,7 +15,7 @@ puts "nome da classe: " + name
 puts "ano de lançamento: " + yearLaunch.to_s # Aqui o <.to_s> converte o valor para string
 puts "preço da classe: " + price.to_s # Aqui o <.to_s> converte para float, já que o tudo que vai no puts é string
   
-# 2-Utilizando o #{}, vamos fazer o mesmo código só que de forma mais prática
+# 2-Utilizando o # {}, vamos fazer o mesmo código só que de forma mais prática
 
 puts "nome da classe: #{name}" 
 puts "ano de lançamento: #{yearLaunch}" # Aqui não é necessário fazer a converção, já que é intrínseco
