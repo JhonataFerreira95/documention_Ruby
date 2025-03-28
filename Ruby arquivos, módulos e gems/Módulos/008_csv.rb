@@ -11,5 +11,15 @@ CSV.open("../Manipulação de arquivos/Csv/exemplo.csv", "w") do |csv| # Aqui va
     csv << ["Protoman" "24", "NetCity"]
 end
 
+# 2-Lendo ddos em csv
+
+# Inicializamos o método para ler linha a linha com  metódo <.foreach>, passasamos o caminho.
+
+CSV.foreach("../Manipulação de arquivos/Csv/exemplo.csv", headers: true) do |row| # Esta opção indica que a primeira linha do arquivo CSV contém os cabeçalhos (nomes das colunas).
+    nome = row ["Nome"]
+    idade = row ["idade"]
+    cidade = row ["cidade"]
+    puts "Nome: #{nome}, idade: #{idade}, cidade: #{cidade}"
+end
 
 
