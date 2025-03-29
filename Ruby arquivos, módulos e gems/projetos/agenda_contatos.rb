@@ -26,13 +26,12 @@ CSV.open(caminho, "w") do |csv| # Aqui iniciei o caminho do arquivo e definir qu
     csv << [nome, idade, cidade] # Usei o <binary left_shitf> para escrever no arquivos.
 end
 
-# Lendo arquivo com <CSV.foreach>.
-
-CSV.foreach(caminho, headers: true) do |row| # Lendo informações do arquivos com <CSV.foreach>.
-  puts "Seu contado foi salvo, o nome: #{row["nome"]}, idade: #{row["idade"]}, cidade: #{row["cidade"]}."
-end
+# Lendo arquivo com <CSV.foreach> e uma condicional verificando se o arquivo foi criado.
 
 if File.exist?(caminho) # Aqui iniciei um <File.exist?> para verificar se o arquivo existe e mostra ao usuário que foi salvo com sucesso.
+  CSV.foreach(caminho, headers: true) do |row| # Lendo informações do arquivos com <CSV.foreach>.
+    puts "Seu contado foi salvo, o nome: #{row["nome"]}, idade: #{row["idade"]}, cidade: #{row["cidade"]}."
+  end
   puts "Seu contato foi salvo #{caminho} com sucesso!"
 else # Caso não encontro, retorna um erro.
   puts "falha em criar seu contato."
