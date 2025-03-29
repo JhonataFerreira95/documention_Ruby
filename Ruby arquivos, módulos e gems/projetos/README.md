@@ -1,19 +1,27 @@
-# Projeto de pesquisa de string
+# Projetos
 
 ## Índice
+
+1. [Projeto de pesquisa de string](#projeto-de-pesquisa-de-string)
+2. [Projeto calcular a área de um quadrado e ratângulo](#projeto-calcular-a-área-de-um-quadrado-e-ratângulo)
+3. [Projeto de agenda de contatos](#projeto-de-agenda-de-contatos)
+
+## Projeto de pesquisa de string
+
+### Índice
 
 1. [Alternativa 1](#altertnativa-1)
 2. [Alternativa 2](#altertnativa-2)
 
 ---
 
-## Introdução
+### Introdução
 Aqui utilizei do que aprendi sobre, metódos, manipulação de arquivos e strings para criar esse programa.
 
-## Altertnativa 1.
+### Altertnativa 1.
 Feito uma pesquisa de arquivos bem básica, porém foi aprimorada na alternativa 2, demostrarei só um pouco da primeira versão antes de seguir em si.
 
-### Primeira alternativa:
+#### Primeira alternativa:
 
 ```ruby
 def search(key) # Criação do metódo com parâmentro.
@@ -39,10 +47,10 @@ puts "Arquivo: #{filename} Linha: #{linenumber + 1}" # Como começamos a contage
 
 ```
 
-## Altertnativa 2.
+### Altertnativa 2.
 Alternativa 2 já é bem mais robusta e com uma condição que retorna se não encontra nada, sem conta que utilizei o `.capitalize` para as primeira fileiras das strings ficarem maiúsculas.
 
-### Segunda alternativa:
+#### Segunda alternativa:
 
 ```ruby
 def search(key) # Criamos nosso metódo com o parâmetro <key>.
@@ -74,9 +82,9 @@ end
 
 ```
 
-# Projeto calcular a área de um quadrado e ratângulo
+## Projeto calcular a área de um quadrado e ratângulo
 
-## Índice
+### Índice
 
 1. [Calcular o quadrado](#calcular-o-quadrado)
 2. [Calcular o retângulo](#calcular-o-retângulo)
@@ -86,10 +94,10 @@ end
 
 ---
 
-## Introdução
+### Introdução
 Aqui utilizei do que aprendi sobre, modulos, e metódos com parâmetros para criação desse programa, ao todo foram 2 módulos feitos.
 
-### Calcular o quadrado.
+##### Calcular o quadrado.
 
 ```ruby
 
@@ -101,7 +109,7 @@ end
 
 ```
 
-### Calcular o retângulo.
+#### Calcular o retângulo.
 
 ```ruby
 
@@ -112,7 +120,7 @@ module Calcula_retangulo # Criado o nome do módulo.
 end
 
 ```
-### Testando o módulo.
+#### Testando o módulo.
 
 ```ruby
 
@@ -122,3 +130,4 @@ puts Calcula_retangulo.quadrado(20, 20) # Retorna no terminal nossa área de ret
 
 ```
 
+## Projeto de agenda de contatos
