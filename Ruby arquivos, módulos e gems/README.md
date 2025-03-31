@@ -1,4 +1,4 @@
-# Trabalhando com arquivos, módulos e gems
+# Trabalhando com arquivos, módulos e gems.
 
 ## Índice
 
@@ -9,7 +9,7 @@
 
 ---
 
-## Introdução
+## Introdução.
 No Ruby, arquivos são manipulados para leitura, escrita e atualização de dados usando classes como `File` e `IO`.
 
 Os módulos ajudam na organização e reutilização de código, funcionando como bibliotecas. Eles podem conter métodos e constantes, permitindo a implementação de `mixins` com `include` e `extend`.
@@ -23,12 +23,12 @@ Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. In
 
 ---
 
-## Manipulação de arquivos no Ruby
+## Manipulação de arquivos no Ruby.
 Aqui damos inicios a manipulação de arquivo com ruby, iremos iniciar de uma formas simples lendo arquivos com `File.open`.
 
 #### Lendo arquivos com Ruby.
 
-Primeira alternativa para ler um arquivo
+Primeira alternativa para ler um arquivo.
 ```ruby
 # <File.open> é um módulo que trabalha com arquivos. Quando trabalhamos com arquivos, temos 2 entradas, input e output == entrada de dados e saída de dados.
 
@@ -46,7 +46,7 @@ movies.each { |line| puts line.strip }
 
 ```
 
-Segunda alternativa para ler um arquivo
+Segunda alternativa para ler um arquivo.
 ```ruby
 
 # Nossa variável que recebe o arquivo que vai ser lido.
@@ -105,7 +105,7 @@ end
 
 #### Argumentos com Ruby.
 
-##### Passando argumentos
+##### Passando argumentos.
 
 ```ruby
 
@@ -139,9 +139,9 @@ end
 
 ```
 
-## Módulos
+## Módulos.
 
-## Módulos úteis com ruby
+## Módulos úteis com ruby.
 Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`. 
 
 ### Utilizando o módulo `Math`.
@@ -249,7 +249,7 @@ puts url.class
 
 ```
 
-#### Enviando requisição HTTP
+#### Enviando requisição HTTP.
 
 ##### Esqueci de mencionar que podemos ter uma classe dentro de um módulo perfeitamente. Sobre <url.host> retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar. Sobre <url.port> retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
 
@@ -346,9 +346,9 @@ end
 
 ```
 
-## Gems
+## Gems.
 
-### Para instalação da gem no terminal
+### Para instalação da gem no terminal.
 
 #### Utilizei o faker como exemplo de gems, mais podemos por o nome de outra gem caso queira algo diferente.
 
