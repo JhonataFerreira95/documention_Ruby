@@ -1,0 +1,5 @@
+source "https://rubygems.org" # Para utilizamos às gems, estamos importando.
+
+# Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
+
+gem "faker", "~> 3.2.0" # Para funcionar utlizer esse comando no terminal <bundle install> para instalação da gem.
