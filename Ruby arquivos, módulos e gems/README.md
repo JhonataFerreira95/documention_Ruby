@@ -4,7 +4,7 @@
 
 1. [Arquivos](#manipulação-de-arquivos-no-ruby)
 2. [Módulos](#módulos)
-3. [Gems]()
+3. [Gems](#gems)
 
 
 ---
@@ -343,5 +343,45 @@ CSV.foreach("../Manipulação de arquivos/Csv/exemplo.csv", headers: true) do |r
     cidade = row ["cidade"]
     puts "Nome: #{nome}, idade: #{idade}, cidade: #{cidade}"
 end
+
+```
+
+## Gems
+
+### Para instalação da gem no terminal
+
+#### Utilizei o faker como exemplo de gems, mais podemos por o nome de outra gem caso queira algo diferente.
+
+```ruby
+
+gem install `faker`
+
+```
+
+### Utilização da gems via `gemfile`.
+
+#### Para utilizamos às gems, estamos importando.
+
+```ruby
+
+source "https://rubygems.org"
+
+```
+
+#### Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
+
+```ruby
+
+gem "faker", "~> 3.2.0" 
+
+```
+
+### Após a configuração do arquivo `gemfile`.
+
+#### Para funcionar utlizer esse comando no terminal `bundle install` para instalação da gem. Atente-se ao seu diretório, para o `bundle install` funcionar, tem que está no mesmo diretório da sua `gemfile`.
+
+```ruby
+
+bundle install
 
 ```
