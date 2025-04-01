@@ -5,6 +5,7 @@
 1. [Projeto de pesquisa de string](#projeto-de-pesquisa-de-string)
 2. [Projeto calcular a área de um quadrado e ratângulo](#projeto-calcular-a-área-de-um-quadrado-e-ratângulo)
 3. [Projeto de agenda de contatos](#projeto-de-agenda-de-contatos)
+4. [Projeto de agenda de contatos](#projeto-de-agenda-de-contatos)
 
 ## Projeto de pesquisa de string
 
