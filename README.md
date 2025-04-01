@@ -10,6 +10,23 @@
 
 ---
 
+## Estrutura do projeto
+
+DOCUMENTAÇÃO RUBY/
+├── Banco de dados SQL/
+│   └── SQL/
+├── Ruby arquivos, módulos e gems/
+│   └── Gems/
+├── └──Manipulação de arquivos/
+│   └── Módulos/
+│   └──projetos/
+├── Ruby avançado/
+├── Ruby fundamentos/
+│   ├── Ruby/
+│   └── README.md
+├── Ruby poo/
+└── README.md
+
 ## Introdução
 Ruby é uma linguagem de programação dinâmica, open-source, focada na simplicidade e produtividade. Seu criador, Yukihiro Matsumoto, a projetou com o objetivo de tornar a programação mais humana e intuitiva.
 
