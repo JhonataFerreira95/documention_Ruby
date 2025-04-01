@@ -264,9 +264,9 @@ puts "Dados foram salvo em #{arquivo_csv}!"
 ### Índice
 
 1. [Importando a gem](#importando-a-gem)
-2. [Armazenando dados 20 vezes](#armazenando-dados-20-vezes)
-3. [Expotando para `CSV`](#expotando-para-csv)
-4. [Mensagem de sucesso em salvar os dados](#mensagem-de-sucesso-em-salvar-os-dados)
+2. [Nome do arquivo da planilha](#nome-do-arquivo-da-planilha)
+3. [Vamos específica a planilha padrão](#vamos-específica-a-planilha-padrão)
+4. [Iterando as linhas da planilhas para estração de dados](#iterando-as-linhas-da-planilhas-para-estração-de-dados)
 
 #### Importando a gem.
 
