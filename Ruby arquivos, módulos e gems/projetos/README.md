@@ -6,6 +6,7 @@
 2. [Projeto calcular a área de um quadrado e ratângulo](#projeto-calcular-a-área-de-um-quadrado-e-ratângulo)
 3. [Projeto de agenda de contatos](#projeto-de-agenda-de-contatos)
 4. [Projeto criação de dados faker](#projeto-criação-de-dados-faker)
+5. [Projeto extração de dados com roo](#projeto-extração-de-dados-com-roo)
 
 ## Projeto de pesquisa de string
 
@@ -255,5 +256,64 @@ end
 ```ruby
 
 puts "Dados foram salvo em #{arquivo_csv}!"
+
+```
+
+## Projeto extração de dados com roo
+
+### Índice
+
+1. [Importando a gem](#importando-a-gem)
+2. [Armazenando dados 20 vezes](#armazenando-dados-20-vezes)
+3. [Expotando para `CSV`](#expotando-para-csv)
+4. [Mensagem de sucesso em salvar os dados](#mensagem-de-sucesso-em-salvar-os-dados)
+
+#### Importando a gem.
+
+```ruby
+
+require "roo" 
+
+```
+
+#### Nome do arquivo da planilha. 
+
+##### Utilizamos o submódulo da gem <Roo>, que é <Excelx> seguido da classe <new> e instânciado a nossa planilha.
+
+```ruby
+
+documento = Roo::Excelx.new("../Manipulação de arquivos/Planilhas/extração.xlsx") 
+
+```
+
+#### Vamos específica a planilha padrão.
+
+##### Aqui definimos que o <documento> vai ser utilizado e que vamos utilizar apenas a primeira página da planilha com <documento.sheets.first>.
+
+```ruby
+
+documento.default_sheet = documento.sheets.first 
+
+```
+
+#### Iterando as linhas da planilhas para estração de dados.
+
+##### Aqui criei um intervalo entre <2..documento.llast_row> para ler da linha 2 até a última linha. Usei o <.each> para ler toda a planilha. 
+##### Criei um bloco com <do> para chama a minha <|linha|> e obter os dados da planilha.
+
+```ruby
+
+(2..documento.last_row).each do |linha| 
+
+    nome = documento.cell(linha, 1) # Utilizei o <.cell> para extração os dados da planilha sobre o nome na linha 1.
+
+    idade = documento.cell(linha, 2) # Utilizei o <.cell> para extração os dados da planilha sobre o idade na linha 2.
+
+    cidade = documento.cell(linha, 3) # Utilizei o <.cell> para extração os dados da planilha sobre o cidade na linha 3.
+
+    puts "Nome: #{nome}, Idade: #{idade}, Cidade: #{cidade}" # Imprimindo os dados no terminal.
+
+end
+
 
 ```
