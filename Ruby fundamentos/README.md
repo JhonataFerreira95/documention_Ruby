@@ -29,28 +29,6 @@
 
 ---
 
-## Conversão de Tipos
-```ruby
-puts "Informe o nome da sua classe:"
-name = gets.chomp.to_i # Converte a string para inteiro
-```
-
-## Concatenação e Exibição de Valores
-```ruby
-puts "Nome da classe: " + name.to_s
-puts "Ano de lançamento: " + yearLaunch.to_s
-puts "Preço da classe: " + price.to_s
-```
-
-## Interpolação de Strings
-```ruby
-puts "Nome da classe: #{name}"
-puts "Ano de lançamento: #{yearLaunch}"
-```
-
-## Operadores Arit
-
-
 ---
 
 ## Introdução
@@ -86,6 +64,25 @@ puts price.class
 puts planIncluded.class 
 puts true.class
 puts false.class
+```
+
+## Conversão de Tipos
+```ruby
+puts "Informe o nome da sua classe:"
+name = gets.chomp.to_i # Converte a string para inteiro
+```
+
+## Concatenação e Exibição de Valores
+```ruby
+puts "Nome da classe: " + name.to_s
+puts "Ano de lançamento: " + yearLaunch.to_s
+puts "Preço da classe: " + price.to_s
+```
+
+## Interpolação de Strings
+```ruby
+puts "Nome da classe: #{name}"
+puts "Ano de lançamento: #{yearLaunch}"
 ```
 
 ### Tipos de Dados em Ruby
@@ -338,6 +335,7 @@ end
 sum()
 
 # Método para cadastrar um filme
+
 def create_movie
   puts "Digite o nome do filme:"
   name = gets.chomp
@@ -361,6 +359,7 @@ full_name("Rodrigo", "Silva")
 ### Operações Matemáticas
 
 ```ruby
+
 puts "Digite o primeiro número: "
 num1 = gets.chomp.to_f
 puts "Digite o segundo número: "
@@ -382,6 +381,7 @@ else
 end
 
 puts "Resultado da sua operação é #{'%.2f' % result}"
+
 ```
 
 ### Blocks (Blocos)
