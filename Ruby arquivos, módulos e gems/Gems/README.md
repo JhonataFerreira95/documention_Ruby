@@ -26,11 +26,19 @@ source "https://rubygems.org"
 
 ```
 
-#### Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
+#### Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 2.10">.
 
 ```ruby
 
 gem "faker", "~> 3.2.0" 
+
+```
+
+#### Aqui importamos com <gem> o nome da nossa gem entre aspas <"roo"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
+
+```ruby
+
+gem 'roo', '~> 2.10', '>= 2.10.1' 
 
 ```
 

@@ -1,6 +1,15 @@
 # Documentação Ruby
 
+## Dependências 
+
+### Ruby version 3.4.2
+
+### Gems 
+
+#### Faker e Roo foram utlizadas. 
+
 ## Índice
+
 1. [Introdução](#introdução)
 2. [Lógica com Ruby](#lógica-com-ruby)
 3. [Arquivos, Módulos e Gems](#arquivos-módulos-e-gems)
