@@ -1,7 +1,6 @@
 # Documentação do Ruby
 
 ## Índice
-## Índice
 
 1. [Conversão de Tipos](#conversão-de-tipos)
 2. [Concatenação e Exibição de Valores](#concatenação-e-exibição-de-valores)
