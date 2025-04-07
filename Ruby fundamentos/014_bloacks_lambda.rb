@@ -34,7 +34,7 @@ um argumento chamado number.
 # retorna apenas um valor.  
 
 power = lambda { |num| num ** 2 } # Função de potência de um número.
-puts power.call(4) # Retorna 16 no terminal.
+puts power.call(4) # Retorna 16 no terminal. O <.call> é para chamada do resultado da função.
 
 # Função de soma de dois são par.
 
