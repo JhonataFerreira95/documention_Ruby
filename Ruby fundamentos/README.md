@@ -32,9 +32,11 @@
 ---
 
 ## Introdução
+
 Lógica de programação é o alicerce primordial para uma carreira bem-sucedida na área de tecnologia. Dominar os conceitos básicos é essencial para construir soluções eficientes e robustas. Vamos explorar alguns dos tópicos fundamentais abordados, como tipos, gets, concatenação, operadores, strings, condicionais, laços de repetição, funções, parâmetros, blocks, lambda, arrays e hash.
 
 - **Lógica de programação:**
+
   - Conceitos Básicos.
   - Estruturas de Controle.
   - Estruturas de Dados.
@@ -99,6 +101,7 @@ puts "Ano de lançamento: #{yearLaunch}"
 ### Tipos de Dados em Ruby
 
 #### Tipos Básicos
+
 - **String**: Sequência de caracteres, como `"Hello, World!"`.
 - **Integer**: Números inteiros, como `42`.
 - **Float**: Números decimais, como `3.14`.
@@ -106,50 +109,60 @@ puts "Ano de lançamento: #{yearLaunch}"
 - **NilClass**: Representa a ausência de valor, como `nil`.
 
 #### Estruturas de Dados
+
 - **Array**: Coleção ordenada de elementos, como `[1, 2, 3, 4, 5]`.
 - **Hash**: Coleção de pares chave-valor, como `{ "name" => "Alice", "age" => 30 }`.
 - **Symbol**: Sequência imutável de caracteres, como `:name`.
 - **Range**: Representa um intervalo de valores, como `1..5`.
 
 #### Expressões Regulares
+
 - **Regexp**: Representa uma expressão regular, como `/\d+/`.
 - **MatchData**: Resultado de correspondência, como `/(\d+)/.match("123")`.
 
 #### Funções e Métodos
+
 - **Proc**: Representa um bloco de código, como `Proc.new { |x| x * 2 }`.
 - **Method**: Representa um método, como `method(:foo)`.
 - **UnboundMethod**: Representa um método não vinculado, como `String.instance_method(:upcase)`.
 - **Binding**: Representa um contexto de execução, como `binding`.
 
 #### Classes e Módulos
+
 - **Class**: Representa uma classe, como `String`.
 - **Module**: Representa um módulo, como `Math`.
 - **Object**: Representa um objeto, como `Object.new`.
 - **Struct**: Estrutura de dados, como `Struct.new(:name, :age)`.
 
 #### Entrada e Saída
+
 - **File**: Representa um arquivo, como `File.open("foo.txt")`.
 - **IO**: Representa entrada/saída, como `$stdin` e `$stdout`.
 - **Dir**: Representa um diretório, como `Dir.pwd`.
 
 #### Tempo e Datas
+
 - **Time**: Representa uma data e hora, como `Time.now`.
 - **Date**: Representa uma data, como `Date.today`.
 
 #### Controle de Fluxo
+
 - **Thread**: Representa uma thread, como `Thread.new { ... }`.
 - **Mutex**: Representa um mutex, como `Mutex.new`.
 - **Fiber**: Representa uma fibra, como `Fiber.new { ... }`.
 - **Enumerator**: Representa um enumerador, como `1.upto(10)`.
 
 #### Números Avançados
+
 - **Rational**: Representa um número racional, como `Rational(2, 3)`.
 - **Complex**: Representa um número complexo, como `Complex(1, 2)`.
 
 #### Codificação
+
 - **Encoding**: Representa uma codificação de caracteres, como `Encoding::UTF_8`.
 
 #### Exceções e Erros
+
 - **Exception**: Representa uma exceção, como `StandardError`.
 - **FiberError**: Erro de fibra, como `FiberError`.
 - **ZeroDivisionError**: Erro de divisão por zero, como `ZeroDivisionError`.
@@ -171,6 +184,7 @@ O tipo Boolean é uma subclasse da classe `Object`, que é a classe mãe de toda
 
 
 #### Módulos
+
 Os módulos são usados para organizar métodos e classes.
 
 ```ruby
