@@ -26,6 +26,7 @@
 22. [Métodos úteis para Hashes](#métodos-úteis-para-hashes)
 23. [Lambda](#lambda)
 24. [Diferentes tipos de Lambdas](#diferentes-tipos-de-lambdas)
+25. [Simbólos em ruby]()
 
 ---
 
@@ -680,6 +681,7 @@ puts multiply.call(4, 5) # Retorna 20
 ```
 
 ### **Diferentes tipos de Lambdas:**
+
 #### Exemplo: Soma de dois números
 
 ```ruby
@@ -713,5 +715,32 @@ puts movie
 
 movie.clear()
 puts movie
+
+```
+
+### **Simbólos em ruby:**
+
+#### Exemplo com `.object_id`:
+
+##### objetos que representam nomes de forma imutável e são armazenados em memória de forma única. 
+
+##### São prefixados com dois-pontos (:) e são frequentemente usados como chaves em hashes ou como argumentos para métodos que requerem identificadores. 
+
+##### Utilizamos o <.object_id> para atribuir um id aleatório.
+
+```ruby
+
+puts :nome.object_id 
+
+```
+
+#### Reutilização de memoria com <.object_id> para a mesma variável.
+
+```ruby
+
+puts "nome".object_id # Aqui vai atribui um valor aleatório, será alocada na mesma posição da memoria da string abaixo.
+
+puts "nome".object_id # Aqui vai atribui um valor aleatório, será alocada na mesma posição da memoria da string acima.
+
 
 ```
