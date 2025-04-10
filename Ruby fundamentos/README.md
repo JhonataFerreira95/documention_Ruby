@@ -721,13 +721,13 @@ puts movie
 
 ### **Simbólos em ruby:**
 
+#### Código Ruby possui o que a linguagem chama de símbolos (symbols), que são identificadores precedidos por dois-pontos, por exemplo :nome, :idade, :peso.
+
+#### objetos que representam nomes de forma imutável e são armazenados em memória de forma única. sendo portanto uma instância única e imutável de alguma coisa (pertencente à classe Symbol aparentemente). Dois símbolos com mesmo identificador são o mesmo símbolo.
+
+#### São prefixados com dois-pontos (:) e são frequentemente usados como chaves em hashes ou como argumentos para métodos que requerem identificadores.Utilizamos o <.object_id> para atribuir um id aleatório.
+
 #### Exemplo com `.object_id`:
-
-##### objetos que representam nomes de forma imutável e são armazenados em memória de forma única. 
-
-##### São prefixados com dois-pontos (:) e são frequentemente usados como chaves em hashes ou como argumentos para métodos que requerem identificadores. 
-
-##### Utilizamos o <.object_id> para atribuir um id aleatório.
 
 ```ruby
 
