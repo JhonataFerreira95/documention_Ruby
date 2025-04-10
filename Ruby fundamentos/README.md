@@ -625,6 +625,7 @@ puts movie2.values # Retorna os valores
 ```
 
 #### Usando `for`
+
 ```ruby
 
 for key, value in movie2
