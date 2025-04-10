@@ -743,5 +743,4 @@ puts "nome".object_id # Aqui vai atribui um valor aleatório, será alocada na m
 
 puts "nome".object_id # Aqui vai atribui um valor aleatório, será alocada na mesma posição da memoria da string acima.
 
-
 ```
