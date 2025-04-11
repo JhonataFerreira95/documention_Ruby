@@ -18,6 +18,7 @@ puts movie2 # Para o hash reconhecer os valores, é obrigatório usar os <:> ou 
 # keys.
 
 puts movie2.keys # O método keys. Imprime as chaves no terminal com o <Keys>. conseguimos recuperar as chaves.
+
 puts movie2.values # O método keys e values. Imprime as valores no terminal com o <values>. conseguimos recuperar os valores.
 
 # Iterando com for.
