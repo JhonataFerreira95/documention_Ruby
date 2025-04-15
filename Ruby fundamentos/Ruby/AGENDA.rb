@@ -8,7 +8,7 @@ puts "Bem vindo a agenda de contatos com hash! \n-------------------------------
 puts "Qual contato deseja busca, digite o nome do contato: "
 contato = gets.chomp
 
-contato_encontrado = agenda.find { |c| c[:nome] == contato }
+contato_encontrado = agenda.find { |contact| contact[:nome] == contato }
 
 if contato_encontrado
   puts "O contato foi achado: #{contato_encontrado[:nome]} e o número é #{contato_encontrado[:number]}"
