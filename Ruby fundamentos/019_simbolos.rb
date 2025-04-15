@@ -1,6 +1,6 @@
 # 1-O que são simbolos? 
 
-# objetos que representam nomes de forma imutável e são armazenados em memória de forma única. 
+# objetos que representam nomes de forma imutável e são armazenados em memória de forma única, assim sendo, baixo consumo de memória.
 # São prefixados com dois-pontos (:) e são frequentemente usados como chaves em hashes ou como argumentos para métodos que requerem identificadores. 
 
 # Utilizamos o <.object_id> para atribuir um id aleatório.
