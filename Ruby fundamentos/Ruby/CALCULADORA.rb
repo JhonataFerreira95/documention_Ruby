@@ -1,6 +1,7 @@
 puts "Bem-vindo ao app calculadora! "
 
 loop do
+  
   puts "Escolha entre as opções adi, subi, mult, div. Caso deseje sair digite (x): ".downcase
   op = gets.chomp
 
