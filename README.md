@@ -28,7 +28,7 @@ DOCUMENTAÇÃO RUBY/
 │   └── SQL/
 ├── Ruby arquivos, módulos e gems/
 │   └── Gems/
-├── └──Manipulação de arquivos/
+│   └──Manipulação de arquivos/
 │   └── Módulos/
 │   └──projetos/
 ├── Ruby avançado/
