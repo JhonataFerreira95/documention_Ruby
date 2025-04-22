@@ -32,6 +32,7 @@ DOCUMENTAÇÃO RUBY/
 │   └── Módulos/
 │   └──projetos/
 ├── Ruby avançado/
+│   └──Estrutura de dados/
 ├── Ruby fundamentos/
 │   ├── Ruby/
 │   └── README.md
@@ -164,6 +165,22 @@ puts cachorro.falar
 ---
 
 ## Ruby Avançado
+
+### Estrutura de dados
+
+```ruby
+
+def factorial(n)
+  # Caso base: fatorial de 0 ou 1 é 1
+  return 1 if n <= 1
+  
+  # Chamada recursiva: n * fatorial de (n-1)
+  n * factorial(n - 1)
+end
+
+puts factorial(5)  # Saída: 120 (5 * 4 * 3 * 2 * 1)
+
+```
 
 ### Metaprogramação
 ```ruby
