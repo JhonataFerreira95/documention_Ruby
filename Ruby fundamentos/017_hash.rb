@@ -11,7 +11,7 @@ puts movie
 # Outra forma de definir a chave.
 
 movie2 = {:name => "Solo leveling", :year => "2024"} # Outra forma para passar valores no hash é com <:>.
-puts movie2 # Para o hash reconhecer os valores, é obrigatório usar os <:> ou <""> para que tudo funcione de forma perfeita.
+puts movie2 # Para o hash reconhecer os valores, é obrigatório usar os <:> e em seguida <""> para que tudo funcione de forma perfeita.
 
 # 2-Iterando valores (for, while e each).
 
@@ -25,13 +25,13 @@ puts movie2.values # O método keys e values. Imprime as valores no terminal com
 
 for key, value in movie2 # Recuperando valores está recuperando e exibindo os valores do hash movie2.
     puts "#{key}-#{value}" # Imprime na tela cada chave e seu valor correspondente no formato, <key> representa a chave de cada par do hash, <value> representa o valor associado a essa chave.
-end
+end # Porém, caso tenha uma variável com o mesmo nome o <for> sobescreve ela e imprime o último valor mais uma vez.
 
 # Iterando com while.
 
 i = 0 # Váriavel de controle.
 
-while  i < movie2.length # Aqui o <lenght> verifica se o i é menor que o nosso hash.
+while  i < movie2.length # Aqui o <lenght> verifica se o i é menor que o nosso hash. O <lenght> é um metódo nativo do ruby para conta a quantidades de caracteres de uma string/float/int/array/hash e etc.
     puts "#{movie2.keys[i]}-#{movie2.values[i]}" # Imprimir os valores no terminal correspondente <key> e <values>.
     i += 1 # Para que o laço não seja infinito.
 end
