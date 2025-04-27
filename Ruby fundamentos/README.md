@@ -26,7 +26,8 @@
 22. [Métodos úteis para Hashes](#métodos-úteis-para-hashes)
 23. [Lambda](#lambda)
 24. [Diferentes tipos de Lambdas](#diferentes-tipos-de-lambdas)
-25. [Simbólos em ruby]()
+25. [Simbólos em ruby](#simbólos-em-ruby)
+26. [Map em ruby](#utilizando-o-map-em-ruby)
 
 ---
 
@@ -742,5 +743,24 @@ puts :nome.object_id
 puts "nome".object_id # Aqui vai atribui um valor aleatório, será alocada na mesma posição da memoria da string abaixo.
 
 puts "nome".object_id # Aqui vai atribui um valor aleatório, será alocada na mesma posição da memoria da string acima.
+
+```
+
+### Utilizando o map em ruby:
+
+#### O mapa é geralmente utilizado quando temos um array/hash e queremos criar uma lista nova a partir da antiga mas com alguns elementos extras e sem modificar a antiga.
+
+```ruby
+
+
+nomes = ["Hiss", "Ouken", "Bass", "Saturn"] # lista de nomes
+
+# Aqui inciamos com a variável que será utilizada para injeção dos sobrenome pós temos nosso array <nomes>
+
+nomes_personalidades = nomes.map.with_index do |personality, index| # Com nosso <.map> para inciar o mapa e em seguida com <.with_index> para interar novos valores interpolando nossa array <nomes>
+  "#{personality} #{['Astran', 'Ikidori', 'Ovirowa', 'Emu'][index]}" # Utilizamos interpolação para imprimir os sobrenomes, para alocar os sobrenomes com os devidos valores nos locais certos utilizamos o <[index]>
+end
+
+puts nomes_personalidades # Imprime o resultado desejado no terminal.
 
 ```
