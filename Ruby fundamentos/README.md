@@ -28,6 +28,7 @@
 24. [Diferentes tipos de Lambdas](#diferentes-tipos-de-lambdas)
 25. [Simbólos em ruby](#simbólos-em-ruby)
 26. [Map em ruby](#utilizando-o-map-em-ruby)
+27. [Código ternário](#utilizando-código-ternário-em-ruby)
 
 ---
 
@@ -762,5 +763,36 @@ nomes_personalidades = nomes.map.with_index do |personality, index| # Com nosso 
 end
 
 puts nomes_personalidades # Imprime o resultado desejado no terminal.
+
+```
+
+### Utilizando código ternário em Ruby
+
+#### Aqui irei aborda algo simples só para demostra como um código ternário funciona.
+
+##### Exemplos de condicional sem código ternário:
+
+```ruby
+
+nome = "kuma"
+
+if nome == "kuma"
+  puts "Kuma é um fofo"
+else
+  puts "Kuma não é um fofo"
+end
+
+```
+
+##### Como fica utilizando código ternário:
+##### Aqui utilizamos o <.eql>  que verificar se os objetos são equivalentes.
+
+```ruby
+
+# Utilizamos o <.eqL> para verificar se tem algum caracter presente na variável. 
+
+puts nome.eql("kuma")? "Kuma é um fofo" : "kuma não é fofo"
+ 
+# Uso do código ternário é iniciado com <?> pré condição e em seguida <:> para adicionar as condições, esquerda para <true> e direita para <false>
 
 ```
