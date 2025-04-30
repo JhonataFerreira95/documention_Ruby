@@ -42,6 +42,14 @@ gem 'roo', '~> 2.10', '>= 2.10.1'
 
 ```
 
+#### Aqui importamos com <gem> o nome da nossa gem entre aspas <"securerandom"> e posteriomente a sua versão nesse seguimento <"~> 0.1.0">.
+
+```ruby
+
+gem 'securerandom', '~> 0.1.0'
+
+```
+
 ### Após a configuração do arquivo `gemfile`.
 
 #### Para funcionar utlizer esse comando no terminal `bundle install` para instalação da gem. Atente-se ao seu diretório, para o `bundle install` funcionar, tem que está no mesmo diretório da sua `gemfile`.

@@ -5,6 +5,6 @@ source "https://rubygems.org" # Para utilizamos às gems, estamos importando.
 gem "faker", "~> 3.2.0" # Para funcionar utlizer esse comando no terminal <bundle install> para instalação da gem.
 gem 'roo', '~> 2.10', '>= 2.10.1' 
 
-# Aqui importamos a <gem> a nossa gem, no momento quero utilizar a <gem> chamada <"random"> para gerar número randomicos.
+# Aqui importamos a <gem> a nossa gem, no momento quero utilizar a <gem> chamada <"securerandom"> para gerar número randomicos seguros, tanto int quanto float.
 
-gem 'random', '~> 0.2.1'
+gem 'securerandom', '~> 0.1.0'
