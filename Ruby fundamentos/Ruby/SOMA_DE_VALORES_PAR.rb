@@ -8,8 +8,5 @@ for i in 1..6
   count += 1
 end
 
-if soma % 2 == 0
-  puts "A soma dos valores é #{soma}, assim sendo pares!"
-else
-  puts "A soma dos valores é #{soma}, assim sendo ímpares!"
-end
+
+puts soma % 2 == 0? "A soma dos valores é #{soma}, assim sendo pares!" : "A soma dos valores é #{soma}, assim sendo ímpares!"
