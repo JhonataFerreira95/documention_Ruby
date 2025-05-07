@@ -8,5 +8,4 @@ for i in 1..6
   count += 1
 end
 
-
 puts soma % 2 == 0? "A soma dos valores é #{soma}, assim sendo pares!" : "A soma dos valores é #{soma}, assim sendo ímpares!"
