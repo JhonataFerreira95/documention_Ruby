@@ -15,5 +15,5 @@ end
 
 puts nome.eql("kuma")? "Kuma é um fofo" : "kuma não é fofo" # Aqui utilizamos o <.eql>  que verificar se os objetos são equivalentes.
 
-# No operador ternário, a esquerda representa <true> == <else> e a direita representa <false> == <if>
+# No operador ternário, a esquerda representa <true> == <if> e a direita representa <false> == <else>
 
