@@ -20,7 +20,7 @@ puts url.class
 # Sobre <url.host> retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar.
 # Sobre <url.port> retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
 
-http = Net::HTTP.new(url.host, url.port) # Vamos insância a nossa classe <HTTP> e vamos passar um parâmetro para a mesma.
+http = Net::HTTP.new(url.host, url.port) # Vamos instância a nossa classe <HTTP> e vamos passar um parâmetro para a mesma.
 
 # Se for necessários utilizar o HTTPS, vamos adicionar isso a seguir.
 # Essa linha configura automaticamente o cliente HTTP para usar SSL/TLS apenas quando a URL começa com https. 
