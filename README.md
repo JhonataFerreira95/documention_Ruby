@@ -33,6 +33,8 @@ DOCUMENTAÇÃO RUBY/
 │   └──projetos/
 ├── Ruby avançado/
 │   └──Estrutura de dados/
+│     └──Recursividade/
+│     └──Sorting/
 ├── Ruby fundamentos/
 │   ├── Ruby/
 │   └── README.md
