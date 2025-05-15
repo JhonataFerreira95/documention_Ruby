@@ -8,3 +8,7 @@ gem 'roo', '~> 2.10', '>= 2.10.1'
 # Aqui importamos a <gem> a nossa gem, no momento quero utilizar a <gem> chamada <"securerandom"> para gerar número randomicos seguros, tanto int quanto float.
 
 gem 'securerandom', '~> 0.1.0'
+
+# Aqui importamos a <gem> a nossa gem, vou utilizar uma <gem> para debuggr chamada <"byebug"> para usa e descobrir os bug do código.
+
+gem 'byebug', '~> 12.0'
