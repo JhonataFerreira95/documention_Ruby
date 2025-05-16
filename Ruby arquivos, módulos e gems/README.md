@@ -49,6 +49,7 @@ movies.each { |line| puts line.strip }
 ```
 
 Segunda alternativa para ler um arquivo.
+
 ```ruby
 
 # Nossa variável que recebe o arquivo que vai ser lido.
