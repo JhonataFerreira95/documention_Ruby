@@ -88,7 +88,9 @@ puts saudacao("Ana")
 ## Arquivos, Módulos e Gems
 
 ### Trabalhando com Arquivos
+
 ```ruby
+
 # Leitura
 File.open("exemplo.txt", "r") do |arquivo|
   puts arquivo.read
@@ -98,6 +100,7 @@ end
 File.open("exemplo.txt", "w") do |arquivo|
   arquivo.puts "Nova linha no arquivo"
 end
+
 ```
 
 ### Módulos
