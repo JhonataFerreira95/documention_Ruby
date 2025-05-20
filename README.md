@@ -58,7 +58,9 @@ Ruby é uma linguagem de programação dinâmica, open-source, focada na simplic
 Ruby oferece uma abordagem simples e intuitiva para lógica de programação. A seguir, abordamos os principais conceitos:
 
 ### Estruturas de Controle
+
 ```ruby
+
 # Condicional
 if x > 10
   puts "Maior que 10"
@@ -72,6 +74,7 @@ end
 5.times do |i|
   puts "Número: #{i}"
 end
+
 ```
 
 ### Métodos
