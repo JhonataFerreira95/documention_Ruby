@@ -159,7 +159,9 @@ puts ana.saudacao
 ```
 
 ### Herança
+
 ```ruby
+
 class Animal
   def falar
     "Som genérico"
@@ -174,6 +176,7 @@ end
 
 cachorro = Cachorro.new
 puts cachorro.falar
+
 ```
 
 ---
