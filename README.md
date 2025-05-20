@@ -78,12 +78,15 @@ end
 ```
 
 ### Métodos
+
 ```ruby
+
 def saudacao(nome)
   "Olá, #{nome}!"
 end
 
 puts saudacao("Ana")
+
 ```
 
 ---
