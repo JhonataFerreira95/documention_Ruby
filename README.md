@@ -123,12 +123,15 @@ puts Saudacao.ola("Mundo")
 
 ### Gems
 As gems são bibliotecas reutilizáveis. Use o Bundler para gerenciar dependências.
+
 ```bash
+
 # Instalar uma gem
 gem install rails
 
 # Adicionar ao Gemfile
 bundle install
+
 ```
 
 ---
