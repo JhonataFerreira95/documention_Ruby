@@ -140,7 +140,9 @@ bundle install
 Ruby é completamente orientado a objetos, com suporte nativo a classes, herança e polimorfismo.
 
 ### Classes e Objetos
+
 ```ruby
+
 class Pessoa
   attr_accessor :nome, :idade
 
@@ -156,6 +158,7 @@ end
 
 ana = Pessoa.new("Ana", 19)
 puts ana.saudacao
+
 ```
 
 ### Herança
