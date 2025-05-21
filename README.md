@@ -206,7 +206,9 @@ puts factorial(5)  # Saída: 120 (5 * 4 * 3 * 2 * 1)
 ```
 
 ### Metaprogramação
+
 ```ruby
+
 class Pessoa
   attr_accessor :nome
 end
@@ -214,6 +216,7 @@ end
 pessoa = Pessoa.new
 pessoa.nome = "Ana"
 puts pessoa.nome
+
 ```
 
 ### Blocks, Procs e Lambdas
