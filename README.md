@@ -242,8 +242,11 @@ puts saudacao.call("Ana")
 Rails é um framework web popular escrito em Ruby, que segue o padrão MVC (Model-View-Controller).
 
 ### Criação de um Projeto
+
 ```bash
+
 rails new meu_projeto
+
 ```
 
 ### Estrutura do Projeto
