@@ -220,7 +220,9 @@ puts pessoa.nome
 ```
 
 ### Blocks, Procs e Lambdas
+
 ```ruby
+
 # Block
 3.times { |i| puts "Número: #{i}" }
 
@@ -231,6 +233,7 @@ imprimir.call("Olá, mundo!")
 # Lambda
 saudacao = ->(nome) { "Olá, #{nome}" }
 puts saudacao.call("Ana")
+
 ```
 
 ---
