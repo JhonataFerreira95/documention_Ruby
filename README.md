@@ -111,7 +111,9 @@ end
 
 ### Módulos
 Os módulos são usados para organizar métodos e classes.
+
 ```ruby
+
 module Saudacao
   def self.ola(nome)
     "Olá, #{nome}!"
@@ -119,6 +121,7 @@ module Saudacao
 end
 
 puts Saudacao.ola("Mundo")
+
 ```
 
 ### Gems
