@@ -266,12 +266,15 @@ end
 ```
 
 #### Controlador
+
 ```ruby
+
 class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
 end
+
 ```
 
 #### View
