@@ -256,10 +256,13 @@ rails new meu_projeto
 
 ### Exemplos Básicos
 #### Modelo
+
 ```ruby
+
 class Post < ApplicationRecord
   validates :titulo, presence: true
 end
+
 ```
 
 #### Controlador
