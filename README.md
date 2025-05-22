@@ -278,10 +278,13 @@ end
 ```
 
 #### View
+
 ```erb
+
 <% @posts.each do |post| %>
   <h1><%= post.titulo %></h1>
 <% end %>
+
 ```
 
 ---
