@@ -31,6 +31,7 @@ Aqui damos inicios a manipulação de arquivo com ruby, iremos iniciar de uma fo
 #### Lendo arquivos com Ruby.
 
 Primeira alternativa para ler um arquivo.
+
 ```ruby
 # <File.open> é um módulo que trabalha com arquivos. Quando trabalhamos com arquivos, temos 2 entradas, input e output == entrada de dados e saída de dados.
 
