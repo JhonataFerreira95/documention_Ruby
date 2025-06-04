@@ -99,6 +99,7 @@ File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de
 #### Deletando arquivos com Ruby.
 
 ```ruby
+
 # Para excluir arquivos temos que verificar se ele ao menos existe. Para isso usamos uma condicional para verificar se ele existe ou não.
 
 if File.exist?("../Manipulação de arquivos/Text/cursosTI.txt") # Aqui verificamos se ele existe.
