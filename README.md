@@ -60,7 +60,6 @@ Ruby oferece uma abordagem simples e intuitiva para lógica de programação. A 
 ### Estruturas de Controle
 
 ```ruby
-
 # Condicional
 if x > 10
   puts "Maior que 10"
