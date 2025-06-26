@@ -99,6 +99,7 @@ File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de
 #### Deletando arquivos com Ruby.
 
 ```ruby
+
 # Para excluir arquivos temos que verificar se ele ao menos existe. Para isso usamos uma condicional para verificar se ele existe ou não.
 
 if File.exist?("../Manipulação de arquivos/Text/cursosTI.txt") # Aqui verificamos se ele existe.
@@ -324,7 +325,6 @@ require 'csv' # Utilizamos o <require> para importação de módulos.
 #### Aqui vamos abri o arquivo, algo parecido com o <File.open>, esse aqui não precisa existir o módulo funciona, no caso da leitura, se for escrita é obrigatório que ele exista.
 
 ```ruby
-
 # Aqui vamos escreve utilizando o <CSV.open>, passamos o <"w"> que significa que vamos escrever, criamos um bloco com <do> o bloco vai ser como parâmetro nossa variável <|csv|>.
 
 CSV.open("../Manipulação de arquivos/Csv/exemplo.csv", "w") do |csv| 
