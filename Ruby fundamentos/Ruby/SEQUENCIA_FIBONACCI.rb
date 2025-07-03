@@ -1,9 +1,19 @@
 puts "Quantos termos você quer mostra? "
 termos = gets.chop.to_i
 
-fib = 0 
+t1 = 0
+t2 = 1
 
-while result <= 10
-    result = fib + termos
-    puts result
+puts "#{t1} -> #{t2}"
+
+cont = 3
+
+while cont <= termos
+    t3 = t1 + t2
+    puts "-> #{t3}"
+    t1 = t2
+    t2 = t3
+    cont += 1
 end
+
+puts "Fim"
