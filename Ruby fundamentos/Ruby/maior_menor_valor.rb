@@ -3,7 +3,7 @@ encerrar = ""
 
 while encerrar != "S"
   puts "Digite um número inteiro(EX:0, 5, 2): "
-  valor = gets.chop.to_i
+  valor = gets.chop.to_f
   soma += valor
   repeat += 1
   puts "-=-=-=-=-" * 5
