@@ -1,4 +1,5 @@
 repeat = maior = menor = soma = 0 
+
 encerrar = ""
 
 while encerrar != "S"
