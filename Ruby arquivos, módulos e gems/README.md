@@ -272,16 +272,16 @@ http.use_ssl = (url.scheme == 'https')
 
 #### Sobre o uso de <https.use_ssl> e <url.scheme>.
 
-#### url.scheme:
-####  O método scheme retorna o protocolo da URL, que pode ser http ou https.
-#### url.scheme == 'https':
-#### Essa é uma comparação que verifica se o protocolo da URL é https.
-#### Se for https, a expressão retorna true.
-#### Se for http, a expressão retorna false.
-#### http.use_ssl = (url.scheme == 'https'):
-#### Aqui, o valor da comparação (true ou false) é atribuído à propriedade use_ssl do objeto http.
-#### Se a URL for https, use_ssl será true, e o cliente HTTP usará SSL/TLS para criptografar a conexão.
-#### Se a URL for http, use_ssl será false, e a conexão será feita sem criptografia.
+- url.scheme:
+  - O método scheme retorna o protocolo da URL, que pode ser http ou https.
+  - url.scheme == 'https':
+  - Essa é uma comparação que verifica se o protocolo da URL é https.
+  - Se for https, a expressão retorna true.
+  - Se for http, a expressão retorna false.
+  - http.use_ssl = (url.scheme == 'https'):
+  - Aqui, o valor da comparação (true ou false) é atribuído à propriedade use_ssl do objeto http.
+  - Se a URL for https, use_ssl será true, e o cliente HTTP usará SSL/TLS para criptografar a conexão.
+  - Se a URL for http, use_ssl será false, e a conexão será feita sem criptografia
 
 ### Enviando uma requisição para o HTTP.
 
@@ -295,7 +295,7 @@ request = Net::HTTP::Get.new(url) # Aqui estamos fazendo uma requisição para n
 
 ### Utilizamos o <response> para fazer a requisição.
 
-##### Adicionamos uma condicional para verificar se a resposta vai ser em array, depois passamos os parâmentros para verificar se a reposta foi um sucesso. Status code, 100~500. 100=Código de informação. 200=Código de sucesso. 300=Código de redirecionamento. 400=Código de erro no lado do cliente. 500=Código de erro no lado do servidor.
+  - Adicionamos uma condicional para verificar se a resposta vai ser em array, depois passamos os parâmentros para verificar se a reposta foi um sucesso. Status code, 100~500. 100=Código de informação. 200=Código de sucesso. 300=Código de redirecionamento. 400=Código de erro no lado do cliente. 500=Código de erro no lado do servidor.
 
 ```ruby
 
@@ -312,7 +312,7 @@ end
 
 ### Utilizando módulo `CSV`.
 
-### Importando o módulo.
+  - Importando o módulo.
 
 ```ruby
 
