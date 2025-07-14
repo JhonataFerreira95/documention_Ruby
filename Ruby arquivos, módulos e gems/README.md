@@ -11,11 +11,11 @@
 
 ## Introdução.
 
-No Ruby, arquivos são manipulados para leitura, escrita e atualização de dados usando classes como `File` e `IO`.
+- No Ruby, arquivos são manipulados para leitura, escrita e atualização de dados usando classes como `File` e `IO`.
 
-Os módulos ajudam na organização e reutilização de código, funcionando como bibliotecas. Eles podem conter métodos e constantes, permitindo a implementação de `mixins` com `include` e `extend`.
+- Os módulos ajudam na organização e reutilização de código, funcionando como bibliotecas. Eles podem conter métodos e constantes, permitindo a implementação de `mixins` com `include` e `extend`.
 
-Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. Instaladas via `gem install` nome_da_gem, podem ser usadas com require.
+- Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. Instaladas via `gem install` nome_da_gem, podem ser usadas com require.
 
 - **Arquivos, módulos, gems:**
   - Manipulação de arquivos.
@@ -28,9 +28,9 @@ Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. In
 
 - Aqui damos inicios a manipulação de arquivo com ruby, iremos iniciar de uma formas simples lendo arquivos com `File.open`.
 
-#### Lendo arquivos com Ruby.
+  - Lendo arquivos com Ruby.
 
-Primeira alternativa para ler um arquivo.
+  - Primeira alternativa para ler um arquivo.
 
 ```ruby
 
@@ -50,7 +50,7 @@ movies.each { |line| puts line.strip }
 
 ```
 
-Segunda alternativa para ler um arquivo.
+- Segunda alternativa para ler um arquivo.
 
 ```ruby
 
@@ -68,7 +68,7 @@ File.open(file_path, "r") do |file|
 # O <.strip> para remover espaços extras no início e no final da linha, <unless> verifica se a linha não está vazia <line.strip.empty?>. Se a linha NÃO estiver vazia, ela é imprimida no terminal.
 
 ```
-#### Escrevendo arquivos com Ruby.
+- Escrevendo arquivos com Ruby.
 
 ```ruby
 
@@ -86,7 +86,7 @@ end
 
 ```
 
-#### Renomeando arquivo com Ruby.
+- Renomeando arquivo com Ruby.
 
 ```ruby
 
@@ -96,7 +96,7 @@ File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de
 
 ```
 
-#### Deletando arquivos com Ruby.
+- Deletando arquivos com Ruby.
 
 ```ruby
 
@@ -109,9 +109,9 @@ end
 
 ```
 
-#### Argumentos com Ruby.
+- Argumentos com Ruby.
 
-##### Passando argumentos.
+  - Passando argumentos.
 
 ```ruby
 
@@ -125,7 +125,7 @@ ARGV.each { |arg| puts arg.class }
 
 ```
 
-##### Potência de um número com ARGV.
+- Potência de um número com ARGV.
 
 ```ruby
 
@@ -172,7 +172,7 @@ puts Math.sqrt(4) # Passamos entre () o número desejado para a raiz quadrada.
 
 ### Metódo para ver Pi.
 
-#### Quando passamos <::>, siginifica que estamos querendo utilizar um módulos com os primeiros <:> e no segundo a referência a classe que está dentro do módulo que vamos usar, que no caso seria <PI>.
+- Quando passamos <::>, siginifica que estamos querendo utilizar um módulos com os primeiros <:> e no segundo a referência a classe que está dentro do módulo que vamos usar, que no caso seria <PI>.
 
 ```ruby 
 
@@ -229,7 +229,7 @@ puts "Perímetro do círculo com raio #{raio} é #{perimetro.round(2)}" # Exibi�
 ```
 ### Utilizando módulo `http` e `uri`.
 
-#### Criando instância HTTP e fazendo a requisição.
+- Criando instância HTTP e fazendo a requisição.
 
 ```ruby
 
