@@ -322,7 +322,7 @@ require 'csv' # Utilizamos o <require> para importação de módulos.
 
 ### Ecrevendo dados em CSV.
 
-#### Aqui vamos abri o arquivo, algo parecido com o <File.open>, esse aqui não precisa existir o módulo funciona, no caso da leitura, se for escrita é obrigatório que ele exista.
+- Aqui vamos abri o arquivo, algo parecido com o <File.open>, esse aqui não precisa existir o módulo funciona, no caso da leitura, se for escrita é obrigatório que ele exista.
 
 ```ruby
 # Aqui vamos escreve utilizando o <CSV.open>, passamos o <"w"> que significa que vamos escrever, criamos um bloco com <do> o bloco vai ser como parâmetro nossa variável <|csv|>.
@@ -338,7 +338,7 @@ end
 
 ### Lendo ddos em CSV.
 
-#### Inicializamos o método para ler linha a linha com  metódo <.foreach>, passasamos o caminho.
+- Inicializamos o método para ler linha a linha com  metódo <.foreach>, passasamos o caminho.
 
 ```ruby
 
@@ -355,7 +355,7 @@ end
 
 ### Para instalação da gem no terminal.
 
-#### Utilizei o faker como exemplo de gems, mais podemos por o nome de outra gem caso queira algo diferente.
+- Utilizei o faker como exemplo de gems, mais podemos por o nome de outra gem caso queira algo diferente.
 
 ```ruby
 
