@@ -26,7 +26,7 @@ Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. In
 
 ## Manipulação de arquivos no Ruby.
 
-Aqui damos inicios a manipulação de arquivo com ruby, iremos iniciar de uma formas simples lendo arquivos com `File.open`.
+- Aqui damos inicios a manipulação de arquivo com ruby, iremos iniciar de uma formas simples lendo arquivos com `File.open`.
 
 #### Lendo arquivos com Ruby.
 
