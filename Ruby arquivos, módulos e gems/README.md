@@ -150,9 +150,9 @@ end
 ## Módulos úteis com ruby.
 Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`. 
 
-### Utilizando o módulo `Math`.
+- Utilizando o módulo `Math`.
 
-#### Para ver o tipo, no caso do <Math> ele é tipo módulo.
+  - Para ver o tipo, no caso do <Math> ele é tipo módulo.
 
 ```ruby
 
