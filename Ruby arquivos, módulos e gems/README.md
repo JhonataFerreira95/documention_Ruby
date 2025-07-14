@@ -365,7 +365,7 @@ gem install `faker`
 
 ### Utilização da gems via `gemfile`.
 
-#### Para utilizamos às gems, estamos importando.
+- Para utilizamos às gems, estamos importando.
 
 ```ruby
 
@@ -373,7 +373,7 @@ source "https://rubygems.org"
 
 ```
 
-#### Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
+- Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
 
 ```ruby
 
@@ -383,7 +383,7 @@ gem "faker", "~> 3.2.0"
 
 ### Após a configuração do arquivo `gemfile`.
 
-#### Para funcionar utlizer esse comando no terminal `bundle install` para instalação da gem. Atente-se ao seu diretório, para o `bundle install` funcionar, tem que está no mesmo diretório da sua `gemfile`.
+- Para funcionar utlizer esse comando no terminal `bundle install` para instalação da gem. Atente-se ao seu diretório, para o `bundle install` funcionar, tem que está no mesmo diretório da sua `gemfile`.
 
 ```ruby
 
