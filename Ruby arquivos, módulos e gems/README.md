@@ -50,7 +50,7 @@ movies.each { |line| puts line.strip }
 
 ```
 
-- Segunda alternativa para ler um arquivo.
+### Segunda alternativa para ler um arquivo.
 
 ```ruby
 
@@ -68,7 +68,7 @@ File.open(file_path, "r") do |file|
 # O <.strip> para remover espaços extras no início e no final da linha, <unless> verifica se a linha não está vazia <line.strip.empty?>. Se a linha NÃO estiver vazia, ela é imprimida no terminal.
 
 ```
-- Escrevendo arquivos com Ruby.
+### Escrevendo arquivos com Ruby.
 
 ```ruby
 
@@ -86,7 +86,7 @@ end
 
 ```
 
-- Renomeando arquivo com Ruby.
+### Renomeando arquivo com Ruby.
 
 ```ruby
 
@@ -96,7 +96,7 @@ File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de
 
 ```
 
-- Deletando arquivos com Ruby.
+### Deletando arquivos com Ruby.
 
 ```ruby
 
@@ -109,9 +109,9 @@ end
 
 ```
 
-- Argumentos com Ruby.
+### Argumentos com Ruby.
 
-  - Passando argumentos.
+- Passando argumentos.
 
 ```ruby
 
@@ -125,7 +125,7 @@ ARGV.each { |arg| puts arg.class }
 
 ```
 
-- Potência de um número com ARGV.
+### Potência de um número com ARGV.
 
 ```ruby
 
@@ -152,7 +152,7 @@ Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`.
 
 - Utilizando o módulo `Math`.
 
-  - Para ver o tipo, no caso do <Math> ele é tipo módulo.
+### Para ver o tipo, no caso do <Math> ele é tipo módulo.
 
 ```ruby
 
@@ -240,7 +240,7 @@ require 'net/http' # Para fazer a requisição do módulo <HTTP>.
 
 ```
 
-#### Para enviar uma requisição para internet. Para fazer a requisição, precisamos de uma url. Essa url é padronizada pela <URI>.
+- Para enviar uma requisição para internet. Para fazer a requisição, precisamos de uma url. Essa url é padronizada pela <URI>.
 
 ```ruby
 
@@ -255,9 +255,9 @@ puts url.class
 
 ```
 
-#### Enviando requisição HTTP.
+- Enviando requisição HTTP.
 
-##### Esqueci de mencionar que podemos ter uma classe dentro de um módulo perfeitamente. Sobre <url.host> retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar. Sobre <url.port> retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
+  - Esqueci de mencionar que podemos ter uma classe dentro de um módulo perfeitamente. Sobre <url.host> retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar. Sobre <url.port> retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
 
 ```ruby
 
