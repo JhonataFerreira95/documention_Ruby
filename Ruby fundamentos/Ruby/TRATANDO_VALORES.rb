@@ -4,6 +4,9 @@ puts "Digite um número(999 para parar o laço): "
 
 while valor != 999
     valor = gets.chop.to_i
+    if valor == 999
+        break  
+    end
     somaTotal += valor
     cont += 1
     puts "Digite um número(999 para parar o laço): "
