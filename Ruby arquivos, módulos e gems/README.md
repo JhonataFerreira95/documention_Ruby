@@ -11,11 +11,11 @@
 
 ## Introdução.
 
-No Ruby, arquivos são manipulados para leitura, escrita e atualização de dados usando classes como `File` e `IO`.
+- No Ruby, arquivos são manipulados para leitura, escrita e atualização de dados usando classes como `File` e `IO`.
 
-Os módulos ajudam na organização e reutilização de código, funcionando como bibliotecas. Eles podem conter métodos e constantes, permitindo a implementação de `mixins` com `include` e `extend`.
+- Os módulos ajudam na organização e reutilização de código, funcionando como bibliotecas. Eles podem conter métodos e constantes, permitindo a implementação de `mixins` com `include` e `extend`.
 
-Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. Instaladas via `gem install` nome_da_gem, podem ser usadas com require.
+- Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. Instaladas via `gem install` nome_da_gem, podem ser usadas com require.
 
 - **Arquivos, módulos, gems:**
   - Manipulação de arquivos.
@@ -26,11 +26,11 @@ Já as gems são bibliotecas externas que ampliam as funcionalidades do Ruby. In
 
 ## Manipulação de arquivos no Ruby.
 
-Aqui damos inicios a manipulação de arquivo com ruby, iremos iniciar de uma formas simples lendo arquivos com `File.open`.
+- Aqui damos inicios a manipulação de arquivo com ruby, iremos iniciar de uma formas simples lendo arquivos com `File.open`.
 
-#### Lendo arquivos com Ruby.
+  - Lendo arquivos com Ruby.
 
-Primeira alternativa para ler um arquivo.
+  - Primeira alternativa para ler um arquivo.
 
 ```ruby
 
@@ -50,7 +50,7 @@ movies.each { |line| puts line.strip }
 
 ```
 
-Segunda alternativa para ler um arquivo.
+### Segunda alternativa para ler um arquivo.
 
 ```ruby
 
@@ -68,7 +68,7 @@ File.open(file_path, "r") do |file|
 # O <.strip> para remover espaços extras no início e no final da linha, <unless> verifica se a linha não está vazia <line.strip.empty?>. Se a linha NÃO estiver vazia, ela é imprimida no terminal.
 
 ```
-#### Escrevendo arquivos com Ruby.
+### Escrevendo arquivos com Ruby.
 
 ```ruby
 
@@ -86,7 +86,7 @@ end
 
 ```
 
-#### Renomeando arquivo com Ruby.
+### Renomeando arquivo com Ruby.
 
 ```ruby
 
@@ -96,7 +96,7 @@ File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de
 
 ```
 
-#### Deletando arquivos com Ruby.
+### Deletando arquivos com Ruby.
 
 ```ruby
 
@@ -109,9 +109,9 @@ end
 
 ```
 
-#### Argumentos com Ruby.
+### Argumentos com Ruby.
 
-##### Passando argumentos.
+- Passando argumentos.
 
 ```ruby
 
@@ -125,7 +125,7 @@ ARGV.each { |arg| puts arg.class }
 
 ```
 
-##### Potência de um número com ARGV.
+### Potência de um número com ARGV.
 
 ```ruby
 
@@ -150,9 +150,9 @@ end
 ## Módulos úteis com ruby.
 Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`. 
 
-### Utilizando o módulo `Math`.
+- Utilizando o módulo `Math`.
 
-#### Para ver o tipo, no caso do <Math> ele é tipo módulo.
+### Para ver o tipo, no caso do <Math> ele é tipo módulo.
 
 ```ruby
 
@@ -172,7 +172,7 @@ puts Math.sqrt(4) # Passamos entre () o número desejado para a raiz quadrada.
 
 ### Metódo para ver Pi.
 
-#### Quando passamos <::>, siginifica que estamos querendo utilizar um módulos com os primeiros <:> e no segundo a referência a classe que está dentro do módulo que vamos usar, que no caso seria <PI>.
+- Quando passamos <::>, siginifica que estamos querendo utilizar um módulos com os primeiros <:> e no segundo a referência a classe que está dentro do módulo que vamos usar, que no caso seria <PI>.
 
 ```ruby 
 
@@ -229,7 +229,7 @@ puts "Perímetro do círculo com raio #{raio} é #{perimetro.round(2)}" # Exibi�
 ```
 ### Utilizando módulo `http` e `uri`.
 
-#### Criando instância HTTP e fazendo a requisição.
+- Criando instância HTTP e fazendo a requisição.
 
 ```ruby
 
@@ -257,7 +257,7 @@ puts url.class
 
 #### Enviando requisição HTTP.
 
-##### Esqueci de mencionar que podemos ter uma classe dentro de um módulo perfeitamente. Sobre <url.host> retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar. Sobre <url.port> retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
+  - Esqueci de mencionar que podemos ter uma classe dentro de um módulo perfeitamente. Sobre <url.host> retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar. Sobre <url.port> retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
 
 ```ruby
 
@@ -270,18 +270,18 @@ http.use_ssl = (url.scheme == 'https')
 
 ```
 
-#### Sobre o uso de <https.use_ssl> e <url.scheme>.
+- Sobre o uso de <https.use_ssl> e <url.scheme>.
 
-#### url.scheme:
-####  O método scheme retorna o protocolo da URL, que pode ser http ou https.
-#### url.scheme == 'https':
-#### Essa é uma comparação que verifica se o protocolo da URL é https.
-#### Se for https, a expressão retorna true.
-#### Se for http, a expressão retorna false.
-#### http.use_ssl = (url.scheme == 'https'):
-#### Aqui, o valor da comparação (true ou false) é atribuído à propriedade use_ssl do objeto http.
-#### Se a URL for https, use_ssl será true, e o cliente HTTP usará SSL/TLS para criptografar a conexão.
-#### Se a URL for http, use_ssl será false, e a conexão será feita sem criptografia.
+  - url.scheme:
+    - O método scheme retorna o protocolo da URL, que pode ser http ou https.
+    - url.scheme == 'https':
+    - Essa é uma comparação que verifica se o protocolo da URL é https.
+    - Se for https, a expressão retorna true.
+    - Se for http, a expressão retorna false.
+    - http.use_ssl = (url.scheme == 'https'):
+    - Aqui, o valor da comparação (true ou false) é atribuído à propriedade use_ssl do objeto http.
+    - Se a URL for https, use_ssl será true, e o cliente HTTP usará SSL/TLS para criptografar a conexão.
+    - Se a URL for http, use_ssl será false, e a conexão será feita sem criptografia
 
 ### Enviando uma requisição para o HTTP.
 
@@ -295,7 +295,7 @@ request = Net::HTTP::Get.new(url) # Aqui estamos fazendo uma requisição para n
 
 ### Utilizamos o <response> para fazer a requisição.
 
-##### Adicionamos uma condicional para verificar se a resposta vai ser em array, depois passamos os parâmentros para verificar se a reposta foi um sucesso. Status code, 100~500. 100=Código de informação. 200=Código de sucesso. 300=Código de redirecionamento. 400=Código de erro no lado do cliente. 500=Código de erro no lado do servidor.
+  - Adicionamos uma condicional para verificar se a resposta vai ser em array, depois passamos os parâmentros para verificar se a reposta foi um sucesso. Status code, 100~500. 100=Código de informação. 200=Código de sucesso. 300=Código de redirecionamento. 400=Código de erro no lado do cliente. 500=Código de erro no lado do servidor.
 
 ```ruby
 
@@ -312,7 +312,7 @@ end
 
 ### Utilizando módulo `CSV`.
 
-### Importando o módulo.
+  - Importando o módulo.
 
 ```ruby
 
@@ -322,7 +322,7 @@ require 'csv' # Utilizamos o <require> para importação de módulos.
 
 ### Ecrevendo dados em CSV.
 
-#### Aqui vamos abri o arquivo, algo parecido com o <File.open>, esse aqui não precisa existir o módulo funciona, no caso da leitura, se for escrita é obrigatório que ele exista.
+- Aqui vamos abri o arquivo, algo parecido com o <File.open>, esse aqui não precisa existir o módulo funciona, no caso da leitura, se for escrita é obrigatório que ele exista.
 
 ```ruby
 # Aqui vamos escreve utilizando o <CSV.open>, passamos o <"w"> que significa que vamos escrever, criamos um bloco com <do> o bloco vai ser como parâmetro nossa variável <|csv|>.
@@ -338,7 +338,7 @@ end
 
 ### Lendo ddos em CSV.
 
-#### Inicializamos o método para ler linha a linha com  metódo <.foreach>, passasamos o caminho.
+- Inicializamos o método para ler linha a linha com  metódo <.foreach>, passasamos o caminho.
 
 ```ruby
 
@@ -355,7 +355,7 @@ end
 
 ### Para instalação da gem no terminal.
 
-#### Utilizei o faker como exemplo de gems, mais podemos por o nome de outra gem caso queira algo diferente.
+- Utilizei o faker como exemplo de gems, mais podemos por o nome de outra gem caso queira algo diferente.
 
 ```ruby
 
@@ -365,7 +365,7 @@ gem install `faker`
 
 ### Utilização da gems via `gemfile`.
 
-#### Para utilizamos às gems, estamos importando.
+- Para utilizamos às gems, estamos importando.
 
 ```ruby
 
@@ -373,7 +373,7 @@ source "https://rubygems.org"
 
 ```
 
-#### Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
+- Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
 
 ```ruby
 
@@ -383,7 +383,7 @@ gem "faker", "~> 3.2.0"
 
 ### Após a configuração do arquivo `gemfile`.
 
-#### Para funcionar utlizer esse comando no terminal `bundle install` para instalação da gem. Atente-se ao seu diretório, para o `bundle install` funcionar, tem que está no mesmo diretório da sua `gemfile`.
+- Para funcionar utlizer esse comando no terminal `bundle install` para instalação da gem. Atente-se ao seu diretório, para o `bundle install` funcionar, tem que está no mesmo diretório da sua `gemfile`.
 
 ```ruby
 
