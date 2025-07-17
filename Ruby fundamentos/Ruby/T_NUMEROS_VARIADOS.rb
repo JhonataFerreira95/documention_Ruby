@@ -6,7 +6,7 @@ while true
   puts "Bem vindo a aplicação de tabuada com números variados!"
   puts "=-=-=-=-=" * 3
   puts "Digite a tabuada que deseja visualizar(Para sair digite -1): "
-  numero_digitado = gets.chop.to_i
+  numero_digitado = gets.chomp.to_i
   puts "=-=-=-=-=" * 3
   if numero_digitado == -1
     break
