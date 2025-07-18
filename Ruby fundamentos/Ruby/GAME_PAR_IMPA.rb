@@ -19,16 +19,33 @@ while true
   if opcao.include?("P")
 
     puts "=-=-="*8
-    puts "Você escolheu ímpar"
+    puts "Você escolheu par"
     puts "=-=-="*8
 
-    puts "Digite um número para jogar com o computador: "
+    puts "=-=-="*8
+    puts "Digite um número para jogar: "
     jogador =  gets.chomp.to_i
+    puts "=-=-="*8
 
     if jogador % 2 == 0 and pc % 2 == 1
 
-      sleep 0.3
-      puts "O computador jogou ímpar #{pc}\n Você jogou par #{jogador}"
+      puts "=-=-="*8
+      puts "Você jogou #{jogador} par\n PC jogou #{pc} ímpar\n Você venceu"
+      puts "=-=-="*8
+
+      if jogador % 2 == 0
+        break
+      end
+
+    elsif jogador % 2 == 1 or pc % 2 == 1
+
+      puts "=-=-="*8
+      puts "Você jogou #{jogador} ímpar\n PC jogou #{pc} ímpar\n Você perdeu"
+      puts "=-=-="*8
+
+      if pc % 2 == 1 
+        break
+      end
 
     end
 
@@ -38,19 +55,35 @@ while true
     puts "Você escolheu par"
     puts "=-=-="*8
 
-    puts "Digite um número para jogar com o computador: "
+    puts "=-=-="*8
+    puts "Digite um número para jogar: "
     jogador =  gets.chomp.to_i
+    puts "=-=-="*8
 
-    if jogador % 2 == 1 and pc % 2 == 0
-      
-      sleep 0.3
-      puts "O computador jogou par #{pc}\n Você jogou ímpar #{jogador}"
+   if jogador % 2 == 1 and pc % 2 == 0
+
+      puts "=-=-="*8
+      puts "Você jogou #{jogador} ímpar\n PC jogou #{pc} par\n Você venceu"
+      puts "=-=-="*8
+
+      if jogador % 2 == 0
+        break
+      end
+
+    elsif jogador % 2 == 1 or pc % 2 == 0
+
+      puts "=-=-="*8
+      puts "Você jogou #{jogador} ímpar\n PC jogou #{pc} ímpar\n Você perdeu"
+      puts "=-=-="*8
+
+      if pc % 2 == 0 
+        break
+      end
 
     end
 
   end
 
   cont += 1
-  puts cont
 
 end
