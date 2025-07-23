@@ -1,4 +1,4 @@
-idade = 0
+idade = cont = 0
 sexo = ""
 cadastro = ""
 
@@ -18,9 +18,10 @@ while true
   cadastro = gets.chomp.upcase
   puts "-=-=-"*8
 
+  cont += 1
+
   if cadastro.include?("N")
-      puts ""
-      break
+      
   end
 
 end

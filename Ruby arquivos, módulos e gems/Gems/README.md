@@ -18,7 +18,7 @@ gem install `faker`
 
 ### Utilização da gems via `gemfile`.
 
-#### Para utilizamos às gems, estamos importando.
+#### Para utilizamos às gems, estamos importando. Isso em seu arquivo <gemfile>.
 
 ```bash
 
