@@ -1,27 +1,25 @@
-idade = cont = 0
-sexo = ""
-cadastro = ""
 
 while true
 
-  puts "-=-=-"*8
-  puts "[CADASTRE UMA PESSOA]"
-  puts "-=-=-"*8
-
-  puts  "Idade: "
+  puts "digite a sua idade: "
   idade = gets.chomp.to_i
-  puts "Sexo [M/F]: "
-  sexo = gets.chomp.upcase
 
-  puts "-=-=-"*8
-  puts "Quer continua?[S/N] "
-  cadastro = gets.chomp.upcase
-  puts "-=-=-"*8
+  sexo = " "
 
-  cont += 1
-
-  if cadastro.include?("N")
-      
+  while sexo != "M" && sexo != "F"
+    puts "Digite o sexo [M/F]: "
+    sexo = gets.chomp.upcase
   end
+
+  resp = " "
+
+  while resp != "S" && resp != "N"
+    puts "Quer continuar [S/N]? "
+    resp = gets.chomp.upcase
+  end
+
+  if resp.include?("N")
+      break
+    end
 
 end
