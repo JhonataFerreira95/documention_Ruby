@@ -2,7 +2,7 @@ preco = total = custam1000 = barato = flag = 0
 item_mais_barato = " "
 
 puts "-"*20
-puts "SUPER BARATÃO"
+puts "SUPER BARATÃO".center(20)
 puts "-"*20
 
 while true
