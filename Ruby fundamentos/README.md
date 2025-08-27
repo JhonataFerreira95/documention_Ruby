@@ -1,4 +1,4 @@
-# Documentação do Ruby
+# Documentação do Ruby Fundamentos
 
 ## Índice
 
