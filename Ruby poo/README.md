@@ -16,7 +16,7 @@
 
         - Uma classe possui atríbutos(características) e métodos(comportamentos).
 
-    - Encapesulamento
+    - Encapsulamento
 
         - Esconder as funcionalidades e funcionamento do nosso código.
 
