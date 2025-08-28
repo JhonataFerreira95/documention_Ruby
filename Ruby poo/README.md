@@ -6,10 +6,18 @@
 
 - O que é o POO? Ou programação orientada a objetos.
 
-    - Nova maneira de pensar no desenvolvimento, utilizando conceitos do mundo real.
+    - Conceitos
 
-    - Objetos do mundo real transforma-se em objetos no software.
+        - Nova maneira de pensar no desenvolvimento, utilizando conceitos do mundo real.
 
-    - Torna mais fácil a manutenção ao sistema.
+        - Objetos do mundo real transforma-se em objetos no software.
 
-    - 
+        - Torna mais fácil a manutenção ao sistema.
+
+        - Uma classe possui atríbutos(características) e métodos(comportamentos).
+
+    - Encapesulamento
+
+        - Esconder as funcionalidades e funcionamento do nosso código
+
+        - Proteger o acesso aos atríbutos, possibilitando o acesso a leitura ou escrita destes atributos, somente via métodos.
