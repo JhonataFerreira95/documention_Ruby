@@ -39,3 +39,31 @@
                  - Permite acesso aos membros somente dentro da classe.
 
                  - Pode ser definida com a palavra reservada `private`.
+
+    - Herança
+
+        - Possibilita que uma classe(filha) possa herdar atríbutos e métodos de outra classe(pai).
+
+        - Classe Genérica
+
+            - Geralmente as classe Genérica são as `SUPER-CLASSE`(classe pai), por que classe Genérica? Ela pode conter informações que pode ser últi para outras classe deverivadas dela ou `SUB-CLASSES`(classe filha).
+        
+        - Classe Especialista
+
+            - As classe Especialistas são às `SUB-CLASSE`(classe filha), que herdam as informações da `SUPER-CLASSE`(classe pai), além de herda todos os atríbutos da `SUPER-CLASSE`, elas podem ter seus próprios atríbutos e métodos específico para sua finalidade.
+
+        - Relacionamento de Herança
+
+            - "é um" usando herança é quando temos uma classe geral Animal e classes específicas como Cachorro e Gato que herdam dela, pois um cachorro é um animal e um gato é um animal. Isso significa que as `SUB-CLASSE` (Cachorro, Gato) herdam os atributos e métodos da `SUPER-CLASSE` (Animal), adicionando ou modificando seus próprios comportamentos específicos. 
+
+        - Herdando uma classe em Ruby
+
+            - Para herda uma classe é só utilizar o operador `<`(menor que), exemplo abaixo:
+
+                ``` ruby
+
+                Gato < Animal
+
+                ```
+    -
+        
