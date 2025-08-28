@@ -49,6 +49,7 @@ Lógica de programação é o alicerce primordial para uma carreira bem-sucedida
 ---
 
 ## Lógica de Programação em Ruby
+
 Este repositório contém exemplos e explicações sobre os principais conceitos de lógica de programação utilizando a linguagem Ruby.
 
 ### Dados Básicos

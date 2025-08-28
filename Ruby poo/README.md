@@ -2,6 +2,9 @@
 
 ## Índice   
 
+1.[Introdução](#introdução)
+2.[Classe e Objetos](#classes-e-objetos)
+
 ## Introdução
 
 - O que é o POO? Ou programação orientada a objetos.
@@ -67,3 +70,17 @@
                 ```
     -
         
+## Classes e Objetos
+
+- Vamos começar falando sobre o que é uma classe. É uma estrutura que define as propriedades (atributos) e comportamentos (métodos) que os objetos criados a partir dela terão. Os atributos são as características do objeto, enquanto os métodos são as ações que o objeto pode realizar. Em termos simples, uma classe é um template para criar objetos que compartilham um conjunto comum de campos e métodos.
+
+- Como criar uma classe em Ruby? Utilizando a palavra reservada `classe<NomeDesejado>` lembrando que o nome da sua `classe` deve começar com a lestra maiúscula. Siga o exemplo abaixo:
+
+    ```ruby
+
+    class Veiculo # Criamos uma classe chamada veiculos
+
+    end
+
+    ```
+- Como intaciar sua classe
