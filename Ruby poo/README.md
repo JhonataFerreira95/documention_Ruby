@@ -4,6 +4,7 @@
 
 1.[Introdução](#introdução)
 2.[Classe e Objetos](#classes-e-objetos)
+3.[Initialize(Ou Constructor)](#initialize)
 
 ## Introdução
 
@@ -94,3 +95,5 @@
     byd = Veiculo.new # caso queira ver o tipo de variável no console é só digitar <puts `nome_da_variavel_desejada.class`>
 
     ```
+
+## Initialize
