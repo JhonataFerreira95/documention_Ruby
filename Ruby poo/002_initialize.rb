@@ -9,6 +9,11 @@ class Game
       @versions = [2018, 2019, 2020]
       @price = 100
   end
+
+  def information
+      puts "O jogo é do gênero #{@genre} e as suas verões #{@versions}"
+  end
+
 end
 
 game = Game.new # estanciando a nossa classe
