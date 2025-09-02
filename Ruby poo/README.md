@@ -152,7 +152,7 @@
                 end
 
                 def apresentar # Vamos supor que você deseja exibir isso no console
-                    "Vejam nosso novo modelo de carro #{modelo} e sua marca #{marca}"
+                    "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
                 end
 
             end
