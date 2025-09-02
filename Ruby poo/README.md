@@ -124,5 +124,13 @@
             carro = Carro.new("Ford", "A23")
 
             puts carro
+            p carro
+
+        ```
+    - Caso queira verificar a seus `atríbutos` das suas `váriavel de instância`, no lugar do `puts` utilize o `p`, já que se voce utilizar o `puts` não ira acontecer nada. Na prática séria assim:
+
+        ```ruby
+
+            p carro
 
         ```
