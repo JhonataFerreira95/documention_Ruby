@@ -2,9 +2,10 @@
 
 ## Índice   
 
-1.[Introdução](#introdução)
-2.[Classe e Objetos](#classes-e-objetos)
-3.[Initialize(Ou Constructor)](#initialize)
+1. [Introdução](#introdução)
+2. [Classe e Objetos](#classes-e-objetos)
+3. [Initialize(Ou Constructor)](#initialize)
+4. [Métodos em Instância](#métodos-em-instânciaou-objetos)
 
 ## Introdução
 
@@ -134,3 +135,33 @@
             p carro
 
         ```
+
+## Métodos em Instância(ou objetos)
+
+- Bem, vamos começa a falar sobre os metódos de `instância`, os métodos de instância são aqueles que pertencem a um objeto específico. Para utilizá-los, primeiro precisamos instanciar a classe, ou seja, criar um objeto a partir dela. Assim, podemos acessar os métodos definidos dentro da classe para aquele objeto
+
+    - Exemplo na prática:
+
+        ```ruby
+
+            class Carro
+
+                def initialize(marca, modelo)
+                    @marca = marca
+                    @modelo = modelo
+                end
+
+                def apresentar # Vamos supor que você deseja exibir isso no console
+                    "Vejam nosso novo modelo de carro #{modelo} e sua marca #{marca}"
+                end
+
+            end
+
+            carro = Carro.new("Ford", "A23") # Nossa classe estanciada
+
+            puts = carro.apresentar # Exibindo  metódo estanciado
+
+        ```
+    - Agora eu posso utilizar o `metódo` já que ele é uma instância da minha `classe` que já foi instânciada.
+
+- 
