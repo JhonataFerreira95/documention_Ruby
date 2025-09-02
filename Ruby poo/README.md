@@ -157,11 +157,10 @@
 
             end
 
-            carro = Carro.new("Ford", "A23") # Nossa classe estanciada
+            carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
-            puts = carro.apresentar # Exibindo  metódo estanciado
+            puts = carro.apresentar # Exibindo  metódo instânciada
 
         ```
-    - Agora eu posso utilizar o `metódo` já que ele é uma instância da minha `classe` que já foi instânciada.
+    - Agora eu posso utilizar o `metódo` já que ele é uma instância da minha `classe` que já foi instânciada. Vale ressaltar que podemos utilizar isso com todos os metódos que estão presentes em nossa `classe`, levando em consideração que ela já esta instânciada.
 
-- 
