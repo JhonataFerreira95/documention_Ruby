@@ -97,3 +97,32 @@
     ```
 
 ## Initialize
+
+- O metódo `initialize` funciona da mesma forma que um `construtor` em outras linguagens de programação.
+
+- Geralmente o metódo `initialize` é utilizado para definir a configuração inicial da sua `classe`, não só `classe` mais também `atríbuto` ou `objeto`.
+
+- Irei aborda uma curiosidade na linguagem `ruby`, normalmente definimos atributos para nossas classes. Isso também acontece em outras linguagens, mas em Ruby temos algo chamado variável de instância. Após a criação da classe e do método initialize, podemos definir variáveis de instância com `@`. A função da `variável de instância` é guardar informações específicas de cada objeto criado. Assim, toda vez que você instancia um objeto, ele terá suas próprias características armazenadas nessas variáveis.
+
+    - Exemplo prático:
+
+        ```ruby
+
+            class Carro
+
+                def initialize(marca, modelo)
+                    @marca = marca
+                    @modelo = modelo
+                end
+
+                def apresentar
+                    "Vejam nosso novo modelo de carro #{modelo} e sua marca #{marca}"
+                end
+
+            end
+
+            carro = Carro.new("Ford", "A23")
+
+            puts carro
+
+        ```
