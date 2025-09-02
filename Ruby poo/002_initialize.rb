@@ -13,4 +13,4 @@ end
 
 game = Game.new # estanciando a nossa classe
 puts game
-p game
+p game # Isso permite verificar a nossa inst6ancia e seus atríbutos
