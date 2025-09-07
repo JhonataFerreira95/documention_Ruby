@@ -21,7 +21,7 @@ class Game
     puts "preço do jogo: #{@price}"
   end
 
-  def to_s # Metódo de sobrescrita 
+  def to_s # método de sobrescrita 
     "#{@genre}-#{@multiplayer}-#{@versions}-#{@name}"
   end
 
@@ -29,6 +29,6 @@ end
 
 game = Game.new # instânciado a nossa classe
 
-puts game.information # agora pdodemos chama nosso metódo instânciado
+puts game.information # agora pdodemos chama nosso método instânciado
 
 puts game

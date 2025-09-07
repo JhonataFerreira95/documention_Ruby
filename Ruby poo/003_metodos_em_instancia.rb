@@ -18,4 +18,4 @@ end
 
 game = Game.new # instânciado a nossa classe
 
-puts game.information # agora pdodemos chama nosso metódo instânciado
+puts game.information # agora pdodemos chama nosso método instânciado

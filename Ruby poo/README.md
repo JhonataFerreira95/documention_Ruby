@@ -6,6 +6,7 @@
 2. [Classe e Objetos](#classes-e-objetos)
 3. [Initialize(Ou Constructor)](#initialize)
 4. [Métodos em Instância](#métodos-em-instânciaou-objetos)
+5. [Self](#self)
 
 ## Introdução
 
@@ -99,9 +100,9 @@
 
 ## Initialize
 
-- O metódo `initialize` funciona da mesma forma que um `construtor` em outras linguagens de programação.
+- O método `initialize` funciona da mesma forma que um `construtor` em outras linguagens de programação.
 
-- Geralmente o metódo `initialize` é utilizado para definir a configuração inicial da sua `classe`, não só `classe` mais também `atríbuto` ou `objeto`.
+- Geralmente o método `initialize` é utilizado para definir a configuração inicial da sua `classe`, não só `classe` mais também `atríbuto` ou `objeto`.
 
 - Irei aborda uma curiosidade na linguagem `ruby`, normalmente definimos atributos para nossas classes. Isso também acontece em outras linguagens, mas em Ruby temos algo chamado variável de instância. Após a criação da classe e do método initialize, podemos definir variáveis de instância com `@`. A função da `variável de instância` é guardar informações específicas de cada objeto criado. Assim, toda vez que você instancia um objeto, ele terá suas próprias características armazenadas nessas variáveis.
 
@@ -138,7 +139,7 @@
 
 ## Metodos em Instância(ou objetos)
 
-- Bem, vamos começa a falar sobre os metódos de `instância`, os métodos de instância são aqueles que pertencem a um objeto específico. Para utilizá-los, primeiro precisamos instanciar a classe, ou seja, criar um objeto a partir dela. Assim, podemos acessar os métodos definidos dentro da classe para aquele objeto
+- Bem, vamos começa a falar sobre os métodos de `instância`, os métodos de instância são aqueles que pertencem a um objeto específico. Para utilizá-los, primeiro precisamos instanciar a classe, ou seja, criar um objeto a partir dela. Assim, podemos acessar os métodos definidos dentro da classe para aquele objeto
 
     - Exemplo na prática:
 
@@ -159,17 +160,17 @@
 
             carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
-            puts = carro.apresentar # Exibindo  metódo instânciada
+            puts = carro.apresentar # Exibindo  método instânciada
 
         ```
-    - Agora eu posso utilizar o `metódo` já que ele é uma instância da minha `classe` que já foi instânciada. Vale ressaltar que podemos utilizar isso com todos os metódos que estão presentes em nossa `classe`, levando em consideração que ela já esta instânciada.
+    - Agora eu posso utilizar o `método` já que ele é uma instância da minha `classe` que já foi instânciada. Vale ressaltar que podemos utilizar isso com todos os métodos que estão presentes em nossa `classe`, levando em consideração que ela já esta instânciada.
 
-- Agora irei aborda o `metódo` `to_s`, é utilizado para converte qualquer `objeto` em sua representação em `string`. Você deve está se perguntando para que utilizar o metódo `to_s` se ele faz a mesma coisa do metódo `p`, o metódo `p` apenas exibi no console a representação do `objeto`, enquanto o metódo `to_s` retorna a `string` do `objeto` desejado, ou seja, ele retorna a `string` que está dentro do `objeto`, enquanto o `p` retorna o `objeto` inteiro. Cada `objeto` em `ruby` tem acesso ao metódo `to_s`, já que o metódo retorna uma `string` com informação do `objeto` desejado.
+- Agora irei aborda o `método` `to_s`, é utilizado para converte qualquer `objeto` em sua representação em `string`. Você deve está se perguntando para que utilizar o método `to_s` se ele faz a mesma coisa do método `p`, o método `p` apenas exibi no console a representação do `objeto`, enquanto o método `to_s` retorna a `string` do `objeto` desejado, ou seja, ele retorna a `string` que está dentro do `objeto`, enquanto o `p` retorna o `objeto` inteiro. Cada `objeto` em `ruby` tem acesso ao método `to_s`, já que o método retorna uma `string` com informação do `objeto` desejado.
 
 
-    - Antes do metódo `to_s`, note que quando criamos um `objeto` sem definição do `to_s`, essa e sua mensagem de criação:
+    - Antes do método `to_s`, note que quando criamos um `objeto` sem definição do `to_s`, essa e sua mensagem de criação:
 
-        ![Sem o metódo to_s](../Banco%20de%20dados%20SQL/SQL/Metódo_p.png)
+        ![Sem o método to_s](../Banco%20de%20dados%20SQL/SQL/método_p.png)
 
     - Aqui um exemplo na prática:
 
@@ -194,12 +195,16 @@
 
             carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
-            puts = carro.apresentar # Exibindo  metódo instânciada
+            puts = carro.apresentar # Exibindo  método instânciada
 
             puts game
 
         ```
 
-        - Depois da definição do metódo `to_s`, resaltar que para funcinar perfeitamente, utilize a palavra reservada `to_s`. Podemos ver a mensagem que foi definida no metódo `to_s`.
+        - Depois da definição do método `to_s`, resaltar que para funcinar perfeitamente, utilize a palavra reservada `to_s`. Podemos ver a mensagem que foi definida no método `to_s`.
 
-            ![Com metódo to_s](../Banco%20de%20dados%20SQL/SQL/Metódo_to_s.png)
+            ![Com método to_s](../Banco%20de%20dados%20SQL/SQL/método_to_s.png)
+
+## Self
+
+- Irei apresentar o `self`, `self` não é um método e sim uma palavra reservada com a utilidade 
