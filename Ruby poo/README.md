@@ -283,3 +283,5 @@
         - O palavra reservada `self` faz refência de acordo com o local que foi inserida. Ela basicamente aponta para instância atual que o `objeto` foi criado.
 
         - Como visto, utilizei 2 exemplos com o `self`, tanto um para anúnciar que a classe foi instânciada como o outro que foi sobrescrever com o método `to_s`. Como visto, se utilizar o `self` foras dos métodos, ele se referência a classe, dentro dos métodos, se referência aos métodos.
+
+## Getter e Setter  
