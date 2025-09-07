@@ -278,4 +278,6 @@
 
     - Resultado: 
 
-        ![Resultado]()
+        ![Resultado](../Banco%20de%20dados%20SQL/SQL/self.png)
+
+        - O palavra reservada `self` faz refência de acordo com o local que foi inserida. Ela basicamente aponta para instância atual que o `objeto` foi criado.

@@ -3,8 +3,9 @@
 
 class Game
 
+    puts "Novo objeto foi criado#{self}"
+
   def initialize # O initialize funciona como um constructor ou construtor
-      puts "Novo objeto foi criado"
       # Variável de instância
       @name = "pes"
       @genre = "esporte"
@@ -28,6 +29,10 @@ class Game
     "#{@genre}-#{@multiplayer}-#{@versions}-#{@name}"
   end
 
+  def details
+    puts "detalhes do jogo #{self}"
+  end
+
 end
 
 game = Game.new # instânciado a nossa classe
@@ -35,3 +40,6 @@ game = Game.new # instânciado a nossa classe
 puts game.information # agora pdodemos chama nosso método instânciado
 
 puts game
+
+puts game.details # chamando o método que possuí o self na classe
+
