@@ -166,6 +166,11 @@
 
 - Agora irei aborda o `metódo` `to_s`, é utilizado para converte qualquer `objeto` em sua representação em `string`. Você deve está se perguntando para que utilizar o metódo `to_s` se ele faz a mesma coisa do metódo `p`, o metódo `p` apenas exibi no console a representação do `objeto`, enquanto o metódo `to_s` retorna a `string` do `objeto` desejado, ou seja, ele retorna a `string` que está dentro do `objeto`, enquanto o `p` retorna o `objeto` inteiro. Cada `objeto` em `ruby` tem acesso ao metódo `to_s`, já que o metódo retorna uma `string` com informação do `objeto` desejado.
 
+
+    - Antes do metódo `to_s`, note que quando criamos um `objeto` sem definição do `to_s`, essa e sua mensagem de criação:
+
+        ![Sem o metódo to_s](../Banco%20de%20dados%20SQL/SQL/Metódo_p.png)
+
     - Aqui um exemplo na prática:
 
         ```ruby
@@ -181,10 +186,20 @@
                     "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
                 end
 
+                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                    "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                end
+
             end
 
             carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
             puts = carro.apresentar # Exibindo  metódo instânciada
 
+            puts game
+
         ```
+
+        - Depois da definição do metódo `to_s`, resaltar que para funcinar perfeitamente, utilize a palavra reservada `to_s`. Podemos ver a mensagem que foi definida no metódo `to_s`.
+
+            ![Com metódo to_s](../Banco%20de%20dados%20SQL/SQL/Metódo_to_s.png)
