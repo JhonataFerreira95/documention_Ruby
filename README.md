@@ -6,7 +6,7 @@
 
 ### Gems 
 
-#### Faker e Roo foram utlizadas. 
+  - Faker, Roo, Byebug e Securerandom foram utlizadas. 
 
 ## Índice
 
@@ -55,6 +55,7 @@ Ruby é uma linguagem de programação dinâmica, open-source, focada na simplic
 ---
 
 ## Lógica com Ruby
+
 Ruby oferece uma abordagem simples e intuitiva para lógica de programação. A seguir, abordamos os principais conceitos:
 
 ### Estruturas de Controle
