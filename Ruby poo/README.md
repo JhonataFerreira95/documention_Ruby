@@ -128,7 +128,7 @@
             p carro
 
         ```
-    - Caso queira verificar a seus `atríbutos` das suas `váriavel de instância`, no lugar do `puts` utilize o `p`, já que se voce utilizar o `puts` não ira acontecer nada. Na prática séria assim:
+    - Caso queira verificar a seus `atríbutos` das suas `váriavel de instância`, no lugar do `puts` utilize o `p`, já que se voce utilizar o `puts` não ira acontecer nada. É um método de "impressão" que exibe a representação de um objeto e adiciona uma nova linha. Na prática séria assim:
 
         ```ruby
 
@@ -136,7 +136,7 @@
 
         ```
 
-## Métodos em Instância(ou objetos)
+## Metodos em Instância(ou objetos)
 
 - Bem, vamos começa a falar sobre os metódos de `instância`, os métodos de instância são aqueles que pertencem a um objeto específico. Para utilizá-los, primeiro precisamos instanciar a classe, ou seja, criar um objeto a partir dela. Assim, podemos acessar os métodos definidos dentro da classe para aquele objeto
 
@@ -164,3 +164,27 @@
         ```
     - Agora eu posso utilizar o `metódo` já que ele é uma instância da minha `classe` que já foi instânciada. Vale ressaltar que podemos utilizar isso com todos os metódos que estão presentes em nossa `classe`, levando em consideração que ela já esta instânciada.
 
+- Agora irei aborda o `metódo` `to_s`, é utilizado para converte qualquer `objeto` em sua representação em `string`. Você deve está se perguntando para que utilizar o metódo `to_s` se ele faz a mesma coisa do metódo `p`, o metódo `p` apenas exibi no console a representação do `objeto`, enquanto o metódo `to_s` retorna a `string` do `objeto` desejado, ou seja, ele retorna a `string` que está dentro do `objeto`, enquanto o `p` retorna o `objeto` inteiro. Cada `objeto` em `ruby` tem acesso ao metódo `to_s`, já que o metódo retorna uma `string` com informação do `objeto` desejado.
+
+    - Aqui um exemplo na prática:
+
+        ```ruby
+
+             class Carro
+
+                def initialize(marca, modelo)
+                    @marca = marca
+                    @modelo = modelo
+                end
+
+                def apresentar # Vamos supor que você deseja exibir isso no console
+                    "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
+                end
+
+            end
+
+            carro = Carro.new("Ford", "A23") # Nossa classe instânciada
+
+            puts = carro.apresentar # Exibindo  metódo instânciada
+
+        ```
