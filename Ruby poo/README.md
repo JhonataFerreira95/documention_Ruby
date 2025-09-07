@@ -197,8 +197,6 @@
 
             puts = carro.apresentar # Exibindo  método instânciada
 
-            puts game
-
         ```
 
         - Depois da definição do método `to_s`, resaltar que para funcinar perfeitamente, utilize a palavra reservada `to_s`. Podemos ver a mensagem que foi definida no método `to_s`.
@@ -207,4 +205,77 @@
 
 ## Self
 
-- Irei apresentar o `self`, `self` não é um método e sim uma palavra reservada com a utilidade 
+- Irei apresentar o `self`. O `self` não é um método, mas sim uma palavra reservada que representa o próprio objeto instanciado. Ele é utilizado dentro da classe para fazer referência à instância que está sendo criada ou manipulada.
+
+    - Exemplo com self:
+
+        ```ruby
+
+             class Carro
+
+                puts "Novo objeto foi criado #{self}" # Utilizando o self
+
+                def initialize(marca, modelo)
+                    @marca = marca
+                    @modelo = modelo
+                end
+
+                def apresentar # Vamos supor que você deseja exibir isso no console
+                    "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
+                end
+
+                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                    "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                end
+
+            end
+
+            carro = Carro.new("Ford", "A23") # Nossa classe instânciada
+
+            puts = carro.apresentar # Exibindo  método instânciada
+
+
+        ```
+    
+    - No exemplo acima utilizando o `self` para anúnciar que um `objeto` foi criado.
+
+- O `self` também pode ser utilizado em conjunto com o `to_s`, caso você criar uma opção de detalhes manipulando algo dentra da sua classe, vou seguir o exemplo com detalhe, é só criar um novo método utilizando o `self` dentro do mesmo.
+
+    - Exemplo:
+
+        ```ruby
+
+           class Carro
+
+                puts "Novo objeto foi criado #{self}" # Utilizando o self
+
+                def initialize(marca, modelo)
+                    @marca = marca
+                    @modelo = modelo
+                end
+
+                def apresentar # Vamos supor que você deseja exibir isso no console
+                    "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
+                end
+
+                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                    "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                end
+
+                def detalhes
+                    puts "detalhe do carro: #{self}" #utilizando o self
+                end
+
+            end
+
+            carro = Carro.new("Ford", "A23") # Nossa classe instânciada
+
+            puts = carro.apresentar # Exibindo  método instânciada
+
+            puts carro.detalhes # Chamando o método que tem o self
+
+        ```
+
+    - Resultado: 
+
+        ![Resultado]()
