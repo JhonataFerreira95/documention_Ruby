@@ -7,6 +7,7 @@
 3. [Initialize(Ou Constructor)](#initialize)
 4. [Métodos em Instância](#métodos-em-instânciaou-objetos)
 5. [Self](#self)
+6. [Getter e Setter](#getter-e-setter)
 
 ## Introdução
 
