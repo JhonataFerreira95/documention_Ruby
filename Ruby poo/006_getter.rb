@@ -18,13 +18,26 @@ class Game
     "#{@genre}-#{@multiplayer}-#{@versions}-#{@name}"
   end
 
+  def name # Utilizando o Getter
+    @name # para variável de instância
+  end
+
+  def multiplayer
+    @multiplayer
+  end
+
+  def price
+    @price
+  end
+
+  def versions
+    @versions
+  end
+
 end
 
 game = Game.new # instânciado a nossa classe
 
-puts game.information # agora pdodemos chama nosso método instânciado
+puts game.multiplayer, game.name, game.versions, game.price
 
-puts game
-
-puts game.details # chamando o método que possuí o self na classe
 
