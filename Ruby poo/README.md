@@ -356,3 +356,7 @@
                 puts carro.marca, carro.modelo # Instânciando com getter
 
                 ```
+
+    - Setters
+
+        - 
