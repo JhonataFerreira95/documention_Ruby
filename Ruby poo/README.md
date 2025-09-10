@@ -285,4 +285,74 @@
 
         - Como visto, utilizei 2 exemplos com o `self`, tanto um para anúnciar que a classe foi instânciada como o outro que foi sobrescrever com o método `to_s`. Como visto, se utilizar o `self` foras dos métodos, ele se referência a classe, dentro dos métodos, se referência aos métodos.
 
-## Getter e Setter  
+## Getters e Setters 
+
+- Irei aborda o Getter e o Setter. Em `ruby`, `getters` são métodos que lêem o valor de uma variável de instância, enquanto `setters` são métodos que modificam esse valor, sendo definidos com um sinal de igual (=) anexado ao nome.
+
+    - Getters
+
+        - Os método `getters` geralmente são utilizados para retorna valores em `atríbutos` ou `variável` instânciada.
+
+        - Para se utilizar o `getter` se da um nome para o método, normalmente se atribuí o mesmo nome da `variável de instância` ou `atríbuto`. 
+
+            - Exemplo para `váriavel de instância`:
+
+                ```ruby
+
+                class Carro
+
+                    puts "Novo objeto foi criado #{self}" # Utilizando o self
+
+                    def initialize # removemos o parâmetros para fica mais simples
+                        @marca = marca
+                        @modelo = modelo
+                    end
+
+                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                        "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    end
+
+                    def marca # Utilizando o Getter
+                        @marca # Para variável de instância
+                    end
+
+                    def modelo # Utilizando o Getter
+                        @modelo # Para variável de instância
+                    end
+
+                end
+
+                ```
+
+            - Exemplo para `atríbutos`:
+
+                ```ruby
+
+                class Carro
+
+                    puts "Novo objeto foi criado #{self}" # Utilizando o self
+
+                    def initialize # removemos o parâmetros para fica mais simples
+                        @marca = "A25"
+                        @modelo = "Ford car" # mudamos aqui para que não seja necessário passamos os parâmetros em um <puts>
+                    end
+
+                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                        "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    end
+
+                    def marca # Utilizando o Getter
+                        @marca # Para atríbutos
+                    end
+
+                    def modelo # Utilizando o Getter
+                        @modelo # Para atríbutos
+                    end
+
+                end
+
+                carro = Carro.new # instânciado a minha classe
+
+                puts carro.marca, carro.modelo # Instânciando com getter
+
+                ```
