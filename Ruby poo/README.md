@@ -330,7 +330,7 @@
 
         - Para utilizar o `setters` criamos uma nova `variável de instância` com o mesmo nome do da `variável de instância` com um parâmetro com nome diferente, para que possamos atríbuir um novo valor utilizando o `setters`. Levando em consideração que para utilização do `setters` é necessário definir os `getters` antes de prosseguir
 
-            - Exemplo utilizando o `setters` com `variável de instância`:
+            - Exemplo utilizando o `setters` com `variável de instância` e `atríbuto de instância`:
 
                 ``` ruby 
                 
