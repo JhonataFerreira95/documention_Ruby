@@ -291,7 +291,7 @@
 
     - Getters
 
-        - Os método `getters` geralmente são utilizados para retorna valores em `atríbutos` ou `variável` instânciada.
+        - O método `getters` geralmente são utilizados para retorna valores em `atríbutos` ou `variável` instânciada.
 
         - Para se utilizar o `getter` se da um nome para o método, normalmente se atribuí o mesmo nome da `variável de instância` ou `atríbuto`. 
 
@@ -323,18 +323,24 @@
                 end
 
                 ```
+                
+    - Setters
 
-            - Exemplo para `atríbutos`:
+        - O método `setters` geralmente são utilizado para alterar valores de uma `variável de instância`, lembrando que isso só é possível depois que o `objeto é criado`.
 
-                ```ruby
+        - Para utilizar o `setters` criamos uma nova `variável de instância` com o mesmo nome do da `variável de instância` com um parâmetro com nome diferente, para que possamos atríbuir um novo valor utilizando o `setters`.
 
+            - Exemplo utilizando o `setters` com `variável de instância`:
+
+                ``` ruby 
+                
                 class Carro
 
                     puts "Novo objeto foi criado #{self}" # Utilizando o self
 
                     def initialize # removemos o parâmetros para fica mais simples
-                        @marca = "A25"
-                        @modelo = "Ford car" # mudamos aqui para que não seja necessário passamos os parâmetros em um <puts>
+                        @marca = marca
+                        @modelo = modelo
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
@@ -342,21 +348,20 @@
                     end
 
                     def marca # Utilizando o Getter
-                        @marca # Para atríbutos
+                        @marca # Para variável de instância
                     end
 
                     def modelo # Utilizando o Getter
-                        @modelo # Para atríbutos
+                        @modelo # Para variável de instância
                     end
+
+                    def marca(nova_marca) # utlizando o setters para atribuir algo novo para nossa variável de instância
+                        @marca = nova_marca # o parâmentro é utilizando para que possamos atribuir um valor ao atríbuto de instância que foi criado.
+                    end
+
+                    def
 
                 end
 
-                carro = Carro.new # instânciado a minha classe
-
-                puts carro.marca, carro.modelo # Instânciando com getter
 
                 ```
-
-    - Setters
-
-        - 
