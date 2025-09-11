@@ -34,11 +34,11 @@ class Game
     @versions
   end
 
-  def name(new_name) # Utilizando o setters
+  def name=(new_name) # Utilizando o setters
     @name = new_name
   end
 
-  def price(new_price)
+  def price=(new_price)
     @price = new_price
   end
 
@@ -49,7 +49,7 @@ game = Game.new # instânciado a nossa classe
 game.name = "hollow knight" # Escrevando novas informações com setters
 game.price = 59.99
 
-puts name, price
+puts game.name, game.price
 
 
 

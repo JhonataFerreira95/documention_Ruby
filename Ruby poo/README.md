@@ -323,12 +323,12 @@
                 end
 
                 ```
-                
+
     - Setters
 
         - O método `setters` geralmente são utilizado para alterar valores de uma `variável de instância`, lembrando que isso só é possível depois que o `objeto é criado`.
 
-        - Para utilizar o `setters` criamos uma nova `variável de instância` com o mesmo nome do da `variável de instância` com um parâmetro com nome diferente, para que possamos atríbuir um novo valor utilizando o `setters`.
+        - Para utilizar o `setters` criamos uma nova `variável de instância` com o mesmo nome do da `variável de instância` com um parâmetro com nome diferente, para que possamos atríbuir um novo valor utilizando o `setters`. Levando em consideração que para utilização do `setters` é necessário definir os `getters` antes de prosseguir
 
             - Exemplo utilizando o `setters` com `variável de instância`:
 
@@ -355,13 +355,20 @@
                         @modelo # Para variável de instância
                     end
 
-                    def marca(nova_marca) # utlizando o setters para atribuir algo novo para nossa variável de instância
-                        @marca = nova_marca # o parâmentro é utilizando para que possamos atribuir um valor ao atríbuto de instância que foi criado.
+                    def marca=(nova_marca) # utlizando o setters para atribuir algo novo para nossa variável de instância
+                        @marca = nova_marca # o parâmentro é utilizando para que possamos atribuir um valor ao atríbuto de instância que foi criado
                     end
 
-                    def
+                    def modelo=(novo_modelo) 
+                        @modelo = novo_modelo
+                    end
 
                 end
 
+                carro = Carro.new # Para instânciar nossa classe
+                carro.marca = "Fiat" # utilizando a nova atríbuição com setters
+                carro.modelo = "uno"
+
+                puts carro.marca, carro.modelo
 
                 ```
