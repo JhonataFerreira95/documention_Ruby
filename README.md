@@ -39,6 +39,8 @@ DOCUMENTAÇÃO RUBY/
 │   ├── Ruby/
 │   └── README.md
 ├── Ruby poo/
+│   ├── Ruby/
+│   └── README.md
 └── README.md
 
 ```
