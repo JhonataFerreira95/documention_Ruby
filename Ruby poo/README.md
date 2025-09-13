@@ -8,6 +8,7 @@
 4. [Métodos em Instância](#métodos-em-instânciaou-objetos)
 5. [Self](#self)
 6. [Getter e Setter](#getter-e-setter)
+7. [Atributos com Attr reader, Attr writer e Attr acessor](#atríbutos-em-ruby)
 
 ## Introdução
 
@@ -372,3 +373,7 @@
                 puts carro.marca, carro.modelo
 
                 ```
+
+## Atríbutos em Ruby
+
+- Métodos especiais para definição atríbutos com rótulo de leitura, escrita ou acesso.
