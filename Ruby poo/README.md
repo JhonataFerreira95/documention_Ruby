@@ -376,4 +376,4 @@
 
 ## Atríbutos em Ruby
 
-- Métodos especiais para definição atríbutos com rótulo de leitura, escrita ou acesso.
+- Métodos especiais para definição atríbutos com rótulo de leitura, escrita ou leitura e escrita ao mesmo tempo. O objetivo desses métodos é evitar o usor explicito de `getters` e `setters`.
