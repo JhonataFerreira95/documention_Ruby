@@ -1,6 +1,8 @@
 class Game
 
-  
+  # attr_reader :name, :genre, :price # apenas leitura
+  # attr_writer :name, :genre, :price # apenas escrita
+  attr_accessor :name, :genre, :price # leitura e escrita
 
   def initialize # O initialize funciona como um constructor ou construtor
       # Variável de instância
