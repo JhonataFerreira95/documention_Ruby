@@ -388,7 +388,7 @@
 
                     class Carro
                     
-                    attr_reader :marca, :modelo # Utilizando o método <attr_reader> para definir que que os atríbutos são de leitura
+                    attr_reader :marca, :modelo # Utilizando o método <attr_reader> para definir que os atríbutos são de leitura
                     
                     def initialize # removemos o parâmetros para fica mais simples
                         @marca = marca
@@ -401,5 +401,41 @@
                 end
 
                 carro = Carro.new # instânciado a classe
+
+                p carro.marca # Exibição do atríbuto com método <p>
+                p carro.modelo
+
+                ```
+
+    - Attr_writer
+
+        - É utilizado para definir um atríbuto como atríbuto de escrita.
+
+            - Exemplo na prática:
+
+                ```ruby 
+
+                    class Carro
+                    
+                    attr_writer :marca, :modelo # Utilizando o método <attr_writer> para definir que os atríbutos são de escrita
+                    
+                    def initialize # removemos o parâmetros para fica mais simples
+                        @marca = marca
+                        @modelo = modelo
+                    end
+
+                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+
+                end
+
+                carro = Carro.new # instânciado a classe
+                
+                carro.marca="Ford" # Utilizando o método <attr_writer>
+                carro.modelo="Gol"
+
+                p carro.marca # Exibição do atríbuto alterado com <attr_writer>
+                p carro.modelo
+
 
                 ```
