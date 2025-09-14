@@ -19,5 +19,14 @@ class Game
 
 end
 
+game = Game.new
+p game.name
+game.name="Resident Evil"
+p game.name
+game.genre="Suspense"
+game.price=150
+p game.genre
+p game.price
+
 
 
