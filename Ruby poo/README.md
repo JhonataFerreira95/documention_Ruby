@@ -450,7 +450,7 @@
 
                 class Carro
                     
-                    attr_acessor :marca, :modelo # Utilizando o método <attr_writer> para definir que os atríbutos são de escrita
+                    attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
                     
                     def initialize # removemos o parâmetros para fica mais simples
                         @marca = marca
@@ -464,10 +464,10 @@
 
                 carro = Carro.new # instânciado a classe
                 
-                p carro.marca # Utilizando o método <attr_acessor> para ler
+                p carro.marca # Utilizando o método <attr_accessor> para ler
 
-                p carro.marca="Ferrari" # Exibição do atríbuto alterado com <attr_acessor> para alterar 
+                p carro.marca="Ferrari" # Exibição do atríbuto alterado com <attr_accessor> para alterar 
 
-                p carro.marca # Utilizando o método <attr_acessor> para ler o novo valor alterado 
+                p carro.marca # Utilizando o método <attr_accessor> para ler o novo valor alterado 
 
                 ```
