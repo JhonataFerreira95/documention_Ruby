@@ -386,7 +386,7 @@
 
                 ```ruby 
 
-                    class Carro
+                class Carro
                     
                     attr_reader :marca, :modelo # Utilizando o método <attr_reader> para definir que os atríbutos são de leitura
                     
@@ -415,7 +415,7 @@
 
                 ```ruby 
 
-                    class Carro
+                class Carro
                     
                     attr_writer :marca, :modelo # Utilizando o método <attr_writer> para definir que os atríbutos são de escrita
                     
@@ -437,5 +437,37 @@
                 p carro.marca # Exibição do atríbuto alterado com <attr_writer>
                 p carro.modelo
 
+
+                ```
+
+    - Attr_acessor
+
+        - É utilizado para definir um atríbuto leitura e escrita ao mesmo tempo, é a junção do `attr_reader` e `attr_writer`.
+
+            - Exemplo na prática:
+
+                ```ruby
+
+                class Carro
+                    
+                    attr_acessor :marca, :modelo # Utilizando o método <attr_writer> para definir que os atríbutos são de escrita
+                    
+                    def initialize # removemos o parâmetros para fica mais simples
+                        @marca = marca
+                        @modelo = modelo
+                    end
+
+                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+
+                end
+
+                carro = Carro.new # instânciado a classe
+                
+                p carro.marca # Utilizando o método <attr_acessor> para ler
+
+                p carro.marca="Ferrari" # Exibição do atríbuto alterado com <attr_acessor> para alterar 
+
+                p carro.marca # Utilizando o método <attr_acessor> para ler o novo valor alterado 
 
                 ```
