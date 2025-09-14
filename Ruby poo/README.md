@@ -9,6 +9,7 @@
 5. [Self](#self)
 6. [Getter e Setter](#getter-e-setter)
 7. [Atributos com Attr reader, Attr writer e Attr acessor](#atríbutos-em-ruby)
+8. [Parâmetros no Método Initialize(ou Construtor)](#parâmetros-no--método-initialize)
 
 ## Introdução
 
@@ -471,3 +472,5 @@
                 p carro.marca # Utilizando o método <attr_accessor> para ler o novo valor alterado 
 
                 ```
+
+## Parâmetros no  Método Initialize
