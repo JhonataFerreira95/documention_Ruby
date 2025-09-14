@@ -190,7 +190,7 @@
                 end
 
                 def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
                 end
 
             end
@@ -227,7 +227,7 @@
                 end
 
                 def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
                 end
 
             end
@@ -261,7 +261,7 @@
                 end
 
                 def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
                 end
 
                 def detalhes
@@ -310,7 +310,7 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
                     end
 
                     def marca # Utilizando o Getter
@@ -345,7 +345,7 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marc}-#{@modelo}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
                     end
 
                     def marca # Utilizando o Getter
@@ -377,3 +377,29 @@
 ## Atríbutos em Ruby
 
 - Métodos especiais para definição atríbutos com rótulo de leitura, escrita ou leitura e escrita ao mesmo tempo. O objetivo desses métodos é evitar o usor explicito de `getters` e `setters`.
+
+    - Attr_reader
+
+        - É utilizado para definir um atríbuto como atríbuto de leitura
+
+            - Exemplo na prática:
+
+                ```ruby 
+
+                    class Carro
+                    
+                    attr_reader :marca, :modelo # Utilizando o método <attr_reader> para definir que que os atríbutos são de leitura
+                    
+                    def initialize # removemos o parâmetros para fica mais simples
+                        @marca = marca
+                        @modelo = modelo
+                    end
+
+                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+
+                end
+
+                carro = Carro.new # instânciado a classe
+
+                ```
