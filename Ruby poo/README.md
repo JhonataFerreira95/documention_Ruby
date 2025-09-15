@@ -74,7 +74,6 @@
                 Gato < Animal
 
                 ```
-    -
         
 ## Classes e Objetos
 
