@@ -498,9 +498,25 @@
                     "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
                 end
 
+                def tecnico
+                    puts "#Dados do Carro"
+                    puts "Sua marca é #{@marca}"
+                    puts "Seu modelo é #{@modelo}"
+                end
+
             end
 
             carro = Carro.new("ford", "car") # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+
+            puts carro
+
+            puts carro.tecnico # exibição do método de instância
+
+            carro2 = Carro.new("Fiat", "uno")
+
+            puts carro2
+
+            puts carro2.tecnico 
 
          ```
 
