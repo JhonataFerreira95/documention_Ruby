@@ -483,26 +483,26 @@
 
       - Exemplo na prática:
 
-            ```ruby
+        ```ruby 
 
-                class Carro
+            class Carro
                     
-                    attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+                attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
                                         
-                    def initialize(marca, modelo) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                        @marca = marca
-                        @modelo = modelo
-                    end
-
-                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
-                    end
-
+                def initialize(marca, modelo) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
+                    @marca = marca
+                    @modelo = modelo
                 end
 
-                carro = Carro.new
+                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                    "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                end
 
-            ```
+            end
+
+            carro = Carro.new
+
+         ```
 
     - Vale ressaltar se todos os parâmetro não forem informados após a execução irá da erro como pode ser visto.
 
@@ -510,7 +510,7 @@
 
         ![Sem passar todos os valores em nossos parâmetros](../Banco%20de%20dados%20SQL/SQL/ruby_erro_sem_definicao_dos_parametros.png)
 
-        - Como pode ser visto, é obrigatório passar os dados em nossos parâmetros para que nosso método `initialize` de forma dinâmica funcione
+        - Como pode ser visto, é obrigatório passar os dados em nossos parâmetros para que nosso método `initialize` de forma dinâmica funcione.
 
 
 
