@@ -172,7 +172,7 @@
 
     - Antes do método `to_s`, note que quando criamos um `objeto` sem definição do `to_s`, essa e sua mensagem de criação:
 
-        ![Sem o método to_s](../Banco%20de%20dados%20SQL/SQL/método_p.png)
+        ![Sem o método to_s](../Banco%20de%20dados%20SQL/SQL/Metódo_p.png)
 
     - Aqui um exemplo na prática:
 
@@ -197,13 +197,13 @@
 
             carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
-            puts = carro.apresentar # Exibindo  método instânciada
+            puts = carro.apresentar # Exibindo método instânciada
 
         ```
 
         - Depois da definição do método `to_s`, resaltar que para funcinar perfeitamente, utilize a palavra reservada `to_s`. Podemos ver a mensagem que foi definida no método `to_s`.
 
-            ![Com método to_s](../Banco%20de%20dados%20SQL/SQL/método_to_s.png)
+            ![Com método to_s](../Banco%20de%20dados%20SQL/SQL/Metódo_to_s.png)
 
 ## Self
 
@@ -397,7 +397,8 @@
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
                         "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
-
+                    end 
+                    
                 end
 
                 carro = Carro.new # instânciado a classe
@@ -426,6 +427,7 @@
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
                         "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    end
 
                 end
 
@@ -459,6 +461,7 @@
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
                         "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    end
 
                 end
 
@@ -472,6 +475,25 @@
 
                 ```
 
-## Parâmetros no  Método Initialize
+## Parâmetros no Método Initialize
+
+- Para deixa os `valores` do método `initialize` estatícos, e torná-los mais dinâmico. Começando a trabalha com `parâmetros` em nosso método `initialize`.
+
+    - Para utlizamos `parâmetros` no lugar de `valores` em nosso `initialize` precisamos definir-los(de preferência seguindo a mesma nomeclatura do nosso `objeto` que está dentro do `ìnitialize`) e após a sua definição iremos instância nossa classe e passsar seus valores de uma forma dinâmica.
+
+    - Vale ressaltar se todos os parâmetro não forem informados após a execução irá da erro como pode ser visto.
+
+        - Resultado sem todos os valores:
+
+
+        - Exemplo na prática:
+
+            ```ruby
+
+
+
+            ```
+
+
 
     
