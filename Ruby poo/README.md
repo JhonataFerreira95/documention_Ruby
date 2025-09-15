@@ -500,11 +500,11 @@
 
             end
 
-            carro = Carro.new
+            carro = Carro.new("ford", "car") # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
 
          ```
 
-    - Vale ressaltar se todos os parâmetro não forem informados após a execução irá da erro como pode ser visto.
+    - Vale ressaltar se todos os parâmetro não forem informados após a execução irá da erro como pode ser visto. E que os parâmetros devem ser inserido seguindo a ordem de precedência dos mesmo.
 
         - Resultado sem todos os valores:
 
