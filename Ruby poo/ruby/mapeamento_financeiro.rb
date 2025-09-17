@@ -12,3 +12,11 @@ class FinancialTransaction
   end
 
 end
+
+trans1 = FinancialTransaction.new("Hornet", "Knight", 1000, false)
+p trans1.to
+p trans1.from
+p trans1.amount
+p trans1.completed
+trans1.completed = true
+p trans1.completed
