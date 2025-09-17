@@ -528,6 +528,8 @@
 
         - Como pode ser visto, é obrigatório passar os dados em nossos parâmetros para que nosso método `initialize` de forma dinâmica funcione.
 
+## Método Privado 
+
 
 
 
