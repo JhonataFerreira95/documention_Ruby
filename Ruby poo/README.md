@@ -10,6 +10,7 @@
 6. [Getter e Setter](#getter-e-setter)
 7. [Atributos com Attr reader, Attr writer e Attr acessor](#atríbutos-em-ruby)
 8. [Parâmetros no Método Initialize(ou Construtor)](#parâmetros-no--método-initialize)
+9. [Encapsulamento(Privado, Público e Protegio)](#encapsulamento-privado-público-e-protegido)
 
 ## Introdução
 
@@ -528,9 +529,9 @@
 
         - Como pode ser visto, é obrigatório passar os dados em nossos parâmetros para que nosso método `initialize` de forma dinâmica funcione.
 
-## Método Privado 
+## Encapsulamento. Privado, Público e Protegido
 
-
+- O conceito de `Encapsulamento`, a função principal do encapsulamento é esconder os detalhes internos e a complexidade de um objeto, expondo apenas uma interface controlada (os métodos públicos) para interação externa.
 
 
 
