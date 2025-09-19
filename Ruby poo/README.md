@@ -533,6 +533,11 @@
 
 - O conceito de `Encapsulamento`, a função principal do encapsulamento é esconder os detalhes internos e a complexidade de um objeto, expondo apenas uma interface controlada (os métodos públicos) para interação externa.
 
+- Existem 3 tipos de modificador de acesso no `Encapsulamento`, sendo eles `Privado`, `Público` e `Protegido`.
+
+    - Privado
+    
+
 
 
     
