@@ -531,12 +531,61 @@
 
 ## Encapsulamento. Privado, Público e Protegido
 
-- O conceito de `Encapsulamento`, a função principal do encapsulamento é esconder os detalhes internos e a complexidade de um objeto, expondo apenas uma interface controlada (os métodos públicos) para interação externa.
+- O conceito de `Encapsulamento`, a função principal do `encapsulamento` é esconder os detalhes internos e a complexidade de um objeto, expondo apenas uma interface controlada (os métodos públicos) para interação externa.
 
 - Existem 3 tipos de modificador de acesso no `Encapsulamento`, sendo eles `Privado`, `Público` e `Protegido`.
 
     - Privado
-    
+
+        - Em `ruby`, métodos ou atributos `privados` só podem ser chamados dentro da mesma instância da `classe` onde foram definidos, inclusive nas `sub-classes` que os herdam. Eles não podem ser acessados por outras `classes`, nem chamados diretamente em outra instância do mesmo tipo, mesmo que pertença à mesma `classe`. Além disso, métodos `privados` não podem ser invocados com um receptor explícito `obj.metodo`, apenas de forma implícita dentro do objeto.
+
+        - Utilizamos a palavra reservada `private` para definir um método privado em `ruby`, tudo que está abaixo da palavra reservada `private` está privado. 
+
+        - Para torna os próximos métodos público abaixo do `private`, se utilizar a palavra reservada `public`.
+
+        - Seguindo a mesma lógica, vale o mesmo para o `protected`.
+
+            - Exemplo na prática:
+
+                ```ruby
+
+                # Irei utilizar o método <Privado>
+
+                class Carro
+                        
+                    attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+
+                    attr_reader
+                                            
+                    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
+                        @marca = marca
+                        @modelo = modelo
+                        @preco = preco
+                    end
+
+                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    end
+
+                    def tecnico
+                        puts "#Dados do Carro"
+                        puts "Sua marca é #{@marca}"
+                        puts "Seu modelo é #{@modelo}"
+                    end
+
+                    private # Para utilizar o método privado utilizamos da palavra resevada <private>
+
+                    def desconto_carro(desconto_aplicado) # Criando o método de desconto
+                        @preco -= (@price * desconto_aplicado / 100)
+                    end
+                    
+                end
+
+                carro = Carro.new("ford", "car") # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+
+                ```
+
+                
 
 
 
