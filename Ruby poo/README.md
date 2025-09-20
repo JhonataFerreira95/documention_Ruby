@@ -564,7 +564,7 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}-#{@preco}" # Definido a mesagem de criação do objeto
                     end
 
                     def tecnico
@@ -581,12 +581,21 @@
                     
                 end
 
-                carro = Carro.new("ford", "car") # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+                carro = Carro.new("ford", "car", 80.600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+
+                puts carro # Imprimir resultado no console
+
+                puts carro.desconto_carro(15.000) # Chamando o método privado para aplicar o desconto
 
                 ```
 
-                
+                - Resultado:
 
+                    ![Resultado na prática](../Banco%20de%20dados%20SQL/SQL/método_privado.png)
 
+                    - Isso acontece porque o método `private` não pode ser acessado por instância fora da nossa `classe` apenas dentro da mesma utilizando um recptor explícito já mencionado acima, nosso `self`.
 
+    - Public        
+
+         
     
