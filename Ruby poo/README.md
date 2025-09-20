@@ -655,7 +655,7 @@
 
                     puts carro.desconto_10_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
 
-                     puts carro # Imprimir resultado no console
+                    puts carro # Imprimir resultado no console
 
                     # carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
 
@@ -674,6 +674,8 @@
                 ![Método Público](../Banco%20de%20dados%20SQL/SQL/método_publico.png)
 
                 - Aqui fiz a seguinte lógica para acessar o método dentro `private`, criei um método `public` para chama o método privado dentro da própria `classe` para acessar a lógica do método `privado`.
+
+    - Protected
 
 
     
