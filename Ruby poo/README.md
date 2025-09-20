@@ -191,7 +191,7 @@
                 end
 
                 def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                 end
 
             end
@@ -228,7 +228,7 @@
                 end
 
                 def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                 end
 
             end
@@ -262,7 +262,7 @@
                 end
 
                 def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                 end
 
                 def detalhes
@@ -311,7 +311,7 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                     end
 
                     def marca # Utilizando o Getter
@@ -346,7 +346,7 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                     end
 
                     def marca # Utilizando o Getter
@@ -397,7 +397,7 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                     end 
 
                 end
@@ -427,7 +427,7 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                     end
 
                 end
@@ -461,7 +461,7 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                     end
 
                 end
@@ -496,7 +496,7 @@
                 end
 
                 def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}" # Definido a mesagem de criação do objeto
+                    "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
                 end
 
                 def tecnico
@@ -553,7 +553,7 @@
 
                 class Carro
                         
-                    attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+                    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
 
                     attr_reader
                                             
@@ -564,13 +564,14 @@
                     end
 
                     def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}-#{@preco}" # Definido a mesagem de criação do objeto
+                        "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
                     end
 
                     def tecnico
                         puts "#Dados do Carro"
                         puts "Sua marca é #{@marca}"
                         puts "Seu modelo é #{@modelo}"
+                        puts "Seu preco é #{@preco}"
                     end
 
                     private # Para utilizar o método privado utilizamos da palavra resevada <private>
@@ -585,7 +586,7 @@
 
                 puts carro # Imprimir resultado no console
 
-                puts carro.desconto_carro(15.000) # Chamando o método privado para aplicar o desconto
+                carro.desconto_carro(15.000) # Chamando o método privado para aplicar o desconto
 
                 ```
 
@@ -613,9 +614,7 @@
 
                     class Carro
                             
-                        attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-
-                        attr_reader
+                        attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
                                                 
                         def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
                             @marca = marca
@@ -624,13 +623,14 @@
                         end
 
                         def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                            "#{@marca}-#{@modelo}-#{@preco}" # Definido a mesagem de criação do objeto
+                            "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
                         end
 
                         def tecnico
                             puts "#Dados do Carro"
                             puts "Sua marca é #{@marca}"
                             puts "Seu modelo é #{@modelo}"
+                            puts "Seu preco é #{@preco}"
                         end
 
                         private # Para utilizar o método privado utilizamos da palavra resevada <private>
@@ -641,8 +641,8 @@
 
                         public # Criando o método para acesar o nosso outro método que se encontra no <private>
 
-                        def
-
+                        def desconto_10_aplicar # Método para chama o outro método privado
+                            desconto_carro(15.000)
                         end
                         
                     end
@@ -651,7 +651,9 @@
 
                     puts carro # Imprimir resultado no console
 
-                    puts carro.desconto_carro(15.000) # Chamando o método privado para aplicar o desconto
+                   # carro.desconto_carro(15.000) # Chamando o método privado para aplicar o desconto
+
+                   puts carro.desconto_10_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
 
                  ```
 
