@@ -589,15 +589,15 @@
 
                 ```
 
-                - Resultado:
+            - Resultado:
 
-                    ![Resultado na prática](../Banco%20de%20dados%20SQL/SQL/método_privado.png)
+                ![Resultado na prática](../Banco%20de%20dados%20SQL/SQL/método_privado.png)
 
-                    - Isso acontece porque o método `private` não pode ser acessado por instância fora da nossa `classe` apenas dentro da mesma utilizando um recptor explícito já mencionado acima, nosso `self`.
+                - Isso acontece porque o método `private` não pode ser acessado por instância fora da nossa `classe` apenas dentro da mesma utilizando um recptor explícito já mencionado acima, nosso `self`.
 
     - Public        
 
-         - Em `ruby`, métodos ou atributos `privados` só podem ser chamados dentro da mesma instância da `classe` onde foram definidos, inclusive nas `sub-classes` que os herdam. Eles não podem ser acessados por outras `classes`, nem chamados diretamente em outra instância do mesmo tipo, mesmo que pertença à mesma `classe`. Além disso, métodos `privados` não podem ser invocados com um receptor explícito `obj.metodo`, apenas de forma implícita dentro do objeto.
+         - Em `ruby`, métodos ou atributos `public` podem ser chamados em qualquer lugar na`classe` ou fora dela, inclusive nas `sub-classes` que os herdam. Eles podem ser acessados por outras `classes`, ser chamados diretamente em outra instância do mesmo tipo, mesmo que pertença à mesma `classe`. Além disso, métodos `public`  podem ser invocados com um receptor explícito `obj.metodo`, podem ser usados para acessar até mesmo algum método `privado`.
 
         - Utilizamos a palavra reservada `Public` para definir um método público em `ruby`, tudo que está abaixo da palavra reservada `public` está público. 
 
@@ -605,6 +605,57 @@
 
         - Seguindo a mesma lógica, vale o mesmo para o `protected`.
 
-            - Exemplo na prática
+            - Exemplo na prática:
 
+                ```ruby
+
+                    # Irei utilizar o método <Public> para acessar o método <Private>
+
+                    class Carro
+                            
+                        attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+
+                        attr_reader
+                                                
+                        def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
+                            @marca = marca
+                            @modelo = modelo
+                            @preco = preco
+                        end
+
+                        def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                            "#{@marca}-#{@modelo}-#{@preco}" # Definido a mesagem de criação do objeto
+                        end
+
+                        def tecnico
+                            puts "#Dados do Carro"
+                            puts "Sua marca é #{@marca}"
+                            puts "Seu modelo é #{@modelo}"
+                        end
+
+                        private # Para utilizar o método privado utilizamos da palavra resevada <private>
+
+                        def desconto_carro(desconto_aplicado) # Criando o método de desconto
+                            @preco -= (@price * desconto_aplicado / 100)
+                        end
+
+                        public # Criando o método para acesar o nosso outro método que se encontra no <private>
+
+                        def
+
+                        end
+                        
+                    end
+
+                    carro = Carro.new("ford", "car", 80.600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+
+                    puts carro # Imprimir resultado no console
+
+                    puts carro.desconto_carro(15.000) # Chamando o método privado para aplicar o desconto
+
+                 ```
+
+            - Resultado: 
+
+                - Aqui fiz a seguinte lógica para acessar o método `private`, criei um método `public`
     
