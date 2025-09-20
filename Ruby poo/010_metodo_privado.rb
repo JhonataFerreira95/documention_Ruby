@@ -34,8 +34,6 @@ class Game
     @price -= (@price * discount_percentage / 100)
   end
 
-  public # Para utilizar o método público utilizamos da palavra reservada <public>
-
 end
 
 game1 = Game.new("silksong", "Aventura", true, [2025], 60)
