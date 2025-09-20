@@ -30,9 +30,11 @@ class Game
 
   private # Para utilizar o método privado utilizamos da palavra resevada <private>
 
-  def apply_disconut(discount_percentage)
+  def apply_discount(discount_percentage)
     @price -= (@price * discount_percentage / 100)
   end
+
+  public # Para utilizar o método público utilizamos da palavra reservada <public>
 
 end
 
@@ -40,7 +42,7 @@ game1 = Game.new("silksong", "Aventura", true, [2025], 60)
 
 puts game1
 
-game1.apply_disconut(10)
+game1.apply_discount(10) # Não consigo chaama o método já que é um método privado e está fora da minha classe
 
 
 
