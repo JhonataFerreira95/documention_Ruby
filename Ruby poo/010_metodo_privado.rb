@@ -28,19 +28,20 @@ class Game
     "#{@genre}-#{@multiplayer}-#{@versions}-#{@name}"
   end
 
+  private # Para utilizar o método privado utilizamos da palavra resevada <private>
+
+  def apply_disconut(discount_percentage)
+    @price -= (@price * discount_percentage / 100)
+  end
+
 end
 
-game1 = Game.new("fifa", "esporte", true, [2018, 2019, 2020], 100) # insirindo valores na ordem de definição dos parâmetros do método <initialize>
+game1 = Game.new("silksong", "Aventura", true, [2025], 60)
 
 puts game1
 
-puts game1.techinal_sheet
+game1.apply_disconut(10)
 
-game2 = Game.new("hollow knight", "aventura", true, [2017, 2018, 2019, 2020, 2021], 39.99)
-
-puts game2
-
-puts game2.techinal_sheet
 
 
 
