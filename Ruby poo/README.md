@@ -673,7 +673,7 @@
 
                 ![Método Público](../Banco%20de%20dados%20SQL/SQL/método_publico.png)
 
-                - Aqui fiz a seguinte lógica para acessar o método `private`, criei um método `public` para chama o método privado dentro da própria `classe` para acessar a lógica do método `privado`.
+                - Aqui fiz a seguinte lógica para acessar o método dentro `private`, criei um método `public` para chama o método privado dentro da própria `classe` para acessar a lógica do método `privado`.
 
 
     

@@ -36,13 +36,23 @@ class Game
 
   public # Para utilizar o método público utilizamos da palavra reservada <public>
 
+  def apply_10_percent_discount
+    apply_discount(20)
+  end
+
 end
 
 game1 = Game.new("silksong", "Aventura", true, [2025], 60)
 
 puts game1
 
-game1.apply_discount(10) # Não consigo chaama o método já que é um método privado e está fora da minha classe
+puts game1.price # Antes do desconto
+
+# game1.apply_discount(10) # Não consigo chaama o método já que é um método privado e está fora da minha classe
+
+game1.apply_10_percent_discount # Utilizamos um método <public> para chama outro método presente em nossa classe, um método <private>
+
+puts game1.price # Depois do desconto
 
 
 
