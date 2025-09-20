@@ -577,16 +577,16 @@
                     private # Para utilizar o método privado utilizamos da palavra resevada <private>
 
                     def desconto_carro(desconto_aplicado) # Criando o método de desconto
-                        @preco -= (@price * desconto_aplicado / 100)
+                        @preco -= (@preco * desconto_aplicado / 100)
                     end
                     
                 end
 
-                carro = Carro.new("ford", "car", 80.600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+                carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
 
                 puts carro # Imprimir resultado no console
 
-                carro.desconto_carro(15.000) # Chamando o método privado para aplicar o desconto
+                carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
 
                 ```
 
@@ -636,28 +636,44 @@
                         private # Para utilizar o método privado utilizamos da palavra resevada <private>
 
                         def desconto_carro(desconto_aplicado) # Criando o método de desconto
-                            @preco -= (@price * desconto_aplicado / 100)
+                            @preco -= (@preco * desconto_aplicado / 100)
                         end
 
                         public # Criando o método para acesar o nosso outro método que se encontra no <private>
 
                         def desconto_10_aplicar # Método para chama o outro método privado
-                            desconto_carro(15.000)
+                            desconto_carro(20)
                         end
                         
                     end
 
-                    carro = Carro.new("ford", "car", 80.600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+                    carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
 
                     puts carro # Imprimir resultado no console
 
-                   # carro.desconto_carro(15.000) # Chamando o método privado para aplicar o desconto
+                   # carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
 
-                   puts carro.desconto_10_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
+                    puts carro.desconto_10_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
+
+                     puts carro # Imprimir resultado no console
+
+                    # carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
+
+                    puts carro # Imprimir resultado no console
+
+                    puts carro.preco # Antes do desconto
+
+                    carro.desconto_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
+
+                    puts carro.preco # Depois do desconto
 
                  ```
 
             - Resultado: 
 
-                - Aqui fiz a seguinte lógica para acessar o método `private`, criei um método `public`
+                ![Método Público](../Banco%20de%20dados%20SQL/SQL/método_publico.png)
+
+                - Aqui fiz a seguinte lógica para acessar o método `private`, criei um método `public` para chama o método privado dentro da própria `classe` para acessar a lógica do método `privado`.
+
+
     
