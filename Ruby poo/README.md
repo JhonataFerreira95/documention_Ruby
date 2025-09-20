@@ -597,5 +597,14 @@
 
     - Public        
 
-         
+         - Em `ruby`, métodos ou atributos `privados` só podem ser chamados dentro da mesma instância da `classe` onde foram definidos, inclusive nas `sub-classes` que os herdam. Eles não podem ser acessados por outras `classes`, nem chamados diretamente em outra instância do mesmo tipo, mesmo que pertença à mesma `classe`. Além disso, métodos `privados` não podem ser invocados com um receptor explícito `obj.metodo`, apenas de forma implícita dentro do objeto.
+
+        - Utilizamos a palavra reservada `Public` para definir um método público em `ruby`, tudo que está abaixo da palavra reservada `public` está público. 
+
+        - Para torna os próximos métodos privado abaixo do `public`, se utilizar a palavra reservada `private`.
+
+        - Seguindo a mesma lógica, vale o mesmo para o `protected`.
+
+            - Exemplo na prática
+
     
