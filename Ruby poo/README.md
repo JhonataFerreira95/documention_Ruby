@@ -677,5 +677,7 @@
 
     - Protected
 
+        - Em `ruby`, métodos ou atributos `public` podem ser chamados em qualquer lugar na`classe` ou fora dela, inclusive nas `sub-classes` que os herdam. Eles podem ser acessados por outras `classes`, ser chamados diretamente em outra instância do mesmo tipo, mesmo que pertença à mesma `classe`. Além disso, métodos `public`  podem ser invocados com um receptor explícito `obj.metodo`, podem ser usados para acessar até mesmo algum método `privado`.
+
 
     
