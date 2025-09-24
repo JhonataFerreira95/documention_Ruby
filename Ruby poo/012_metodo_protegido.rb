@@ -1,6 +1,8 @@
-# Método Public
+# Método protected
 
-# Pode ser chaamado em qualquer lugar, dentro ou fora da <classe>
+# Os métodos podem ser chamado a partir de instâncias da mesma <classe> onde foram definidos.
+
+# ou em suas <sub-classes>
 
 class Game
 
