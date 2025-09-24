@@ -600,7 +600,7 @@
 
          - Em `ruby`, métodos ou atributos `public` podem ser chamados em qualquer lugar na`classe` ou fora dela, inclusive nas `sub-classes` que os herdam. Eles podem ser acessados por outras `classes`, ser chamados diretamente em outra instância do mesmo tipo, mesmo que pertença à mesma `classe`. Além disso, métodos `public`  podem ser invocados com um receptor explícito `obj.metodo`, podem ser usados para acessar até mesmo algum método `privado`.
 
-        - Utilizamos a palavra reservada `Public` para definir um método público em `ruby`, tudo que está abaixo da palavra reservada `public` está público. 
+        - Utilizamos a palavra reservada `public` para definir um método público em `ruby`, tudo que está abaixo da palavra reservada `public` está público. 
 
         - Para torna os próximos métodos privado abaixo do `public`, se utilizar a palavra reservada `private`.
 
@@ -679,7 +679,13 @@
 
         - Em `ruby`, métodos ou atributos `protected` podem ser chamados a partir de instâncias da mesma`classe` onde foram definidos ou em suas `sub-classes`.
 
-        - 
+        - Utilizamos a palavra reservada `protected` para definir um método protegido em `ruby`, tudo que está abaixo da palavra reservada `protected` está protegido. 
+
+        - Para torna os próximos métodos privado ou público abaixo do `protected`, se utilizar a palavra reservada `private` ou `public`, fica a cargo do que você está fazendo.
+
+        - Seguindo a mesma lógica acima de se utilizar, vale o mesmo para o `private` ou `public`, apenas existem algumas restrições que devem ser levadas em consideração.
+
+            - Exemplo na prática:
 
 
     
