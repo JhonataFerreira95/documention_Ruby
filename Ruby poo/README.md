@@ -610,7 +610,7 @@
 
                 ```ruby
 
-                    # Irei utilizar o método <Public> para acessar o método <Private>
+                    # Irei utilizar o método <public> para acessar o método <Private>
 
                     class Carro
                             
@@ -686,6 +686,60 @@
         - Seguindo a mesma lógica acima de se utilizar, vale o mesmo para o `private` ou `public`, apenas existem algumas restrições que devem ser levadas em consideração.
 
             - Exemplo na prática:
+
+                ```ruby
+
+                    # Irei utilizar o método <protected> para acessar o método <Private>
+
+                    class Carro
+                            
+                        attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+                                                
+                        def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
+                            @marca = marca
+                            @modelo = modelo
+                            @preco = preco
+                        end
+
+                        def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                            "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
+                        end
+
+                        def tecnico
+                            puts "#Dados do Carro"
+                            puts "Sua marca é #{@marca}"
+                            puts "Seu modelo é #{@modelo}"
+                            puts "Seu preco é #{@preco}"
+                        end
+
+                        private # Para utilizar o método privado utilizamos da palavra resevada <private>
+
+                        def desconto_carro(desconto_aplicado) # Criando o método de desconto
+                            @preco -= (@preco * desconto_aplicado / 100)
+                        end
+
+                        public # Criando o método para acesar o nosso outro método que se encontra no <private>
+
+                        def desconto_10_aplicar # Método para chama o outro método privado
+                            desconto_carro(20)
+                        end
+
+                        protected
+
+
+                        
+                    end
+
+                    carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+
+
+                ```
+
+            - Resultado: 
+
+                ![]()
+
+                - 
 
 
     
