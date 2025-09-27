@@ -65,7 +65,7 @@ game2 = Game.new("Hollow night", "Indie", true, [2017], 60)
 
 puts game2
 
-game2.send(:discount_price,60)
+game2.send(:discount_price, 60)
 
 puts game2.techinal_sheet
 
