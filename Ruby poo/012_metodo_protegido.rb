@@ -30,16 +30,22 @@ class Game
     "#{@genre}-#{@multiplayer}-#{@versions}-#{@name}"
   end
 
-  private # Para utilizar o método privado utilizamos da palavra resevada <private>
+  # private ## Para utilizar o método privado utilizamos da palavra resevada <private>
 
-  def apply_discount(discount_percentage)
-    @price -= (@price * discount_percentage / 100)
-  end
+  # def apply_discount(discount_percentage)
+  #   @price -= (@price * discount_percentage / 100) ## Comentei essa parte para usar de exemplo no método <protected>
+  # end
 
-  public # Para utilizar o método público utilizamos da palavra reservada <public>
+ # public ## Para utilizar o método público utilizamos da palavra reservada <public>
 
-  def apply_10_percent_discount
-    apply_discount(20)
+  # def apply_10_percent_discount
+  #   apply_discount(20)
+  # end
+
+  protected # Para utilizar o método protegido utilizamos a palavra reservada <protected>
+
+  def discount_price(discount_percentage)
+    @price -= (@price * (discount_percentage.to_f / 100)) # Convertemos o parâmetros <descount_percentage> para float utilizando o <.to_f>
   end
 
 end
@@ -48,13 +54,20 @@ game1 = Game.new("silksong", "Aventura", true, [2025], 60)
 
 puts game1
 
-puts game1.price # Antes do desconto
+game1.send(:discount_price, 10) # Utiizando o método <.send> para chama o método de uma forma dinâmica
 
-# game1.apply_discount(10) # Não consigo chaama o método já que é um método privado e está fora da minha classe
+puts game1.techinal_sheet
 
-game1.apply_10_percent_discount # Utilizamos um método <public> para chama outro método presente em nossa classe, um método <private>
 
-puts game1.price # Depois do desconto
+# Game 2 exemplo
+
+game2 = Game.new("Hollow night", "Indie", true, [2017], 60)
+
+puts game2
+
+game2.send(:discount_price,60)
+
+puts game2.techinal_sheet
 
 
 
