@@ -663,7 +663,7 @@
 
                     puts carro.preco # Antes do desconto
 
-                    carro.desconto_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
+                    carro.desconto_10_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
 
                     puts carro.preco # Depois do desconto
 
@@ -694,7 +694,7 @@
                     class Carro
                             
                         attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                                                
+                                                                        
                         def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
                             @marca = marca
                             @modelo = modelo
@@ -712,34 +712,57 @@
                             puts "Seu preco é #{@preco}"
                         end
 
-                        private # Para utilizar o método privado utilizamos da palavra resevada <private>
+                        # Comentei o método <private> e <public> para trabalha apenas com o <protected>
 
-                        def desconto_carro(desconto_aplicado) # Criando o método de desconto
-                            @preco -= (@preco * desconto_aplicado / 100)
+                        # private # Para utilizar o método privado utilizamos da palavra resevada <private>
+
+                        # def desconto_carro(desconto_aplicado) # Criando o método de desconto
+                        #     @preco -= (@preco * desconto_aplicado / 100)
+                        # end
+
+                        # public # Criando o método para acesar o nosso outro método que se encontra no <private>
+
+                        # def desconto_10_aplicar # Método para chama o outro método privado
+                        #   desconto_carro(20)
+                        # end
+
+                        protected # Para utilizar o método protegido utilizamos a palavra reservada <protected>
+
+                        def desconto_geral(desconto_carros) # Novo método de desconto usando o <protected>
+                            @preco -= (@preco * (desconto_carros.to_f / 100)) # convetir o desconto para float com o <.to_f>
+                        end
+                                                
                         end
 
-                        public # Criando o método para acesar o nosso outro método que se encontra no <private>
+                        # instânciando minha classe
 
-                        def desconto_10_aplicar # Método para chama o outro método privado
-                            desconto_carro(20)
-                        end
+                        carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o marca e dps modelo, como foi definido nos parâmetros
 
-                        protected
+                        puts carro 
 
+                        puts carro.tecnico # pré do desconto
 
-                        
-                    end
+                        carro.send(:desconto_geral, 20) #  Irei utilizar o <.send.> que permite chaama dinamicamente outro método de um objeto
 
-                    carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
-
+                        puts carro.tecnico # após desconto
 
                 ```
 
             - Resultado: 
 
-                ![]()
+                ![Método Protegido](../Banco%20de%20dados%20SQL/SQL/método_protegido.png)
 
-                - 
+                - Nesse exemplo acima, única coisa que fiz foi comentar os métodos `private` e `public` para criar o mesmo exemplo com o `protected`, a mesma lógica de aplicar o desconto, instância a `classe` e depois imprimir os valores com o método `tecnico` foi o mesmo.
+
+                - Sobre a utilização do `send`, usei porque é um método que chama outros métodos de objetos de uma forma dinânmica, passando o nome do método como `symbol` ou `string`, e os argumentos devem receber exatamente nessa ordem `(:metodo, symbol/string/number(desejado))`
+
+                    - Exemplo:
+
+                        ```ruby
+
+                            carro.send(:desconto_geral, 20)
+
+                        ```
 
 
     
