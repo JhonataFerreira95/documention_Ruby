@@ -677,7 +677,7 @@
 
     - Protected
 
-        - Em `ruby`, métodos ou atributos `protected` podem ser chamados a partir de instâncias da mesma`classe` onde foram definidos ou em suas `sub-classes`.
+        - Em `ruby`, métodos ou atributos `protected` podem ser chamados a partir de instâncias da mesma `classe` onde foram definidos ou em suas `sub-classes`.
 
         - Utilizamos a palavra reservada `protected` para definir um método protegido em `ruby`, tudo que está abaixo da palavra reservada `protected` está protegido. 
 
