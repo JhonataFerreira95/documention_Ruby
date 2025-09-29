@@ -5,12 +5,13 @@
 1. [Introdução](#introdução)
 2. [Classe e Objetos](#classes-e-objetos)
 3. [Initialize(Ou Constructor)](#initialize)
-4. [Métodos em Instância](#métodos-em-instânciaou-objetos)
+4. [Métodos em Instância](#metodos-em-instânciaou-objetos)
 5. [Self](#self)
 6. [Getter e Setter](#getter-e-setter)
 7. [Atributos com Attr reader, Attr writer e Attr acessor](#atríbutos-em-ruby)
 8. [Parâmetros no Método Initialize(ou Construtor)](#parâmetros-no--método-initialize)
 9. [Encapsulamento(Privado, Público e Protegio)](#encapsulamento-privado-público-e-protegido)
+10. [Métodos de Classe](#métodos-de-classe-em-ruby)
 
 ## Introdução
 
@@ -140,7 +141,7 @@
 
         ```
 
-## Metodos em Instância(ou objetos)
+## Métodos em Instância(ou objetos)
 
 - Bem, vamos começa a falar sobre os métodos de `instância`, os métodos de instância são aqueles que pertencem a um objeto específico. Para utilizá-los, primeiro precisamos instanciar a classe, ou seja, criar um objeto a partir dela. Assim, podemos acessar os métodos definidos dentro da classe para aquele objeto
 
@@ -764,5 +765,5 @@
 
                         ```
 
+## Métodos de Classe em Ruby
 
-    
