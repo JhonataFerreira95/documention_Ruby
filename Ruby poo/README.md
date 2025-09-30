@@ -767,3 +767,7 @@
 
 ## Métodos de Classe em Ruby
 
+- Irei aborda o método de `Classe`, consiste em um método que pode ser chamado diretamente na `Classe` sem a necessidade de criar uma instância da mesma.
+
+    - Exemplo na prática: 
+    
