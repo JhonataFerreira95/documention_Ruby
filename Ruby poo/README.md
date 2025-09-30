@@ -769,5 +769,68 @@
 
 - Irei aborda o método de `Classe`, consiste em um método que pode ser chamado diretamente na `Classe` sem a necessidade de criar uma instância da mesma.
 
-    - Exemplo na prática: 
+- Como se utilizar um método de `Classe`? Para definir um método de `Classe` utilizamos a palavra reservada `self`, vista em anteriormente. Para torna nosso método desejado em método de `Classe`  usamos a sintaxe `def self.<nome do método desejado>`.
+
+    - Exemplo na prática:
     
+        ```ruby
+
+        class Carro
+                            
+            attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+                                                                                    
+            def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
+                @marca = marca
+                @modelo = modelo
+                @preco = preco
+            end
+
+            def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
+            end
+
+            def tecnico
+                puts "#Dados do Carro"
+                puts "Sua marca é #{@marca}"
+                puts "Seu modelo é #{@modelo}"
+                puts "Seu preco é #{@preco}"
+            end
+
+            # Definição do método de <Classe>
+
+            def self.calcular_desconto(preco, desconto_preco) # Para definir um método de <Classe> usamos a palavra reservada <self>
+                preco -= (preco * (desconto_preco.to_f / 100))
+            end
+                                                
+        end
+
+        # instânciando minha classe
+
+        carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o marca e dps modelo, como foi definido nos parâmetros
+
+        puts carro 
+
+        puts carro.tecnico # pré do desconto
+
+        # carro.calcular_desconto(carro.preco, 20) # Forçando erro do método de classe
+
+        # Chamando o méotodo de <Classe> pela <Classe>
+
+        puts Carro.calcular_desconto(carro.preco, 20) # Chamando ele por sua <Clsse>, usei um <puts> para imprimir no terminal
+
+        ```
+
+    - Resultado: 
+    
+        ![Erro no método de Classe](../Banco%20de%20dados%20SQL/SQL/erro_método_de_classe.png)
+
+        - Esse erro acontece porque o método de `Classe` não pode ser acessado por uma instância e sim por sua própria `classe`.
+
+            - Resultado:
+
+                ![Método de Classe](../Banco%20de%20dados%20SQL/SQL/metodo_de_classe.png)
+
+                - Nesse exemplo eu chamei o método de `Classe` pela `Classe`, sem instância, desse jeito que funciona o método de `Classe`.
+
+
+
