@@ -832,5 +832,16 @@
 
                 - Nesse exemplo eu chamei o método de `Classe` pela `Classe`, sem instância, desse jeito que funciona o método de `Classe`.
 
+## Variável de Classe
 
+- Em `ruby`, uma variável de `classe` é um valor compartilhado por uma `classe` e todas as suas `sub-classes`, denotada  pelo  prefiro `@@` e em seguida o nome da sua variável.
 
+    - Exemplo na prática: 
+
+        ```ruby
+
+            @@variavel_de_classe
+
+        ```
+
+- 
