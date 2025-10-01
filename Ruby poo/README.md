@@ -844,4 +844,11 @@
 
         ```
 
-- 
+- Elas são acessíveis em qualquer lugar, dentrou ou fora da`classe` onde foram definidas e mantêm estado único que é compartilhado entre todas as instâncias(objetos) criados a partir dessa `classe`.
+
+    - Exemplo na prática:
+
+        ```ruby
+
+
+        ```
