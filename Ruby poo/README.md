@@ -911,3 +911,5 @@
         ![variavel de classe](../Banco%20de%20dados%20SQL/SQL/variavel_de_classe.png)
     
         - Utilizei uma váriavel de `Classe` para ver a quantidade instância(objetos) criados da minha `Class Carro`, inicializei a minha variável de `classe` como `0`, após passei nossa variável de `Classe` em nosso `initialize(constructor)` incrementadno para que a cada `Classe` instânciada seja adicionada a nossa variável de `Classe`.
+
+## Herança em Ruby
