@@ -1,5 +1,3 @@
-# Método protected
-
 # Os métodos podem ser chamado a partir de instâncias da mesma <classe> onde foram definidos.
 
 # ou em suas <sub-classes>

@@ -834,7 +834,7 @@
 
 ## Variável de Classe
 
-- Em `ruby`, uma variável de `classe` é um valor compartilhado por uma `classe` e todas as suas `sub-classes`, denotada  pelo  prefiro `@@` e em seguida o nome da sua variável.
+- Em `ruby`, uma variável de `classe` é um valor compartilhado por uma `classe` e todas as suas `sub-classes`, denotada  pelo  prefixo `@@` e em seguida o nome da sua variável.
 
     - Exemplo na prática: 
 
@@ -844,11 +844,12 @@
 
         ```
 
-- Elas são acessíveis em qualquer lugar, dentrou ou fora da`classe` onde foram definidas e mantêm estado único que é compartilhado entre todas as instâncias(objetos) criados a partir dessa `classe`.
+- Elas são acessíveis em qualquer lugar, dentro ou fora da`classe` onde foram definidas e mantêm estado único que é compartilhado entre todas as instâncias(objetos) criados a partir dessa `classe`.
 
     - Exemplo na prática:
 
         ```ruby
 
+            
 
         ```
