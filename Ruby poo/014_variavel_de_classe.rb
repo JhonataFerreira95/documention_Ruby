@@ -54,7 +54,7 @@ game2 = Game.new("Hollow Knight Pablo", "Aventura", true, [2030], 60)
 puts game2
 puts game2.techinal_sheet
 
-## Usando método <classe> em conjunto da variável de <classe>
+# Usando método <classe> em conjunto da variável de <classe>
 
 puts "A quantidade de jogos criados foram #{Game.total_games}" # Como sabemos, um método de <classe> só pode ser chamado pela sua <classe> diretamente.
 
