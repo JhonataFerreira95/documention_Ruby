@@ -12,6 +12,8 @@
 8. [Parâmetros no Método Initialize(ou Construtor)](#parâmetros-no--método-initialize)
 9. [Encapsulamento(Privado, Público e Protegio)](#encapsulamento-privado-público-e-protegido)
 10. [Métodos de Classe](#métodos-de-classe-em-ruby)
+11. [Variável de Classe](#variável-de-classe)
+12. [Herança em Ruby](#herança-em-ruby)
 
 ## Introdução
 
@@ -917,3 +919,81 @@
 - Utilizamos bastante a `herança` para reutilização de código e a criação de nova estruturas a partir de estruturas já definidas, onde a `sub-classe` pode herda tudo da `super-Classe` que já foi criada e definida, reutilizando o código já feito de maneira muito eficiênte.
 
 - Para utilizar a `herança` em `ruby` é muito simples, você já tem sua `super-classe` definida e quer criar outra a partir da mesma, utilizando o símbolos menor que `<` para herda os parâmetros da sua `super-class` para sua nova `sub-classe`, a sintaxe é a seguinte `Class Moto < Carro`, nessa ordem, a direira está sua `super-classe` e a eesquerda está sua `sub-classe`.
+
+- Quando falamos sobre `super-classe` e `sub-classe`, sempre deixamos claro que a `super-classe` é sempre a `classe` mais generica, enquanto a `sub-classe` é uma classe mais especializada.  O porque a `super-classe` é mais generica? Por que ela deve ser uma classe que tenha muito código e funções, sendo mais fácil de se reutilizar. A `sub-classe` é especializada para adaptar ou entender esse comportamento de forma concreta, Essa separação evita repetição de código e dá flexibilidade ao sistema.
+
+    - Exemplo na prática: 
+
+        ```ruby
+
+            class Carro
+                                
+                attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+                          
+                # Inicializando minha variável de <classe>
+
+                @@contador_carro = 0
+
+                def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
+                    @marca = marca
+                    @modelo = modelo
+                    @preco = preco
+
+                    # Utilizando a variável de <classe>
+                    @@contador_carro += 1 # Icrementador para saber a quantidade de <Classes> instânciada
+                end
+
+                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                    "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
+                end
+
+                def tecnico
+                    puts "#Dados do Carro"
+                    puts "Sua marca é #{@marca}"
+                    puts "Seu modelo é #{@modelo}"
+                    puts "Seu preco é #{@preco}"
+                end
+
+                # Utilizando o método de <classe> em conjunto com a variável de <classe>
+
+                def self.conta_vendas
+                    @@contador_carro
+                end
+                                                    
+            end
+
+            # criando a nossa <sub-classe>
+
+            class Moto < Carro # Utilizando o sinal de `menor que <` para que nossa nova <classe> herde os parâmetros da <super-classe>
+
+                # Definição dos atributos pelo <attr_acessor> que é escrita e leitura
+                
+                attr_acessor :motor
+
+                # dinição do nosso <initialize>
+
+                def initialize(marca, modelo, preco, motor)
+                    # A palavra reservada <supe> é utilizada para trazer os métodos da nossa <super-classe> para nossa <sub-classe>
+                    super(marca, modelo, preco) 
+                    @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em noosso <initialize>
+                end
+
+            end
+
+            # instânciando minhas <classes>
+
+            carro = Carro.new("Ford", "Kar", 34000)
+            puts carro
+            puts carro.tecnico
+
+            # Chamando o método de <classe> que consume uma variável de <classe> em nosso <initialize>
+
+            puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
+
+        ```
+
+    - Resultado:
+
+        ![]()
+
+        - 
