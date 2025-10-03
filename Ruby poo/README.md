@@ -968,7 +968,7 @@
 
                 # Definição dos atributos pelo <attr_acessor> que é escrita e leitura
                 
-                attr_acessor :motor
+                attr_accessor :motor
 
                 # dinição do nosso <initialize>
 
@@ -990,10 +990,16 @@
 
             puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
 
+            # Instânciando a nossa <sub-classe>
+
+            carro1 = moto.new("BYD", "Dolphe", 11000, "eletrico")
+            puts carro1
+            puts carro1.tecnico
+
         ```
 
     - Resultado:
 
-        ![]()
+        ![Herança](../Banco%20de%20dados%20SQL/SQL/herança.png)
 
-        - 
+        - Em nossa `sub-classe` definimos nosso `initialize` e chamamos a palavra reservada `super` que puxa os métodos da nossa `super-classe`, após passamos os parâmetros de nossa `super-classe` de forma ordenanda, passamos o da nossa `sub-classe`, sendo assim, primeiro os parâmetros de nossa `super-classe` em seguida os da nossa `sub-classe`.
