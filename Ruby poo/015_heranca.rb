@@ -51,7 +51,7 @@ class Download < Game  # Utilizando o sinal de `menor que <` para que nossa nova
     # Definição do meu <initialize>
 
     def initialize(name, genre, multiplayer, versions, price, download_size)
-      super(name, genre, multiplayer, versions, price) # O <super> é uma palavra reservada para chama o método da sua <super-classe> na sua <sub-classe> usando reutilização de código
+      super(name, genre, multiplayer, versions, price) # O <super> é uma palavra reservada para chama o método da sua <super-classe> na sua <sub-classe> usando reutilização de código, segundo a ordem de precedência, <super-classe> com seus parâmetros primeiros e <sub-classe> em seguida
       @download_size = download_size
     end
 
@@ -64,5 +64,9 @@ puts game
 puts game.techinal_sheet
 
 # Instânciando a nossa <sub-classe>
+
+game2 = Download.new("Final fantasy", "RPG", false, [1995], 40, 10)
+puts game2
+puts game2.techinal_sheet
 
 
