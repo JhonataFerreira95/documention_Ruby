@@ -913,3 +913,7 @@
         - Utilizei uma váriavel de `Classe` para ver a quantidade instância(objetos) criados da minha `Class Carro`, inicializei a minha variável de `classe` como `0`, após passei nossa variável de `Classe` em nosso `initialize(constructor)` incrementadno para que a cada `Classe` instânciada seja adicionada a nossa variável de `Classe`.
 
 ## Herança em Ruby
+
+- Utilizamos bastante a `herança` para reutilização de código e a criação de nova estruturas a partir de estruturas já definidas, onde a `sub-classe` pode herda tudo da `super-Classe` que já foi criada e definida, reutilizando o código já feito de maneira muito eficiênte.
+
+- Para utilizar a `herança` em `ruby` é muito simples, você já tem sua `super-classe` definida e quer criar outra a partir da mesma, utilizando o símbolos menor que `<` para herda os parâmetros da sua `super-class` para sua nova `sub-classe`, a sintaxe é a seguinte `Class Moto < Carro`, nessa ordem, a direira está sua `super-classe` e a eesquerda está sua `sub-classe`.
