@@ -44,6 +44,17 @@ end
 
 class Download < Game  # Utilizando o sinal de `menor que <` para que nossa nova <classe> herde os parâmetros da <super-classe>
 
+    # Definição dos atributos pelo <attr_acessor> que é escrita e leitura
+
+    attr_accessor :download_size
+
+    # Definição do meu <initialize>
+
+    def initialize(name, genre, multiplayer, versions, price, download_size)
+      super(name, genre, multiplayer, versions, price) # O <super> é uma palavra reservada para chama o método da sua <super-classe> na sua <sub-classe> usando reutilização de código
+      @download_size = download_size
+    end
+
 end
 
 # Instânciando as <Classes>
@@ -51,5 +62,7 @@ end
 game = Game.new("Hollow Knight", "Aventura", true, [2017], 60)
 puts game
 puts game.techinal_sheet
+
+# Instânciando a nossa <sub-classe>
 
 
