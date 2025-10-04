@@ -978,6 +978,10 @@
                     @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em noosso <initialize>
                 end
 
+                def to_s
+                    "#{super}-#{@motor}" # Herdando o <to_s> e adc nosso parâmetro
+                end
+
             end
 
             # instânciando minhas <classes>
