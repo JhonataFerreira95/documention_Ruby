@@ -14,6 +14,7 @@
 10. [Métodos de Classe](#métodos-de-classe-em-ruby)
 11. [Variável de Classe](#variável-de-classe)
 12. [Herança em Ruby](#herança-em-ruby)
+13. [Polimorfismo](#polimorfismo-em-ruby)
 
 ## Introdução
 
@@ -1007,3 +1008,5 @@
         ![Herança](../Banco%20de%20dados%20SQL/SQL/herança.png)
 
         - Em nossa `sub-classe` definimos nosso `initialize` e chamamos a palavra reservada `super` que puxa os métodos da nossa `super-classe`, após passamos os parâmetros de nossa `super-classe` de forma ordenanda, passamos o da nossa `sub-classe`, sendo assim, primeiro os parâmetros de nossa `super-classe` em seguida os da nossa `sub-classe`.
+
+## Polimorfismo em Ruby
