@@ -980,7 +980,7 @@
                 end
 
                 def to_s
-                    "#{super}-#{@motor}" # Herdando o <to_s> e adc nosso parâmetro
+                    "#{super}-#{@motor}" # Herdando o <to_s> e adc nosso parâmetro com polimorfismo
                 end
 
             end
@@ -1010,3 +1010,5 @@
         - Em nossa `sub-classe` definimos nosso `initialize` e chamamos a palavra reservada `super` que puxa os métodos da nossa `super-classe`, após passamos os parâmetros de nossa `super-classe` de forma ordenanda, passamos o da nossa `sub-classe`, sendo assim, primeiro os parâmetros de nossa `super-classe` em seguida os da nossa `sub-classe`.
 
 ## Polimorfismo em Ruby
+
+- 
