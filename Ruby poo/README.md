@@ -8,7 +8,7 @@
 4. [Métodos em Instância](#metodos-em-instânciaou-objetos)
 5. [Self](#self)
 6. [Getter e Setter](#getter-e-setter)
-7. [Atributos com Attr reader, Attr writer e Attr acessor](#atríbutos-em-ruby)
+7. [Atributos com Attr reader, Attr writer e Attr accessor](#atríbutos-em-ruby)
 8. [Parâmetros no Método Initialize(ou Construtor)](#parâmetros-no--método-initialize)
 9. [Encapsulamento(Privado, Público e Protegio)](#encapsulamento-privado-público-e-protegido)
 10. [Métodos de Classe](#métodos-de-classe-em-ruby)
