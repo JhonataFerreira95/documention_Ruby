@@ -997,7 +997,7 @@
 
             # Instânciando a nossa <sub-classe>
 
-            carro1 = moto.new("BYD", "Dolphe", 11000, "eletrico")
+            carro1 = Moto.new("BYD", "Dolphe", 11000, "eletrico")
             puts carro1
             puts carro1.tecnico
 
@@ -1014,3 +1014,94 @@
 - O polimorfismo(sobrescrita de método) posse definido da seguinte forma, habilidade de objetos diferentes `classes` responderem à mesma mensagem(chamada de método) de maneiras diferentes, permitindo que uma única interface seja usada para interagir com vários tipos de objetos. Isso pode ser alcançado por meio de `herança`, onde `sub-classes` sobrescrevam método da `super-classe`, ou pelo `duck typing`.
 
 - Para utilizarmos o polimorfismo, primeiro temos que pegar o método desejado e sobrescrever da nossa `super-classe` para nossa `sub-classe` utilizando a palavra reservada `super` já que a mesma chama a implementação do método de nossa `super-classe`, após isso podemos manipular livremente o nosso método e adicionar mais parâmetros caso for desejado.
+
+    - Exemplo na prática:
+
+        ```ruby
+
+            class Carro
+                                
+                attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+                          
+                # Inicializando minha variável de <classe>
+
+                @@contador_carro = 0
+
+                def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
+                    @marca = marca
+                    @modelo = modelo
+                    @preco = preco
+
+                    # Utilizando a variável de <classe>
+                    @@contador_carro += 1 # Icrementador para saber a quantidade de <Classes> instânciada
+                end
+
+                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+                    "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
+                end
+
+                def tecnico
+                    puts "#Dados do Carro"
+                    puts "Sua marca é #{@marca}"
+                    puts "Seu modelo é #{@modelo}"
+                    puts "Seu preco é #{@preco}"
+                end
+
+                # Utilizando o método de <classe> em conjunto com a variável de <classe>
+
+                def self.conta_vendas
+                    @@contador_carro
+                end
+                                                    
+            end
+
+            # criando a nossa <sub-classe>
+
+            class Moto < Carro # Utilizando o sinal de `menor que <` para que nossa nova <classe> herde os parâmetros da <super-classe>
+
+                # Definição dos atributos pelo <attr_acessor> que é escrita e leitura
+                
+                attr_accessor :motor
+
+                # dinição do nosso <initialize>
+
+                def initialize(marca, modelo, preco, motor)
+                    # A palavra reservada <supe> é utilizada para trazer os métodos da nossa <super-classe> para nossa <sub-classe>
+                    super(marca, modelo, preco) 
+                    @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em noosso <initialize>
+                end
+
+                def to_s
+                    "#{super}-#{@motor}" # Herdando o <to_s> e adc nosso parâmetro com polimorfismo
+                end
+
+                def tecnico
+                  super # A palavra reservada <super> aproveita todo métood da nosssa <super-classe> e podemos adicionar mais parâmetros casos seja desejado
+                  puts "O motor do carro é #{@motor}."
+                end
+
+            end
+
+            # instânciando minhas <classes>
+
+            carro = Carro.new("Ford", "Kar", 34000)
+            puts carro
+            puts carro.tecnico
+
+            # Chamando o método de <classe> que consume uma variável de <classe> em nosso <initialize>
+
+            puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
+
+            # Instânciando a nossa <sub-classe>
+
+            carro1 = Moto.new("BYD", "Dolphe", 11000, "eletrico")
+            puts carro1
+            puts carro1.tecnico
+
+        ```
+
+    - Resultado: 
+
+        ![Polimorfismo](../Banco%20de%20dados%20SQL/SQL/Polimorfismo.png)
+
+        - Aqui utilizei dois exemplo para o `polimorfismo`, um em nosso método `to_s` e outro no método `tecnico`. Repare que destaquei o método `to_s` para repara a diferença da `super-classe` instânciada para a `sub-classe` instânciada, fiz o mesmo para o método `tecnico` só que com uma seta, apontando o mesmo, já que o método muda da `super-classe` para `sub-classe`, isso é polimorfismo. Em nossa `super-classe` no método `to_s` vemos as seguintes informações `marca, modelo, preco` e em nossa `sub-classe` vemos as seguintes informações `marca, modelo, preco, motor`, o mesmo acontece para o método `tecnico`.
