@@ -1011,4 +1011,5 @@
 
 ## Polimorfismo em Ruby
 
-- 
+- O polimorfismo posse definido da seguinte forma, habilidade de objetos diferentes `classes` responderem à mesma mensagem(chamada de método) de maneiras diferentes, permitindo que uma única interface seja usada para interagir com vários tipos de objetos. Isso pode ser alcançado por meio de `herança`, onde `sub-classes` sobrescrevam método da `super-classe`, ou pelo `duck typing`.
+
