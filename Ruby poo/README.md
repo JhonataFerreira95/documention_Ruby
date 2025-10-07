@@ -14,7 +14,7 @@
 10. [Métodos de Classe](#métodos-de-classe-em-ruby)
 11. [Variável de Classe](#variável-de-classe)
 12. [Herança em Ruby](#herança-em-ruby)
-13. [Polimorfismo](#polimorfismo-em-ruby)
+13. [Polimorfismo em Ruby](#polimorfismo-em-ruby)
 
 ## Introdução
 
