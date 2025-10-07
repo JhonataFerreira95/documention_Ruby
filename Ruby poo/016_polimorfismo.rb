@@ -55,7 +55,12 @@ class Download < Game  # Utilizando o sinal de `menor que <` para que nossa nova
       @download_size = download_size
     end
 
-    
+    # Utilizando o polimorfismo 
+
+    def techinal_sheet
+      super # A palavra reservada <super> aproveita tudo que está em nossa <super-classe> e permite adicionar novos parâmetros em nosso novo método.
+      puts "Tamanho do Download: #{@download_size} GB"
+    end
 
 end
 
@@ -67,7 +72,7 @@ puts game.techinal_sheet
 
 # Instânciando a nossa <sub-classe>
 
-game2 = Download.new("Final fantasy", "RPG", false, [1995], 40, 10)
+game2 = Download.new("Final fantasy", "RPG", false, [1995], 40, 3)
 puts game2
 puts game2.techinal_sheet
 
