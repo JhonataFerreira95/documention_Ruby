@@ -5,7 +5,7 @@
 1. [Introdução](#introdução)
 2. [Classe e Objetos](#classes-e-objetos)
 3. [Initialize(Ou Constructor)](#initialize)
-4. [Métodos em Instância](#metodos-em-instânciaou-objetos)
+4. [Métodos em Instância](#métodos-em-instânciaou-objetos)
 5. [Self](#self)
 6. [Getter e Setter](#getter-e-setter)
 7. [Atributos com Attr reader, Attr writer e Attr accessor](#atríbutos-em-ruby)
@@ -167,7 +167,7 @@
 
             carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
-            puts = carro.apresentar # Exibindo  método instânciada
+            puts carro.apresentar # Exibindo  método instânciada
 
         ```
     - Agora eu posso utilizar o `método` já que ele é uma instância da minha `classe` que já foi instânciada. Vale ressaltar que podemos utilizar isso com todos os métodos que estão presentes em nossa `classe`, levando em consideração que ela já esta instânciada.
@@ -202,7 +202,7 @@
 
             carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
-            puts = carro.apresentar # Exibindo método instânciada
+            puts  carro.apresentar # Exibindo método instânciada
 
         ```
 
@@ -239,7 +239,7 @@
 
             carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
-            puts = carro.apresentar # Exibindo  método instânciada
+            puts  carro.apresentar # Exibindo  método instânciada
 
 
         ```
@@ -277,7 +277,7 @@
 
             carro = Carro.new("Ford", "A23") # Nossa classe instânciada
 
-            puts = carro.apresentar # Exibindo  método instânciada
+            puts carro.apresentar # Exibindo  método instânciada
 
             puts carro.detalhes # Chamando o método que tem o self
 
