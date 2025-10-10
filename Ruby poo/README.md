@@ -177,7 +177,7 @@
 
     - Antes do método `to_s`, note que quando criamos um `objeto` sem definição do `to_s`, essa e sua mensagem de criação:
 
-        ![Sem o método to_s](../Banco%20de%20dados%20SQL/SQL/Metódo_p.png)
+        ![Sem o método to_s](../Banco%20de%20dados%20SQL/Assets/Metódo_p.png)
 
     - Aqui um exemplo na prática:
 
@@ -208,7 +208,7 @@
 
         - Depois da definição do método `to_s`, resaltar que para funcinar perfeitamente, utilize a palavra reservada `to_s`. Podemos ver a mensagem que foi definida no método `to_s`.
 
-            ![Com método to_s](../Banco%20de%20dados%20SQL/SQL/Metódo_to_s.png)
+            ![Com método to_s](../Banco%20de%20dados%20SQL/Assets/Metódo_to_s.png)
 
 ## Self
 
@@ -285,7 +285,7 @@
 
     - Resultado: 
 
-        ![Resultado](../Banco%20de%20dados%20SQL/SQL/self.png)
+        ![Resultado](../Banco%20de%20dados%20SQL/Assets/self.png)
 
         - O palavra reservada `self` faz refência de acordo com o local que foi inserida. Ela basicamente aponta para instância atual que o `objeto` foi criado.
 
@@ -529,7 +529,7 @@
 
         - Resultado sem todos os valores:
 
-        ![Sem passar todos os valores em nossos parâmetros](../Banco%20de%20dados%20SQL/SQL/ruby_erro_sem_definicao_dos_parametros.png)
+        ![Sem passar todos os valores em nossos parâmetros](../Banco%20de%20dados%20SQL/Assets/ruby_erro_sem_definicao_dos_parametros.png)
 
         - Como pode ser visto, é obrigatório passar os dados em nossos parâmetros para que nosso método `initialize` de forma dinâmica funcione.
 
@@ -596,7 +596,7 @@
 
             - Resultado:
 
-                ![Resultado na prática](../Banco%20de%20dados%20SQL/SQL/método_privado.png)
+                ![Resultado na prática](../Banco%20de%20dados%20SQL/Assets/método_privado.png)
 
                 - Isso acontece porque o método `private` não pode ser acessado por instância fora da nossa `classe` apenas dentro da mesma utilizando um recptor explícito já mencionado acima, nosso `self`.
 
@@ -675,7 +675,7 @@
 
             - Resultado: 
 
-                ![Método Público](../Banco%20de%20dados%20SQL/SQL/método_publico.png)
+                ![Método Público](../Banco%20de%20dados%20SQL/Assets/método_publico.png)
 
                 - Aqui fiz a seguinte lógica para acessar o método dentro `private`, criei um método `public` para chama o método privado dentro da própria `classe` para acessar a lógica do método `privado`.
 
@@ -754,7 +754,7 @@
 
             - Resultado: 
 
-                ![Método Protegido](../Banco%20de%20dados%20SQL/SQL/método_protegido.png)
+                ![Método Protegido](../Banco%20de%20dados%20SQL/Assets/método_protegido.png)
 
                 - Nesse exemplo acima, única coisa que fiz foi comentar os métodos `private` e `public` para criar o mesmo exemplo com o `protected`, a mesma lógica de aplicar o desconto, instância a `classe` e depois imprimir os valores com o método `tecnico` foi o mesmo.
 
@@ -825,13 +825,13 @@
 
     - Resultado: 
     
-        ![Erro no método de Classe](../Banco%20de%20dados%20SQL/SQL/erro_método_de_classe.png)
+        ![Erro no método de Classe](../Banco%20de%20dados%20SQL/Assets/erro_método_de_classe.png)
 
         - Esse erro acontece porque o método de `Classe` não pode ser acessado por uma instância e sim por sua própria `classe`.
 
             - Resultado:
 
-                ![Método de Classe](../Banco%20de%20dados%20SQL/SQL/metodo_de_classe.png)
+                ![Método de Classe](../Banco%20de%20dados%20SQL/Assets/metodo_de_classe.png)
 
                 - Nesse exemplo eu chamei o método de `Classe` pela `Classe`, sem instância, desse jeito que funciona o método de `Classe`.
 
@@ -911,7 +911,7 @@
     
     - Resultado:
 
-        ![variavel de classe](../Banco%20de%20dados%20SQL/SQL/variavel_de_classe.png)
+        ![variavel de classe](../Banco%20de%20dados%20SQL/Assets/variavel_de_classe.png)
     
         - Utilizei uma váriavel de `Classe` para ver a quantidade instância(objetos) criados da minha `Class Carro`, inicializei a minha variável de `classe` como `0`, após passei nossa variável de `Classe` em nosso `initialize(constructor)` incrementadno para que a cada `Classe` instânciada seja adicionada a nossa variável de `Classe`.
 
@@ -1005,7 +1005,7 @@
 
     - Resultado:
 
-        ![Herança](../Banco%20de%20dados%20SQL/SQL/herança.png)
+        ![Herança](../Banco%20de%20dados%20SQL/Assets/herança.png)
 
         - Em nossa `sub-classe` definimos nosso `initialize` e chamamos a palavra reservada `super` que puxa os métodos da nossa `super-classe`, após passamos os parâmetros de nossa `super-classe` de forma ordenanda, passamos o da nossa `sub-classe`, sendo assim, primeiro os parâmetros de nossa `super-classe` em seguida os da nossa `sub-classe`.
 
@@ -1102,6 +1102,6 @@
 
     - Resultado: 
 
-        ![Polimorfismo](../Banco%20de%20dados%20SQL/SQL/Polimorfismo.png)
+        ![Polimorfismo](../Banco%20de%20dados%20SQL/Assets/Polimorfismo.png)
 
         - Aqui utilizei dois exemplo para o `polimorfismo`, um em nosso método `to_s` e outro no método `tecnico`. Repare que destaquei o método `to_s` para repara a diferença da `super-classe` instânciada para a `sub-classe` instânciada, fiz o mesmo para o método `tecnico` só que com uma seta, apontando o mesmo, já que o método muda da `super-classe` para `sub-classe`, isso é polimorfismo. Em nossa `super-classe` no método `to_s` vemos as seguintes informações `marca, modelo, preco` e em nossa `sub-classe` vemos as seguintes informações `marca, modelo, preco, motor`, o mesmo acontece para o método `tecnico`.
