@@ -131,16 +131,27 @@
 
 ### Deletando arquivos com Ruby.
 
-```ruby
+- Deletando os arquivos em `ruby` de forma rápida verificando no diretório.
 
-# Para excluir arquivos temos que verificar se ele ao menos existe. Para isso usamos uma condicional para verificar se ele existe ou não.
+- Exemplo na prática: 
 
-if File.exist?("../Manipulação de arquivos/Text/cursosTI.txt") # Aqui verificamos se ele existe.
+    ```ruby
 
-  File.delete("../Manipulação de arquivos/Text/cursosTI.txt") # Como o arquivo em si não existe, ele nem entra na condição, não aparece nada no terminal.
-end
+    if File.exist?("../Manipulação de arquivos/Text/cursosTI.txt") 
 
-```
+      File.delete("../Manipulação de arquivos/Text/cursosTI.txt")
+
+    end
+
+    ```
+
+  - Explicando o script:
+
+    - Para excluir arquivos temos que verificar se ele ao menos existe. Para isso usamos uma condicional para verificar se ele existe ou não.
+
+    - Aqui verificamos se ele existe.
+
+    - Como o arquivo em si não existe, ele nem entra na condição, não aparece nada no terminal.
 
 ### Argumentos com Ruby.
 
