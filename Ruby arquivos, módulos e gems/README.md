@@ -115,13 +115,19 @@
 
 ### Renomeando arquivo com Ruby.
 
-```ruby
+- Renomeando arquivos com `ruby` de forma simples e rápida.
 
-# Para renomear o nome do arquivo utilizamos <File.rename>. Passamos o arquivo e nome com o caminho, depois passamos o caminho com o novo nome do arquivo.
+- Exemplo na prática: 
 
-File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de arquivos/Text/courses.txt") 
+    ```ruby
 
-```
+    File.rename("../Manipulação de arquivos/Text/cursos.txt", "../Manipulação de arquivos/Text/courses.txt") 
+
+    ```
+  
+  - Explicando o script:
+
+    - Para renomear o nome do arquivo utilizamos `File.rename`. Passamos o arquivo e nome com o caminho, depois passamos o caminho com o novo nome do arquivo.
 
 ### Deletando arquivos com Ruby.
 
