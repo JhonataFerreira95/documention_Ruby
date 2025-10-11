@@ -46,7 +46,7 @@
 
       ```
   
-  - Resultado:
+  - Explicação do script:
 
     - `File.open` é um módulo que trabalha com arquivos. Quando trabalhamos com arquivos, temos 2 entradas, input e output == entrada de dados e saída de dados.
 
@@ -58,22 +58,30 @@
 
 ### Segunda alternativa para ler um arquivo.
 
-```ruby
+- Há outra maneira de ler arquivos em `ruby`.
 
-# Nossa variável que recebe o arquivo que vai ser lido.
+- Exemplo na prática:
 
-file_path = "../Manipulação de arquivos/Text/anime.txt" 
+    ```ruby
 
-# Abrimos o arquivo com <File.open>, passamos a nossa variável, em seguida útilizamos o <"r"> para indicar que é <READ == leitura>.
+    file_path = "../Manipulação de arquivos/Text/anime.txt" 
 
-File.open(file_path, "r") do |file| 
-  file.each_line { |line| puts line.strip unless line.strip.empty? } 
-  end
+    File.open(file_path, "r") do |file| 
+      file.each_line { |line| puts line.strip unless line.strip.empty? }
+    end
 
-# Utilizamos o <each> para percorrer o arquivo linha a linha, utilizamos o <line> para representar cada linha linda.
-# O <.strip> para remover espaços extras no início e no final da linha, <unless> verifica se a linha não está vazia <line.strip.empty?>. Se a linha NÃO estiver vazia, ela é imprimida no terminal.
+    ```
 
-```
+  - Explicação do script:
+
+    - Nossa variável que recebe o arquivo que vai ser lido.
+
+    - Abrimos o arquivo com `File.open`, passamos a nossa variável, em seguida útilizamos o `"r"` para indicar que é `READ == leitura`.
+
+    - Utilizamos o `each` para percorrer o arquivo linha a linha, utilizamos o `line` para representar cada linha linda.
+
+    - O `.strip` para remover espaços extras no início e no final da linha, `unless` verifica se a linha não está vazia `line.strip.empty?`. Se a linha NÃO estiver vazia, ela é imprimida no terminal.
+
 ### Escrevendo arquivos com Ruby.
 
 ```ruby
