@@ -25,7 +25,10 @@
 
 DOCUMENTAÇÃO RUBY/
 ├── Banco de dados SQL/
-│   └── SQL/
+│   └── Assets/
+│   └── Integração_com_BandoDeDados/
+│   └── Modelagem_BancoDeDados/
+│   └── Rails.sql
 ├── Ruby arquivos, módulos e gems/
 │   └── Gems/
 │   └──Manipulação de arquivos/
