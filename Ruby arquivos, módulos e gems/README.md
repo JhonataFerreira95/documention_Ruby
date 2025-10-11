@@ -356,44 +356,61 @@ end
 
 ### Utilizando módulo `CSV`.
 
-  - Importando o módulo.
+- Importando o módulo para escrever em `CSV`
 
-```ruby
+    ```ruby
 
-require 'csv' # Utilizamos o <require> para importação de módulos.
+    require 'csv' 
 
-```
+    ```
+  
+  - Explicação do script
+
+    - Utilizamos o `require` para importação de módulos.
 
 ### Ecrevendo dados em CSV.
 
 - Aqui vamos abri o arquivo, algo parecido com o `File.open`, esse aqui não precisa existir o módulo funciona, no caso da leitura, se for escrita é obrigatório que ele exista.
 
-```ruby
-# Aqui vamos escreve utilizando o <CSV.open>, passamos o <"w"> que significa que vamos escrever, criamos um bloco com <do> o bloco vai ser como parâmetro nossa variável <|csv|>.
+- Exemplo na prática: 
 
-CSV.open("../Manipulação de arquivos/Csv/exemplo.csv", "w") do |csv| 
-    csv << ["Nome", "idade", "cidade"] # Estamos escrevendo no arquivo utilizando o <Binary left_shift>.
-    csv << ["Shademan", "90", "?"]
-    csv << ["Rockman", "22", "NetCity"]
-    csv << ["Protoman" "24", "NetCity"]
-end
+    ```ruby
 
-```
+    CSV.open("../Manipulação de arquivos/Csv/exemplo.csv", "w") do |csv| 
+        csv << ["Nome", "idade", "cidade"] 
+        csv << ["Shademan", "90", "?"]
+        csv << ["Rockman", "22", "NetCity"]
+        csv << ["Protoman" "24", "NetCity"]
+    end
+
+    ```
+  
+  Explicação script:
+
+    - Aqui vamos escreve utilizando o `CSV.open`, passamos o `"w"` que significa que vamos escrever, criamos um bloco com `do` o bloco vai ser como parâmetro nossa variável `|csv|`.
+
+    - Estamos escrevendo no arquivo utilizando o `Binary left_shift`.
 
 ### Lendo ddos em CSV.
 
-- Inicializamos o método para ler linha a linha com  metódo <.foreach>, passasamos o caminho.
+- Inicializamos o método para ler linha a linha com  metódo `.foreach`, passasamos o caminho.
 
-```ruby
+- Exemplo na prática:
 
-CSV.foreach("../Manipulação de arquivos/Csv/exemplo.csv", headers: true) do |row| # Esta opção indica que a primeira linha do arquivo CSV contém os cabeçalhos (nomes das colunas).
-    nome = row ["Nome"]
-    idade = row ["idade"]
-    cidade = row ["cidade"]
-    puts "Nome: #{nome}, idade: #{idade}, cidade: #{cidade}"
-end
+    ```ruby
 
-```
+    CSV.foreach("../Manipulação de arquivos/Csv/exemplo.csv", headers: true) do |row| 
+        nome = row ["Nome"]
+        idade = row ["idade"]
+        cidade = row ["cidade"]
+        puts "Nome: #{nome}, idade: #{idade}, cidade: #{cidade}"
+    end
+
+    ```
+
+  - Explicando script:
+
+    - Esta opção indica que a primeira linha do arquivo CSV contém os cabeçalhos (nomes das colunas).
 
 ## Gems.
 
@@ -417,7 +434,7 @@ source "https://rubygems.org"
 
 ```
 
-- Aqui importamos com <gem> o nome da nossa gem entre aspas <"faker"> e posteriomente a sua versão nesse seguimento <"~> 3.2.0">.
+- Aqui importamos com `gem` o nome da nossa gem entre aspas `"faker"` e posteriomente a sua versão nesse seguimento `"~> 3.2.0"`.
 
 ```ruby
 
