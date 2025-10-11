@@ -32,23 +32,29 @@
 
   - Primeira alternativa para ler um arquivo.
 
-```ruby
+  - Exemplo na prática:
+  
 
-# <File.open> é um módulo que trabalha com arquivos. Quando trabalhamos com arquivos, temos 2 entradas, input e output == entrada de dados e saída de dados.
+      ```ruby
 
-movies = File.open("../Manipulação de arquivos/Text/anime.txt") 
-puts movies
+      movies = File.open("../Manipulação de arquivos/Text/anime.txt") 
+      puts movies
 
-# Para que serve o <.class>? Serve para confirmar que movies é realmente um objeto da classe file, assim confirmando que é um arquivo.
+      puts movies.class 
 
-puts movies.class 
+      movies.each { |line| puts line.strip } 
 
-# Utilizamos <each> para ler cada linha do arquivo.
-# <line> representa cada linha lida e <.strip> remove os espaços em branco antes e depois do texto. O <puts> imprime a linha no console.
+      ```
+  
+  - Resultado:
 
-movies.each { |line| puts line.strip } 
+    - `File.open` é um módulo que trabalha com arquivos. Quando trabalhamos com arquivos, temos 2 entradas, input e output == entrada de dados e saída de dados.
 
-```
+    - Para que serve o `.class`? Serve para confirmar que movies é realmente um objeto da classe file, assim confirmando que é um arquivo
+
+    - Utilizamos `each` para ler cada linha do arquivo.
+
+    - `line` representa cada linha lida e `.strip` remove os espaços em branco antes e depois do texto. O `puts` imprime a linha no console.
 
 ### Segunda alternativa para ler um arquivo.
 
@@ -147,7 +153,7 @@ end
 
 ## Módulos.
 
-## Módulos úteis com ruby.
+## Módulos úteis com Ruby.
 Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`. 
 
 - Utilizando o módulo `Math`.
@@ -257,7 +263,7 @@ puts url.class
 
 #### Enviando requisição HTTP.
 
-  - Esqueci de mencionar que podemos ter uma classe dentro de um módulo perfeitamente. Sobre <url.host> retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar. Sobre <url.port> retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
+  - Esqueci de mencionar que podemos ter uma classe dentro de um módulo perfeitamente. Sobre `url.host` retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar. Sobre `url.port` retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
 
 ```ruby
 
@@ -322,7 +328,7 @@ require 'csv' # Utilizamos o <require> para importação de módulos.
 
 ### Ecrevendo dados em CSV.
 
-- Aqui vamos abri o arquivo, algo parecido com o <File.open>, esse aqui não precisa existir o módulo funciona, no caso da leitura, se for escrita é obrigatório que ele exista.
+- Aqui vamos abri o arquivo, algo parecido com o `File.open`, esse aqui não precisa existir o módulo funciona, no caso da leitura, se for escrita é obrigatório que ele exista.
 
 ```ruby
 # Aqui vamos escreve utilizando o <CSV.open>, passamos o <"w"> que significa que vamos escrever, criamos um bloco com <do> o bloco vai ser como parâmetro nossa variável <|csv|>.
