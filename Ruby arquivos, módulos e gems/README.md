@@ -155,68 +155,89 @@
 
 ### Argumentos com Ruby.
 
-- Passando argumentos.
+- Passando argumentos com `ruby` com `argv`.
 
-```ruby
+- Exemplo na prática:
 
-# Para ver o tipo do arg utilizamos o <.class>, para isso acontece você deve passar o argumento direto no terminal.
+    ```ruby
 
-ARGV.each { |arg| puts arg }
+    ARGV.each { |arg| puts arg }
 
-# Vamos colocar um "óla" no terminal, a saída é exatamente assim <óla> quebra a linha e vem o tipo <string>. No argv, por padrão tudo vem em STRING.
+    ARGV.each { |arg| puts arg.class } 
 
-ARGV.each { |arg| puts arg.class } 
+    ```
 
-```
+  - Explicando script:
+
+    -  Para ver o tipo do arg utilizamos o `.class`, para isso acontece você deve passar o argumento direto no terminal.
+
+    - Vamos colocar um `"óla"` no terminal, a saída é exatamente assim `óla` quebra a linha e vem o tipo `string`. No argv, por padrão tudo vem em STRING.
 
 ### Potência de um número com ARGV.
 
-```ruby
+- Passando potência de número
 
-# Criamos um bloco com o <do>, passamos nossa variável com os pipes <|arg|>.
+- Exemplo na prática:
 
-ARGV.each do |arg| 
+    ```ruby
 
-# Convertendo o <arg> para inteiro, já que o <ARGV> por padrão é string, atribuímos o <arg.to_i> à variável <pot>.
+    ARGV.each do |arg|
+      pot = arg.to_i ** 2 
+      puts "Potência do número #{arg} é #{pot}" 
+    end
 
-  pot = arg.to_i ** 2 
+    ```
 
-# Aqui iremos ao terminal e passar o argumento no terminal, como visto acima. Passaremos um 4, isso deve retorna um 16 no terminal.
+  - Explicando o script:
 
-  puts "Potência do número #{arg} é #{pot}" 
-  
-end
+    - Criamos um bloco com o `do`, passamos nossa variável com os pipes `|arg|`.
 
-```
+    - Convertendo o `arg` para inteiro, já que o `ARGV` por padrão é string, atribuímos o `arg.to_i` à variável `pot`.
+
+    - Aqui iremos ao terminal e passar o argumento no terminal, como visto acima. Passaremos um 4, isso deve retorna um 16 no terminal.
+
 
 ## Módulos.
 
-## Módulos úteis com Ruby.
-Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`. 
+- Módulos úteis com Ruby.
 
-- Utilizando o módulo `Math`.
+  - Aqui damos inicios a utilizar módulos como `Math`, `HTTP`, `URI` e `CSV`. 
 
-### Para ver o tipo, no caso do <Math> ele é tipo módulo.
+    - Utilizando o módulo `Math`.
 
-```ruby
+  - Para ver o tipo, no caso do `Math` ele é tipo módulo.
 
-puts Math.class # Retorna o tipo no terminal.
+  - Exemplo na prática:
 
-# Para ver todo os metódos que tem dentro do <Math> utilizamos <.methods> e <.sort> para ordena os metódos.
+    ```ruby
 
-```
+    puts Math.class 
 
-### Módulo para ver a raiz quadrada.
+    ```
 
-```ruby
+  - Explicando script:
 
-puts Math.sqrt(4) # Passamos entre () o número desejado para a raiz quadrada.
+    - Retorna o tipo no terminal.
 
-```
+    - ara ver todo os metódos que tem dentro do `Math` utilizamos `.methods` e `.sort` para ordena os metódos.
+
+  - Módulo para ver a raiz quadrada.
+
+  - Exemplo na prática:
+
+    ```ruby
+
+    puts Math.sqrt(4) 
+
+    ```
+
+  - Explicando script:
+
+    - Passamos entre `()` o número desejado para a raiz quadrada.
 
 ### Metódo para ver Pi.
 
-- Quando passamos <::>, siginifica que estamos querendo utilizar um módulos com os primeiros <:> e no segundo a referência a classe que está dentro do módulo que vamos usar, que no caso seria <PI>.
+- Quando passamos `::`, siginifica que estamos querendo utilizar um módulos com os primeiros <:> e no segundo a referência a classe que está dentro do módulo que vamos usar, que no caso seria <PI>.
 
 ```ruby 
 
