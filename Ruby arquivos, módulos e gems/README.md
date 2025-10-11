@@ -215,11 +215,11 @@
 
     ```
 
-  - Explicando script:
+    - Explicando script:
 
-    - Retorna o tipo no terminal.
+      - Retorna o tipo no terminal.
 
-    - ara ver todo os metódos que tem dentro do `Math` utilizamos `.methods` e `.sort` para ordena os metódos.
+      - ara ver todo os metódos que tem dentro do `Math` utilizamos `.methods` e `.sort` para ordena os metódos.
 
   - Módulo para ver a raiz quadrada.
 
@@ -231,19 +231,26 @@
 
     ```
 
-  - Explicando script:
+    - Explicando script:
 
-    - Passamos entre `()` o número desejado para a raiz quadrada.
+      - Passamos entre `()` o número desejado para a raiz quadrada.
 
 ### Metódo para ver Pi.
 
-- Quando passamos `::`, siginifica que estamos querendo utilizar um módulos com os primeiros <:> e no segundo a referência a classe que está dentro do módulo que vamos usar, que no caso seria <PI>.
+- Quando passamos `::`, siginifica que estamos querendo utilizar um módulos com os primeiros `:` e no segundo a referência a classe que está dentro do módulo que vamos usar, que no caso seria `PI`.
 
-```ruby 
+- Exemplo na prática:
 
-puts Math::PI # Retorna o valor de PI no terminal.
+    ```ruby 
 
-```
+    puts Math::PI 
+
+    ```
+
+    - Explicando o script:
+
+      - Retorna o valor de PI no terminal.
+
 
 ### Cálculo a área de um círculo.
 
