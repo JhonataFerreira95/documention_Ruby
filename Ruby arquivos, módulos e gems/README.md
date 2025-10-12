@@ -314,7 +314,7 @@ Exemplo na prática:
       perimetro = calcular_perimetro(raio) 
 
       ```
-  Explicando o script:
+  - Explicando o script:
 
     - Aqui atribúimos a entrada do usuário para `area`.
 
@@ -322,14 +322,20 @@ Exemplo na prática:
 
   
 
-### exibindo os resultados.
+- exibindo os resultados:
 
-```ruby
+    ```ruby
 
-puts "Área do círculo com raio #{raio} é #{area.round(2)}" # Exibição com duas casa decímais com <.round(2)>.
-puts "Perímetro do círculo com raio #{raio} é #{perimetro.round(2)}" # Exibição com duas casa decímais com <.round(2)>.
+    puts "Área do círculo com raio #{raio} é #{area.round(2)}" 
+    puts "Perímetro do círculo com raio #{raio} é #{perimetro.round(2)}" 
 
-```
+    ```
+  - Explicando o script: 
+
+    - Exibição com duas casa decímais com `.round(2)`.
+
+    - Exibição com duas casa decímais com `.round(2)`.
+
 ### Utilizando módulo `http` e `uri`.
 
 - Criando instância HTTP e fazendo a requisição.
