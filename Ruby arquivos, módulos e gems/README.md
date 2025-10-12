@@ -373,35 +373,51 @@ Exemplo na prática:
 
     - Com o `puts url` retorna informações que pedimos na requisição do site, que será o seu domínio.
 
-#### Enviando requisição HTTP.
+- Enviando requisição HTTP.
 
   - Esqueci de mencionar que podemos ter uma classe dentro de um módulo perfeitamente. Sobre `url.host` retorna o nome do host (domínio ou endereço IP) do servidor ao qual você deseja se conectar. Sobre `url.port` retorna o número da porta que será usada para a conexão. Se a porta não for especificada na URL, o valor padrão será 80 para HTTP e 443 para HTTPS.
 
-```ruby
+- Exemplo na prática: 
 
-http = Net::HTTP.new(url.host, url.port) # Vamos insância a nossa classe <HTTP> e vamos passar um parâmetro para a mesma.
+    ```ruby
 
-# Se for necessários utilizar o HTTPS, vamos adicionar isso a seguir.
-# Essa linha configura automaticamente o cliente HTTP para usar SSL/TLS apenas quando a URL começa com https. 
+    http = Net::HTTP.new(url.host, url.port) 
 
-http.use_ssl = (url.scheme == 'https') 
+    http.use_ssl = (url.scheme == 'https') 
 
-```
+    ```
+  
+  - Explicação do script:
 
-- Sobre o uso de <https.use_ssl> e <url.scheme>.
+    - Vamos insância a nossa classe `HTTP` e vamos passar um parâmetro para a mesma.
+
+    - Se for necessários utilizar o HTTPS, vamos adicionar isso a seguir.
+
+    - Essa linha configura automaticamente o cliente HTTP para usar SSL/TLS apenas quando a URL começa com https. 
+
+- Sobre o uso de `https.use_ssl` e `url.scheme`.
 
   - url.scheme:
+
     - O método scheme retorna o protocolo da URL, que pode ser http ou https.
+
     - url.scheme == 'https':
+
     - Essa é uma comparação que verifica se o protocolo da URL é https.
+
     - Se for https, a expressão retorna true.
+
     - Se for http, a expressão retorna false.
+
     - http.use_ssl = (url.scheme == 'https'):
+
     - Aqui, o valor da comparação (true ou false) é atribuído à propriedade use_ssl do objeto http.
+
     - Se a URL for https, use_ssl será true, e o cliente HTTP usará SSL/TLS para criptografar a conexão.
+
     - Se a URL for http, use_ssl será false, e a conexão será feita sem criptografia
 
-### Enviando uma requisição para o HTTP.
+- Enviando uma requisição para o HTTP.
 
 ```ruby
 
