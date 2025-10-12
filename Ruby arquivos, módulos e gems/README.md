@@ -320,8 +320,6 @@ Exemplo na prática:
 
     - Aqui atribúimos a entrada do usuário para `perimetro`.
 
-  
-
 - exibindo os resultados:
 
     ```ruby
@@ -338,31 +336,42 @@ Exemplo na prática:
 
 ### Utilizando módulo `http` e `uri`.
 
-- Criando instância HTTP e fazendo a requisição.
+- Criando instância `HTTP` e fazendo a requisição.
 
-```ruby
+- Exemplo na prática:
 
-# Criando instância HTTP e fazendo a requisição.
+    ```ruby
 
-require 'uri' # Para fazer a requisição do módulo <URI>.
-require 'net/http' # Para fazer a requisição do módulo <HTTP>.
+    require 'uri' 
+    require 'net/http' 
 
-```
+    ```
 
-#### Para enviar uma requisição para internet. Para fazer a requisição, precisamos de uma url. Essa url é padronizada pela <URI>.
+  - Explicando o script: 
 
-```ruby
+    - Para fazer a requisição do módulo `URI`.
 
-url = URI.parse('https://www.google.com') # Para a requisição utilizamos o <URI> e para permissão de endereço utilizamos o <.parse> para passar o link do site onde faremos a requisição.
-# Retorna informações que pedimos na requisição do site, que será o seu domínio.
+    - Para fazer a requisição do módulo `HTTP`.
 
-puts url 
+- Para enviar uma requisição para internet. Para fazer a requisição, precisamos de uma url. Essa url é padronizada pela `URI`.
 
-# Retorna o tipo da <url> que será <URI::HTTP>, já que estamos utilizando protocolo HTTPS.
+- Exemplo na prática:
 
-puts url.class 
+    ```ruby
 
-```
+    url = URI.parse('https://www.google.com')
+
+    puts url 
+
+    puts url.class 
+
+    ```
+
+  - Explicando o script: 
+
+    - Para a requisição utilizamos o `URI` e para permissão de endereço utilizamos o `.parse` para passar o link do site onde faremos a requisição.
+
+    - Com o `puts url` retorna informações que pedimos na requisição do site, que será o seu domínio.
 
 #### Enviando requisição HTTP.
 
