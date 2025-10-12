@@ -275,34 +275,52 @@
 
 Exemplo na prática: 
 
-    ```ruby
+  ```ruby
 
-    def calcular_perimetro(raio)
-        return 2 * Math::PI * raio
-    end
+      def calcular_perimetro(raio)
+          return 2 * Math::PI * raio
+      end
 
-    ```
+  ```
+
   - Explicando o script: 
      
      - Aqui usei o método `math` com o `PI` para calcular o `raio`.
 
 ### Entrada de dados.
 
-```ruby
+- Atribuídos valor a nossa váriavel `raio` para execultar o calculo do método.
 
-puts "Digite o raio do círculo: "
-raio = gets.chomp.to_f # Para atualizar a entrada dizendo que o valor digitado é floot com <.to_f>.
+- Exemplo na prática: 
 
-```
+    ```ruby
 
-### Execução da função.
+    puts "Digite o raio do círculo: "
+    raio = gets.chomp.to_f 
 
-```ruby
+    ```
 
-area = calcular_area(raio) # Aqui atribúimos a entrada do usuário para <area>
-perimetro = calcular_perimetro(raio) # Aqui atribúimos a entrada do usuário para <perimetro>
+  - Explicando o script: 
 
-```
+    - Para atualizar a entrada dizendo que o valor digitado é floot com `.to_f`.
+
+    - Execução da função.
+
+    - Exemplo na prática: 
+
+      ```ruby
+
+      area = calcular_area(raio) 
+      perimetro = calcular_perimetro(raio) 
+
+      ```
+  Explicando o script:
+
+    - Aqui atribúimos a entrada do usuário para `area`.
+
+    - Aqui atribúimos a entrada do usuário para `perimetro`.
+
+  
 
 ### exibindo os resultados.
 
