@@ -271,14 +271,20 @@
 
 ### Cáculo perímetro de um círculo.
 
+- Usando novamento o método `Math` com `PI`.
 
-```ruby
+Exemplo na prática: 
 
-def calcular_perimetro(raio)
-    return 2 * Math::PI * raio
-end
+    ```ruby
 
-```
+    def calcular_perimetro(raio)
+        return 2 * Math::PI * raio
+    end
+
+    ```
+  - Explicando o script: 
+     
+     - Aqui usei o método `math` com o `PI` para calcular o `raio`.
 
 ### Entrada de dados.
 
