@@ -427,22 +427,36 @@ request = Net::HTTP::Get.new(url) # Aqui estamos fazendo uma requisição para n
 
 ```
 
-### Utilizamos o <response> para fazer a requisição.
+- Utilizamos o `response` para fazer a requisição.
 
-  - Adicionamos uma condicional para verificar se a resposta vai ser em array, depois passamos os parâmentros para verificar se a reposta foi um sucesso. Status code, 100~500. 100=Código de informação. 200=Código de sucesso. 300=Código de redirecionamento. 400=Código de erro no lado do cliente. 500=Código de erro no lado do servidor.
+  - Adicionamos uma condicional para verificar se a resposta vai ser em array, depois passamos os parâmentros para verificar se a reposta foi um sucesso. Status code, `100~500`. `100=Código` de informação. `200=Código` de sucesso. `300=Código` de redirecionamento. `400=Código` de erro no lado do cliente. `500=Código` de erro no lado do servidor.
 
-```ruby
+- Exemplo na prática: 
 
-response = http.request(request) # faz uma solicitação <HTTP> usando um objeto <request> e armazena a resposta na variável <response>.
+    ```ruby
 
-if response.is_a?(Net::HTTPSuccess) # Estamos verificando se ouver código de sucesso ou seja, código 200. Quando o servidor vai responder para o cliente, ele pode responde de 5 formas.
-  puts "Status #{response.code} #{response.message}" # Caso esteja tudo ok, vai retorna o código e a messagem.
-  puts response.body # Aqui vamos retorna o corpo dos dados.
-else
-  puts "A requisição falhou com status #{response.code}" # Aqui vamos utilizar o else para retorna a falha do status code.
-end
+    response = http.request(request) 
 
-```
+    if response.is_a?(Net::HTTPSuccess)
+      puts "Status #{response.code} #{response.message}" 
+      puts response.body 
+    else
+      puts "A requisição falhou com status #{response.code}" 
+    end
+
+    ```
+
+  - Explicando o script: 
+
+    - faz uma solicitação `HTTP` usando um objeto `request` e armazena a resposta na variável `response`.
+
+    - Estamos verificando se ouver código de sucesso ou seja, código `200`. Quando o servidor vai responder para o cliente, ele pode responde de 5 formas.
+
+    - Caso esteja tudo ok, vai retorna o código e a messagem no `#{response.code}`.
+
+    - `puts response.body` aqui vamos retorna o corpo dos dados.
+
+    - Aqui vamos utilizar o `else` para retorna a falha do status code.
 
 ### Utilizando módulo `CSV`.
 
