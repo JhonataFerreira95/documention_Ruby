@@ -254,13 +254,20 @@
 
 ### Cálculo a área de um círculo.
 
-```ruby
+- Calculando área com o método `PI`.
 
-def calcular_area(raio)
-    return Math::PI * raio ** 2 # cálculo para calcular a área de um círculo.
-end
+- Exemplo na prática:
 
-```
+    ```ruby
+
+    def calcular_area(raio)
+        return Math::PI * raio ** 2 
+    end
+
+    ```
+  - Explicando o script: 
+
+    - cálculo para calcular a área de um círculo com método `Math`.
 
 ### Cáculo perímetro de um círculo.
 
