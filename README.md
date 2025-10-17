@@ -2,7 +2,7 @@
 
 ## Dependências 
 
-### Ruby version 3.3.0
+### Ruby version 3.4.6
 
 ### Gems 
 
