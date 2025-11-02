@@ -46,6 +46,7 @@ DOCUMENTAÇÃO RUBY/
 │   └── README.md
 ├── RubyOnRails/
 │   └── README.md
+├── .ruby-version
 └── README.md
 
 ```
