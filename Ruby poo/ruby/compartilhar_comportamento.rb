@@ -1,16 +1,27 @@
-require 'modulo'
+require "./modulo"
 
 class Pessoa
 
-  attr_accessor falar:
+  include Falante
+
+  attr_accessor :falar
 
   def initialize(falar)
-    include Falante
     @falar = falar
+  end
+
+  def to_s
+    "#{@falar}"
   end
 
 end
 
-class Robo
+pessoa = Pessoa.new("olá")
+puts pessoa.to_s
 
-end
+pessoa.falar("fala")
+
+puts "Nome do sistema: #{Falante::NOME_SISTEMA}"
+puts "Versão: #{Falante::VERSAO}"
+
+
