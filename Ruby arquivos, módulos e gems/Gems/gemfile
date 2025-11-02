@@ -12,3 +12,9 @@ gem 'securerandom', '~> 0.1.0'
 # Aqui importamos a <gem> a nossa gem, vou utilizar uma <gem> para debuggr chamada <"byebug"> para usa e descobrir os bug do código.
 
 gem 'byebug', '~> 12.0'
+
+# Aqui importei a <gem>, irei utilizar uma <gem> para utiliazação de estrutura no ruby chamada <ruby-lsp>.
+
+group :development do
+  gem "ruby-lsp"
+end
