@@ -34,6 +34,7 @@ class Carro < Motor
   def iniciar
     puts "Iniciando o carro #{@modelo}"
     self.ligar
+    
   end
 
 end

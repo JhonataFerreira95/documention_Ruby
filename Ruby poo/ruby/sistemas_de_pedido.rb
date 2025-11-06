@@ -11,21 +11,27 @@ class Produto
     "#{@nome}-#{@preco}"
   end
 
+  protected
+
   def descricao
     puts "Produto: #{@nome} - R$#{@preco}"
   end
 
 end
 
-class Pedido
+
+class Pedido < Produto
 
     @@total = 0
 
     attr_accessor :clientes, :itens
 
     def initialize(clientes, itens)
+      super(nome, preco)
       @clientes = clientes
-      @itens =  itens
+      @itens =  itens.to_a
+
+      @@total += 1
     end
 
     def to_s
@@ -37,6 +43,25 @@ class Pedido
     end
 
     def adicionar_item(produto)
-      
+      produto = @itens.preco
+      produto += @@total
+    end
+
+    def detalhes
+      self.descricao
+      puts "A quantidade itens foi #{adicionar_item}"
     end
 end
+
+class Cliente
+    
+  attr_accessor :nome
+
+  def initialize(nome)
+
+end
+
+p1 = Produto.new("cola", 10)
+p2 = Produto.new("caneta", 20)
+
+
