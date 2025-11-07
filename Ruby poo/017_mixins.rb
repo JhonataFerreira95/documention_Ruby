@@ -1,5 +1,11 @@
-
+module Mods
+    def nome_mods
+        puts "Instalandos mods para o jogos #{self.name}... [72%]"
+    end
+end
 class Game
+
+  include Mods
 
   attr_accessor :name, :genre, :price # leitura e escrita
   attr_reader :multiplayer, :versions # apenas leitura
@@ -69,11 +75,13 @@ end
 game = Game.new("Hollow Knight", "Aventura", true, [2017], 60)
 puts game
 puts game.techinal_sheet
+game.nome_mods
 
 # Instânciando a nossa <sub-classe>
 
 game2 = Download.new("Final fantasy", "RPG", false, [1995], 40, 3)
 puts game2
 puts game2.techinal_sheet
+
 
 
