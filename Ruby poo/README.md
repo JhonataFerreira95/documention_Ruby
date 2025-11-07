@@ -15,7 +15,7 @@
 11. [Variável de Classe](#variável-de-classe)
 12. [Herança em Ruby](#herança-em-ruby)
 13. [Polimorfismo em Ruby](#polimorfismo-em-ruby)
-14. [Mixins e Módulo em Ruby(Herança Múltipla)](#mixins-e-módulo-em-rubyherança-múltipla)
+14. [Módulo e Mixins em Ruby(Herança Múltipla)](#módulo-e-mixins-em-rubyherança-múltipla)
 
 ## Introdução
 
