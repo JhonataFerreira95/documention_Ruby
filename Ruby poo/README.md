@@ -15,7 +15,7 @@
 11. [Variável de Classe](#variável-de-classe)
 12. [Herança em Ruby](#herança-em-ruby)
 13. [Polimorfismo em Ruby](#polimorfismo-em-ruby)
-14. [Mixins em Ruby(Herança Múltipla)](#mixins-em-rubyherança-múltipla)
+14. [Mixins e Modulos em Ruby(Herança Múltipla)](#mixins-e-modulo-em-rubyherança-múltipla)
 
 ## Introdução
 
@@ -1109,4 +1109,6 @@
 
         - Aqui utilizei dois exemplo para o `polimorfismo`, um em nosso método `to_s` e outro no método `tecnico`. Repare que destaquei o método `to_s` para repara a diferença da `super-classe` instânciada para a `sub-classe` instânciada, fiz o mesmo para o método `tecnico` só que com uma seta, apontando o mesmo, já que o método muda da `super-classe` para `sub-classe`, isso é polimorfismo. Em nossa `super-classe` no método `to_s` vemos as seguintes informações `marca, modelo, preco` e em nossa `sub-classe` vemos as seguintes informações `marca, modelo, preco, motor`, o mesmo acontece para o método `tecnico`.
 
-## Mixins em Ruby(Herança Múltipla)
+## Mixins e Modulo em Ruby(Herança Múltipla)
+
+- Bem, `ruby` não suporta a herança múltipla
