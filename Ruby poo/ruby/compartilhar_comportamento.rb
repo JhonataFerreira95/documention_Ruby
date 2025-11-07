@@ -1,4 +1,4 @@
-require "./modulo"
+require_relative "falante"
 
 class Pessoa
 

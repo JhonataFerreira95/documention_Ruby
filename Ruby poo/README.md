@@ -1111,4 +1111,6 @@
 
 ## Mixins e Modulo em Ruby(Herança Múltipla)
 
-- Bem, `ruby` não suporta a herança múltipla
+- Mixins
+
+    - Bem, `ruby` não suporta a herança múltipla
