@@ -15,7 +15,7 @@
 11. [Variável de Classe](#variável-de-classe)
 12. [Herança em Ruby](#herança-em-ruby)
 13. [Polimorfismo em Ruby](#polimorfismo-em-ruby)
-14. [Mixins e Modulos em Ruby(Herança Múltipla)](#mixins-e-modulo-em-rubyherança-múltipla)
+14. [Mixins e Módulo em Ruby(Herança Múltipla)](#mixins-e-módulo-em-rubyherança-múltipla)
 
 ## Introdução
 
@@ -1109,8 +1109,50 @@
 
         - Aqui utilizei dois exemplo para o `polimorfismo`, um em nosso método `to_s` e outro no método `tecnico`. Repare que destaquei o método `to_s` para repara a diferença da `super-classe` instânciada para a `sub-classe` instânciada, fiz o mesmo para o método `tecnico` só que com uma seta, apontando o mesmo, já que o método muda da `super-classe` para `sub-classe`, isso é polimorfismo. Em nossa `super-classe` no método `to_s` vemos as seguintes informações `marca, modelo, preco` e em nossa `sub-classe` vemos as seguintes informações `marca, modelo, preco, motor`, o mesmo acontece para o método `tecnico`.
 
-## Mixins e Modulo em Ruby(Herança Múltipla)
+## Módulo e Mixins em Ruby(Herança Múltipla)
+
+- Módulo
+
+    - Bem, a utilização de `modulo` em `ruby` é algo bem comum e básico, já que podemo agrupar um grupo de métodos para realizar uma determinada tarefa, podemos além disso compartiha a solução de algum `modulo` em específico para outra problemas e reaproveitar o código já escrito
+
+    - Módulos são coleções de métodos, constantes e outras definições de `modulos/classes`. A principal diferença de uma classe é que você não pode criar instâncias de um módulo. Eles servem principalmente para:
+
+        - `Namespaces:` 
+            
+            - Agrupar métodos e constantes sob um nome para evitar conflitos.
+
+        - `Mixins:`
+
+            - Compartilhar código entre classes.
+
+    - Exemplo na prática:
+
+        ```ruby
+
+            
+
+        ```
+
+    - Resultado:
+
+        - 
 
 - Mixins
 
-    - Bem, `ruby` não suporta a herança múltipla
+    - Bem, `ruby` não suporta a herança múltipla, para isso temos o `mixin`, que não mais é que um `modulo` que é incluido em uma `classe`. Muitas linguagens de `programação orientadas a objetos (POO)` permitem a herança múltipla, onde uma `classe` pode herdar de várias `super-classes`. No entanto, isso pode levar ao temido "Problema do Diamante" (conflitos de nomes e complexidade na hierarquia).
+
+    - Quando você usa a palavra-chave `include` para adicionar um módulo a uma classe, os métodos de instância desse módulo se tornam métodos de instância da classe. É como se a classe estivesse "misturando" (mixing in) o código do módulo.
+
+    - Exemplo na Prática: 
+
+        ```ruby
+
+
+
+        ```
+
+    - Resultado:
+
+        - 
+
+
