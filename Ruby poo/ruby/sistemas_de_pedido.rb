@@ -1,3 +1,16 @@
+module Sistem
+    
+    def calcularMontante
+      total += self.preco 
+      puts "O total das compras é: R$#{total}"
+    end
+
+    def listaPedido
+          
+    end
+
+end
+
 class Produto
 
   attr_accessor :nome, :preco
@@ -22,34 +35,29 @@ end
 
 class Pedido < Produto
 
-    @@total = 0
+    include Sistem
 
     attr_accessor :clientes, :itens
 
     def initialize(clientes, itens)
       super(nome, preco)
       @clientes = clientes
-      @itens =  itens.to_a
-
-      @@total += 1
+      @itens = []
     end
 
     def to_s
       "#{super}-#{@clientes}-#{@itens}"
     end
 
-    def total
-      
-    end
-
-    def adicionar_item(produto)
-      produto = @itens.preco
-      produto += @@total
+    def adicionar_item(Produto)
+      produto = 
     end
 
     def detalhes
+      puts "---Itens pedido---"
       self.descricao
       puts "A quantidade itens foi #{adicionar_item}"
+      self.calcularMontante
     end
 end
 
@@ -58,7 +66,11 @@ class Cliente
   attr_accessor :nome
 
   def initialize(nome)
-        
+        @nome = nome
+  end
+
+  def fazer_pedido(pedido)
+      pedido = 
   end
 
 end
