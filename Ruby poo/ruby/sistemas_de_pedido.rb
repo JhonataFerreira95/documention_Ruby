@@ -51,7 +51,7 @@ class Pedido < Produto
 
     def adicionar_item(Produto)
       self.fazer_pedido
-      
+
     end
 
     def detalhes
@@ -79,4 +79,12 @@ end
 
 p1 = Produto.new("cola", 10)
 p2 = Produto.new("caneta", 20)
+cliente = Cliente.new("Bass")
+
+pedido = cliente.fazer_pedido
+
+pedido.adicionar_item(p1)
+pedido.adicionar_item(p2)
+
+puts pedido.detalhes
 
