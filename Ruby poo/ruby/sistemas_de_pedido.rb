@@ -50,7 +50,8 @@ class Pedido < Produto
     end
 
     def adicionar_item(Produto)
-      produto = 
+      self.fazer_pedido
+      
     end
 
     def detalhes
@@ -63,19 +64,19 @@ end
 
 class Cliente
     
-  attr_accessor :nome
+  attr_accessor :nomeCliente
 
-  def initialize(nome)
-        @nome = nome
+  def initialize(nomeCliente)
+    @nomeCliente = nomeCliente
   end
 
   def fazer_pedido(pedido)
-      pedido = 
+    puts "Cliente: #{@nomeCliente}"
+    pedido = self.Produto
   end
 
 end
 
 p1 = Produto.new("cola", 10)
 p2 = Produto.new("caneta", 20)
-
 
