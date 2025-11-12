@@ -1,9 +1,12 @@
 module Sistem
-    total = 0
-    
+
     def calcularMontante
-      total += self.preco 
+      total = @itens.sum(&:preco)
       puts "O total das compras é: R$#{total}"
+    end
+
+    def preco_compras
+      ""
     end
 
 end
@@ -36,7 +39,7 @@ class Pedido
 
     attr_accessor :clientes, :itens
 
-    def initialize(clientes, itens)
+    def initialize(clientes)
       @clientes = clientes
       @itens = []
     end
@@ -46,16 +49,17 @@ class Pedido
     end
 
     def adicionar_item(produto)
-      produto = " Produto - #{self.fazer_pedido}"
+      @itens << produto
+      puts "#{produto.nome} adiconado ao pedido."
     end
 
-    protected
-
     def detalhes
-      puts "---Itens pedido---"
-      self.descricao
-      puts "A quantidade itens foi #{adicionar_item}"
-      self.calcularMontante
+      puts "\n--- Detalhes do Pedido ---"
+      puts "Cliente: #{@clientes.nomeCliente}"
+      puts "Itens:"
+      @itens.each { |item| puts "  - #{item}" }
+      calcular_montante
+      puts "--------------------------"
     end
 end
 
@@ -67,21 +71,17 @@ class Cliente
     @nomeCliente = nomeCliente
   end
 
-  def fazer_pedido(fazer_pedido)
-    fazer_pedido = Pedido.new
-    self.detalhes
+  def fazer_pedido
+    Pedido.new(self)
   end
 
 end
 
-p1 = Produto.new("cola", 10)
-p2 = Produto.new("caneta", 20)
+p1 = Produto.new("Cola", 10)
+p2 = Produto.new("Caneta", 20)
 cliente = Cliente.new("Bass")
 
 pedido = cliente.fazer_pedido
-
 pedido.adicionar_item(p1)
 pedido.adicionar_item(p2)
-
-puts pedido.detalhes
-
+pedido.detalhes
