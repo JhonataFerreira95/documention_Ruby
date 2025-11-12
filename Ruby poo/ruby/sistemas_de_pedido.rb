@@ -58,7 +58,7 @@ class Pedido
       puts "Cliente: #{@clientes.nomeCliente}"
       puts "Itens:"
       @itens.each { |item| puts "  - #{item}" }
-      calcular_montante
+      calcularMontante
       puts "--------------------------"
     end
 end
