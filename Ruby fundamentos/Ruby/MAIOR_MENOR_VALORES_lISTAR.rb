@@ -1,8 +1,10 @@
-reposta = []
+resposta = []
 
 for i in 1..5
   puts "Digite a os valores: "
-  reposta << gets.chomp.to_i
+  resposta << gets.chomp.to_i
 end
 
-print reposta
+puts maior_valor, menor_valor
+
+print "O maior valor da lista é #{resposta.max}, e o maior valor da lista é #{resposta.min}"
