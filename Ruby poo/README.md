@@ -1222,7 +1222,7 @@
                 end
 
                 def tecnico
-                  super # A palavra reservada <super> aproveita todo métood da nosssa <super-classe> e podemos adicionar mais parâmetros casos seja desejado
+                  super # A palavra reservada <super> aproveita todo método da nossa <super-classe> e podemos adicionar mais parâmetros casos seja desejado
                   puts "O motor do carro é #{@motor}."
                 end
 
