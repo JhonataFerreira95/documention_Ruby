@@ -5,7 +5,9 @@ while true
   puts "Digite um valor: "
   valores << gets.chomp.to_i
   count += 1
-  if valores.include?(20)
+  puts "Para sair do programa digite[S]: "
+  sair = gets.chomp.upcase
+  if sair.include?("S")
     break
   end
   puts valores, count
