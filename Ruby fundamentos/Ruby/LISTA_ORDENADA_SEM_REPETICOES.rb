@@ -6,11 +6,10 @@ lista = []
 end
 
 if lista[i] <= i or lista[i] >= i
-  if lista[i] == i
-    end
+  if lista[0] == i
+    puts "Adicionando item no índice #{i} da lista!"
+    lista.insert(0, i)
+  end
 end
 
 puts "A posiçao dos número em sua lista foram #{lista}"
-
-lista.insert(0, i)
-    puts lista
