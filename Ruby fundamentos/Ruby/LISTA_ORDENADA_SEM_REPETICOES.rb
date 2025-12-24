@@ -2,12 +2,12 @@ lista = []
 
 5.times do |i|
   puts "Digite o valor para ser adicionado a lista: "
-  lista << gets.chomp.to_i
-  if lista[i] <= i
-    puts "Adicionando item no índice #{i} da lista!"
-    if lista[i] == i or lista[i] <= i
-      lista[0] << i
-    end
+  lista.insert(-1, gets.chomp.to_i)
+  if lista[4] > i
+    lista[4] = i
+  end
+  if lista[3] <= i
+    lista[2] = i
   end
 end
 
