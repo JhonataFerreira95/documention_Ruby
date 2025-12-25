@@ -10,6 +10,9 @@ lista = []
     posicao += 1
   end
 
+  lista.insert(posicao, valor)
+
+  puts "Lista atual: #{lista.inspect}"
 end
 
 puts "A posiçao dos número em sua lista foram #{lista.inspect}"
