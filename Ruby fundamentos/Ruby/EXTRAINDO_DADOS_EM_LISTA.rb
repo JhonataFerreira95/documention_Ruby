@@ -2,6 +2,7 @@ count = 0
 lista =[]
 
 while true
+
   puts "Digite um valor que vai ser adicionado na lista: "
   lista << gets.chomp.to_i
 
@@ -15,3 +16,6 @@ while true
   end
   
 end
+
+puts "Valores digitado na ordem decrescente #{lista.sort.reverse}"
+
