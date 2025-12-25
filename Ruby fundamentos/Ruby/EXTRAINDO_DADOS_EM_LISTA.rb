@@ -8,6 +8,7 @@ while true
 
   count += 1
 
+  
   if lista.include?(5)
     vezes_cinco += 1
   end
@@ -21,5 +22,6 @@ while true
   
 end
 
-puts "Valores digitado na ordem decrescente #{lista.sort.reverse}, a quantidade vezes que o número 5 foi digitado #{vezes_cinco}"
+puts "Valores digitado na ordem decrescente #{lista.sort.reverse} e a quantidade de números que foi digitada #{count}."
+puts "A quantidade vezes que o número 5 foi digitado #{vezes_cinco}, está presente na #{lista}"
 
