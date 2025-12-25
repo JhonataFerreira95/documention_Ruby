@@ -1,4 +1,4 @@
-count = 0
+count = vezes_cinco = 0
 lista =[]
 
 while true
@@ -8,8 +8,12 @@ while true
 
   count += 1
 
+  if lista.include?(5)
+    vezes_cinco += 1
+  end
+
   puts "Deseja continuar adicionando números na lista [S/N]: "
-  decisao = gets.chomp.to_i.upcase
+  decisao = gets.chomp.upcase
 
   if decisao.include?("N")
     break
@@ -17,5 +21,5 @@ while true
   
 end
 
-puts "Valores digitado na ordem decrescente #{lista.sort.reverse}"
+puts "Valores digitado na ordem decrescente #{lista.sort.reverse}, a quantidade vezes que o número 5 foi digitado #{vezes_cinco}"
 
