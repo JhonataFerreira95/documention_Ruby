@@ -1,12 +1,14 @@
-lista = impar = par = []
+lista = []
+par = []
+impar = []
 count = 0
 
 
 while true
+  count += 1
   puts "Digite o valor Desejado: "
   lista << gets.chomp.to_i
-  count += 1
-  if lista[count] % 2 == 0
+  if lista.last % 2 == 0
     puts "oi" 
   end
   puts "Deseja continuar[S/N]: "
