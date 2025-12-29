@@ -10,6 +10,8 @@ while true
   lista << gets.chomp.to_i
   if lista.last % 2 == 0
     puts "oi" 
+  else
+    
   end
   puts "Deseja continuar[S/N]: "
   sair = gets.chomp.upcase
