@@ -9,9 +9,9 @@ while true
   puts "Digite o valor Desejado: "
   lista << gets.chomp.to_i
   if lista.last % 2 == 0
-    puts "oi" 
+    par << lista[count]
   else
-    
+    impar << lista[count]
   end
   puts "Deseja continuar[S/N]: "
   sair = gets.chomp.upcase
@@ -20,4 +20,4 @@ while true
   end
 end
 
-print lista
+print lista, par, impar
