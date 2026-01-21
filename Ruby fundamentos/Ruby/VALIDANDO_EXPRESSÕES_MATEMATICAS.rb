@@ -1,13 +1,13 @@
 
 puts "Digite a expressão matemática para ver se é válida: "
-expressao << gets.chomp
+expressao = gets.chomp
 pilha = []
 
-for simb in expressao
+expressao.each_char do |simb|
     if simb == ("(")
       pilha.push("(")
     elsif simb == (")")
-      if pilha.size < 0
+      if pilha.size > 0
         pilha.pop
       else 
         pilha.push(")")
@@ -16,7 +16,7 @@ for simb in expressao
     end
 end
 
-if pilha.size == 0
+if pilha.empty?
   puts "sua expressão é válida!"
 else
   puts "sua expressão é invalida!"
