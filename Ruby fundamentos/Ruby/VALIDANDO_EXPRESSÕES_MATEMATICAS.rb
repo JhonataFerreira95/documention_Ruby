@@ -7,7 +7,18 @@ for simb in expressao
     if simb == ("(")
       pilha.push("(")
     elsif simb == (")")
-      pilha.push(")")
+      if pilha.size < 0
+        pilha.pop
+      else 
+        pilha.push(")")
+        break
+      end
     end
+end
+
+if pilha.size == 0
+  puts "sua expressão é válida!"
+else
+  puts "sua expressão é invalida!"
 end
 
