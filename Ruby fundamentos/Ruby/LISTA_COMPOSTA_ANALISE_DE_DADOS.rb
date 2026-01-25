@@ -1,6 +1,4 @@
-pesadas = []
-leves = []
-
+dados = []
 count = 0
 
 while true
@@ -10,11 +8,11 @@ while true
     puts "Digite o sue peso em KG: "
     peso = gets.chomp.to_f
 
-    count += 1
-
     if peso < 0
-        pesadas[count]
+      
     end
+
+    count += 1
 
     puts "Desejar continuar[S/N]: "
     sair = gets.chomp.upcase
