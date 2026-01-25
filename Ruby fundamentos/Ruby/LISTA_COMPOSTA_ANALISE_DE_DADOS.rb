@@ -1,4 +1,3 @@
-quantas = []
 pesadas = []
 leves = []
 
@@ -11,9 +10,7 @@ while true
     puts "Digite o sue peso em KG: "
     peso = gets.chomp.to_f
 
-    if peso < 0
-          
-    end
+    
 
     count += 1
 
