@@ -10,9 +10,11 @@ while true
     puts "Digite o sue peso em KG: "
     peso = gets.chomp.to_f
 
-    
-
     count += 1
+
+    if peso < 0
+        pesadas[count]
+    end
 
     puts "Desejar continuar[S/N]: "
     sair = gets.chomp.upcase
