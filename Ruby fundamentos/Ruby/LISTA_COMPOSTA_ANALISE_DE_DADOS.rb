@@ -8,16 +8,16 @@ while true
     puts "Digite o sue peso em KG: "
     peso = gets.chomp.to_f
 
-    count += 1
-
-    if peso > 0
+    if peso >= 0
       dados[count] = [nome, peso]
     end
 
-    if peso > dados[count]
+    if peso >= dados[count]
         dados[count] = [nome, peso]
         puts "zzzzz"    
     end
+
+    count += 1
 
     puts "Desejar continuar[S/N]: "
     sair = gets.chomp.upcase
