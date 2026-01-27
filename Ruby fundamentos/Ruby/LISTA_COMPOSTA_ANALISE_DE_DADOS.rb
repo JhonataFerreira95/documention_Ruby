@@ -10,10 +10,13 @@ while true
 
     count += 1
 
-    if peso < 0
-      dados[count] << nome
-      dados[count] << peso
-      pust dados
+    if peso > 0
+      dados[count] = [nome, peso]
+    end
+
+    if peso > dados[count]
+        dados[count] = [nome, peso]
+        puts "zzzzz"    
     end
 
     puts "Desejar continuar[S/N]: "
