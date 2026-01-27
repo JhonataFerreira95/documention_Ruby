@@ -8,14 +8,7 @@ while true
     puts "Digite o sue peso em KG: "
     peso = gets.chomp.to_f
 
-    if peso >= 0
-      dados[count] = [nome, peso]
-    end
-
-    if peso >= dados[count]
-        dados[count] = [nome, peso]
-        puts "zzzzz"    
-    end
+    dados = [nome, peso]
 
     count += 1
 
@@ -26,6 +19,7 @@ while true
         break
     end
 
+    
 end
 
 print dados
