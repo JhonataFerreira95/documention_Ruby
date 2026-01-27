@@ -1,5 +1,7 @@
 dados = []
 count = 0
+mais_pesados = 0
+mais_leves = 0
 
 while true
 
@@ -19,7 +21,7 @@ while true
         break
     end
 
-    
+
 end
 
 print dados
