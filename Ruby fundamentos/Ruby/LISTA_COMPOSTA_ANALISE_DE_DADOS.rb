@@ -5,13 +5,14 @@ count = 0
 while true
 
     puts "Digite o seu nome: "
-    dados << gets.chomp
+    temp << gets.chomp
     puts "Digite o sue peso em KG: "
-    dados << gets.chomp.to_i
+    temp << gets.chomp.to_i
+
+    dados.push(temp.dup)
+    temp.clear
 
     count += 1
-
-    puts dados[count]
 
     puts "Desejar continuar[S/N]: "
     sair = gets.chomp.upcase
