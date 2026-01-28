@@ -8,21 +8,13 @@ nome_mais_leve = ''
 while true
 
     puts "Digite o seu nome: "
-    nome = gets.chomp
+    dados << gets.chomp
     puts "Digite o sue peso em KG: "
-    peso = gets.chomp.to_f
-
-    dados = [nome, peso]
+    dados << gets.chomp.to_i
 
     count += 1
 
-    if peso >= 0
-        peso = mais_pesados
-        nome = nome_mais_pesado
-    elsif peso <= mais_pesados
-        peso = mais_leves
-        nome = nome_mais_leve
-    end
+    puts dados[count]
 
     puts "Desejar continuar[S/N]: "
     sair = gets.chomp.upcase
