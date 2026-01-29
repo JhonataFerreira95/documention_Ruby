@@ -2,6 +2,7 @@ dados = []
 temp = []
 count = 0
 maior = menor = 0
+pesado = leve = ""
 
 while true
 
@@ -15,9 +16,11 @@ while true
     else
         if temp[1] > maior
             maior = temp[1]
+            pesado = temp[0]
         end
         if temp[1] < menor
             menor = temp[1]
+            leve = temp[0]
         end
     end
 
@@ -35,4 +38,4 @@ while true
 
 end
 
-print dados
+puts "A quantidade de pessoas cadastras foram #{count}, todas as pessoas cadastradas #{dados}, a pessoa mais pesada é #{maior} e a pessoa mais leve é #{menor}"
