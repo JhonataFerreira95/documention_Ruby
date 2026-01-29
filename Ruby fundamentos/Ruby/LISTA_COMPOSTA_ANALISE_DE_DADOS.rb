@@ -16,6 +16,9 @@ while true
         if temp[1] > maior
             maior = temp[1]
         end
+        if temp[1] < menor
+            menor = temp[1]
+        end
     end
 
     dados.push(temp.dup)
