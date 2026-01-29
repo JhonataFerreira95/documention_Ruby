@@ -14,6 +14,7 @@ while true
 
     if dados.size == 0
         maior = menor = temp[1]
+        pesado = leve = temp[0]
     else
         if temp[1] > maior
             maior = temp[1]
