@@ -1,6 +1,7 @@
 dados = []
 temp = []
 count = 0
+maior = menor = 0
 
 while true
 
@@ -13,6 +14,8 @@ while true
     temp.clear
 
     count += 1
+
+    
 
     puts "Desejar continuar[S/N]: "
     sair = gets.chomp.upcase
