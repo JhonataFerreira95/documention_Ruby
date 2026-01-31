@@ -4,11 +4,15 @@ matriz = [
   [0,0,0]
 ]
 
-for l in range 0..3
-  for c in range 0..3
+for l in 0..2
+  for c in 0..2
     puts "Digite um valor para #{matriz}: " 
     matriz[l][c] = gets.chomp.to_i     
   end
 end
 
-puts matriz
+for l in 0..2
+  for c in 0..2
+    print "#{matriz[l][c]}"
+  end
+end
