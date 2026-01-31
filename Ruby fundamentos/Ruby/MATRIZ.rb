@@ -4,10 +4,11 @@ matriz = [
   [0,0,0]
 ]
 
-count = 0
-
-while count < 9
-  count += 1
-  puts "Digite um valor para #{matriz}: " 
-  matriz << gets.chomp.to_i
+for l in range 0..3
+  for c in range 0..3
+    puts "Digite um valor para #{matriz}: " 
+    matriz[l][c] = gets.chomp.to_i     
+  end
 end
+
+puts matriz
