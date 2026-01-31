@@ -13,6 +13,7 @@ end
 
 for l in 0..2
   for c in 0..2
-    print "#{matriz[l][c]}"
+    print"[#{matriz[l][c]}]"
   end
+  puts ""
 end
