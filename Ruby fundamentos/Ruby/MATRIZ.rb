@@ -39,3 +39,5 @@ for c in 0..2
       mai = matriz[1][c]
     end
 end
+
+puts "O maior elemento da segunda linha #{mai}"
