@@ -16,6 +16,9 @@ end
 for l in 0..2
   for c in 0..2
     print"[#{matriz[l][c]}]"
+    if matriz[l][c] % 2 == 0
+      spar += matriz[l][c]
+    end
   end
   puts ""
 end
