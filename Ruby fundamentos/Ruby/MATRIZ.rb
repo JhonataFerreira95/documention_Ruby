@@ -4,6 +4,8 @@ matriz = [
   [0,0,0]
 ]
 
+spar = mai = scol = 0
+
 for l in 0..2
   for c in 0..2
     puts "Digite um valor para #{matriz}: " 
