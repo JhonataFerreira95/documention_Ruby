@@ -24,10 +24,10 @@ for l in 0..2
 end
 
 puts "-=" * 10
-puts "A soma dos valores pares é #{spar}"
+puts "A soma dos valores pares é #{spar}!"
 
 for l in 0..2
   scol += matriz[l][2]
 end
 
-puts "A soma dos valores da coluna 3 são #{scol}"
+puts "A soma dos valores da coluna 3 é #{scol}!"
