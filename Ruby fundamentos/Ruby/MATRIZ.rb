@@ -31,3 +31,11 @@ for l in 0..2
 end
 
 puts "A soma dos valores da coluna 3 é #{scol}!"
+
+for c in 0..2
+    if c == 0
+      mai = matriz[1][c]
+    elsif matriz[1][c] > mai
+      mai = matriz[1][c]
+    end
+end
