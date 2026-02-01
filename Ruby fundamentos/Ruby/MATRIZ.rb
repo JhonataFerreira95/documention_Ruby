@@ -22,3 +22,6 @@ for l in 0..2
   end
   puts ""
 end
+
+puts "-=" * 10
+puts "A soma dos valores pares é #{spar}"
