@@ -25,3 +25,7 @@ end
 
 puts "-=" * 10
 puts "A soma dos valores pares é #{spar}"
+
+for l in 0..2
+    scol += matriz[l][2]
+end
