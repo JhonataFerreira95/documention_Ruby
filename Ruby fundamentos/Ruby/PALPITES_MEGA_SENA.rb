@@ -1,12 +1,12 @@
 require 'securerandom'
 
 sorteio = []
-count = 0
+count = 1
 
 puts "Quantos jogos você quer que eu sorteie? "
-palpites = gets.chomp.to_i
+vezes_jogadas = gets.chomp.to_i
 
-while count <= palpites 
-  puts "algo #{count}" 
+while count <= vezes_jogadas 
+  puts "Jogo #{count}: #{sorteio}" 
   count += 1
 end
