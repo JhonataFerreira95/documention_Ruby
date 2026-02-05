@@ -1,4 +1,8 @@
-matriz = [
-  [0,0,0],
-  [0,0,0]
-]
+require 'securerandom'
+
+sorteio = []
+count = 0
+
+while count 
+    
+end
