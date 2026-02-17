@@ -9,6 +9,7 @@
   - Faker, Roo, Byebug e Securerandom foram utlizadas. 
 
 ## Índice
+
 1. [Introdução](#introdução)
 2. [Lógica com Ruby](#lógica-com-ruby)
 3. [Arquivos, Módulos e Gems](#arquivos-módulos-e-gems)
