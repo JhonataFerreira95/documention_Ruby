@@ -25,3 +25,6 @@ while true
         break
     end
 end
+
+puts "-=-=" * 10
+puts ficha
