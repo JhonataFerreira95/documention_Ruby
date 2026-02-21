@@ -27,4 +27,4 @@ while true
 end
 
 puts "-=-=" * 10
-puts ficha
+puts "Os dados obtidos #{ficha}"
