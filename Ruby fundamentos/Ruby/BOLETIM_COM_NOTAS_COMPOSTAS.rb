@@ -28,3 +28,14 @@ end
 
 puts "-=-=" * 10
 puts "Os dados obtidos #{ficha}"
+
+while true
+    puts "-=-=" * 10
+
+    puts "Deseja as notas de qual aluno?(Digite 999 para interromper): "
+    opc = gets.chomp
+    
+    if opc.include?("999")
+        break
+    end
+end
