@@ -1,13 +1,16 @@
 count = 0
 dados = []
+nome = []
+nota = []
 
 while true
-    puts "Digite o nome do aluno: "
-    dados << gets.chomp
-    puts "Digite a nome do aluno: "
-    dados << gets.chomp.to_f
 
     count += 1
+
+    puts "Digite o nome do aluno: "
+    dados << gets.chomp
+    puts "Digite a #{nota} do aluno: "
+    nota << gets.chomp.to_f
 
     puts "Deseja continuar[S/N]: ".upcase
     resposta = gets.chomp
