@@ -38,4 +38,8 @@ while true
     if opc.include?("999")
         break
     end
+
+    if opc <= ficha.size - 1
+        puts "notas de  #{ficha[opc] [0]} são #{cad[opc] [1]}"
+    end
 end
