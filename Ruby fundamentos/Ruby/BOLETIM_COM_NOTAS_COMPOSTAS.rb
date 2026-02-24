@@ -38,6 +38,6 @@ while true
     end
 
     if opc <= ficha.size - 1
-        puts "notas de  #{ficha[opc] [0]} são #{opc[cad] [1]}"
+        puts "notas de  #{ficha[opc] [0]} são #{ficha[opc] [1]}"
     end
 end
