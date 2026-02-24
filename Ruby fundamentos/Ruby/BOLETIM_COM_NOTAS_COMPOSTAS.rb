@@ -31,13 +31,13 @@ while true
     puts "-=-=" * 10
 
     puts "Deseja as notas de qual aluno?(Digite 999 para interromper): "
-    opc = gets.chomp
+    opc = gets.chomp.to_i
     
-    if opc.include?("999")
+    if 999.include?(opc)
         break
     end
 
-    if opc <= ficha. - 1
-        puts "notas de  #{ficha[opc] [0]} são #{cad[opc] [1]}"
+    if opc <= ficha.size - 1
+        puts "notas de  #{ficha[opc] [0]} são #{opc[cad] [1]}"
     end
 end
