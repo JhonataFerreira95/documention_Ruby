@@ -16,8 +16,6 @@ while true
 
     ficha.push([nome, [nota1, nota2], media])
 
-    puts ficha
-
     puts "Deseja continuar[S/N]: "
     resposta = gets.chomp.upcase
 
@@ -39,7 +37,7 @@ while true
         break
     end
 
-    if opc <= ficha.size - 1
+    if opc <= ficha. - 1
         puts "notas de  #{ficha[opc] [0]} são #{cad[opc] [1]}"
     end
 end
