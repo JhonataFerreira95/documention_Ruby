@@ -33,7 +33,7 @@ while true
     puts "Deseja as notas de qual aluno?(Digite 999 para interromper): "
     opc = gets.chomp.to_i
     
-    if 999.include?(opc)
+    if 999 == opc
         break
     end
 
