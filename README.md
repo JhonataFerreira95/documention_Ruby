@@ -52,6 +52,7 @@ DOCUMENTAÇÃO RUBY/
 ```
 
 ## Introdução
+
 Ruby é uma linguagem de programação dinâmica, open-source, focada na simplicidade e produtividade. Seu criador, Yukihiro Matsumoto, a projetou com o objetivo de tornar a programação mais humana e intuitiva.
 
 - **Principais características:**
