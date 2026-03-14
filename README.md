@@ -29,6 +29,8 @@ DOCUMENTAÇÃO RUBY/
 │   └── Integração_com_BandoDeDados/
 │   └── Modelagem_BancoDeDados/
 │   └── Rails.sql
+├── Git e Github/
+│   └── Readme.md
 ├── Ruby arquivos, módulos e gems/
 │   └── Gems/
 │   └──Manipulação de arquivos/
