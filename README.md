@@ -22,7 +22,6 @@
 ## Estrutura do projeto
 
 ```bash
-
 DOCUMENTAÇÃO RUBY/
 ├── Banco de dados SQL/
 │   └── Assets/
