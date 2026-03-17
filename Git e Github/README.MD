@@ -183,4 +183,23 @@
 
 - Commits pequenos e frequentes:
 
-    - 
+    - São fáceis de revisar, testar e reverter se necessário.
+
+    - Tente fazer `commits` cade vez que você completar uma pequena funcionalidade ou correção.
+
+- Tipos de versões semântico:
+
+    - `Major(Versão principal):`
+
+        - Indicada pela primeira parte do número da versão. Esta versão inclui mudanças significativas, grandes novas funcionalidades ou reestruturações que podem quebrar a compatibilidade com versões anteriores.
+
+    - `Minor(Versão secundária):`
+
+        - Indicada pela segunda parte do número da versão. Esta versão adiciona funcionalidades ou melhorias novas, mas mantém a compatibilidade com versões anteriores.
+
+    - `Patch(Correções de bugs):`
+
+        - Indicada pela terceira parte do número da versão. Esta versão é focada na correção de bugs e pequenas melhorias que não afetam a compatibilidade com versões anteriores.
+
+
+    
