@@ -4,7 +4,8 @@
 
 1. [Introdução](#introdução)
 2. [Conceitos](#conceitos)
-2. [Básico do Git](#básico-do-git)
+3. [Básico do Git](#básico-do-git)
+4. [Boas práticas no Git](#boas-práticas)
 
 ## Introdução
 
@@ -161,3 +162,5 @@
         ![git diff](../Banco%20de%20dados%20SQL/Assets/git_diff.png)
 
         - Aqui utilizamos o ´git diff´ para ver as modificações que estão pendentes em determinados arquivos.
+
+## Boas Práticas
