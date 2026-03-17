@@ -36,6 +36,6 @@
 
     - São ramificações que podemos criar a partir de um ponto histórico do projeto para trabalhar paralelamente, assim é possível trabalhar sem afetar a ramificação principal.
 
-    
+    - Todo repositório precisa de pelo menos uma `branch`, para servir como principal(Geralmente chamada de `main` ou `master`)
 
 ## Básico do Git
