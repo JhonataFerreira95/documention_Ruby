@@ -88,3 +88,21 @@
         ![Git add](../Banco%20de%20dados%20SQL/Assets/git_add.png)
 
         - Observa-se que utilizei o `git add .` para adcionar todos os arquivos modificados e após para confirma que tudo que foi modificado foi adicionado utilizei o comando `git status` para checar que está tudo ok.
+
+- `git restore --staged:`
+
+    - Para desfazer um `git add .<ou nome do arquivo>` utilizamos o `git restore --staged .<ou nome do arquivo>`.
+
+    - Exemplo na prática:
+
+        ```git
+
+            git restore --staged .
+
+        ```
+    - Resultado:
+
+        ![Git restorage](../Banco%20de%20dados%20SQL/Assets/git_restorage.png)
+
+        - Observa-se que utilizei o comando `git status` para checar as modificações e após utilizei o `git add .` para adicionar todos os arquivos modificados após isso utilizei o `git restore --staged .` para remover todos os arquivos que foram adicionados com o `git add .`.
+
