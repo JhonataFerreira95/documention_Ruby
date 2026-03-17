@@ -10,7 +10,7 @@
 
 - O que é `Git`?
 
-    - `Git` é um sistema de controler de versão de software criado pelo ´Linus Torvalds´ para gerenciamento do código do ´Linux´.
+    - `Git` é um sistema de controler de versão de software criado pelo `Linus Torvalds` para gerenciamento do código do `Linux`.
 
     - Além de ajuda os desenvolvedores a colaborar entre si, guarda um hístorico de alterações e reverter para versões anteriores se necessário.
 
@@ -51,3 +51,22 @@
             git init
 
         ```
+
+- `git status:`
+
+    - Assim que modificamos um arquivos, para checarmos se os arquivos foram adicionado `git` utilizamos o comando
+    utlizamos o comando `git status`, assim ele nos mostra quais arquivos foram modificados, quais foram salvo e quais estão pendende para ser salvo.
+
+    - Exemplo na pratica:
+
+        ```git
+
+            git status
+
+        ```
+
+    - Resultado: 
+
+        ![Git status](../Banco%20de%20dados%20SQL/Assets/git_status.png)
+
+        - Observa-se que o arquivo foi modificado mas não foi salvo.
