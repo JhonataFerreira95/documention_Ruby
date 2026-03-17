@@ -120,4 +120,9 @@
 
     - Resultado: 
 
-        ![git commit]()
+        ![git commit](../Banco%20de%20dados%20SQL/Assets/git_commit.png)
+
+        - Observa-se que utilizei o `git add .` e após chequei com `git status` se as altrações foram feitas, finalzei salvando com `git commit -m "adicionado alterações"`.
+
+        - Vale ressaltar que o `git commit` só funciona se você adiconar as alterações feitas antes de usa-lo, o `-m` após `git commit` é referente a sua `branch main` e o `develop`é para onde o commit foi enviado, ou seja a a branch develop.
+
