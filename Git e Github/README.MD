@@ -164,3 +164,23 @@
         - Aqui utilizamos o ´git diff´ para ver as modificações que estão pendentes em determinados arquivos.
 
 ## Boas Práticas
+
+- Nomear os `commits` com cuidado:
+
+    - Menssagens de `commit` bem escritas e pragmática ajudam a entender o que foi alterado e por quê.
+
+    - Obedeça os padrões impostos pelo seu time.
+
+    - Conheça as convenções de nomeclatura de `commits`:
+
+        [Convenções](https://www.conventionalcommits.org/pt-br/v1.0.0/)
+
+- Revise mudanças:
+
+    - Ajuda a evitar `commits` de código incompleto ou errado.
+
+    - Use o `git diff` para ver as mudanças que serão commitadas e `git status` para ver os arquivos modificados.
+
+- Commits pequenos e frequentes:
+
+    - 
