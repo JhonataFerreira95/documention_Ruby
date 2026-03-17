@@ -108,7 +108,7 @@
 
 - `git commit:`
 
-    - o `git commit` registra todas as modificações no repositório local antes de serem enviadas para repositório remoto.
+    - O `git commit` registra todas as modificações no repositório local antes de serem enviadas para repositório remoto.
 
     - Exemplo na prática:
 
@@ -125,4 +125,22 @@
         - Observa-se que utilizei o `git add .` e após chequei com `git status` se as altrações foram feitas, finalzei salvando com `git commit -m "adicionado alterações"`.
 
         - Vale ressaltar que o `git commit` só funciona se você adiconar as alterações feitas antes de usa-lo, o `-m` após `git commit` é referente a sua `branch main` e o `develop`é para onde o commit foi enviado, ou seja a a branch develop.
+
+- `git log:`
+
+    - O `git log` serve para ver os históricos de `commit` no `git`.
+
+    - Exemplo na prática:
+
+        ```git
+
+            git log
+
+        ```
+
+    - Resultado:
+
+        ![git log](../Banco%20de%20dados%20SQL/Assets/git_log.png)
+
+        - Observa-se que utilizei o comando `git log` para verificar o histórico de `commits` do meu repositório.
 
