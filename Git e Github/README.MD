@@ -106,3 +106,18 @@
 
         - Observa-se que utilizei o comando `git status` para checar as modificações e após utilizei o `git add .` para adicionar todos os arquivos modificados após isso utilizei o `git restore --staged .` para remover todos os arquivos que foram adicionados com o `git add .`.
 
+- `git commit:`
+
+    - o `git commit` registra todas as modificações no repositório local antes de serem enviadas para repositório remoto.
+
+    - Exemplo na prática:
+
+        ```git
+
+            git commit -m "adicionado alterações"
+
+        ```
+
+    - Resultado: 
+
+        ![git commit]()
