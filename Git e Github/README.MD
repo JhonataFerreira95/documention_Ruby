@@ -70,3 +70,21 @@
         ![Git status](../Banco%20de%20dados%20SQL/Assets/git_status.png)
 
         - Observa-se que o arquivo foi modificado mas não foi salvo.
+
+- `git add:`
+
+    - Para adicionarmos um arquivo ao git utilizamos o comando `git add <nome do arquivo>` ou `git add .`, o `.` após o `add` significa que é para adicionar todos os arquivos que foram modificado no diretório.
+
+    - Exemplo na prática:
+
+        ```git
+
+            git add .
+
+        ```
+
+    - Resultado: 
+
+        ![Git add](../Banco%20de%20dados%20SQL/Assets/git_add.png)
+
+        - Observa-se que utilizei o `git add .` para adcionar todos os arquivos modificados e após para confirma que tudo que foi modificado foi adicionado utilizei o comando `git status` para checar que está tudo ok.
