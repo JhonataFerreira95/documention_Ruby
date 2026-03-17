@@ -39,3 +39,15 @@
     - Todo repositório precisa de pelo menos uma `branch`, para servir como principal(Geralmente chamada de `main` ou `master`)
 
 ## Básico do Git
+
+- `git init:`
+
+    - Para inicializar um projeto com `Git`, utilizamos o comando `git init` no terminal do diretório desejado.
+
+    - Exemplo na prática:
+
+        ```git
+
+            git init
+
+        ```
