@@ -6,7 +6,7 @@
 2. [Conceitos](#conceitos)
 3. [Básico do Git](#básico-do-git)
 4. [Boas práticas no Git](#boas-práticas)
-5. [Branchs](#branchs)
+5. [Branches](#branches)
 
 ## Introdução
 
@@ -202,5 +202,5 @@
 
         - Indicada pela terceira parte do número da versão. Esta versão é focada na correção de bugs e pequenas melhorias que não afetam a compatibilidade com versões anteriores.
 
-## Branchs
+## Branches
     
