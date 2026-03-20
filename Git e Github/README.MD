@@ -232,5 +232,42 @@
 
         - Usada para corrigir bugs, funciona de maneira similar à `branch` de funcionaldiade, mas fora em resolver problemas específicos.
 
-        
+- Trabalhando com `branches:`
+
+- Para criar uma nova `branch` utilize o:
+
+    ```git
+
+        git branch nome-da-branch
+
+    ```
+
+- Para mudar de uma `branch` para outra utilize o:
+
+    ```git
+
+        git checkout -b nome-da-branch
+
+    ```
+
+    - Você tanbém pode usar o `git checkout -b nome-da-branch` para criar e mudar para a nova branch em um único comando.
+
+- Use para ver a lista de `branch`:
+
+    ```git
+
+        git branch
+
+    ```
+
+- Para integrar mudanças de uma `branch` para outra, use o:
+
+    ```git 
+
+        git merge nome-da-branch
+    
+    ```
+
+    - Este comando aplica as mudanças da `branch` especificada na `bracnh` atual.
+
 
