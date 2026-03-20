@@ -204,3 +204,6 @@
 
 ## Branches
     
+- O que são `branches`? São ramificações que permitem trabalhar em diferentes linhas de desevolvimento dentro de um mesmo repositório.
+
+- Cada `branch` pode conter uma série de `commits` independentes, permitindo que desenvolvedores trabalhem em funcionalidades ou correções sem intefetir na `branch` principal.
