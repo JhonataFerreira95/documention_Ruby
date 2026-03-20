@@ -7,6 +7,7 @@
 3. [Básico do Git](#básico-do-git)
 4. [Boas práticas no Git](#boas-práticas)
 5. [Branches](#branches)
+6. [Conflitos de Merge](#conflitos-de-merge)
 
 ## Introdução
 
@@ -277,4 +278,6 @@
 
         git branch --delete nome-da-branch
 
-    ````
+    ```
+
+## Conflitos de Merge
