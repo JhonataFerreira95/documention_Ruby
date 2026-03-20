@@ -218,5 +218,19 @@
 
     - Facilitam a colaboração entre desenvolvedores, permitindo que cada um trabalhe em sua própria `brach` e depois integre(`merge`) as mudanças.
 
+- Conceitos fudamentais sobre `branches:`
 
+    - `Branch principal:`
+
+        - Normalmente chamada de `main` ou `master`, é a linha principal de desenvolvimento onde o código mais estável é mantido.
+
+    - `Brach de funcionalidade:`
+
+        - Uasada para desenvolver uma nova funcionalidade ou melhoria, é criada a partir da `branch` principal e, depois de finalizada, suas mudanças são integradas de volta à `branch` principal.
+
+    - `Branch de correção:`
+
+        - Usada para corrigir bugs, funciona de maneira similar à `branch` de funcionaldiade, mas fora em resolver problemas específicos.
+
+        
 
