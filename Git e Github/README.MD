@@ -271,3 +271,10 @@
     - Este comando aplica as mudanças da `branch` especificada na `bracnh` atual.
 
 
+- Para deletar uma `branch` utilize:
+
+    ```git
+
+        git branch --delete nome-da-branch
+
+    ````
