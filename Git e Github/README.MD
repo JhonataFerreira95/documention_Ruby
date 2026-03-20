@@ -203,7 +203,20 @@
         - Indicada pela terceira parte do número da versão. Esta versão é focada na correção de bugs e pequenas melhorias que não afetam a compatibilidade com versões anteriores.
 
 ## Branches
-    
-- O que são `branches`? São ramificações que permitem trabalhar em diferentes linhas de desevolvimento dentro de um mesmo repositório.
 
-- Cada `branch` pode conter uma série de `commits` independentes, permitindo que desenvolvedores trabalhem em funcionalidades ou correções sem intefetir na `branch` principal.
+- O que são `branches no git`?
+    
+    - O que são `branches`? São ramificações que permitem trabalhar em diferentes linhas de desevolvimento dentro de um mesmo repositório.
+
+    - Cada `branch` pode conter uma série de `commits` independentes, permitindo que desenvolvedores trabalhem em funcionalidades ou correções sem intefetir na `branch` principal.
+
+- Por que usar `branches`?
+
+    - Permite isolar o trabalho em funcionalidades novas ou correções de bugs, facilitando o desenvolvimento paralelo.
+
+    - Ajudam a manter o historico de desevolvimento organizado e claro.
+
+    - Facilitam a colaboração entre desenvolvedores, permitindo que cada um trabalhe em sua própria `brach` e depois integre(`merge`) as mudanças.
+
+
+
