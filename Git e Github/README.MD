@@ -281,3 +281,10 @@
     ```
 
 ## Conflitos de Merge
+
+- O que são conflito de `merge`?
+
+    - Conflitos de `merge` ocorrem quando o `git` não consegue automaticamente combinar mudanças de duas `branches` diferentes.
+
+    - Isso geralmente acontece quando há alterações conflitantes no mesmo trecho de código ou arquivo.
+
