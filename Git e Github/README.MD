@@ -288,3 +288,8 @@
 
     - Isso geralmente acontece quando há alterações conflitantes no mesmo trecho de código ou arquivo.
 
+- Como identificar conflitos de `merge`?
+
+    - Quando um conflito ocorre, o `git` interrompe o `merge` e marca os arquivos em conflito.
+
+    - Você verá menssagens de erro no terminal, e arquivos conflitantes conterão marcações especiais como `<<<<`, `====` e `>>>>`.
