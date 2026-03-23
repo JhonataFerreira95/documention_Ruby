@@ -9,6 +9,7 @@
 5. [Branches](#branches)
 6. [Conflitos de Merge](#conflitos-de-merge)
 7. [Repositórios Remotos](#repositórios-remotos)
+8. [Trabalhando com SSH](#trabalhando-com-ssh)
 
 ## Introdução
 
@@ -342,3 +343,7 @@
     - Quando possuir `commits` que deseja integrar ao repositório remoto, envie-os com `git push nome-do-remote nome-da-brach`.
 
     - Quando quiser sincronizar o repositório para manter o projeto local atualizado use o `git pull nome-do-remote nome-da-brach`.
+
+## Trabalhando com SSH
+
+- 
