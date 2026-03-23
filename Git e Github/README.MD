@@ -376,5 +376,29 @@
 
         - Obeserva-se que rasurei alguns pontos, que foram, meu email, nome do arquivo, senha e própria chave `SSH`, a saida do seu vai ser exatamente assim.
 
+- Execultar o agente `SSH` no seu projeto local:
 
+    - Antes de adicionar o cliente do `SSH` e necessário roda o agente em si com o comando:
+
+        ```git
+
+            eval $(ssh-agent -s)
+
+        ```
+
+        - Após isso siga o passo para utilizar o comando `SSH` no cliente.
+
+        ![Agente](../Banco%20de%20dados%20SQL/Assets/agentSSH.png)
+
+    - Para adicionar o cliente do `SSH` na maquina utilize o comando:
+
+        ```git
+
+            ssh-add ~/caminho/da/sua/chave/privada
+
+        ```
+
+        - Após o comando você verá a messagem solicitando a senha e após a confirmação que tudo foi feito.
+
+        ![ssh2](../Banco%20de%20dados%20SQL/Assets/ssh2.png)
 
