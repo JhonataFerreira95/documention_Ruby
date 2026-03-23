@@ -8,6 +8,7 @@
 4. [Boas práticas no Git](#boas-práticas)
 5. [Branches](#branches)
 6. [Conflitos de Merge](#conflitos-de-merge)
+7. [Repositórios Remotos](#repositórios-remotos)
 
 ## Introdução
 
@@ -313,3 +314,5 @@
     - Complete o `merge`
 
         - Após resolver os conflitos, adicione os arquivos resolvidos à área de preparação `staging area` usando o ´git add nome-do-arquivo´ e faça um ´commit´ para salvar as alterações.
+
+## Repositórios Remotos
