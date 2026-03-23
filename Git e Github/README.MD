@@ -346,4 +346,9 @@
 
 ## Trabalhando com SSH
 
-- 
+- O que é `SSH`?
+
+    - É um protocolo criptografado utilizado para acessar, gerenciar e controlar sistemas e servidores remotamente de forma segura, no nosso caso o repositório remoto no `Github`.
+
+- Como utilizar o `SSH:`
+
