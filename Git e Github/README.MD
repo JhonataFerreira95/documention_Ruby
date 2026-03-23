@@ -10,6 +10,7 @@
 6. [Conflitos de Merge](#conflitos-de-merge)
 7. [Repositórios Remotos](#repositórios-remotos)
 8. [Trabalhando com SSH](#trabalhando-com-ssh)
+9. [Trabalhando com Forks](#forks-e-como-contribuir)
 
 ## Introdução
 
@@ -402,3 +403,4 @@
 
         ![ssh2](../Banco%20de%20dados%20SQL/Assets/ssh2.png)
 
+## Forks e como contribuir
