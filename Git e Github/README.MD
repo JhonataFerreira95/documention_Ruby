@@ -293,3 +293,23 @@
     - Quando um conflito ocorre, o `git` interrompe o `merge` e marca os arquivos em conflito.
 
     - Você verá menssagens de erro no terminal, e arquivos conflitantes conterão marcações especiais como `<<<<`, `====` e `>>>>`.
+
+- Passos para resolver conflitos de `merge`:
+
+    - Identifique os arquivos em conflito:
+
+        - Após um conflito de `merge`, use o `git` para listar os arquivos em confllito.
+
+        - Os arquivos em conflito estarão marcados como `bosth modified`.
+
+    - Abra os arquivos em conflito.
+
+    - Marque os confflitos como resolvidos:
+
+        - Edite os arquivos para combinar as mudanças de forma adequada.
+
+        - Remova as marcações de conflito `<<<<`, `====`, `>>>>`, após resolver o conflito.
+
+    - Complete o `merge`
+
+        - Após resolver os conflitos, adicione os arquivos resolvidos à área de preparação `staging area` usando o ´git add nome-do-arquivo´ e faça um ´commit´ para salvar as alterações.
