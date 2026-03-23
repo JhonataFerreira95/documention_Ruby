@@ -352,3 +352,27 @@
 
 - Como utilizar o `SSH:`
 
+    - Antes de utilizar o `SSH`, verifique se o mesmo está ativo na sua maquina com o seguinte comando:
+
+        ```git 
+
+            netstat -an | grep :22
+
+        ```
+    
+        - Após a confirmação que o `SSH` está ativo prossiga. Vale ressaltar que irei partir do ponto que você está com `SSH` ativo e sabe manejar o termina.
+
+    - Para criação de uma nova chave `SSH` utilize seu `email` após a criação da nova chave. O comando para criar a nova chave `SSH` é:
+
+        ```git
+
+            ssh-keygen -C "seu-email-entre-aspas-duplas"
+
+        ```
+
+        - Utilize o mesmo `email` na sua conta do `Github` na sua chave `SSh`. Após isso sua chave será criado como pode ver abaixo:
+
+        ![ssh_key](../Banco%20de%20dados%20SQL/Assets/ssh.png)
+
+        - Obeserva-se que rasurei alguns pontos, que foram, meu email, nome do arquivo, senha e própria chave `SSH`, a saida do seu vai ser exatamente assim.
+
