@@ -350,7 +350,7 @@
 
     - É um protocolo criptografado utilizado para acessar, gerenciar e controlar sistemas e servidores remotamente de forma segura, no nosso caso o repositório remoto no `Github`.
 
-- Como utilizar o `SSH:`
+- Como verificar se `SSH` está na sua marquina e criar uma chave:
 
     - Antes de utilizar o `SSH`, verifique se o mesmo está ativo na sua maquina com o seguinte comando:
 
@@ -375,4 +375,6 @@
         ![ssh_key](../Banco%20de%20dados%20SQL/Assets/ssh.png)
 
         - Obeserva-se que rasurei alguns pontos, que foram, meu email, nome do arquivo, senha e própria chave `SSH`, a saida do seu vai ser exatamente assim.
+
+
 
