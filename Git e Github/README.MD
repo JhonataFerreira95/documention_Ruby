@@ -316,3 +316,29 @@
         - Após resolver os conflitos, adicione os arquivos resolvidos à área de preparação `staging area` usando o ´git add nome-do-arquivo´ e faça um ´commit´ para salvar as alterações.
 
 ## Repositórios Remotos
+
+- O que são os repostórios remotos?
+
+    - São versões do sue projeto hospedada na internet. Permitem que você e outros trabalhem no mesmo projeto a partir de diferentes locais.
+
+- por que usar repositório remoto?
+
+    - Facilitam a colaboração entre desenvolvedores, permitindo que todos tenham acesso à versão mais recente do projeto.
+
+    - Servem como um backup do seu código, garantindo que ele não seja perdido caso alog aconteça com seu repositório local.
+
+    - Possibilitam a integração contínua e outra prática de `DevOps`.
+
+- O que é `Github`?
+
+    - É uma plataforma de hospedagem de código-fonte para trabalhar com repositórios remotos.
+
+    - Oferece uma interface web amigável e várias ferramentas adicionais para colaboração, como `pull requests`, `issues`, `wikis`, `kanban`, etc.
+
+- Trabalhando com repostório remoto:
+
+    - Clone o repositório com `git clone url-do-repositorio` para criar uma cópia local dele onde você irá trabalhar.
+
+    - Quando possuir `commits` que deseja integrar ao repositório remoto, envie-os com `git push nome-do-remote nome-da-brach`.
+
+    - Quando quiser sincronizar o repositório para manter o projeto local atualizado use o `git pull nome-do-remote nome-da-brach`.
