@@ -460,4 +460,4 @@
 
     - Sim, basta criar um arquivo com o nome `.gitignore`, após sua criação liste os diretórios ou aqruvios que deseja que o `git` ignore.
 
-    ![gitignore](../Banco%20de%20dados%20SQL/Assets/git_ignore.png)
+        ![gitignore](../Banco%20de%20dados%20SQL/Assets/git_ignore.png)
