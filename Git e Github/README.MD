@@ -461,3 +461,7 @@
     - Sim, basta criar um arquivo com o nome `.gitignore`, após sua criação liste os diretórios ou aqruvios que deseja que o `git` ignore.
 
         ![gitignore](../Banco%20de%20dados%20SQL/Assets/git_ignore.png)
+
+- Como manter diretórios vázios com `git`?
+
+    - Utilize o `.gitkeep` em um diretório vázio para mante-lo. Funciona da mesma forma que o `.gitignore`.
