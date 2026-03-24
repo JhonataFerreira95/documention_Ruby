@@ -422,3 +422,7 @@
             - Clique em `fork` para clona o repositório escolhido.
         
         - Passo 2:
+
+            ![fork copy](../Banco%20de%20dados%20SQL/Assets/fork_copy.png)
+
+            - Obseva-se que tem a opção de copiar apenas a `branch main`, caso desmarque essa opção, ira copiar todos o repositório incluindo as `branches`.
