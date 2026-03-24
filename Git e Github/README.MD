@@ -451,3 +451,9 @@
             ![fork pull](../Banco%20de%20dados%20SQL/Assets/fork_pull.png)
 
 ## Utilizando o .gitignore
+
+- O que é o `gitignore`?
+
+    - O que `gitignore` serve para deixar aquivos fora dos nossos `commits`, imagine que você fez uma alteração e lá tem um diretório que você não quer enviar para seu repositório remoto, poderia utilizar o `git add nome-do-arquivo` certo? Sim mas se você toda vez que for fazer uma alteração nova e ter que fazer isso? Daí podemo usar o `gitignore`.
+
+    
