@@ -456,4 +456,8 @@
 
     - O que `gitignore` serve para deixar aquivos fora dos nossos `commits`, imagine que você fez uma alteração e lá tem um diretório que você não quer enviar para seu repositório remoto, poderia utilizar o `git add nome-do-arquivo` certo? Sim mas se você toda vez que for fazer uma alteração nova e ter que fazer isso? Daí podemo usar o `gitignore`.
 
-    
+- Como utilizar o `gitignore`?
+
+    - Sim, basta criar um arquivo com o nome `.gitignore`, após sua criação liste os diretórios ou aqruvios que deseja que o `git` ignore.
+
+    ![gitignore](../Banco%20de%20dados%20SQL/Assets/git_ignore.png)
