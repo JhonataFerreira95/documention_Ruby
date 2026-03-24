@@ -441,4 +441,10 @@
 
             - Seu `fork` foi criado com sucesso.
 
-        
+        - Passo 4:
+
+            - Agora você tem 2 caminhos a seguir, modificar o repositório para um projeto pessoa seu ou contribuir. Caso deseje contribuir com o projeto `open-source`, sugiro ler as regras do projeto para poder contribuir, geralmente é um arquivo com a nomeclatura `CONTRIBUTING.md` e seguir as intruções para fazer o mesmo.
+
+            - Após suas alterações, recomendo da um `push` em seu repositório e após isso criar um `pull request` para contribuir com o projeto `open-source`.
+
+            ![fork pull](../Banco%20de%20dados%20SQL/Assets/fork_pull.png)
