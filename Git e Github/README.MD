@@ -11,6 +11,7 @@
 7. [Repositórios Remotos](#repositórios-remotos)
 8. [Trabalhando com SSH](#trabalhando-com-ssh)
 9. [Trabalhando com Forks](#forks-e-como-contribuir)
+10. [Usando o gitignore](#utilizando-o-gitignore)
 
 ## Introdução
 
@@ -448,3 +449,5 @@
             - Após suas alterações, recomendo da um `push` em seu repositório e após isso criar um `pull request` para contribuir com o projeto `open-source`.
 
             ![fork pull](../Banco%20de%20dados%20SQL/Assets/fork_pull.png)
+
+## Utilizando o .gitignore
