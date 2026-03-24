@@ -426,3 +426,19 @@
             ![fork copy](../Banco%20de%20dados%20SQL/Assets/fork_copy.png)
 
             - Obseva-se que tem a opção de copiar apenas a `branch main`, caso desmarque essa opção, ira copiar todos o repositório incluindo as `branches`.
+
+        - Passo 3:
+
+            ![forked](../Banco%20de%20dados%20SQL/Assets/fork_from.png)
+
+            - Note que assim aparece `forked from`, isso índica que o repositório foi um `fork` de outro projeto, para boas prática crie uma nova ramificação ou `branch` com o comando:
+
+            ```git
+
+                git branch -M nome-da-branch-do-fork
+
+            ```
+
+            - Seu `fork` foi criado com sucesso.
+
+        
