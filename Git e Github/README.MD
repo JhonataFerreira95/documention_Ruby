@@ -410,3 +410,15 @@
     - É uma forma de trabalha com projetos `open-source`, e contribuir para comunidade daquele determinado projeto com sugestões de melhorias ou resoluções de alguns problemas. Normalmente todo projeto `open-source` possuí regras para você seguir, caso queira contribuir com o projeto, é necessário seguir as regras para que sua resoluções sejam aceitam mas antes criaremos um `fork`.
 
     - `forks` são nada mais que um clone do repositório principal porém você se torna o dono e está livre para manosear o mesmo do jeito que bem entende, isso séria um `fork`.
+
+- Como fazer um `fork:`
+
+    - Para criação de um `fork` é necessário escolher um repositório para duplicar o mesmo.
+
+        - Passo 1:
+
+            ![fork](../Banco%20de%20dados%20SQL/Assets/fork.png)
+
+            - Clique em `fork` para clona o repositório escolhido.
+        
+        - Passo 2:
