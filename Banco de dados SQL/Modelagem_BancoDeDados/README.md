@@ -3,6 +3,7 @@
 ## Índice
 
 1. [Introdução conceitual](#introdução-ao-conceitos-de-bandos-de-dados)
+2. [Fundamentos sobre SQL](#fundamentos-de-banco-de-dados-sql)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -42,4 +43,4 @@
 
         - Bancos mais modernos que se popularizaram a partir da década de 2010 para solução de diversos problemas específicos, não utilizando os conceitos tradicionais e liguagem `SQL`.
 
-
+## Fundamentos de Banco de dados SQL
