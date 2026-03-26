@@ -39,3 +39,7 @@
         - Banco mais tradicionais que trabalham com uma linguagem de consulta estruturada padrão(`SQL`).
 
     - `Não-relacionais ou NoSQL:`
+
+        - Bancos mais modernos que se popularizaram a partir da década de 2010 para solução de diversos problemas específicos, não utilizando os conceitos tradicionais e liguagem `SQL`.
+
+
