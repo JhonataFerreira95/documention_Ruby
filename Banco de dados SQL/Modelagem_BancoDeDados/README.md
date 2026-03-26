@@ -44,3 +44,29 @@
         - Bancos mais modernos que se popularizaram a partir da década de 2010 para solução de diversos problemas específicos, não utilizando os conceitos tradicionais e liguagem `SQL`.
 
 ## Fundamentos de Banco de dados SQL
+
+- `Tabelas:`
+
+    - Forma estruturada de armazenar os dados, um banco de dados é composto de várias tabbelas(relacionadas ou não).
+
+- `Relacionamentos:`
+
+    - Formas de vincular uma tabela a outra para criar estruturas mais robusta e coesas.
+
+- `Colunas:`
+
+    - Definem quais dados podem ser inseridos em uma tabela.
+
+- `Linhas:`
+
+    - São registros de dados em si, cada linha é considerada uma entrada individual em uma tabela.
+
+- `Chave primária:`
+
+    - A coluna de uma tabela que é única e serve para identificar cada linha.
+
+- `Constraints:`
+
+    - Limitações e regras impostas sobre o banco de dados.
+
+    
