@@ -31,3 +31,11 @@
         - `Firebird`
 
         - `MongoDB`
+
+- Categorias de Bancos de Dados:
+
+    - `Relacionais ou SQL:`
+
+        - Banco mais tradicionais que trabalham com uma linguagem de consulta estruturada padrão(`SQL`).
+
+    - `Não-relacionais ou NoSQL:`
