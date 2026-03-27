@@ -173,6 +173,11 @@
 
         - Número de precisão fixa, útil para valores monetários.
 
-    
+- Dados de texto:
 
+    - `CHAR(n)`:
+
+        - Cadeia de caracteres de comprimento fixo.
+
+    
 
