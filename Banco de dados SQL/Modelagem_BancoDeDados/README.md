@@ -192,5 +192,9 @@
     - `BOOLEAN`:
 
         - Representa valores lógicos(`TRUE` ou `FALSE`).
+
+    - `BLOB`:
+
+        - Dados binários grandes, usados para armazenar aqruivos como imagens e vídeos(pouco usado).
     
 
