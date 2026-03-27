@@ -155,6 +155,10 @@
 
     - `INT/INTEGER`:
 
-        - Inteiro de 4 bytes
+        - Inteiro de 4 bytes.
+
+    - `BEGINT`:
+
+        - Inteiro com 8 bytes.
 
 
