@@ -187,6 +187,8 @@
 
         - Cadeia de caracteres de comprimento muito grande.
 
+- Dados de data e hora:
+
 
     
 
