@@ -200,5 +200,9 @@
     - `ENUM`:
 
         - Conjuntos de valores predefinidos.
+
+    - `JSON`:
+
+        - Armazena dados em formato `JSON`.
     
 
