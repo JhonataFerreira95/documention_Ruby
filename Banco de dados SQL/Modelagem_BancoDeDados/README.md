@@ -161,4 +161,8 @@
 
         - Inteiro com 8 bytes.
 
+    - `FLOAT`:
+
+        - Número com ponto flutuante de precisão simples.
+
 
