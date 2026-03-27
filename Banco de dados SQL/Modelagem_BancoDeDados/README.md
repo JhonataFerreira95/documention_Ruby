@@ -142,3 +142,7 @@
         ```
 
 ## Tipos de dados
+
+- Tipo de dados definem a natureza dos valores que podem ser armazenados em uma coluna de uma tabela.
+
+- Escolher o tipo de dado adequeado é crucial para a eficiência, integridade e otimização do banco de dados.
