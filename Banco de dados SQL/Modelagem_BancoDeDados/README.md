@@ -119,4 +119,13 @@
 
     - `DCL`(Data Control Language):
 
+        - Comandos para controlar o acesso aos dados.
+
+        ```SQL
+
+            GRANT,
+            REVOKE
+
+        ```
+
     - `TCL`(Transaction Control Language):
