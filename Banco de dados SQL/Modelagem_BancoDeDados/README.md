@@ -189,6 +189,8 @@
 
 - Dados de data e hora:
 
+    - `BOOLEAN`:
 
+        - Representa valores lógicos(`TRUE` ou `FALSE`).
     
 
