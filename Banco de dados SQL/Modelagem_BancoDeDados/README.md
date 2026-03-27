@@ -164,5 +164,9 @@
     - `FLOAT`:
 
         - Número com ponto flutuante de precisão simples.
+    
+    - `DOUBLE`:
+
+        - Número com ponto flutuante de precisão dupla.
 
 
