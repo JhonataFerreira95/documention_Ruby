@@ -179,5 +179,9 @@
 
         - Cadeia de caracteres de comprimento fixo.
 
+    - `VARCHAR(n)`:
+
+        - Cadeia de caracteres de comprimento variável.
+
     
 
