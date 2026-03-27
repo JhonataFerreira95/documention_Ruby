@@ -129,3 +129,13 @@
         ```
 
     - `TCL`(Transaction Control Language):
+
+        - Comandos para gerenciar transações.
+
+        ```SQL
+
+            BEGIN,
+            COMMIT,
+            ROLLBACK
+
+        ```
