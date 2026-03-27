@@ -84,9 +84,9 @@
 
         ```SQL
 
-            CREATE TABLE Clientes;
+            CREATE TABLE clientes;
 
-            SELECT nome, telefone FROM Clientes;
+            SELECT nome, telefone FROM clientes;
 
         ```
 
