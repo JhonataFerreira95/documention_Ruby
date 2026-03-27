@@ -153,4 +153,8 @@
 
         - Inteiro de 2 bytes.
 
+    - `INT/INTEGER`:
+
+        - Inteiro de 4 bytes
+
 
