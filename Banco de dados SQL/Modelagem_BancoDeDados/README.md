@@ -4,6 +4,7 @@
 
 1. [Introdução conceitual](#introdução-ao-conceitos-de-bandos-de-dados)
 2. [Fundamentos sobre SQL](#fundamentos-de-banco-de-dados-sql)
+3. [Conhecendo a linguagem SQL](#conhecendo-a-linguagem-sql)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -69,4 +70,4 @@
 
     - Limitações e regras impostas sobre o banco de dados.
 
-    
+## Conhecendo a linguagem SQL
