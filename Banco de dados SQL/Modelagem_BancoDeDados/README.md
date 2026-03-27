@@ -197,6 +197,12 @@
 
         - Hora(hora, minuto, segundo).
 
+    - `DATETIME`:
+
+        - Combinação de qualquer data e hora.
+
+    
+
 - Outros tipos de dados variados:
 
     - `BOOLEAN`:
