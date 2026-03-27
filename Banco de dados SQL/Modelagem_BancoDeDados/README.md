@@ -106,6 +106,17 @@
 
     - `DML`(Data Manipulation Language):
 
+        - Comandos para manipulação de dados.
+
+        ```SQL
+
+            SELECT, 
+            INSERT,
+            UPDATE,
+            DELETE
+
+        ```
+
     - `DCL`(Data Control Language):
 
     - `TCL`(Transaction Control Language):
