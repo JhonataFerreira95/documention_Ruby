@@ -94,6 +94,16 @@
 
     - `DDL`(Data Definition Language):
 
+        - Comandos para definir a estrutura do banco de dados.
+
+        ```SQL
+
+            CREATE TABLE,
+            ALTER TABLE,
+            DROP TABLE
+
+        ```
+
     - `DML`(Data Manipulation Language):
 
     - `DCL`(Data Control Language):
