@@ -89,3 +89,13 @@
             SELECT nome, telefone FROM Clientes;
 
         ```
+
+- Categorias de comandos da linguagem `SQL`:
+
+    - `DDL`(Data Definition Language):
+
+    - `DML`(Data Manipulation Language):
+
+    - `DCL`(Data Control Language):
+
+    - `TCL`(Transaction Control Language):
