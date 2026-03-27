@@ -71,3 +71,21 @@
     - Limitações e regras impostas sobre o banco de dados.
 
 ## Conhecendo a linguagem SQL
+
+- O que é `SQL`?
+
+    - Foi criada na década de 1970 pela `IBM` posteriomente padronizada pela `ANSI` e `ISO`.
+
+    - `SQL`(Structured Query language) é a linguagem padrão utilizada para gerenciar e manipular bancos de dados relacionais.
+
+    - Serve para criação de tabelas, inserção de linhas, consulta e manipulação dos dados, gerenciamento de acesso, etc.
+
+    - Exemplos de comandos `SQL`:
+
+        ```SQL
+
+            CREATE TABLE Clientes;
+
+            SELECT nome, telefone FROM Clientes;
+
+        ```
