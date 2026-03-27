@@ -5,6 +5,7 @@
 1. [Introdução conceitual](#introdução-ao-conceitos-de-bandos-de-dados)
 2. [Fundamentos sobre SQL](#fundamentos-de-banco-de-dados-sql)
 3. [Conhecendo a linguagem SQL](#conhecendo-a-linguagem-sql)
+4. [Tipos de dados](#tipos-de-dados)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -139,3 +140,5 @@
             ROLLBACK
 
         ```
+
+## Tipos de dados
