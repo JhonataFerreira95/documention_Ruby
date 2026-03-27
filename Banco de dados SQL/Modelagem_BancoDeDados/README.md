@@ -169,4 +169,10 @@
 
         - Número com ponto flutuante de precisão dupla.
 
+    - `DECIMAL/NUMERIC`:
+
+        - Número de precisão fixa, útil para valores monetários.
+
+    
+
 
