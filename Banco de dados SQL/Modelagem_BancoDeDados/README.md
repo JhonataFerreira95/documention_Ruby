@@ -193,7 +193,9 @@
 
         - Data(ano, mês, dia).
 
-    
+    - `TIME`:
+
+        - Hora(hora, minuto, segundo).
 
 - Outros tipos de dados variados:
 
