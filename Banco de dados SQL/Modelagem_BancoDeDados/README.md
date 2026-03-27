@@ -189,6 +189,10 @@
 
 - Dados de data e hora:
 
+
+
+- Outros tipos de dados variados:
+
     - `BOOLEAN`:
 
         - Representa valores lógicos(`TRUE` ou `FALSE`).
