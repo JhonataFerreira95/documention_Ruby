@@ -183,5 +183,10 @@
 
         - Cadeia de caracteres de comprimento variável.
 
+    - `TEXT`:
+
+        - Cadeia de caracteres de comprimento muito grande.
+
+
     
 
