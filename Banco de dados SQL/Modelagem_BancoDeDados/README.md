@@ -201,7 +201,9 @@
 
         - Combinação de qualquer data e hora.
 
-    
+    - `TIMESTAMP`:
+
+        - Data e hora, muito usado para metadados.
 
 - Outros tipos de dados variados:
 
