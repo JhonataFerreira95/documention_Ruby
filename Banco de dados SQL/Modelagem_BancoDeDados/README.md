@@ -189,7 +189,11 @@
 
 - Dados de data e hora:
 
+    - `DATE`:
 
+        - Data(ano, mês, dia).
+
+    
 
 - Outros tipos de dados variados:
 
