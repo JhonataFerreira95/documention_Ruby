@@ -196,5 +196,9 @@
     - `BLOB`:
 
         - Dados binários grandes, usados para armazenar aqruivos como imagens e vídeos(pouco usado).
+
+    - `ENUM`:
+
+        - Conjuntos de valores predefinidos.
     
 
