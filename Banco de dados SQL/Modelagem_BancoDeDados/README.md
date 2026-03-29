@@ -289,6 +289,17 @@
 
             ```psql
 
-                \c nome-do-banco
+                \c nome-do-banco;
 
             ```
+
+- Altranção via `CLI`:
+
+    - Vamos supor que queremos alterar o nome do nosso banco, para isso utilizamos o comando:
+
+        ```SQL
+
+            ALTER DATABASE  nome-do-banco RENAME TO novo-nome;
+
+        ```
+
