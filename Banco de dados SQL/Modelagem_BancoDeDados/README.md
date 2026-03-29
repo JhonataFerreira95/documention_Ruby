@@ -262,3 +262,28 @@
             ![\l](../Assets/comando_l.png)
 
             - Observa-se que ele lista todos os bancos presentes.
+
+- Logar em outro banco via `CLI`:
+
+    - Antes de logar em um banco existente via `CLI`, utilize o comando:
+
+        ```SQL
+
+            \q
+        
+        ```
+
+        - Esse comando permite você deslogar de um banco, após isso utlize o comando:
+
+            ```SQL
+
+                psql -U postgres -d nome-do-banco;
+            
+            ```
+
+        - E a senha que foi definido na instalção.
+
+            ![testing_database](../Assets/testing_database.png)
+
+
+
