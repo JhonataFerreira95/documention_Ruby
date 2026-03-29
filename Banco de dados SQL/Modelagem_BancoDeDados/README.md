@@ -6,6 +6,7 @@
 2. [Fundamentos sobre SQL](#fundamentos-de-banco-de-dados-sql)
 3. [Conhecendo a linguagem SQL](#conhecendo-a-linguagem-sql)
 4. [Tipos de dados](#tipos-de-dados)
+5. [PSQL via CLI](#entrando-no-psql-via-terminal)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -223,4 +224,29 @@
 
         - Armazena dados em formato `JSON`.
     
+## Entrando no PSQL via terminal
 
+- Normlamente utilizamos algum recurso visual para manipular o `SGBD` exemplos como `DATAGRIPE`, `PHPmyAdmin` ou `PGmyAdmin` porém aqui irei utlizar diretamente via `CLI` ou interface de linha de comando.
+
+- Primeiramente escolhe o diretório onde irá alocar o banco, após utilize esse comando para inicializar o `postgres`:
+
+    ```SQL
+
+        psql -U postgres
+
+    ```
+    ![Resultado SQL](../Assets/SQL.png)
+
+    - Após o comando digite a senha que você definiu na hora da instalação.
+
+    - Resultado após a senha:
+
+        ![Resultado 2 SQL](../Assets/SQL_FININSH.png)
+
+        - Obeserve que você já está no servidor do banco, apenas crie um banco com o comando básico que já foi introduzido a cima.
+
+            ```SQL
+
+                CREATE DATABASE nome-do-banco
+
+            ```
