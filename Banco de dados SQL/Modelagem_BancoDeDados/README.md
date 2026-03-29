@@ -250,3 +250,15 @@
                 CREATE DATABASE nome-do-banco
 
             ```
+
+        - Caso queira consultar se o banco foi criado, utilize o comando:
+
+            ```SQL
+
+                \l
+            
+            ```
+
+            ![\l](../Assets/comando_l.png)
+
+            - Observa-se que ele lista todos os bancos presentes.
