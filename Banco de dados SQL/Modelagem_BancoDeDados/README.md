@@ -247,7 +247,7 @@
 
             ```SQL
 
-                CREATE DATABASE nome-do-banco
+                CREATE DATABASE nome-do-banco;
 
             ```
 
