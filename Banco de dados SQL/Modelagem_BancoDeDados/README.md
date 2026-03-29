@@ -6,7 +6,7 @@
 2. [Fundamentos sobre SQL](#fundamentos-de-banco-de-dados-sql)
 3. [Conhecendo a linguagem SQL](#conhecendo-a-linguagem-sql)
 4. [Tipos de dados](#tipos-de-dados)
-5. [PSQL via CLI](#entrando-no-psql-via-terminal)
+5. [PSQL via CLI](#comando-do-banco-via-cli)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -224,7 +224,7 @@
 
         - Armazena dados em formato `JSON`.
     
-## Entrando no PSQL via terminal
+## Comando do banco via CLI
 
 - Normlamente utilizamos algum recurso visual para manipular o `SGBD` exemplos como `DATAGRIPE`, `PHPmyAdmin` ou `PGmyAdmin` porém aqui irei utlizar diretamente via `CLI` ou interface de linha de comando.
 
@@ -293,7 +293,7 @@
 
             ```
 
-- Altranção via `CLI`:
+- Altrando nome do banco via `CLI`:
 
     - Vamos supor que queremos alterar o nome do nosso banco, para isso utilizamos o comando:
 
@@ -302,4 +302,14 @@
             ALTER DATABASE  nome-do-banco RENAME TO novo-nome;
 
         ```
+- Excluindo banco de dados via `CLI`:
+
+    - Caso deseje excluir algum banco existente, utilize o comando:
+
+        ```SQL
+
+            DROP DATABASE nome-do-banco;
+
+        ```
+    
 
