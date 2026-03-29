@@ -253,7 +253,7 @@
 
         - Caso queira consultar se o banco foi criado, utilize o comando:
 
-            ```SQL
+            ```psql
 
                 \l
             
@@ -267,7 +267,7 @@
 
     - Antes de logar em um banco existente via `CLI`, utilize o comando:
 
-        ```SQL
+        ```psql
 
             \q
         
@@ -275,7 +275,7 @@
 
         - Esse comando permite você deslogar de um banco, após isso utlize o comando:
 
-            ```SQL
+            ```psql
 
                 psql -U postgres -d nome-do-banco;
             
@@ -285,5 +285,10 @@
 
             ![testing_database](../Assets/testing_database.png)
 
+            - Caso queira troca de banco de uma forma rápida utilize o comando:
 
+            ```psql
 
+                \c nome-do-banco
+
+            ```
