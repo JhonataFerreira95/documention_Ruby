@@ -311,5 +311,17 @@
             DROP DATABASE nome-do-banco;
 
         ```
-    
 
+- Criando uma tabela em nosso banco, utilize o comando:
+
+    ```SQL
+
+        CREATE TABLE nome-da-tabela(
+            name VARCHAR(255) NOT NULL,
+            phone VARCHAR(20) NOT NULL,
+            email VARCHAR(100),
+        );
+
+    ```
+
+    - Aqui eu citei alguns comandos novos, como o `NOT NULL`, é bem intuitivo pelo mas caso não saiba, isso significa que a coluna `nome` e `phone` não podem ser vázias.
