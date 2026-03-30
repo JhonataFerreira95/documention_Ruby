@@ -346,3 +346,39 @@
         DROP TABLE nome-da-tabela-que-deseja-excluir;
 
     ```
+
+- Modificando uma tabela existente como o esse comando:
+
+    ```SQL
+
+        ALTER TABLE nome-da-tabela ADD COLUMN nova-coluna TIPO-DA-NOVA-COLUNA;
+
+    ```
+
+    - Observa-se que criei uma nova coluna com o comando `ALTER` e `ADD COLUMN`.
+
+    - Outros exemplos:
+
+    ```SQL
+
+        ALTER TABLE nome-da-tabela ALTER COLUMN coluna-desejada SET NOT NULL;
+
+    ```
+
+    - Alterando um valor de uma coluna para que ele não seja nulo com `SET NOT NULL`. Caso deseje remover o `NOT NULL` de alguma coluna, utilize o comando:
+
+    ```SQL
+
+        ALTER TABLE nome-da-tabela ALTER COLUMN coluna-desejada DROP NOT NULL;
+
+    ```
+
+    - Se deseja renomear uma coluna utilize o comando:
+
+    ```SQL
+
+        ALTER TABLE nome-da-tabela ALTER COLUM coluna-desejada TO novo-nome-da-coluna;
+
+    ```
+
+    - Para alterar o nome, utilizamos o `TO`.
