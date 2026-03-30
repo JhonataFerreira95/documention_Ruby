@@ -320,7 +320,7 @@
             id SERIAL PRIMARY KEY,
             name VARCHAR(255) NOT NULL,
             phone VARCHAR(20) NOT NULL,
-            email VARCHAR(100)
+            email VARCHAR(100) UNIQUE
         );
 
     ```
@@ -328,6 +328,8 @@
     - Aqui eu citei alguns comandos novos, como o `NOT NULL`, é bem intuitivo pelo mas caso não saiba, isso significa que a coluna `nome` e `phone` não podem ser vázias.
 
     - Criamos um `id` como chave primária da nossa tabela, definimos como auto-incremento com o `SERIAL`.
+
+    - Utilizei o `UNIQUE` para que o campo do `email` seja único.''
 
 - Se deseja excluir uma tabela, utilize esse comando:
 
