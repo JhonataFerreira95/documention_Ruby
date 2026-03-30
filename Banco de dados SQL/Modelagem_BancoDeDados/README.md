@@ -317,19 +317,22 @@
     ```SQL
 
         CREATE TABLE nome-da-tabela(
+            id SERIAL PRIMARY KEY,
             name VARCHAR(255) NOT NULL,
             phone VARCHAR(20) NOT NULL,
-            email VARCHAR(100),
+            email VARCHAR(100)
         );
 
     ```
 
     - Aqui eu citei alguns comandos novos, como o `NOT NULL`, é bem intuitivo pelo mas caso não saiba, isso significa que a coluna `nome` e `phone` não podem ser vázias.
 
+    - Criamos um `id` como chave primária da nossa tabela, definimos como auto-incremento com o `SERIAL`.
+
 - Se deseja excluir uma tabela, utilize esse comando:
 
     ```SQL
 
-        DROP TABLE nome-da-tabela-que-deseja-exckuir;
+        DROP TABLE nome-da-tabela-que-deseja-excluir;
 
     ```
