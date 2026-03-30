@@ -377,7 +377,7 @@
 
     ```SQL
 
-        ALTER TABLE nome-da-tabela ALTER COLUM coluna-desejada TO novo-nome-da-coluna;
+        ALTER TABLE nome-da-tabela RENAME COLUMN coluna-desejada TO novo-nome-da-coluna;
 
     ```
 
