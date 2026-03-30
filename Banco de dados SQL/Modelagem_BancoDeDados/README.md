@@ -355,7 +355,13 @@
 
     ```
 
-    - Observa-se que criei uma nova coluna com o comando `ALTER` e `ADD COLUMN`.
+    - Observa-se que criei uma nova coluna com o comando `ALTER` e `ADD COLUMN`. E para excluir uma coluna existente utilize o comando:
+
+    ```SQL
+
+        ALTER TABLE nome-databela DROP COLUMN nome-da-coluna;
+
+    ```
 
     - Outros exemplos:
 
