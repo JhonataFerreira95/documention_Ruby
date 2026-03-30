@@ -382,3 +382,13 @@
     ```
 
     - Para alterar o nome, utilizamos o `TO`.
+
+- Criando uma coluna em uma tabela existente, utilize o comando:
+
+    ```SQL
+
+        ALTER TABLE nome-da-tabela ADD COLUMN IF NOT EXIST nome-da-coluna tipo-de-dado;
+    
+    ```
+
+    - O `IF NOT EXIST` é para garantir que se houver uma coluna com o nome igual, essa mesma coluna que estamos criando não seja criada.
