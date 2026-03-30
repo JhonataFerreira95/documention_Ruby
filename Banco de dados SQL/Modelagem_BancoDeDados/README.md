@@ -329,7 +329,15 @@
 
     - Criamos um `id` como chave primária da nossa tabela, definimos como auto-incremento com o `SERIAL`.
 
-    - Utilizei o `UNIQUE` para que o campo do `email` seja único.''
+    - Utilizei o `UNIQUE` para que o campo do `email` seja único.
+
+    - Caso queira consulta as tabelas via `psql`, utilize o comando:
+
+        ```psql
+
+            \dt
+        
+        ```
 
 - Se deseja excluir uma tabela, utilize esse comando:
 
