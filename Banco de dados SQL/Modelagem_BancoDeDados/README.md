@@ -325,3 +325,11 @@
     ```
 
     - Aqui eu citei alguns comandos novos, como o `NOT NULL`, é bem intuitivo pelo mas caso não saiba, isso significa que a coluna `nome` e `phone` não podem ser vázias.
+
+- Se deseja excluir uma tabela, utilize esse comando:
+
+    ```SQL
+
+        DROP TABLE nome-da-tabela-que-deseja-exckuir;
+
+    ```
