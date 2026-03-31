@@ -487,4 +487,14 @@
 
     - `IN:`
 
-        - Irei aborda o operador booleano `IN`, como já de conhecimento geral, para que ele funcione o item desejado esteja dentro da condição que você deseja.
+        - Irei aborda o operador booleano `IN`, como já de conhecimento geral, para que ele funcione o item desejado esteja dentro da condição que você deseja, verificando se um valor pertence a uma lista ou conjunto específico.
+
+        ```SQL
+
+            SELECT * FROM nome-da-tabela WHERE coluna-desejada-e-condição IN ('condição');
+
+            SELECT * FROM stock WHERE category IN ('massas', 'grãos');
+
+        ```
+
+        - Aqui utilizei o `IN` para verificar se em `category` existem alguma categoria com os nomes `massas ou grãos`.
