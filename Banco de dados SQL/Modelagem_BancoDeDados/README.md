@@ -447,4 +447,4 @@
 
     - `AND:`
 
-        - 
+        - Irei aborda o operador booleano `AND`, como já de conhecimento geral, para que a saída do operada seja `true` é necessário que ambas condições sejam `true`.
