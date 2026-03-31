@@ -429,7 +429,7 @@
 
     - Aqui eu fiz dois comandos utilizando o `SELECT`, um com o nome da coluna e o outro com `*`, utilizando o `*` seleciona todas as colunas existente da nossa tabela caso deseje selecionar uma ou mais colunas use a vírgula para separar as colunas desejadas, o `FROM` aponta para a tabela que desejamos consultar.
 
-- Utilizando o `WHERE`, `AND`, `OR` e `IN` na consulta do banco:
+- Utilizando o `WHERE`, `AS`, `AND`, `OR` e `IN` na consulta do banco:
 
     - `WHERE:`
 
@@ -445,6 +445,24 @@
 
         - Aqui utilizei a palavra reservada `WHERE` para pesquisa todos os produtos com a quantidade menor que 20 na tabela `stock`.
 
+    - `AS:`
+
+        - A palavra reservadar `AS`, serve renomear os nomes de colunas do banco.
+
+        ```SQL
+
+            SELECT nome-da-coluna AS novo-nome-da-coluna-temporario, nome-da-coluna AS novo-nome-da-coluna-temporario FROM nome-da-tabela;
+        
+        ```
+        
+        - Aqui utilizei 2 exemplos de colunas para demonstrar que dá pra fazer com várias. O nome fica apenas naquela consulta, não é como o `RENAME`.
+
     - `AND:`
 
         - Irei aborda o operador booleano `AND`, como já de conhecimento geral, para que a saída do operada seja `true` é necessário que ambas condições sejam `true`.
+
+        ```SQL
+
+            SELECT * FROM nome-da-tabela WHERE coluna-desejada-e-condição AND coluna-desejada-e-condição;
+        
+        ```
