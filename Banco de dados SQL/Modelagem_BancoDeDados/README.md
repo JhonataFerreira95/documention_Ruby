@@ -416,3 +416,15 @@
     - Observa-se que, para inserir o dados em uma tabela necessito referência a mesma com o `INSERT INTO`, insert serve para eu dizer que quero inserir algo e o into para referência a tabela desejada. Após isso passo as colunas das tabelas, que no caso foram `name, address, phone`, após isso utilizo o `VALUES` para adiconar valores e abro pârenteses e passo os dados de acordo com a ordem definida dentro do pârenteses da tabela.
 
 ## Consultando dado de uma tabela
+
+- Como fazer uma consulta a uma tabela existente no banco com `SQL`, basta apenas consultar com esse comando:
+
+    ```SQL
+
+        SELECT quais-colunas-eu-quero-selecionar FROM nome-da-tabela;
+
+        SELECT * FROM nome-da-tabela;
+
+    ```
+
+    - Aqui eu fiz dois comandos utilizando o `SELECT`, um com o nome da coluna e o outro com `*`, utilizando o `*` seleciona todas as colunas existente da nossa tabela, o `FROM` aponta para a tabela que desejamos consultar.
