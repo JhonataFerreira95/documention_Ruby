@@ -452,6 +452,8 @@
         ```SQL
 
             SELECT nome-da-coluna AS novo-nome-da-coluna-temporario, nome-da-coluna AS novo-nome-da-coluna-temporario FROM nome-da-tabela;
+
+            SELECT id AS identificação, name AS nome FROM clients;
         
         ```
         
@@ -464,5 +466,7 @@
         ```SQL
 
             SELECT * FROM nome-da-tabela WHERE coluna-desejada-e-condição AND coluna-desejada-e-condição;
+
+            SELECT * FROM stock WHERE categorie = 'grãos' AND amount < 20;
         
         ```
