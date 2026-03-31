@@ -485,4 +485,6 @@
 
         - Aqui utilizei o `OR` para verificar no banco se existe uma categoria chamada `massas` em `category` ou algum item de quantidade 100 em `amount`.
 
-        
+    - `IN:`
+
+        - Irei aborda o operador booleano `IN`, como já de conhecimento geral, para que ele funcione o item desejado esteja dentro da condição que você deseja.
