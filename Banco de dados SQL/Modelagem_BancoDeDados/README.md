@@ -427,4 +427,16 @@
 
     ```
 
-    - Aqui eu fiz dois comandos utilizando o `SELECT`, um com o nome da coluna e o outro com `*`, utilizando o `*` seleciona todas as colunas existente da nossa tabela, o `FROM` aponta para a tabela que desejamos consultar.
+    - Aqui eu fiz dois comandos utilizando o `SELECT`, um com o nome da coluna e o outro com `*`, utilizando o `*` seleciona todas as colunas existente da nossa tabela caso deseje selecionar uma ou mais colunas use a vírgula para separar as colunas desejadas, o `FROM` aponta para a tabela que desejamos consultar.
+
+- Utilizando o `WHERE` na consulta:
+
+    ```SQL
+
+        SELECT * FROM nome-da-tabela WHERE coluna-desejada <condição>;
+
+        SELECT * FROM stock WHERE quantity < 20;
+
+    ```
+
+    - Aqui utilizei a palavra reservada `WHERE` para pesquisa todos os produtos com a quantidade menor que 20 na tabela `stock`.
