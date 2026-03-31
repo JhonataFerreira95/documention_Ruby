@@ -7,6 +7,7 @@
 3. [Conhecendo a linguagem SQL](#conhecendo-a-linguagem-sql)
 4. [Tipos de dados](#tipos-de-dados)
 5. [PSQL via CLI](#comando-do-banco-via-cli)
+6. [Inserindo linhas em uma tabela](#inserindo-linhas-em-uma-tabela)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -398,3 +399,5 @@
     ```
 
     - O `IF NOT EXIST` é para garantir que se houver uma coluna com o nome igual, essa mesma coluna que estamos criando não seja criada.
+
+## Inserindo linhas em uma tabela
