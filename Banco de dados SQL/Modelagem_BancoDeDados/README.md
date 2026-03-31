@@ -461,12 +461,28 @@
 
     - `AND:`
 
-        - Irei aborda o operador booleano `AND`, como já de conhecimento geral, para que a saída do operada seja `true` é necessário que ambas condições sejam `true`.
+        - Irei abordar o operador booleano `AND`, como já de conhecimento geral, para que a saída do operador seja `true` é necessário que ambas condições sejam `true`.
 
         ```SQL
 
             SELECT * FROM nome-da-tabela WHERE coluna-desejada-e-condição AND coluna-desejada-e-condição;
 
-            SELECT * FROM stock WHERE categorie = 'grãos' AND amount < 20;
+            SELECT * FROM stock WHERE category = 'grãos' AND amount < 20;
         
         ```
+    
+    - `OR:`
+
+        - Irei abordar o operador booleano `OR`, como já de conhecimento geral, para que a saída do operador seja `true` é necessário que apenas uma condição seja `true`.
+
+        ```SQL
+
+            SELECT * FROM nome-da-tabela WHERE coluna-desejada-e-condição OR coluna-desejada-e-condição;
+
+            SELECT * FROM stock WHERE category = 'massas' OR amount = 100;
+
+        ```
+
+        - Aqui utilizei o `OR` para verificar no banco se existe uma categoria chamada `massas` em `category` ou algum item de quantidade 100 em `amount`.
+
+        
