@@ -401,3 +401,15 @@
     - O `IF NOT EXIST` é para garantir que se houver uma coluna com o nome igual, essa mesma coluna que estamos criando não seja criada.
 
 ## Inserindo linhas em uma tabela
+
+- Para adicionamos algo em nossa tabela já existente utilizamos o comando:
+
+    ```SQL
+
+        INSERT INTO nome-da-tabela(name, address, phone) VALUES(
+            'bass', 'rua A, n380', '(84)98160-5893'
+        );
+
+    ```
+
+    - Observa-se que, para inserir o dados em uma tabela necessito referência a mesma com o `INSERT INTO`, insert serve para eu dizer que quero inserir algo e o into para referência a tabela desejada. Após isso passo as colunas das tabelas, que no caso foram `name, address, phone`, após isso utilizo o `VALUES` para adiconar valores e abro pârenteses e passo os dados de acordo com a ordem definida dentro do pârenteses da tabela.
