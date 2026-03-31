@@ -8,6 +8,7 @@
 4. [Tipos de dados](#tipos-de-dados)
 5. [PSQL via CLI](#comando-do-banco-via-cli)
 6. [Inserindo linhas em uma tabela](#inserindo-linhas-em-uma-tabela)
+7. [Consultar dados de uma tabela](#consultando-dado-de-uma-tabela)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -413,3 +414,5 @@
     ```
 
     - Observa-se que, para inserir o dados em uma tabela necessito referência a mesma com o `INSERT INTO`, insert serve para eu dizer que quero inserir algo e o into para referência a tabela desejada. Após isso passo as colunas das tabelas, que no caso foram `name, address, phone`, após isso utilizo o `VALUES` para adiconar valores e abro pârenteses e passo os dados de acordo com a ordem definida dentro do pârenteses da tabela.
+
+## Consultando dado de uma tabela
