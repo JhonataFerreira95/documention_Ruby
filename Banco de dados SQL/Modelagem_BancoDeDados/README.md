@@ -431,7 +431,9 @@
 
 - Utilizando o `WHERE`, `AND`, `OR` e `IN` na consulta do banco:
 
-    -`WHERE:`
+    - `WHERE:`
+
+        - A clásula `WHERE` server para filtra registro em uma consulta no `SQL` ou condição como `if`.
 
         ```SQL
 
@@ -443,4 +445,6 @@
 
         - Aqui utilizei a palavra reservada `WHERE` para pesquisa todos os produtos com a quantidade menor que 20 na tabela `stock`.
 
-        
+    - `AND:`
+
+        - 
