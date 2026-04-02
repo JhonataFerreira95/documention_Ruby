@@ -513,4 +513,9 @@
     ```
 
     - Observa-se que filtrei como `name`, isso séria a ordem alfabética mas antes da ordem utilizei o comando `ORDER BY` para informa que vai em ordem por `name`.
-    
+
+- Aqui ire falar de filtos para combinar com o comando `ORDER BY`, filtro crescente e o filtro decrescente que são:
+
+    ```SQL
+
+        
