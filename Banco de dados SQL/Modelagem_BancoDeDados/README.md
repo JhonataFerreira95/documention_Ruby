@@ -9,6 +9,7 @@
 5. [PSQL via CLI](#comando-do-banco-via-cli)
 6. [Inserindo linhas em uma tabela](#inserindo-linhas-em-uma-tabela)
 7. [Consultar dados de uma tabela](#consultando-dado-de-uma-tabela)
+8. [Comandos avançados de consulta](#comandos-avançados-de-consulta")
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -498,3 +499,5 @@
         ```
 
         - Aqui utilizei o `IN` para verificar se em `category` existem alguma categoria com os nomes `massas ou grãos`.
+
+## Comandos avançados de consulta
