@@ -518,4 +518,10 @@
 
     ```SQL
 
-        
+        SELECT * FROM tabala-desejada ORDER BY ordem-desejada ASC;
+
+        SELECT * FROM clients ORDER BY id ASC;
+
+    ```
+    
+    - Observa-se que filtei com o `id` porém utilizei o comando `ASC` para que o resultado seja de uma forma crescente, do menor `id` para o maior `id`.
