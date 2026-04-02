@@ -604,5 +604,9 @@
 
         - Aqui utilizei o `AVG` para tira a média total de itens da minha coluna `amount` e renomei ela de media;
 
+- Utilizando operadores avançado com `WHERE`, `LIKE`, `%` e `_`:
+
+
+
 
 
