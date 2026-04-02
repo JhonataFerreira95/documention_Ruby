@@ -578,7 +578,9 @@
 
         ```
 
-        - 
+        - Aqui utilizei o `COUNT` para contas quantos `id` existem dentro da minha coluna `id` e renomei com o comando `AS`.
+
+    - `SUM:`
 
 
 
