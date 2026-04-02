@@ -582,5 +582,15 @@
 
     - `SUM:`
 
+        ```SQL
+
+            SELECT SUM(colunda-desejada) AS nome-desejado FROM tabela-que-corresponda-a-consulta;
+
+            SELECT SUM(amount) AS total FROM stock;
+
+        ```
+
+        - Aqui utilizei o `SUM` para soma o total de itens da minha coluna `amount` e renomei ela de total.
+
 
 
