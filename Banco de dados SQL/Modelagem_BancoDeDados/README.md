@@ -516,25 +516,29 @@
 
 - Aqui ire falar de filtos para combinar com o comando `ORDER BY`, filtro ascendente(crescente) e o filtro descendente(decrescente) que são:
 
-    ```SQL
+    - `ASC:`
 
-        SELECT * FROM tabala-desejada ORDER BY ordem-desejada ASC;
+        ```SQL
 
-        SELECT * FROM clients ORDER BY id ASC;
+            SELECT * FROM tabala-desejada ORDER BY ordem-desejada ASC;
 
-    ```
-    
-    - Observa-se que filtei com o `id` porém utilizei o comando `ASC` para que o resultado seja de uma forma crescente, do menor `id` para o maior `id`.
+            SELECT * FROM clients ORDER BY id ASC;
 
-    ```SQL
+        ```
+        
+        - Observa-se que filtei com o `id` porém utilizei o comando `ASC` para que o resultado seja de uma forma crescente, do menor `id` para o maior `id`.
 
-        SELECT * FROM tabela-desejada ORDER BY ordem-desejada DEC;
+    - `DESC:`
 
-        SELECT * FROM clients ORDER BY id DESC;
+        ```SQL
 
-    ```
+            SELECT * FROM tabela-desejada ORDER BY ordem-desejada DEC;
 
-    - Observa-se que filtei com novamente com `id` porém utilizei o comando `DESC` para que o resultado seja de uma forma decrescente, do maior `id` para o menor `id`.
+            SELECT * FROM clients ORDER BY id DESC;
+
+        ```
+
+        - Observa-se que filtei com novamente com `id` porém utilizei o comando `DESC` para que o resultado seja de uma forma decrescente, do maior `id` para o menor `id`.
 
 - Aqui irei aborda outro comando que limita a quantidade de resultado na busca, que é:
 
