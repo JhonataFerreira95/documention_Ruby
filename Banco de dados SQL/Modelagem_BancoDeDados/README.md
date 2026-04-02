@@ -592,5 +592,17 @@
 
         - Aqui utilizei o `SUM` para soma o total de itens da minha coluna `amount` e renomei ela de total.
 
+    - `AVG:`
+
+        ```SQL
+
+            SELECT AVG(colunda-desejada) AS nome-desejado FROM tabela-que-corresponda-a-consulta;
+
+            SELECT AVG(amount) AS media FROM stock_ingredients;
+
+        ```
+
+        - Aqui utilizei o `AVG` para tira a média total de itens da minha coluna `amount` e renomei ela de media;
+
 
 
