@@ -535,3 +535,26 @@
     ```
 
     - Observa-se que filtei com novamente com `id` porém utilizei o comando `DESC` para que o resultado seja de uma forma decrescente, do maior `id` para o menor `id`.
+
+- Aqui irei aborda outro comando que limita a quantidade de resultado na busca, que é:
+
+    ```SQL
+
+        SELECT * FROM tabala-desejada LIMIT quantidade-desejada;
+
+        SELECT * FROM clients LIMIT 5;
+
+    ```
+    
+    - Aqui utilizei o limit para ele limitar a apenas 5 resultados em minha consulta.
+
+    ```SQL
+
+        SELECT * FROM tabela-desejada LIMIT quantidade-desajda OFFSET quantidade-desejada;
+
+        SELECT * FROM tabela-desejada LIMIT 4 OFFSET 4;
+
+    ```
+
+    - - Aqui usamos com frequência em conjunto com o comando de pular resultados `OFFSET` para criar um mecanismo de paginação
+
