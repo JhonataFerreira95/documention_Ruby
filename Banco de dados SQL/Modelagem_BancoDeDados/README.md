@@ -514,7 +514,7 @@
 
     - Observa-se que filtrei como `name`, isso séria a ordem alfabética mas antes da ordem utilizei o comando `ORDER BY` para informa que vai em ordem por `name`.
 
-- Aqui ire falar de filtos para combinar com o comando `ORDER BY`, filtro crescente e o filtro decrescente que são:
+- Aqui ire falar de filtos para combinar com o comando `ORDER BY`, filtro ascendente(crescente) e o filtro descendente(decrescente) que são:
 
     ```SQL
 
@@ -525,3 +525,13 @@
     ```
     
     - Observa-se que filtei com o `id` porém utilizei o comando `ASC` para que o resultado seja de uma forma crescente, do menor `id` para o maior `id`.
+
+    ```SQL
+
+        SELECT * FROM tabela-desejada ORDER BY ordem-desejada DEC;
+
+        SELECT * FROM clients ORDER BY id DESC;
+
+    ```
+
+    - Observa-se que filtei com novamente com `id` porém utilizei o comando `DESC` para que o resultado seja de uma forma decrescente, do maior `id` para o menor `id`.
