@@ -538,23 +538,43 @@
 
 - Aqui irei aborda outro comando que limita a quantidade de resultado na busca, que é:
 
-    ```SQL
+    - `LIMIT:`
 
-        SELECT * FROM tabala-desejada LIMIT quantidade-desejada;
+        ```SQL
 
-        SELECT * FROM clients LIMIT 5;
+            SELECT * FROM tabala-desejada LIMIT quantidade-desejada;
 
-    ```
+            SELECT * FROM clients LIMIT 5;
+
+        ```
+        
+        - Aqui utilizei o limit para ele limitar a apenas 5 resultados em minha consulta.
     
-    - Aqui utilizei o limit para ele limitar a apenas 5 resultados em minha consulta.
+    - `OFFSET:`
 
-    ```SQL
+        ```SQL
 
-        SELECT * FROM tabela-desejada LIMIT quantidade-desajda OFFSET quantidade-desejada;
+            SELECT * FROM tabela-desejada LIMIT quantidade-desajda OFFSET quantidade-desejada;
 
-        SELECT * FROM tabela-desejada LIMIT 4 OFFSET 4;
+            SELECT * FROM tabela-desejada LIMIT 4 OFFSET 4;
 
-    ```
+        ```
 
-    - - Aqui usamos com frequência em conjunto com o comando de pular resultados `OFFSET` para criar um mecanismo de paginação
+        - Aqui usamos com frequência em conjunto com o comando de pular resultados `OFFSET` para criar um mecanismo de paginação.
+
+- Irei aborda os comandos de contagem de registro `count`, soma `sum` e média aritmética `avg`:
+
+    - `COUNT:`
+
+        ```SQL
+
+            SELECT COUNT(colunda-desejada) AS nome-desejado FROM tabela-que-corresponda-a-consulta;
+
+            SELECT COUNT(id) AS usuarios FROM clients;
+
+        ```
+
+        - 
+
+
 
