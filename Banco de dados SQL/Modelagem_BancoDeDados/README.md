@@ -501,3 +501,16 @@
         - Aqui utilizei o `IN` para verificar se em `category` existem alguma categoria com os nomes `massas ou grãos`.
 
 ## Comandos avançados de consulta
+
+- Irei aborda o comando de ordenação, que serve para filtar as ordens de consulta, o comando é:
+
+    ```SQL
+
+        SELECT * FROM tabela-desejada ORDER BY ordem-desejada;
+
+        SELECT * FROM clients ORDER BY name;
+
+    ```
+
+    - Observa-se que filtrei como `name`, isso séria a ordem alfabética mas antes da ordem utilizei o comando `ORDER BY` para informa que vai em ordem por `name`.
+    
