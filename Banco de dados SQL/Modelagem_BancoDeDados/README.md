@@ -644,5 +644,18 @@
 
             - O filtro atual é simples, ele basicamente busca todo o resultado com `LIKE '%d'` que termina com a letra D.
 
+        - `LIKE '%AN%:'`
+
+            ```SQL
+
+                SELECT * FROM tabela-desejada WHERE coluna-desejada LIKE '%letra-ou-frase-desejada-para-o-filtro';
+
+                SELECT * FROM clients WHERE name LIKE '%an%';
+
+            ```
+
+            - Aqui utilizamos dois % para falar para o `LIKE` que queremos todos os resultado que possuam o `AN` juntos.
+            
+
 
 
