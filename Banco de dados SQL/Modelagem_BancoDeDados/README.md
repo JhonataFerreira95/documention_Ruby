@@ -620,7 +620,17 @@
 
             - Vamos por parte, esse primeiro comando com `LIKE 'b%'` serve para busca todos os dados que começam com a letra B na coluna `name`, irei dar mais alguns exemplos de como utilizar o `LIKE`.
         
-        
+        - `LIKE '_A%':`
+
+            ```SQL
+
+                SELECT * FROM tabela-desejada WHERE coluna-desejada LIKE '_letra-desejada-para-o-filtro%';
+
+                SELECT * FROM clients WHERE name LIKE '_a%';
+
+            ```
+
+            - Esse filtro com `LIKE '_a%'` serve para busca todas as palavras que conteham A como segunda letra na consulta.
 
 
 
