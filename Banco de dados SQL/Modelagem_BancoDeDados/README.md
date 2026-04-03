@@ -632,5 +632,17 @@
 
             - Esse filtro com `LIKE '_a%'` serve para busca todas as palavras que conteham A como segunda letra na consulta.
 
+        - `LIKE '%D':`
+
+            ```SQL
+
+                SELECT * FROM tabela-desejada WHERE coluna-desejada LIKE '%letra-desejada-para-o-filtro';
+
+                SELECT * FROM clients WHERE name LIKE '%d';
+
+            ```
+
+            - O filtro atual é simples, ele basicamente busca todo o resultado com `LIKE '%d'` que termina com a letra D.
+
 
 
