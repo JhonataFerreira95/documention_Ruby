@@ -656,6 +656,17 @@
 
             - Aqui utilizamos dois % para falar para o `LIKE` que queremos todos os resultado que possuam o `AN` juntos.
             
+- Comando `ILIKE` que funciona como o LIKE, porém é case-insensitive, ou seja, não diferencia maiúsculas e minúsculas:
+
+    ```SQL
+
+        SELECT * FROM tabela-desejada WHERE coluna-desejada ILIKE '%letra-desejada';
+
+        SELECT * FROM clients WHERE name ILIKE '%B%';
+
+    ```
+
+    - Como já foi mencionado, aqui ele busca tudo, tanto maiúsculo quanto menúsculo, e funciona da mesma forma que o `LIKE`.
 
 
 
