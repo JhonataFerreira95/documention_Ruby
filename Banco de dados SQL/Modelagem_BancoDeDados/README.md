@@ -606,7 +606,21 @@
 
 - Utilizando operadores avançado com `WHERE`, `LIKE`, `%` e `_`:
 
+    - Para utilizar o `LIKE` com filtro primeiramente precisamos do `WHERE`, utilze desse forma:
 
+        - `LIKE 'B%':`
+
+            ```SQL
+
+                SELECT * FROM tabela-desejada WHERE coluna-desejada LIKE 'letra-desajada-para-o-filtro%'
+
+                SELECT * FROM clients WHERE name LIKE 'b%'
+
+            ```
+
+            - Vamos por parte, esse primeiro comando com `LIKE 'b%'` serve para busca todos os dados que começam com a letra B na coluna `name`, irei dar mais alguns exemplos de como utilizar o `LIKE`.
+        
+        
 
 
 
