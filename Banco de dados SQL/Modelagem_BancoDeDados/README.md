@@ -10,6 +10,7 @@
 6. [Inserindo linhas em uma tabela](#inserindo-linhas-em-uma-tabela)
 7. [Consultar dados de uma tabela](#consultando-dado-de-uma-tabela)
 8. [Comandos avançados de consulta](#comandos-avançados-de-consulta")
+9. [Atualização e exclusão de linhas](#atualização-e-exclusão-de-linhas)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -668,5 +669,4 @@
 
     - Como já foi mencionado, aqui ele busca tudo, tanto maiúsculo quanto menúsculo, e funciona da mesma forma que o `LIKE`.
 
-
-
+## Atualização e exclusão de linhas
