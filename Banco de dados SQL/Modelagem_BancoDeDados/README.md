@@ -681,4 +681,4 @@
 
     ```
 
-    - Aqui utilizei o comando `UPDATE`, para atualizar os valores da coluna `situacao` de `acabou` para `Finalizada`
+    - Aqui utilizei o comando `UPDATE`, para atualizar os valores da coluna `situacao` de `acabou` para `Finalizada`, para indicar essa ação ao `SQL` utilizei a apalavra reservada `SET` e uma condição com a cláusula `WHERE` para sinalizar que tudo na coluna `situacao` que é igual a `Acabou` seja substituido por `Finalizada`.
