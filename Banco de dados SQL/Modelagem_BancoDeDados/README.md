@@ -694,3 +694,15 @@
     ```
 
     - Observa-se que atualizei múltiplas colunas apenas separando com vírgula, na cláusula `WHERE` adicionei a condição onde eu sabia que o filme que queria atualizar tinha o titulo de `Star Wars`.
+
+- Agora irie aborda o comando para deletar dados de nossas colunas:
+
+    ```SQL
+
+        DELETE FROM tabela-desejada WHERE condicao-desejada;
+
+        DELETE FROM serie_tv WHERE titulo = 'The Office';
+
+    ```
+
+    - Utilizei o comodando de `DELETE` para excluir o dado da coluna `titulo`, para isso precisamos deixa claro a condição para nossa cláusa `WHERE`.
