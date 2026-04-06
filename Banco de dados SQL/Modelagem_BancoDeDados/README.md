@@ -682,3 +682,15 @@
     ```
 
     - Aqui utilizei o comando `UPDATE`, para atualizar os valores da coluna `situacao` de `acabou` para `Finalizada`, para indicar essa ação ao `SQL` utilizei a apalavra reservada `SET` e uma condição com a cláusula `WHERE` para sinalizar que tudo na coluna `situacao` que é igual a `Acabou` seja substituido por `Finalizada`.
+
+- Utilizando o `UPDATE` com múltiplos campos:
+
+    ```SQL
+
+        UPDATE tabela-desejada SET coluna-desejada='condicao', coluna-desejada='condicao', coluna-desejada='condicao' WHERE condicao;
+
+        UPDATE filmes SET titulo='Star Wars: A nova esperança', genero='Sci-fi/Fantasy' WHERE titulo='Star Wars';
+
+    ```
+
+    - Observa-se que atualizei múltiplas colunas apenas separando com vírgula, na cláusula `WHERE` adicionei a condição onde eu sabia que o filme que queria atualizar tinha o titulo de `Star Wars`.
