@@ -670,3 +670,15 @@
     - Como já foi mencionado, aqui ele busca tudo, tanto maiúsculo quanto menúsculo, e funciona da mesma forma que o `LIKE`.
 
 ## Atualização e exclusão de linhas
+
+- Irei aborda o comandos para atualizar os dados de tabela, para isso utilizamos o comando:
+
+    ```SQL
+
+        UPDATE nome-da-tabela-desejada SET coluna-desejada = 'mudança-desejada' WHERE condicao-desejada;
+
+        UPDATE serie_tv SET situacao = 'Finalizada' WHERE situacao = 'Acabou';
+
+    ```
+
+    - Aqui utilizei o comando `UPDATE`, para atualizar os valores da coluna `situacao` de `acabou` para `Finalizada`
