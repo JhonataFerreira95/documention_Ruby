@@ -718,9 +718,13 @@
 
             ```psql
 
-                pg_dump argumentos nome-do-banco
+                pg_dump -U usuario-do-branco argumentos nome-do-banco
+
+                pg_dump -U postgres -v -f "caminho/do/diretório/desejado" nome-do-banco
 
             ```
+
+            - Fiz o `dump` de um banco, o `-v` é verbose ou seja, detalhes do que está acontecendo. O `-f` serve para aponta o caminho de qual diretório você deseja salvar.
 
             - Existem algums formatos para nosso arquivo `dump`, eles são representados por letras, são elas:
             
@@ -734,4 +738,3 @@
             ```
 
             - Letra `c` para arquivos `custom`, `d` para arquivos `directory`, `t` para arquivos `tar` e `p` para arquivos `plain text` que é a opção padrão, ou seja em `SQL`.
-            
