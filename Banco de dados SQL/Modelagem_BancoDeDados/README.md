@@ -778,3 +778,13 @@
                 psql -U postgres -d nome_do_banco -f caminho/do/backup.sql
 
             ```
+
+            - Comando para restaurar uma tabela:
+
+            ```psql
+
+                pg_restore -U postgres -t nome-da-tabela -d nome-do-banco caminho/onde/está/o/banco
+
+            ```
+
+            - Aqui o `-t` informa que é uma tabela que vai ser restaurada, o `-d` indica o nome do banco e após isso digitamos onde se encontra o banco.
