@@ -740,4 +740,21 @@
             - Letra `c` para arquivos `custom`, `d` para arquivos `directory`, `t` para arquivos `tar` e `p` para arquivos `plain text` que é a opção padrão, ou seja em `SQL`.
 
     - `Restauração:`
-    
+
+        - Para restaurar o banco via `psql` utilizamos o seguinte comando:
+
+            ```psql
+
+                pg_restore --create -U postgres -v caminho/desejado/nome-do-banco.pgbackup
+
+            ```
+
+            - Vale ressaltar que o `pg_restore` não restaura arquivos `SQL` só em formatos `custom` como `c`, `d` e `t`.
+
+            - Como nosso `backup` foi em formato `p`, o comando acima não vai funcionar, então usamos o `psql` que é apropriado para `SQL`:
+
+            ```psql
+
+                psql -U postgres -d nome_do_banco -f caminho/do/backup.sql
+
+            ```
