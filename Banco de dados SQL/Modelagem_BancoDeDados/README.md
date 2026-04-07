@@ -720,7 +720,7 @@
 
                 pg_dump -U usuario-do-branco argumentos nome-do-banco
 
-                pg_dump -U postgres -v -f "caminho/do/diretório/desejado" nome-do-banco
+                pg_dump -U postgres -v -f "caminho/do/diretório/desejado/nome-do-backup" nome-do-banco
 
             ```
 
@@ -743,11 +743,21 @@
 
                 ```psql
 
-                    pg_dump -U postgres -v -F c -f "caminho/do/diretório/desejado" nome-do-banco
+                    pg_dump -U postgres -v -F c -f "caminho/do/diretório/desejado/nome-do-backup" nome-do-banco
 
                 ```
 
                 - Aqui no comando o `-F c` define o formato o formato backup, que seria `custom`.
+
+                - Caso deseja fazer backup de apenas uma tabela do banco, o comando para isso é:
+
+                ```psql
+
+                    pg_dump -U postgres -v -F c -f "caminho/do/diretório/desejado/nome-do-backup" -t nome-da-tabela nome-do-banco
+
+                ```
+
+                - Para referênciar a tabela utilizamos o `-t` e em seguido o seu nome.
 
     - `Restauração:`
 
