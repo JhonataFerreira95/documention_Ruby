@@ -738,3 +738,6 @@
             ```
 
             - Letra `c` para arquivos `custom`, `d` para arquivos `directory`, `t` para arquivos `tar` e `p` para arquivos `plain text` que é a opção padrão, ou seja em `SQL`.
+
+    - `Restauração:`
+    
