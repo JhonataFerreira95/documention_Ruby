@@ -738,6 +738,16 @@
             ```
 
             - Letra `c` para arquivos `custom`, `d` para arquivos `directory`, `t` para arquivos `tar` e `p` para arquivos `plain text` que é a opção padrão, ou seja em `SQL`.
+            
+            - `dump` em outros formatos:
+
+                ```psql
+
+                    pg_dump -U postgres -v -F c -f "caminho/do/diretório/desejado" nome-do-banco
+
+                ```
+
+                - Aqui no comando o `-F c` define o formato o formato backup, que seria `custom`.
 
     - `Restauração:`
 
