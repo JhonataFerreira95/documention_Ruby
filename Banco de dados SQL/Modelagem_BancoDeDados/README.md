@@ -709,3 +709,29 @@
     - Utilizei o comodando de `DELETE` para excluir o dado da coluna `titulo`, para isso precisamos deixa claro a condição para nossa cláusa `WHERE`.
 
 ## Backup e restauração
+
+- Irei aborda como fazer o `backup` e `restauração` via `CLI`.
+
+    - `Backup:`
+
+        - Para criar um `backup` via `CLI` utilizamos o comando:
+
+            ```psql
+
+                pg_dump argumentos nome-do-banco
+
+            ```
+
+            - Existem algums formatos para nosso arquivo `dump`, eles são representados por letras, são elas:
+            
+            ```psql
+
+                c
+                d
+                t
+                p
+
+            ```
+
+            - Letra `c` para arquivos `custom`, `d` para arquivos `directory`, `t` para arquivos `tar` e `p` para arquivos `plain text` que é a opção padrão, ou seja em `SQL`.
+            
