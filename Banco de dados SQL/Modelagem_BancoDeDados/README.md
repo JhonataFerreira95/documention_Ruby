@@ -13,6 +13,7 @@
 9. [Atualização e exclusão de linhas](#atualização-e-exclusão-de-linhas)
 10. [Backup e restauração](#backup-e-restauração)
 11. [Relacionamentos entre tabelas](#relacionamentos-entre-tabelas)
+12. [Relacionamntos 1:1 e 1:n](#relacionamntos-11-e-1n)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -905,3 +906,5 @@
             - Relacionamento permitem controles de acesso mais precisos, permissões podem ser estabelecidas para que apenas determinandos usuários possam modificar dados em uma tabela específica, enquanto outros possam apenas visualizar dados agregados ou relacionados.
 
             - Através de relacionamentos bem definidos, é possível implementar políticas de segurança que garantem que os dados sensíveis sejam protegidos e acessados apenas conforme necessários, evitando o vazamentos de acessos não autorizados.
+
+## Relacionamntos 1:1 e 1:n
