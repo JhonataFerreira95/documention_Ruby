@@ -901,3 +901,7 @@
             - Relacionamentos permitem que o modelo de dados do banco de dados reflita as relações do mundo real entre diferentes `entidades`.
 
         - Controle de acesso e segurança:
+
+            - Relacionamento permitem controles de acesso mais precisos, permissões podem ser estabelecidas para que apenas determinandos usuários possam modificar dados em uma tabela específica, enquanto outros possam apenas visualizar dados agregados ou relacionados.
+
+            - Através de relacionamentos bem definidos, é possível implementar políticas de segurança que garantem que os dados sensíveis sejam protegidos e acessados apenas conforme necessários, evitando o vazamentos de acessos não autorizados.
