@@ -800,6 +800,30 @@
 
             - Temos duas tabelas clientes e endereços. Um relacionamento entre essas tabelas permite que associemos uma linha de tabela usuários a um endereço específico.
 
+                - `Usuario:`
+
+                    ```SQL
+
+                        id: 312
+                        nome: 'Bass'
+                        email: 'bass123@gmail.com'
+                        id_endereco: 9634
+                    
+                    ```
+
+                - `Endereço:`
+
+                    ```SQL
+
+                        id: 9634
+                        rua: 'Av. Presidente Vargas'
+                        numero: '34'
+                        id_usuario: 312
+
+                    ```
+
+                - Nos exemplos acima utilizamos o relacionamento de `1:1` para ligar as tabelas `usuario` com `endereco` via `id_usuario` e `id_endereco`.
+
     - Como funcionam os relacionamentos?
 
     - Existem 3 tipos de relacionamentos no `SQL`:
