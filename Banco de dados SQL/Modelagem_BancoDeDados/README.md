@@ -880,6 +880,10 @@
 
             - Relacionamentos permitem a normalização do banco de dados, onde os dados são divididos em tabelas relacionadas de forma que cada peça de informação seja armazenada uma única vez.
 
+                - Normalização:
+
+                    - É um conjunto de regras que visa a organização de um projeto de banco de dados para reduzir a redundância de dados, aumentar a integridade de dados e o desempenho.
+
             - Com redução da redundância, a manutenção dos dados se torna mais simples e menos propensa a erros.
 
             - Atualizações feitas em uma tabela relacionada automaticamente se refletem nas associações, eliminando a necessidade de múltiplas atualizações em várias tabelas.
