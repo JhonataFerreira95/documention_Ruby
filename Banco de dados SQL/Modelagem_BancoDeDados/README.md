@@ -791,3 +791,19 @@
             - Aqui o `-t` informa que é uma tabela que vai ser restaurada, o `-d` indica o nome do banco e após isso digitamos onde se encontra o banco.
 
 ## Relacionamentos entre tabelas
+
+- O que são relacionamentos?
+
+    - Também chamados de associações, são formas de vincularmos os dados de uma tabela aos dados de outra tabela.
+
+        - Exemplo:
+
+            - Temos duas tabelas clientes e endereços. Um relacionamento entre essas tabelas permite que associemos uma linha de tabela usuários a um endereço específico.
+
+    - Como funcionam os relacionamentos?
+
+    - Existem 3 tipos de relacionamentos no `SQL`:
+
+    - Por que os relacionamentos são importantes?
+
+    
