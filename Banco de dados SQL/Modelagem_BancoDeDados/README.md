@@ -862,4 +862,24 @@
 
     - Por que os relacionamentos são importantes?
 
-    
+        - Garantir integridade:
+
+            - Relacionamentos ajudam a manter a consistência dos dados ao garantir que as assosiações entre tabelas sejam válidas.
+
+                - Exemplo:
+
+                    - Se uma tabela pedidos tem uma chave estrangeira que referencia a tabela Clientes, cada pedido deve estar associado a um cliente existente.
+
+            - As chaves entrangeiras impõem restrições que evitam a inserção de dados órfãos ou inconsistentes.
+
+                - Exemplo:
+
+                    - Você não pode inserir um pedido para um cliente que não existe na tabela Clientes.
+
+        - Evitar redundância:
+
+        - Consultas eficientes:
+
+        - Modelagem intuitiva:
+
+        - Controle de acesso e segurança:
