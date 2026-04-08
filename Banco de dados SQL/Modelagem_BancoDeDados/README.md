@@ -826,6 +826,14 @@
 
     - Como funcionam os relacionamentos?
 
+        - Chave primária(`Primary Key,` ou simplesmente `PK`):
+
+            - Coluna ou conjunto de colunas que identificam unicamente cada linha de uma tabela.
+
+        - Chaves estrangeiras(`Foreign Key,` ou `FK`):
+
+            - Coluna ou conjuntos de colunas que estabelecem uma ligação entre duas tabelas.
+
     - Existem 3 tipos de relacionamentos no `SQL`:
 
     - Por que os relacionamentos são importantes?
