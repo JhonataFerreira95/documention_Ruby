@@ -878,6 +878,12 @@
 
         - Evitar redundância:
 
+            - Relacionamentos permitem a normalização do banco de dados, onde os dados são divididos em tabelas relacionadas de forma que cada peça de informação seja armazenada uma única vez.
+
+            - Com redução da redundância, a manutenção dos dados se torna mais simples e menos propensa a erros.
+
+            - Atualizações feitas em uma tabela relacionada automaticamente se refletem nas associações, eliminando a necessidade de múltiplas atualizações em várias tabelas.
+
         - Consultas eficientes:
 
         - Modelagem intuitiva:
