@@ -890,6 +890,12 @@
 
         - Consultas eficientes:
 
+            - Relacionamentos bem estruturados permitem a execução de operações de junção(`JOIN`) eficientes, que são essenciais para consultas complexas envolvendo múltiplas tabelas ao mesmo tempo.
+
+            - Exemplo:
+
+                - Para obter todos os pedidos feitos por um cliente, uma junção entre tabelas `Clientes` e `Pedidos` pode ser realizada.
+
         - Modelagem intuitiva:
 
         - Controle de acesso e segurança:
