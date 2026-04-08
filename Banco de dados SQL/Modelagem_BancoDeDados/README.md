@@ -898,4 +898,6 @@
 
         - Modelagem intuitiva:
 
+            - Relacionamentos permitem que o modelo de dados do banco de dados reflita as relações do mundo real entre diferentes `entidades`.
+
         - Controle de acesso e segurança:
