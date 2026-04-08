@@ -12,6 +12,7 @@
 8. [Comandos avançados de consulta](#comandos-avançados-de-consulta")
 9. [Atualização e exclusão de linhas](#atualização-e-exclusão-de-linhas)
 10. [Backup e restauração](#backup-e-restauração)
+11. [Relacionamentos entre tabelas](#relacionamentos-entre-tabelas)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -788,3 +789,5 @@
             ```
 
             - Aqui o `-t` informa que é uma tabela que vai ser restaurada, o `-d` indica o nome do banco e após isso digitamos onde se encontra o banco.
+
+## Relacionamentos entre tabelas
