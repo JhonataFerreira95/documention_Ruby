@@ -836,6 +836,30 @@
 
     - Existem 3 tipos de relacionamentos no `SQL`:
 
+        - Um-para-Um(`1:1`):
+
+            - Cada linha de uma tabela está relacionada a, no máximo, uma linha de outra tabela.
+
+            - Exemplo:
+
+                - Um usuário possui um endereço e uma endereço só pode pertencer a um usuário.
+
+        - Um-para-Muitos(`1:n`):
+
+            - Cada linha de uma tabela pode estar relacionada a múltiplas linhas de outra tabela.
+
+            - Exemplo:
+
+                - Um filme possui um gênero, mas um mesmo gênero pode ser usado para vários filmes.
+
+        - Muitos-para-Muitos(`n:n`):
+
+            - Linhas de uma tabela podem estar relacionadas a múltiplas linhas de outra tabela e vice-versa, implementado com a ajuda de uma tabela intermediária.
+
+            - Exemplo:
+
+                - Um post do blog pode ser classificado com várias tagas, e uma mesma tag pode ser usada para classificar vários post.
+
     - Por que os relacionamentos são importantes?
 
     
