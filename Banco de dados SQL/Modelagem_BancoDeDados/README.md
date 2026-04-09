@@ -916,3 +916,36 @@
         CREATE DATABASE relacionamentos;
 
     ```
+
+- Criado o banco, agorei irei criar 2 tabelas para elas se relacionar;
+
+    - Primeira tabela:
+
+        ```SQL
+
+            CREATE TABLE employees(
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255),
+                phone VARCHAR(30)
+            );
+
+        ```
+
+    - Segunda tabela:
+
+        ```SQL
+
+            CREATE TABLE addresses(
+                id SERIAL PRIMARY KEY,
+                street VARCHAR(255) NOT NULL,
+                number VARCHAR(10),
+                complement VARCHAR(255),
+                city VARCHAR(255) NOT NULL,
+
+                employee_id INT UNIQUE,
+                FOREIGN KEY(employee_id) REFERENCES employees(id)
+            );
+
+        ```
+
+        - Observa-se que utilizei duas novas constraints, que foram `FOREIGN KEY` e `REFERENCES`, ela servem para indicar uma chave estrangeira e referência qual tabela será feito o relacionamento. Em nosso caso criamos a coluna `employee_id` para ser a nossa chanve estrangeira e referênciamos na tabela `employees` na coluna `id` que essa será a chave estrangeira para nosso relacionamento, nesse exemplo usamos a lógica de relacionamento de `1:1` ou Um para Um.
