@@ -971,3 +971,9 @@
 
         - Para que possamos adicionar um campo da chave estrangeira primeiramente termos que mudar a nossa tabela principal para adicionar a coluna que vai ser responsável pela chanve estrangeira que no caso seria `departament_id`, após isso vamos modificar mais uma vez nossa tabela para enfim criar a refeência de nossa chanve estrangeira, já que vamos alterar uma tabela existente precisamos dar um nome a nossa `CONSTRAINT` que em nosso caso foi `fk_departament`. Nossa chanve estrangeira é `departament_id` referenciado na tabela `departaments` em sua coluna `id`, essa é nossa chave estrangeira para nos relacionar com outra tabela.
 
+        - Vale ressaltar que criamos a nossa chave estrangeira na tabela `employees` já que por via de regras geralmente criamos sempre a `foreign` na tabela que se relacionar `1:n` ou Um para Muitas, que em nosso caso é a tabela `departaments`.
+
+    - Usando a criação da tabelas para criar a tabela do zero com a chave estrangeira:
+
+        
+
