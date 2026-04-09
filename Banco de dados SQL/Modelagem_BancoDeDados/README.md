@@ -952,3 +952,22 @@
             - Observa-se que utilizei duas novas constraints, que foram `FOREIGN KEY` e `REFERENCES`, ela servem para indicar uma chave estrangeira e referência qual tabela será feito o relacionamento. Em nosso caso criamos a coluna `employee_id` para ser a nossa chanve estrangeira e referênciamos na tabela `employees` na coluna `id` que essa será a chave estrangeira para nosso relacionamento, nesse exemplo usamos a lógica de relacionamento de `1:1` ou Um para Um.
 
 - Relacionamento `1:n`:
+
+    - Agora irei aborda a relação de um para muitos, para isso irei criar uma nova tabela:
+
+        ```SQL
+
+            CREATE TABLE departaments(
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255) NOT NULL
+            );
+
+            ALTER TABLE employees ADD COLUMN departament_id INT;
+
+            ALTER TABLE employees ADD CONSTRAINT fk_departament 
+            FOREIGN KEY(departament_id) REFERENCES departaments(id);
+
+        ```
+
+        - Para que possamos adicionar um campo da chave estrangeira primeiramente termos que mudar a nossa tabela principal para adicionar a coluna que vai ser responsável pela chanve estrangeira que no caso seria `departament_id`, após isso vamos modificar mais uma vez nossa tabela para enfim criar a refeência de nossa chanve estrangeira, já que vamos alterar uma tabela existente precisamos dar um nome a nossa `CONSTRAINT` que em nosso caso foi `fk_departament`. Nossa chanve estrangeira é `departament_id` referenciado na tabela `departaments` em sua coluna `id`, essa é nossa chave estrangeira para nos relacionar com outra tabela.
+
