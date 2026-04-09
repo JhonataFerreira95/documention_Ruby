@@ -1010,8 +1010,8 @@
                     employees.id AS ID,
                     employees.name AS Funcionário,
                     employees.phone AS Telefone,
-                    departments.name AS Departamento
-                FROM employees JOIN departments ON employees.department_id = departments.id;
+                    departaments.name AS Departamento
+                FROM employees JOIN departaments ON employees.department_id = departaments.id;
 
             ```
             
