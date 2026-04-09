@@ -975,5 +975,17 @@
 
     - Usando a criação da tabelas para criar a tabela do zero com a chave estrangeira:
 
-        
+        ```SQL
 
+            CREATE TABLE employees(
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255) NOT NULL,
+                phone VARCHAR(30),
+                departament_id INT NOT NULL,
+
+                FOREIGN(departaments_id) REFERENCES departaments(id);
+            );
+
+        ```
+
+        - A única diferença dessa criação de tabela com chave estrangeira para a outro lá em cima é o `UNIQUE`, já que quanod utilizamos o mesmo a tabela se comporta de `1:1` e não `1:n`.
