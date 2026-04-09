@@ -908,3 +908,11 @@
             - Através de relacionamentos bem definidos, é possível implementar políticas de segurança que garantem que os dados sensíveis sejam protegidos e acessados apenas conforme necessários, evitando o vazamentos de acessos não autorizados.
 
 ## Relacionamntos 1:1 e 1:n
+
+- Aqui irei implementar os relacionamentos na prática mas precisamos criar um banco para isso, então vamos lá.
+
+    ```SQL
+
+        CREATE DATABASE relacionamentos;
+
+    ```
