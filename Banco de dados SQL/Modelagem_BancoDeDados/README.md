@@ -989,3 +989,15 @@
         ```
 
         - A única diferença dessa criação de tabela com chave estrangeira para a outro lá em cima é o `UNIQUE`, já que quanod utilizamos o mesmo a tabela se comporta de `1:1` e não `1:n`.
+
+- Utilizando o `JOIN`:
+
+    - O `JOIN` server para fazer a junção de duas tabelas, para consultas mais avançadas onde queremos dados de algumas tabelas e juntar tudo em uma consulta, para isso que usamos o conceito de chave estrangeira.
+
+        ```SQL
+
+            SELECT * FROM employees JOIN addresses ON employees.id = addresses.employee_id;
+
+        ```
+
+        - Aqui eu fiz um consulta utilizando o `JOIN`, usei a tabela `employees` e fiz a junção com a outra tabela `addresses` e quis juntar oa coluna `id` da tabela `employees` com a coluna `employee_id` da tabela `addresses`, para isso utlizo o `ON` que server de ponte para conectar as tabelas e após isso uso o `employees.id` = `addresses.employee_id` o ponto serve para referênciar a coluna desejada.
