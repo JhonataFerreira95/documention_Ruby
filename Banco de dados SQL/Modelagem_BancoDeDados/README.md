@@ -1001,3 +1001,18 @@
         ```
 
         - Aqui eu fiz um consulta utilizando o `JOIN`, usei a tabela `employees` e fiz a junção com a outra tabela `addresses` e quis juntar oa coluna `id` da tabela `employees` com a coluna `employee_id` da tabela `addresses`, para isso utlizo o `ON` que server de ponte para conectar as tabelas e após isso uso o `employees.id` = `addresses.employee_id` o ponto serve para referênciar a coluna desejada.
+
+        - Vale ressaltar que quando trabalhamos com `JOIN`, na hora e especificar a colunas no `SELECT`, temos 2 colunas `id` em diferentes tabelas, para selecionar a coluna desejada utilize essa sintaxe:
+
+            ```SQL
+
+                SELECT
+                    employees.id AS ID,
+                    employees.name AS Funcionário,
+                    employees.phone AS Telefone,
+                    departments.name AS Departamento
+                FROM employees JOIN departments ON employees.department_id = departments.id;
+
+            ```
+            
+            - Observa-se que aqui até utilizei o `AS` para deixar algo mair limpo, e utilizei o `tabela-deseja.coluna-desejada` para referênciar a coluna e a tabela que queremos para não ser uma consulta ambigua.
