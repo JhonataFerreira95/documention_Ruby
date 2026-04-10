@@ -1017,4 +1017,22 @@
             
             - Observa-se que aqui até utilizei o `AS` para deixar algo mair limpo, e utilizei o `tabela-deseja.coluna-desejada` para referênciar a coluna e a tabela que queremos para não ser uma consulta ambigua.
 
-- Relacionamento `n:n`:
+- Relacionamento `n:n`
+
+    - Um relaciomaneto de Muitos para Mutiso `n:n` acontecem quando os registros de uma tabela pertencem a várias outras tabelas. Irei criar a tabela com a relação de `n:n`:
+
+        ```SQL
+
+            CREATE TABLE students(
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255)
+            );
+
+            CREATE TABLE courses(
+                id SERIAL PRIMARY KEY,
+                name VARCHAR(255)
+            );
+
+        ```
+
+        - Obeseva-se que as tabelas não foram relacionado, até porque irei utlizar outra tabela para fazer a intermediação entre essas duas tabelas, que será a relação de `n:n`.
