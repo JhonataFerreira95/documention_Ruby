@@ -1016,3 +1016,5 @@
             ```
             
             - Observa-se que aqui até utilizei o `AS` para deixar algo mair limpo, e utilizei o `tabela-deseja.coluna-desejada` para referênciar a coluna e a tabela que queremos para não ser uma consulta ambigua.
+
+- Relacionamento `n:n`:
