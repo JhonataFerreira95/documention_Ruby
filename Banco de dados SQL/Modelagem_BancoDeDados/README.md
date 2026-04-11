@@ -1113,24 +1113,52 @@
 
     - Agora irei adiconar dados nessas tabelas, creio que a partir desse ponto de leitura já sabemos interpreta essas tabelas.
 
-    ```SQL
+        ```SQL
 
-        INSERT INTO customers(name, email)
-        VALUES('clark', 'clark@gmail.com'), ('bruce wayne', 'bruce@gmail.com'), ('diana prince', 'diana@gmail.com');
+            INSERT INTO customers(name, email)
+            VALUES('clark', 'clark@gmail.com'), ('bruce wayne', 'bruce@gmail.com'), ('diana prince', 'diana@gmail.com');
 
-        INSERT INTO orders(total, customer_id)
-        VALUES(100.00, 1), (240.00, 2), (200.00, 1), (420.00, 3), (700.00, 2);
+            INSERT INTO orders(total, customer_id)
+            VALUES(100.00, 1), (240.00, 2), (200.00, 1), (420.00, 3), (700.00, 2);
 
-    ```
+        ```
 
     - Após inserir os dados irei fazer uma consulta rápida para ver os resultado usando o `JOIN`:
     
+        ```SQL
+
+            SELECT * FROM orders JOIN customers ON customers.id = orders.customer_id;
+
+        ```
+
+        ![Resultado](../Assets/consulta.png)
+
+        - Perfeito, nossa relação de `1:n` estar funcional!
+
+- Vamos tentar excluir um dados da nossa tabela `customers`:
+
     ```SQL
 
-        SELECT * FROM orders JOIN customers ON customers.id = orders.customer_id;
+        DELETE FROM customers WHERE id = 1;
 
     ```
 
-    ![Resultado](../Assets/consulta.png)
+    - Isso ira gerar um erro, afinal estamos violando a restrição da chave estrangeira, para alterar esse padrão é necessário ajusta isso na criação da tabela, vamos recriar essas tabelas:
 
-    - Perfeito, nossa relação de `1:n` está funcional!
+        ```SQL
+
+            DROP TABLE orders;
+
+            CREATE TABLE orders(
+                id SERIAL PRIMARY KEY,
+                total DECIMAL(10, 2),
+                customer_id INT,
+                FOREIGN KEY(customer_id) REFERENCES customers(id)
+                ON DELETE CASCADE
+                ON UPDATE CASCADE
+            );
+
+        ```
+
+        - Observa-se que na criação da tabela eu utilizei as cláusulas `ON DELETE` e `ON UPDATE` ela servem para espelha uma alteração ou excluão nas tabelas com relacionamentos `1:n`, no padrão isso não é permitido mas quando usamos o `CASCADE` ou cascata toda alteração ou exclução vai ser feito em toda tabela que estiver relacionada com a nossa chave estrnageira.
+
