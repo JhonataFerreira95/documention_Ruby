@@ -1091,3 +1091,22 @@
     - `Semântica dos Dados:`
 
         - A integridade define o que os dados significam. Sem chaves estrangeiras e restrições, os números em uma coluna são apenas números. Com a integridade, esses números tornam-se referências, estabelecendo um contrato de confiança entre as tabelas.
+
+- irei criar duas tabela para usar de exemplo para falar sobre a integridade referêncial:
+
+    ```SQL
+
+        CREATE TABLE customers(
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            phone VARCHAR(100) UNIQUE NOT NULL
+        );
+
+        CREATE TABLE orders(
+            id SERIAL PRIMARY KEY,
+            total DECIMAL(10, 2),
+            costomer_id INT,
+            FOREGEIN KEY(costomer_id) REFERENCES customers(id)
+        );
+
+    ```
