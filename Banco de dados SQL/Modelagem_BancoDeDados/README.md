@@ -1052,4 +1052,17 @@
 
         - Observa-se que aqui eu criei o relacionamento de `n:n` a partir de outra tabela, usando uma chave primária composta que foi `student_id, course_id`. Graças a chave primária composta eu posso tanto cadastra um `id` de um aluno em um curso mas não posso cadatra o mesmo no mesmo curso porém posso cadastra o mesmo `id` do aluno em vários outro cursos.
 
-        - Utilizei o conceito de chave estrangeira dupla para fazer ligamento as tabelas `students` e `courses` para seja aplicado o relacionamento `n:n`, foi usado a referência da coluna `student_id` para a coluna `id` da tabela `students`, foi usado a referência da coluna `course_id` para a coluna `id` da tabela `courses`, assim completando o relacionamento e possibilitando o uso de `JOIN` para junção dos dados futuros. Esse conceito de tabela para `n:n` é chamada de tabela `ASSOCIATIVA`.''
+        - Utilizei o conceito de chave estrangeira dupla para fazer ligamento as tabelas `students` e `courses` para seja aplicado o relacionamento `n:n`, foi usado a referência da coluna `student_id` para a coluna `id` da tabela `students`, foi usado a referência da coluna `course_id` para a coluna `id` da tabela `courses`, assim completando o relacionamento e possibilitando o uso de `JOIN` para junção dos dados futuros. Esse conceito de tabela para `n:n` é chamada de tabela `ASSOCIATIVA`.
+
+    - Iserindo dados na tabela `ASSOCIATIVA`:
+
+        - Antes de prosseguir precisamos adicionar dados em nossas tabelas `students` e `courses` após isso adicionamos em nossa tabela `student_courses`.
+
+        ```SQL
+
+            INSERT INTO stundet_courses(student_id, couse_id)
+            VALUES(1,1), (2,1), (3,1), (3,2);
+
+        ```
+
+        - Aqui eu inserir o aluno com `id 1` no curso com `id 1`, aluno com `id 2` no curso com `id 1`, aluno com `id 3` no curso com `id 1` e novamente o aluno com `id 3` no curso com `id 2`.
