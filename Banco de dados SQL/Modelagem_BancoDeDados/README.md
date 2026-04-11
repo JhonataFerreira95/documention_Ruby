@@ -14,6 +14,7 @@
 10. [Backup e restauração](#backup-e-restauração)
 11. [Relacionamentos entre tabelas](#relacionamentos-entre-tabelas)
 12. [Relacionamntos 1:1 e 1:n](#relacionamntos-11-e-1n)
+13. [Integridade Referencial](#integridade-referencial)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -1078,3 +1079,5 @@
         ```
 
         - Aqui utilizei o `JOIN` para fazer a junção entre as 3 tabelas, e pegar os dados. A referência usada foi a nossa chave primária composta e as chave estrangeiras.
+
+## Integridade Referencial
