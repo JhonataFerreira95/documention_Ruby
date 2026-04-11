@@ -1162,3 +1162,5 @@
 
         - Observa-se que na criação da tabela eu utilizei as cláusulas `ON DELETE` e `ON UPDATE` ela servem para espelha uma alteração ou excluão nas tabelas com relacionamentos `1:n`, no padrão isso não é permitido mas quando usamos o `CASCADE` ou cascata toda alteração ou exclução vai ser feito em toda tabela que estiver relacionada com a nossa chave estrnageira.
 
+        - O modo padrão seria o `RESTRICT`, oq utilizamos foi o `CASCADE` e também existe o `SET NULL` que define o dado como nulo mas quando você tentar excluir um X dados, ele mantem o dado da tabela de nossa chanve estrangeira e define o `id` da nossa outra tabela referênciada como nulo.
+
