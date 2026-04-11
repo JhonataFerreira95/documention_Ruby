@@ -1099,14 +1099,14 @@
         CREATE TABLE customers(
             id SERIAL PRIMARY KEY,
             name VARCHAR(255) NOT NULL,
-            phone VARCHAR(100) UNIQUE NOT NULL
+            email VARCHAR(100) UNIQUE NOT NULL
         );
 
         CREATE TABLE orders(
             id SERIAL PRIMARY KEY,
             total DECIMAL(10, 2),
-            costomer_id INT,
-            FOREGEIN KEY(costomer_id) REFERENCES customers(id)
+            customer_id INT,
+            FOREIGN KEY(customer_id) REFERENCES customers(id)
         );
 
     ```
@@ -1115,10 +1115,22 @@
 
     ```SQL
 
-        INSERT INTO customers(name, phone)
+        INSERT INTO customers(name, email)
         VALUES('clark', 'clark@gmail.com'), ('bruce wayne', 'bruce@gmail.com'), ('diana prince', 'diana@gmail.com');
 
         INSERT INTO orders(total, customer_id)
         VALUES(100.00, 1), (240.00, 2), (200.00, 1), (420.00, 3), (700.00, 2);
 
     ```
+
+    - Após inserir os dados irei fazer uma consulta rápida para ver os resultado usando o `JOIN`:
+    
+    ```SQL
+
+        SELECT * FROM orders JOIN customers ON customers.id = orders.customer_id;
+
+    ```
+
+    ![Resultado](../Assets/consulta.png)
+
+    - Perfeito, nossa relação de `1:n` está funcional!
