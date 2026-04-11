@@ -1036,3 +1036,20 @@
         ```
 
         - Obeseva-se que as tabelas não foram relacionado, até porque irei utlizar outra tabela para fazer a intermediação entre essas duas tabelas, que será a relação de `n:n`.
+
+        ```SQL
+
+            CREATE TABLE student_courses(
+                student_id INT,
+                course_Id INT,
+
+                PRIMARY KEY (student_id, course_id),
+                FOREIGN KEY(student_id) REFERENCES students(id),
+                FOREIGN KEY(course_id) REFERENCES courses(id)
+            );
+
+        ```
+
+        - Observa-se que aqui eu criei o relacionamento de `n:n` a partir de outra tabela, usando uma chave primária composta que foi `student_id, course_id`. Graças a chave primária composta eu posso tanto cadastra um `id` de um aluno em um curso mas não posso cadatra o mesmo no mesmo curso porém posso cadastra o mesmo `id` do aluno em vários outro cursos.
+
+        - Utilizei o conceito de chave estrangeira dupla para fazer ligamento as tabelas `students` e `courses` para seja aplicado o relacionamento `n:n`, foi usado a referência da coluna `student_id` para a coluna `id` da tabela `students`, foi usado a referência da coluna `course_id` para a coluna `id` da tabela `courses`, assim completando o relacionamento e possibilitando o uso de `JOIN` para junção dos dados futuros. Esse conceito de tabela para `n:n` é chamada de tabela `ASSOCIATIVA`.''
