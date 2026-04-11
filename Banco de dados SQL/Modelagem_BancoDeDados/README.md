@@ -1081,3 +1081,11 @@
         - Aqui utilizei o `JOIN` para fazer a junção entre as 3 tabelas, e pegar os dados. A referência usada foi a nossa chave primária composta e as chave estrangeiras.
 
 ## Integridade Referencial
+
+- Integridade referêncial são regras feitas para que nosso banco seja coesso e funcional, além de organizar e deixa a nossa lógica funcional e sem ferir nenhum conceito e regras de normalização.
+
+    - `Consistência de estado:`
+        
+        - Garante que o banco de dados nunca entre em um estado inválido. Se o Dado A depende do Dado B, o sistema impede que o Dado B desapareça e deixe o Dado A "pendurado" (o que chamamos de registro órfão).
+
+    
