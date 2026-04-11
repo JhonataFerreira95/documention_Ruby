@@ -1110,3 +1110,15 @@
         );
 
     ```
+
+    - Agora irei adiconar dados nessas tabelas, creio que a partir desse ponto de leitura já sabemos interpreta essas tabelas.
+
+    ```SQL
+
+        INSERT INTO customers(name, phone)
+        VALUES('clark', 'clark@gmail.com'), ('bruce wayne', 'bruce@gmail.com'), ('diana prince', 'diana@gmail.com');
+
+        INSERT INTO orders(total, customer_id)
+        VALUES(100.00, 1), (240.00, 2), (200.00, 1), (420.00, 3), (700.00, 2);
+
+    ```
