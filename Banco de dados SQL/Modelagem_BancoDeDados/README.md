@@ -1060,9 +1060,21 @@
 
         ```SQL
 
-            INSERT INTO stundet_courses(student_id, couse_id)
+            INSERT INTO student_courses(student_id, course_id)
             VALUES(1,1), (2,1), (3,1), (3,2);
 
         ```
 
         - Aqui eu inserir o aluno com `id 1` no curso com `id 1`, aluno com `id 2` no curso com `id 1`, aluno com `id 3` no curso com `id 1` e novamente o aluno com `id 3` no curso com `id 2`.
+
+    - Consultando tabelas com relacionamentos `n:n`:
+
+        ```SQL
+
+            SELECT * FROM student_courses
+            JOIN students ON student_courses.student_id = students.id
+            JOIN courses ON student_courses.course_id = courses.id;
+
+        ```
+
+        - Aqui utilizei o `JOIN` para fazer a junção entre as 3 tabelas, e pegar os dados. A referência usada foi a nossa chave primária composta e as chave estrangeiras.
