@@ -1088,4 +1088,6 @@
         
         - Garante que o banco de dados nunca entre em um estado inválido. Se o Dado A depende do Dado B, o sistema impede que o Dado B desapareça e deixe o Dado A "pendurado" (o que chamamos de registro órfão).
 
-    
+    - `Semântica dos Dados:`
+
+        - A integridade define o que os dados significam. Sem chaves estrangeiras e restrições, os números em uma coluna são apenas números. Com a integridade, esses números tornam-se referências, estabelecendo um contrato de confiança entre as tabelas.
