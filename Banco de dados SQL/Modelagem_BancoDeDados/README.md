@@ -15,6 +15,7 @@
 11. [Relacionamentos entre tabelas](#relacionamentos-entre-tabelas)
 12. [Relacionamntos 1:1 e 1:n](#relacionamntos-11-1n-e-nn)
 13. [Integridade Referencial](#integridade-referencial)
+14. [Encadeamento de consultas com JOIN](#encadeamento-de-consulta-com-join)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -1164,3 +1165,4 @@
 
         - O modo padrão seria o `RESTRICT`, oq utilizamos foi o `CASCADE` e também existe o `SET NULL` que define o dado como nulo mas quando você tentar excluir um X dados, ele mantem o dado da tabela de nossa chanve estrangeira e define o `id` da nossa outra tabela referênciada como nulo.
 
+## Encadeamento de consulta com JOIN
