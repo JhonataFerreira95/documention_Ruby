@@ -16,6 +16,7 @@
 12. [Relacionamntos 1:1 e 1:n](#relacionamntos-11-1n-e-nn)
 13. [Integridade Referencial](#integridade-referencial)
 14. [Encadeamento de consultas com JOIN](#encadeamento-de-consulta-com-join)
+15. [Modelagem de banco de dados](#modelagem-de-banco-de-dados)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -1181,9 +1182,9 @@
         FROM
             doctors
         JOIN
-            consultations ON doctors.id = consultations.doctor_id
+            consultations ON doctors.id = consultations.doctor_id -- Primeiro salto para a tabala consultations
         JOIN
-            patients ON consultations.patients_id = patients.id
+            patients ON consultations.patients_id = patients.id -- Segundo salto da tabela consultations para patients
         WHERE
             doctors.id = 1;
 
@@ -1192,3 +1193,5 @@
     - Aqui eu fiz o encadeamento de `JOIN` para buscar o `id`, `nome` do doutor, a `consultations.id` para `id` da consulta, o `consultations.consultation_date` para a data da consulta e o `patients.id` e `patients.name` para o nome e `id` do paciente.
     
     - Para eu puxar os dados da tabela `consultations` eu preciso fazer um `JOIN` da tabela `doctors` via `FOREIGN` para puxar a datas da consultas e os `ids` das consultas. Após isso tenho que dá um `JOIN` da tabela `patients` a partir da tabela `consultations` para buscar os dados do nome do paciente e o `id` do mesmo via `FOREIGN`, feito isso utilizo a cláusula `WHERE` para definir a minha condição, quero apenas os dados da datas de consultas e pacientes atendidos pelo doutor com `id=1`.
+
+## Modelagem de banco de dados
