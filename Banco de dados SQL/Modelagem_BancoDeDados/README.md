@@ -1166,3 +1166,29 @@
         - O modo padrão seria o `RESTRICT`, oq utilizamos foi o `CASCADE` e também existe o `SET NULL` que define o dado como nulo mas quando você tentar excluir um X dados, ele mantem o dado da tabela de nossa chanve estrangeira e define o `id` da nossa outra tabela referênciada como nulo.
 
 ## Encadeamento de consulta com JOIN
+
+- Irei aborda sobre o encadeamento de `JOIN` ou em termos mais comuns, como fazer a consultar entrando em tabelas por tabelas via `FOREIGN/FK` ou chave estrangeira,segue o exemplo:
+
+    ```SQL
+
+        SELECT 
+            doctors.id AS doctor_id,
+            doctors.name AS doctor_name,
+            consultations.id AS consultation_id,
+            consultations.consultation_date,
+            patients.id AS patient_id,
+            patients.name AS patient_name
+        FROM
+            doctors
+        JOIN
+            consultations ON doctors.id = consultations.doctor_id
+        JOIN
+            patients ON consultations.patients_id = patients.id
+        WHERE
+            doctors.id = 1;
+
+    ```
+
+    - Aqui eu fiz o encadeamento de `JOIN` para buscar o `id`, `nome` do doutor, a `consultations.id` para `id` da consulta, o `consultations.consultation_date` para a data da consulta e o `patients.id` e `patients.name` para o nome e `id` do paciente.
+    
+    - Para eu puxar os dados da tabela `consultations` eu preciso fazer um `JOIN` da tabela `doctors` via `FOREIGN` para puxar a datas da consultas e os `ids` das consultas. Após isso tenho que dá um `JOIN` da tabela `patients` a partir da tabela `consultations` para buscar os dados do nome do paciente e o `id` do mesmo via `FOREIGN`, feito isso utilizo a cláusula `WHERE` para definir a minha condição, quero apenas os dados da datas de consultas e pacientes atendidos pelo doutor com `id=1`.
