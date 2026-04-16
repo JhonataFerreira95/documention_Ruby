@@ -1222,4 +1222,20 @@
 
     - `Definindo as tabelas:`
 
-    - Pensando nos relacionamentos:
+        - As informações coletadas são utilizadas para mapear tabelas e colunas.
+
+        - `Entidades` ocstumam se tornar tabelas, `atributos` costumam se tornar colunas:
+
+            - Exemplo:
+
+                ```SQL
+
+                    Entidade "alunos" -> tabela "alunos"
+                    Entidade "professor" -> tabela "professores"
+
+                    Atributos "nome", "telefone", "matrícula", 
+                    "data de nascimento" se tornam colunas.
+
+                ```
+
+    - `Pensando nos relacionamentos:`
