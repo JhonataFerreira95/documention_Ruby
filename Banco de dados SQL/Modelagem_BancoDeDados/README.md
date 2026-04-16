@@ -1260,3 +1260,21 @@
                 - Um sistema de imóveis precisa que seja possível realizar uma consulta para obter os usuários que demonstraram interesse em um imóvel disponível, logo, precisamos de uma forma de armazenar isso(antes mesmo de alugar o imóvel, que seria um relacionamento mais intuitivo).
 
 ## Normalização banco de dados
+
+- Normalização é o conjunto de regras que visa mininizar as anomalias de modificações dos dados e dar maior felxibilidade em utilização.
+
+- Por que normalizar?
+
+    - 1-`Minimização de redundâncias e inconsistências;`
+    - 2-`Facilidade de manipulação do banco de dados;`
+    - 3-`Facilidade de manutenção do sistema de informações;`
+
+- Para que você compreenda melhor vou dar um exemplo. Vamos supor quee você criou entidade `funcionários` para armazenar as informações dos funcionários de uma empresa e que o resultado físico final seja a tabela mostrada abaixo:
+
+    ![Tabela](../Assets/tabela_funcionarios.png)
+
+- Se voceê olhar bem para a tabela acima vai ter que concordar comigo que ela sofre seguintes anomalias:
+
+    - `Anomalia de exclusão:`
+
+        -
