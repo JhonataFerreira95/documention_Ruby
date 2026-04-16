@@ -1390,3 +1390,7 @@
 
             ```
 
+    - Diagrama:
+
+        ![diagrama](../Assets/diagrama.png)
+
