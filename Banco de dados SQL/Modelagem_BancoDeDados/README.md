@@ -1299,4 +1299,13 @@
 
         - A chave primária da nova entidade será obtida pela concentração da chave primária da entidade inicial e a do grupo repetitivo.
 
+    - 2-`Segunda forma normal (2FN):`
+
+        - Uma relação `R` está na `2FN` se e somente se ela estiver na primeira e todos os atributos da chave forem totalmente dependentes da chave primária(depende de toda a chave e não apenas de parte dela).
+
+            - Identificar os atributos que não são funcionalmente dependentes de toda a chave primária.
+            - Remover da entidade todos esses atributos identificados e criar uma nova entidade com eles.
+        
+        - A chave primária da nova entidade será o atributo do qual os atributos do qual os atributos removidos são funcionalmente dependentes.
+
     
