@@ -1336,5 +1336,57 @@
 
     - A partir do cenário proposto ache as `entidades` e os `atributos`.
 
- 
+    - `Entidades:`
+
+        - Chamados.
+        - Clientes.
+        - Funcionários.
+        - Mensagens.
+
+    - `Atributos`:
+
+        - Chamado:
+
+            ```bash
+
+                Descrição
+                categoria
+                situação
+                data e hora de abertura
+                cliente que abriu
+                técnico que respondeu
+
+            ```
+
+        - Clientes:
+
+            ```bash
+
+                cnpj
+                nome
+                usuário
+                senha
+            
+            ```
+        
+        - Funcionários
+
+            ```bash
+
+                nome
+                usuário
+                senha
+
+            ```
+
+        - Mensagens
+
+            ```bash
+
+                conteúdo
+                data e hora de envio
+                rementente
+                chamado
+
+            ```
 
