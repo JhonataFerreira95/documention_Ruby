@@ -1308,4 +1308,11 @@
         
         - A chave primária da nova entidade será o atributo do qual os atributos do qual os atributos removidos são funcionalmente dependentes.
 
-    
+    - 3-`Terceira forma normal (3FN):`
+
+        - Uma relação `R` está na `3FN` se e somente se estiver na `2FN` e todos os atributos não chave forem dependentes não transitivos da chanve primária(cada atributo funcionalmente depende apenas dos atributos componentes da chave primária ou se todos os seus atributos não chave forem independentes entre si).
+
+            - Identificar todos os atributos que são funcionalmente dependentes de outros atributos não chave;
+            - Removê-los e criar uma nova entidade com os mesmos.
+
+        - A chave primária da nova entidade será o atributo do qual os atributos removidos são funcionalmente dependentes.
