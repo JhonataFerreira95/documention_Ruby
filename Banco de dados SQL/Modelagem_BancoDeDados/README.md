@@ -1239,3 +1239,22 @@
                 ```
 
     - `Pensando nos relacionamentos:`
+
+        - Alguns relacionamentos são intuitos, podem ser inferidos a partir das características das `entidades`:
+
+            - Exemplo:
+
+                - Uma publicação e um autor são `entidades(e tabelas)` diferentes, mas uma publicação necessita de um autor, logo temos um relacionamento.
+
+        - Outros relacionamentos são um pouco mais "artificiais", modelamos a partir de uma necessidade do sistema:
+
+            - Exemplo:
+
+                - Um paciente e um médico são `entidades(e tabelas)` diferentes, e a princípio não tem conexão. No entando o sistema necessita saber quais pacientes foram atendidos por quais médicos, logo, temos que criar um relacionamento(que pode ser feito através de outra tabela, como a de "consultas").
+
+        - E uma última dica é usar como referência as consultas que deverão ser executadas para planejar os relacionamentos necessários:
+
+            - Exemplo:
+
+                - Um sistema de imóveis precisa que seja possível realizar uma consulta para obter os usuários que demonstraram interesse em um imóvel disponível, logo, precisamos de uma forma de armazenar isso(antes mesmo de alugar o imóvel, que seria um relacionamento mais intuitivo).
+
