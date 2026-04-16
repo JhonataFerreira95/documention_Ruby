@@ -1204,6 +1204,10 @@
 
     - O que é e para que serve?
 
+        - Processo de criar uma representação visual do sistema de banco de dados.
+
+        - Organizar os dados de maneira lógica e eficiente, ajudando a definir quais informações precisam ser armazenadas
+
     - Identificando requisitos:
 
     - Definindo as tabelas:
