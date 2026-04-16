@@ -18,6 +18,7 @@
 14. [Encadeamento de consultas com JOIN](#encadeamento-de-consulta-com-join)
 15. [Modelagem de banco de dados](#modelagem-de-banco-de-dados)
 16. [Normalização de banco de dados](#normalização-banco-de-dados)
+17. [Modelando um banco de dados](#modelando-um-banco-de-dados)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -1316,3 +1317,5 @@
             - Removê-los e criar uma nova entidade com os mesmos.
 
         - A chave primária da nova entidade será o atributo do qual os atributos removidos são funcionalmente dependentes.
+
+## Modelando um banco de dados
