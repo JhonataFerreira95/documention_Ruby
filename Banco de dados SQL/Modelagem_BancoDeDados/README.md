@@ -17,6 +17,7 @@
 13. [Integridade Referencial](#integridade-referencial)
 14. [Encadeamento de consultas com JOIN](#encadeamento-de-consulta-com-join)
 15. [Modelagem de banco de dados](#modelagem-de-banco-de-dados)
+16. [Normalização de banco de dados](#normalização-banco-de-dados)
 
 ## Introdução ao conceito de Bandos de dados
 
@@ -1224,11 +1225,11 @@
 
         - As informações coletadas são utilizadas para mapear tabelas e colunas.
 
-        - `Entidades` ocstumam se tornar tabelas, `atributos` costumam se tornar colunas:
+        - `Entidades` costumam se tornar tabelas, `atributos` costumam se tornar colunas:
 
             - Exemplo:
 
-                ```SQL
+                ```bash
 
                     Entidade "alunos" -> tabela "alunos"
                     Entidade "professor" -> tabela "professores"
@@ -1258,3 +1259,4 @@
 
                 - Um sistema de imóveis precisa que seja possível realizar uma consulta para obter os usuários que demonstraram interesse em um imóvel disponível, logo, precisamos de uma forma de armazenar isso(antes mesmo de alugar o imóvel, que seria um relacionamento mais intuitivo).
 
+## Normalização banco de dados
