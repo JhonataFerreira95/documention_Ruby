@@ -1277,4 +1277,14 @@
 
     - `Anomalia de exclusão:`
 
-        -
+        - O que acontece se excluir o funcionário com código 3? O setor vai ser excluído junto e ai você perdeu os dados...
+
+    - `Anomalia de alteração:`
+
+        - O nome do setor suporte mudou para apoio. Você vai ter que alterar o nome em todo os registros da tabela, mais uma perca de tempo...
+
+    - `Anomalia de inclusão:`
+
+        - Foi contratado um novo funcionários para o setor suporte. Você vai ter que incluir um funcionário ao campo `QunatidadeFuncionarios` em todas as ocorrências com setor de nome `suporte`, mais perca de tempo...
+
+    
