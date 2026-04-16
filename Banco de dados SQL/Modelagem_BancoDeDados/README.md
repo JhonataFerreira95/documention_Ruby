@@ -1202,14 +1202,24 @@
 
 - Introdução à modelagem de banco de dados:
 
-    - O que é e para que serve?
+    - `O que é e para que serve?`
 
         - Processo de criar uma representação visual do sistema de banco de dados.
 
         - Organizar os dados de maneira lógica e eficiente, ajudando a definir quais informações precisam ser armazenadas
 
-    - Identificando requisitos:
+    - `Identificando requisitos:`
 
-    - Definindo as tabelas:
+        - Chamamos de requisitos as funcionalidades e regras necessárias para o sistema.
+
+        - Os `StakeHolders` tem um papel importante nessa etapa:
+
+            - `Stakeholders` são as partes interessadas no desenvolvimento do sistema, geralmente é quem melhor consegue definir o que o sistema precisa fazer.
+
+        - Devem ser coletadas tantas informações quando for possível sobre como o sistema deverá se comportar.
+
+        - Após analisar analisar as informações coletadas, devem ser identificadas as `entidades` do sistema(do que queremos armazenar os dados).
+
+    - `Definindo as tabelas:`
 
     - Pensando nos relacionamentos:
