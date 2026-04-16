@@ -1287,4 +1287,16 @@
 
         - Foi contratado um novo funcionários para o setor suporte. Você vai ter que incluir um funcionário ao campo `QunatidadeFuncionarios` em todas as ocorrências com setor de nome `suporte`, mais perca de tempo...
 
+- Para resolver o dilema acima temos que normalizar a entidade. Para que isto aplicamos as `formais normais` a saber:
+
+    - 1-`Primeira forma normal (1FN):`
+
+        - Uma relação está na `1FN` se somente todos os domínios básicos contiverem somente valores atômicos(não contiver grupos repetitivos). Para atingir esta forma normal devemos eliminar grupos de repetição. Como?
+
+            - Identificar a chave primária da entidade;
+            - Identificar o grupo e excluí-lo da entidade; 
+            - Criar uma nova entidade com chave primária da entidade anterior e o grupo repetitivo.
+
+        - A chave primária da nova entidade será obtida pela concentração da chave primária da entidade inicial e a do grupo repetitivo.
+
     
