@@ -1195,3 +1195,17 @@
     - Para eu puxar os dados da tabela `consultations` eu preciso fazer um `JOIN` da tabela `doctors` via `FOREIGN` para puxar a datas da consultas e os `ids` das consultas. Após isso tenho que dá um `JOIN` da tabela `patients` a partir da tabela `consultations` para buscar os dados do nome do paciente e o `id` do mesmo via `FOREIGN`, feito isso utilizo a cláusula `WHERE` para definir a minha condição, quero apenas os dados da datas de consultas e pacientes atendidos pelo doutor com `id=1`.
 
 ## Modelagem de banco de dados
+
+- O que a modagela de banco de dados?
+
+    - É o ato de pensar de como ele é, de como vai ser, isso é a modelagem do banco de dados, nossa interpretação de pensamento lógico serão cruciais para isto.
+
+- Introdução à modelagem de banco de dados:
+
+    - O que é e para que serve?
+
+    - Identificando requisitos:
+
+    - Definindo as tabelas:
+
+    - Pensando nos relacionamentos:
