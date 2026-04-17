@@ -16,7 +16,7 @@
 12. [Relacionamntos 1:1 e 1:n](#relacionamntos-11-1n-e-nn)
 13. [Integridade Referencial](#integridade-referencial)
 14. [Encadeamento de consultas com JOIN](#encadeamento-de-consulta-com-join)
-15. [Modelagem de banco de dados](#modelagem-de-banco-de-dados)
+15. [Modelagem de banco de dados](#modelagem-de-banco-de-dados-1)
 16. [Normalização de banco de dados](#normalização-banco-de-dados)
 17. [Modelando um banco de dados](#modelando-um-banco-de-dados)
 
