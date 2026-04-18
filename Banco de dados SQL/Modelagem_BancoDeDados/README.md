@@ -1462,3 +1462,58 @@
                 descrição
 
             ```
+
+    - Modelagem via `SQL`
+
+        ```SQL
+
+            create table if not exists autores(
+            id serial primary key,
+            nome varchar(255) not null,
+            cpf varchar(255) not null,
+            data_nascimento date
+            );
+
+            create table if not exists livros(
+                id serial primary key,
+                titulo varchar(255) not null,
+                genero varchar(255) not null,
+                data_de_lançamento date not null,
+                empresa_que_publicou varchar(255) not null,
+                auto_id int,
+
+                foreign key (auto_id) references autores(id) on delete cascade
+            );
+
+            create table if not exists leitores(
+                id serial primary key,
+                nome varchar(255) not null,
+                cpf varchar(14) not null unique,
+                data_nascimento date,
+                phone varchar(50),
+                email varchar(255) unique
+            );
+
+            create table if not exists avaliacao(
+                id serial primary key,
+                titulo_avaliacao varchar(50) not null,
+                data_avaliacao date not null default current_date,
+                nota_avaliacao int not null check ( nota_avaliacao >= 0 and nota_avaliacao <= 10 ),
+                descricao_avaliacao varchar(255) not null,
+                leitores_id int,
+
+                foreign key (leitores_id) references leitores(id) on delete cascade
+            );
+
+            create table if not exists isbn(
+                id serial primary key,
+                autor_id int,
+                titulo_id int,
+                codigo_isbn varchar(13) not null unique,
+                descricao varchar(255) not null,
+
+                foreign key (autor_id) references autores(id),
+                foreign key (titulo_id) references livros(id)
+            );
+
+        ```
