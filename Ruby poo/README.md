@@ -1214,7 +1214,7 @@
                 def initialize(marca, modelo, preco, motor)
                     # A palavra reservada <supe> é utilizada para trazer os métodos da nossa <super-classe> para nossa <sub-classe>
                     super(marca, modelo, preco) 
-                    @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em noosso <initialize>
+                    @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em nosso <initialize>
                 end
 
                 def to_s
