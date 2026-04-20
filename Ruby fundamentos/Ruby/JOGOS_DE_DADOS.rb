@@ -1,9 +1,12 @@
 require 'securerandom' 
 
-dados = SecureRandom.random_number(1..6)
+jogadas = {}
+jogadores = [:jogador1, :jogador2, :jogador3, :jogador4]
 
-jogadas = {jogador1: nil}, {jogador2: nil}, {jogador3: nil}
+jogadores.each do |nome|
+    jogadas[nome] = SecureRandom.random_number(1..6)
+end
 
-dados
+puts jogadas
 
-puts "O primeiro jogador tirou #{jogadas[:jogador1]}"
+
