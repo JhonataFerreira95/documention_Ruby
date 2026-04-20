@@ -28,7 +28,7 @@ while true
 
     situacao[:media] = media
 
-    if media >= 7.0
+    if media >= 6.0 or media >= 60.0
       situacao[:resultado] = "Aprovado"
     else 
       situacao[:resultado] = "Reprovado"
