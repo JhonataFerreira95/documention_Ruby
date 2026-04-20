@@ -28,6 +28,12 @@ while true
 
     situacao[:media] = media
 
+    if media >= 7.0
+      situacao[:resultado] = "Aprovado"
+    else 
+      situacao[:resultado] = "Reprovado"
+    end
+
     puts "Processo concluido, desejar sair?[S/N] "
     opcao = gets.chomp.upcase
 
@@ -37,4 +43,4 @@ while true
 
 end
 
-puts "Nome do aluno é #{situacao[:nome]} e sua média foi de #{situacao[:media]}"
+puts "Nome do aluno é #{situacao[:nome]}, sua média foi de #{situacao[:media]}, sua situação é #{situacao[:resultado]}"
