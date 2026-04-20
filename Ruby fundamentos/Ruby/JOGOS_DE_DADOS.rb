@@ -8,5 +8,3 @@ jogadores.each do |nome|
 end
 
 puts jogadas.sort
-
-
