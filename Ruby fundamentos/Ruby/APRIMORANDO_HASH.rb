@@ -1,11 +1,12 @@
 
 cont = 0
 soma_notas = media = 0.0
+situacao = {}
 
 while true
 
     puts "Digite o seu nome: "
-    nome = gets.chomp
+    situacao[:nome] = gets.chomp
 
     puts "Quantidade de bimestre/semestre que possui: "
     quant = gets.chomp.to_i
@@ -19,14 +20,21 @@ while true
       
       if cont >= quant
         puts "Saindo..."
-        media = soma_notas / 2
+        media = soma_notas / quant
         break
       end
 
     end
 
-    
+    situacao[:media] = media
 
+    puts "Processo concluido, desejar sair?[S/N] "
+    opcao = gets.chomp.upcase
 
+    if opcao.include?("S")
+      break
+    end
 
 end
+
+puts "Nome do aluno é #{situacao[:nome]} e sua média foi de #{situacao[:media]}"
