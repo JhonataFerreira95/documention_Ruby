@@ -1,5 +1,6 @@
 
-cont = media = 0
+cont = 0
+soma_notas = media = 0.0
 
 while true
 
@@ -13,16 +14,18 @@ while true
       cont += 1
       puts "Digite a sua #{cont} nota: " 
       notas = gets.chomp.to_i
+
+      soma_notas += notas
       
       if cont >= quant
         puts "Saindo..."
         media = soma_notas / 2
-
-        puts media
         break
       end
 
     end
+
+    
 
 
 
