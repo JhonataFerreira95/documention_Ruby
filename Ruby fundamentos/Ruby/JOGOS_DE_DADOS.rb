@@ -7,6 +7,6 @@ jogadores.each do |nome|
     jogadas[nome] = SecureRandom.random_number(1..6)
 end
 
-puts jogadas
+puts jogadas.sort
 
 
