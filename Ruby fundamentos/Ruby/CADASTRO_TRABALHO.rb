@@ -10,5 +10,10 @@ dados[:idade] = gets.chomp.to_i
 puts "Digite a data do seus nascimetno: "
 dados[:nascimetno] = gets.chomp
 
+puts "Digite o seu CTPS: "
+dados[:ctps] = gets.chomp.to_i
 
+if dados[:ctps] != 0
+    
+end
 
