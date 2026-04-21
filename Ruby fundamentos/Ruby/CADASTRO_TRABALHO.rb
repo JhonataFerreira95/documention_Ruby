@@ -16,10 +16,20 @@ dados[:ctps] = gets.chomp.to_i
 puts dados
 
 if dados[:ctps] != 0
+
   puts "Digite o primeiro ano da sua contratação: "
   dados[:contratacao] = gets.chomp.to_i
   puts "Digite o seu salários: "
   dados[:salario] = gets.chomp.to_i
+  puts "Digite o seu sexo[M/F]: "
+  dados[:sexo] = gets.chomp.upcase
+
+  if dados[:sexo].include?("M")
+    puts "m"
+  else
+    puts "f"
+  end
+  
 else
   puts "Tente novamente com um CTPS válido!"
 end
