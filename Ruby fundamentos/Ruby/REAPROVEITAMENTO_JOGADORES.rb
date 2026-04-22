@@ -20,9 +20,9 @@ partidas_jogadas= gets.chomp.to_i
 while partidas_jogadas > cont
   cont += 1
   puts "Digite o quantidades de gols feitos na partida #{cont}: "
-  dados[:gol] = gets.chomp.to_i
+  dados[:gols] = gets.chomp.to_i
 
-  dados[:gol] += dados[:gols]
+  dados[:gols] += dados[:gols]
 end
 
 puts dados[:gols]
