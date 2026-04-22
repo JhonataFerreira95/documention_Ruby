@@ -1,3 +1,4 @@
+require = ' date'
 
 dados = {}
 
@@ -24,12 +25,19 @@ if dados[:ctps] != 0
   puts "Digite o seu sexo[M/F]: "
   dados[:sexo] = gets.chomp.upcase
 
-  if dados[:sexo].include?("M")
-    dados[:minimoPontosHomem] = 105
-    dados[:aponsentadoria] = dados[:nascimento] + dados[:contratacao] + dados[:minimoPontosHomem]
-    
+  ano_atual = Date.today.year
+  tempo_contribuicao = ano_atual - dados[:contratacao]
+
+  if dados[:sexo] == "M"
+    meta_pontos = 105
   else
-    puts "F"
+    meta_pontos = 95
+  end
+
+  pontos_atuais = dados[:idade] + tempo_contribuicao
+
+  if pontos_atuais >= metas_pontos
+    puts "Parabéns #{dados[:nome]}, você já pode se aposentar!" 
   end
 
 else
