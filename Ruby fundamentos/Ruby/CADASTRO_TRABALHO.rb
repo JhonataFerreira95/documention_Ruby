@@ -26,8 +26,8 @@ if dados[:ctps] != 0
 
   if dados[:sexo].include?("M")
     dados[:minimoPontosHomem] = 105
-    dados[:aponsentadoria] = dados[:idade] + dados[:contratacao] + dados[:minimoPontosHomem]
-    puts dados
+    dados[:aponsentadoria] = dados[:nascimento] + dados[:contratacao] + dados[:minimoPontosHomem]
+    
   else
     puts "F"
   end
