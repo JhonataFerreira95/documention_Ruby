@@ -11,11 +11,13 @@
 ## Índice
 
 1. [Introdução](#introdução)
-2. [Lógica com Ruby](#lógica-com-ruby)
+2. [Ruby fundamentos](#lógica-com-ruby)
 3. [Arquivos, Módulos e Gems](#arquivos-módulos-e-gems)
 4. [Programação Orientada a Objetos (POO)](#programação-orientada-a-objetos-poo)
-5. [Ruby Avançado](#ruby-avançado)
-6. [Ruby on Rails](#ruby-on-rails)
+5. [Bando de dados]()
+6. [Ruby Avançado](#ruby-avançado)
+7. [Git e Github]()
+8. [Ruby on Rails](#ruby-on-rails)
 
 ---
 
