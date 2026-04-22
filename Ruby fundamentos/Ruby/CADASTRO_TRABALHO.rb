@@ -8,7 +8,7 @@ puts "Digite a sua idade senhor(a) #{dados[:nome]}: "
 dados[:idade] = gets.chomp.to_i
 
 puts "Digite a o ano do seu nascimento: "
-dados[:nascimetno] = gets.chomp.to_i
+dados[:nascimento] = gets.chomp.to_i
 
 puts "Digite o seu CTPS: "
 dados[:ctps] = gets.chomp.to_i
@@ -25,16 +25,15 @@ if dados[:ctps] != 0
   dados[:sexo] = gets.chomp.upcase
 
   if dados[:sexo].include?("M")
-    puts "m"
+    dados[:minimoPontosHomem] = 105
+    dados[:aponsentadoria] = dados[:idade] + dados[:contratacao] + dados[:minimoPontosHomem]
+    puts dados
   else
-    puts "f"
+    puts "F"
   end
-  
+
 else
   puts "Tente novamente com um CTPS válido!"
 end
-
-
-
 
 
