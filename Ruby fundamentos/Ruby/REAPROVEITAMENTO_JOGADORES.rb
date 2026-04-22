@@ -7,11 +7,23 @@ No final, tudo isso será guardado em um dicionário, incluindo o total de gols 
 
 =end
 
+cont = 0
+
 dados = {}
 
 puts "Digite o nome do jogador: "
-dados[:nome_jogador] = gets.chomp
+nome_jogador = gets.chomp
 
 puts "Digite a quantidade de partidas que ele jogou: "
-dados[:partidas_jogadas] = gets.chomp.to_i
+partidas_jogadas= gets.chomp.to_i
+
+while partidas_jogadas > cont
+  cont += 1
+  puts "Digite o quantidades de gols feitos na partida #{cont}: "
+  dados[:gol] = gets.chomp.to_i
+
+  dados[:gol] += dados[:gols]
+end
+
+puts dados[:gols]
 
