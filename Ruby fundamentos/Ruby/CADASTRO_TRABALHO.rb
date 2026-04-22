@@ -37,7 +37,17 @@ if dados[:ctps] != 0
   pontos_atuais = dados[:idade] + tempo_contribuicao
 
   if pontos_atuais >= metas_pontos
+
     puts "Parabéns #{dados[:nome]}, você já pode se aposentar!" 
+    
+  else
+
+    anos_que_faltam = (meta_pontos - pontos_atuais) / 2.0
+    idade_aposentadoria = dados[:idade] + anos_que_faltam.ceil
+    
+    puts "Senhor(a) #{dados[:nome]}, sua pontuação atual é #{pontos_atuais}."
+    puts "Você se aposentará com aproximadamente #{idade_aposentadoria} anos."
+    
   end
 
 else
