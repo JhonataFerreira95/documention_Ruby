@@ -9,10 +9,21 @@ dados = []
 
 cont = 0
 
-while true
+puts "Quntas pessoas quer cadastrar? "
+quantidade_cadastro = gets.chomp.to_i
+
+while quantidade_cadastro >= cont
 
     cadastro = {}
     
     puts "Digite o seu nome: "
+    cadastro[:nome] = gets.chomp
+
+    puts "Digtie o seu sexo[M/F]: "
+    cadastro[:sexo] = gets.chomp.upcase
+
     
+
+    cont += 1
+
 end
