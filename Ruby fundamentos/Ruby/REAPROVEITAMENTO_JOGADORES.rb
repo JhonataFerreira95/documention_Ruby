@@ -18,15 +18,15 @@ puts "Digite a quantidade de partidas que ele jogou: "
 partidas_jogadas= gets.chomp.to_i
 
 while partidas_jogadas > cont
-  cont += 1
+
   puts "Digite o quantidades de gols feitos na partida #{cont}: "
   dados[:gols] = gets.chomp.to_i
-
+  cont += 1
   dados[:gols] += dados[:gols]
 end
 
 dados[:nome_jogadores] = nome_jogador
 dados[:partidas_jogadas_camp] = partidas_jogadas
 
-
+puts "O jogador #{dados[:nome_jogadores]} fez um total de #{dados[:partidas_jogadas_camp]} partidas jogadas e a quantidade gols feitos nesse campeonato foi de #{dados[:gols]}!"
 
