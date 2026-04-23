@@ -25,5 +25,8 @@ while partidas_jogadas > cont
   dados[:gols] += dados[:gols]
 end
 
-puts dados[:gols]
+dados[:nome_jogadores] = nome_jogador
+dados[:partidas_jogadas_camp] = partidas_jogadas
+
+
 
