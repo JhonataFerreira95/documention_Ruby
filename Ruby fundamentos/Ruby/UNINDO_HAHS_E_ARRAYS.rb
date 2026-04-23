@@ -17,13 +17,17 @@ while quantidade_cadastro >= cont
     cadastro = {}
     
     puts "Digite o seu nome: "
-    cadastro[:nome] = gets.chomp
+    nome = gets.chomp
 
     puts "Digtie o seu sexo[M/F]: "
     cadastro[:sexo] = gets.chomp.upcase
 
-    
-
+    if cadastro[:sexo] == 'M'
+        cadastro[:mulheres] = nome
+    else
+        cadastro[:homens] = nome
+    end
+     
     cont += 1
 
 end
