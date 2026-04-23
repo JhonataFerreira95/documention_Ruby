@@ -4,3 +4,15 @@ Crie um programa que leia nome, sexo e idade de várias pessoas, guardando os da
 No final, mostre: A) Quantas pessoas foram cadastradas B) A média de idade C) Uma lista com as mulheres D) Uma lista de pessoas com idade acima da média
 
 =end
+
+dados = []
+
+cont = 0
+
+while true
+
+    cadastro = {}
+    
+    puts "Digite o seu nome: "
+    
+end
