@@ -11,16 +11,23 @@ três parâmetros: início, fim e passo. Seu programa tem que realizar três con
 
 def contador(inicio, fim)
 
-  final = 10
+  iniciando = 10
+  final = -1
   
-  while final >= inicio
+  while iniciando >= inicio
+    print "#{inicio} "
+    sleep 1
     inicio += 1
-    puts inicio
   end
 
+  print "=-=" * 10
 
-
+  while final < fim
+    print "#{fim} "
+    sleep 1
+    fim -= 2
+  end
 
 end
 
-puts contador(1)
+puts contador(1, 10)
