@@ -8,3 +8,19 @@ três parâmetros: início, fim e passo. Seu programa tem que realizar três con
  c) uma contagem personalizada
 
 =end
+
+def contador(inicio, fim)
+
+  final = 10
+  
+  while final >= inicio
+    inicio += 1
+    puts inicio
+  end
+
+
+
+
+end
+
+puts contador(1)
