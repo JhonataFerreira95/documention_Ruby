@@ -22,10 +22,12 @@ numbers = []
 
 while true
 
-  puts "Digite o número desejado para comparação: "
-  numbers = gets.chomp.to_i
+  puts "Digite os número desejado para comparação: "
+  number_option = gets.chomp.to_i
 
-  puts "O número digitado foi #{numbers(larger)}"
+  numbers << number_option
+
+  puts "O indice digitado foi #{numbers[cont]}"
 
   puts "Deseja continuar digitando?[S/N] "
   option = gets.chomp.upcase
@@ -35,5 +37,10 @@ while true
     break
   end
 
+  cont += 1
+
 end
+
+
+puts larger(*numbers)
 
