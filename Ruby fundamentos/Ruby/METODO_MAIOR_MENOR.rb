@@ -42,5 +42,9 @@ while true
 end
 
 
-puts larger(*numbers)
+puts "Números digitados #{numbers}"
+
+puts "=-=" * 10
+
+puts "#{larger(numbers)}"
 
