@@ -6,15 +6,26 @@ Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
 =end
 
 def larger(* number)
+
+  s = number
+
+  puts s.sort
     
 end
 
+puts larger(1, 2, 5, 69, 100, 240)
+
+
 cont = 0
+
+numbers = []
 
 while true
 
   puts "Digite o número desejado para comparação: "
-  larger << gets.chomp.to_i
+  numbers = gets.chomp.to_i
+
+  puts "O número digitado foi #{numbers(larger)}"
 
   puts "Deseja continuar digitando?[S/N] "
   option = gets.chomp.upcase
@@ -25,3 +36,4 @@ while true
   end
 
 end
+
