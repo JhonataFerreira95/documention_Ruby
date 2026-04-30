@@ -14,19 +14,25 @@ def contador(inicio, fim)
   iniciando = 10
   final = -1
   
+  puts "Contagem #{inicio}, de 1 em 1 até 10"
+
   while iniciando >= inicio
     print "#{inicio} "
     sleep 1
     inicio += 1
   end
 
-  print "=-=" * 10
+  puts"\n=-==-==-==-==-==-==-==-==-==-=" 
+
+  puts "Contagem #{fim}, de 10 ao 0 de 2 em 2"
 
   while final < fim
     print "#{fim} "
     sleep 1
     fim -= 2
   end
+
+  puts"\n=-==-==-==-==-==-==-==-==-==-="
 
 end
 
