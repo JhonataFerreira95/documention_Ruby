@@ -5,17 +5,17 @@ três parâmetros: início, fim e passo. Seu programa tem que realizar três con
 
  a) de 1 até 10, de 1 em 1  
  b) de 10 até 0, de 2 em 2
- c) uma contagem personalizada
 
 =end
 
-def contador(inicio, fim, passe)
+def contador(inicio, fim)
+
+  cont = -1
+  cont1 = 10
   
   puts "Contagem #{inicio}, de 1 em 1 até 10"
 
-  cont = inicio
-
-  while cont >= fim
+  while cont1 >= inicio
     print "#{inicio} "
     sleep 0.5
     inicio += 1
@@ -35,4 +35,4 @@ def contador(inicio, fim, passe)
 
 end
 
-puts contador(-5, 40, 2)
+puts contador(5, 40)
