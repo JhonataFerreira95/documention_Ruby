@@ -5,17 +5,22 @@ A primeira função vai sortear 5 números e vai colocá-los dentro da lista e a
 
 =end
 
+require 'securerandom'
+
+num = []
+
 def sorteia(lista)
 
-    for cont in 0..5
-        lista.insert 
+    for _ in 1..5
+        lista << (SecureRandom.random_number(1..10))
     end
+    
+    return lista
 
 end
 
-sorteira(num)
+puts sorteia(num)
 
-num = []
 
 
 def somaPar()
