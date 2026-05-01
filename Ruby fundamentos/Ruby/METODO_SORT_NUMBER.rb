@@ -19,10 +19,22 @@ def sorteia(lista)
 
 end
 
-puts sorteia(num)
+def somaPar(lista)
 
+    soma = 0
 
+    for valor in lista
 
-def somaPar()
-      
+        if  valor % 2 == 0
+            soma += valor  
+        end
+
+    end
+
+    return lista
+
 end
+
+
+sorteia(num)
+somaPar(num)
