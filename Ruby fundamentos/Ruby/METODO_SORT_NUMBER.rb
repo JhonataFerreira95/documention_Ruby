@@ -22,14 +22,22 @@ end
 def somaPar(lista)
 
     soma = 0
+    par = []
 
     for valor in lista
 
         if  valor % 2 == 0
+            par << valor
             soma += valor  
         end
 
     end
+
+    puts "Os número sorteados foram #{lista}"
+
+    sleep 0.5
+
+    puts "A soma dos valores par #{par} foram #{soma}"
 
     return lista
 
