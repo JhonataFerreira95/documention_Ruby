@@ -6,18 +6,24 @@ mesmo que algum dado não tenha sido informado corretamente.
 
 =end
 
-def ficha(nome_jogador, gols_marcados)
-    
+def ficha(jogador='Desconhecido', gols=0)
+  puts "O jogador #{jogador} fez #{gols} no campeonato."
 end
 
-puts "Digite o nome do jogador: "
+print "Digite o nome do jogador: "
 n = gets.chomp
 
-puts "Digite o número de gols: "
-g = gets.chomp
+print "Digite o número de gols: "
+g_input = gets.chomp
 
-if g.float
-  g = gets.chomp.to_i
+if g_input =~ /\A\d+\z/
+  g = g_input.to_i
 else
   g = 0
+end
+
+if n.strip.empty?
+  ficha('Desconhecido', g)
+else
+  ficha(n, g)
 end
