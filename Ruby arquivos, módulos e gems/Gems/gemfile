@@ -19,6 +19,3 @@ group :development do
   gem "ruby-lsp"
 end
 
-# Aqui importei a <gem> para importa do ano atual.
-
-gem 'datetime_helper', '~> 1.0', '>= 1.0.5'
