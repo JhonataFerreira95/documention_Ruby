@@ -5,27 +5,24 @@ Crie um programa que tenha a função leiaInt(), que vai funcionar de forma seme
 
 =end
 
-def leiaInt(msg)
+def leia_int(msg)
   
-  ok = false
-  valor = 0
+  loop do
+     
+    print msg
 
-  while true
-    n = gets.chomp(msg)
+    entrada = gets.chomp
 
-    if n.to_i
-      valor = n.to_i
-      ok = true
+    if entrada.match(/^\d+$/)
+      return entrada.to_i
     else
-      puts "Erro, digite um númeiro inteiro válido!"
-    end
-
-    if ok == true
-      break
+      puts "\e[31mErro! Digite um número inteiro válido.\e[0m"
     end
 
   end
 
-  return valor
-
 end
+
+n = leia_int("Digite um número: ")
+
+puts "O número digitado foi #{n}"
