@@ -16,3 +16,21 @@ def ajuda(com)
   system("ri #{com}")
 end
 
+loop do
+
+  puts "\e[32m=" * 40
+  puts "      SISTEMA DE AJUDA RUBY INDEX"
+  puts "=" * 40 + "\e[0m"
+  
+  print "Função ou Classe (ou 'FIM'): "
+  comando = gets.chomp
+  
+  if comando.upcase == 'FIM'
+    puts "\e[31mATÉ LOGO!\e[0m"
+    break
+  else
+    ajuda(comando)
+  end
+  
+end
+
