@@ -6,9 +6,22 @@ retornando um valor literal indicando se uma pessoa tem voto NEGADO, OPCIONAL e 
 
 =end
 
-require 'date'
 
 def voto(ano)
-    atual = date
+
+    require 'date'
+
+    atual = date.today.year
+    idade = atual - ano
+
+
+    if idade < 16
+        return "Com #{idade} você não vota!"
+    elsif idade < 18 or idade <=16 or idade >= 65
+        return "Com #{idade} seu voto é opcional!"
+    else
+        return "Com #{idade} seu voto é obrigatório!"
+    end
+
 end
 
