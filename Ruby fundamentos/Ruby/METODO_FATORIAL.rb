@@ -9,10 +9,14 @@ que será um valor lógico (opcional) indicando se será mostrado ou não na tel
 $n = ' '
 
 
-def fatorial(num=1)
+def fatorial(num, show=true)
+
   f = 1
 
   num.downto(1) do |c|
+    if show
+      print "#{c} x #{f}"
+    end
     f *= c
   end
 
@@ -23,5 +27,5 @@ end
 puts "Digite um número: "
 n = gets.chomp.to_i
 
-puts "O fatorial de #{n} é igual a #{fatorial(n)}"
+puts " O fatorial de #{n} é igual a #{fatorial(n)}"
 
