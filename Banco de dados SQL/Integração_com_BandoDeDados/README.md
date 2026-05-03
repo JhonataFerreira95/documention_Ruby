@@ -3,6 +3,7 @@
 ## índice
 
 1. [Introdução conceitual](#integração-com-banco-de-dados-ao-ruby)
+2. [O que é o SQL](#o-que-é-sql)
 
 ---
 
@@ -18,5 +19,19 @@
 
     - Projetado, construído e povoado por dados com um propósito.
 
-    
+## O que é `SQL`?
+
+> Linguagem de consulta estrutura, e é uma linguagem de consulta para os `SGBDs` relacionais.
+
+- Manipulação de dados(`DML`):
+
+    - Inserir dados
+
+    - Selecionar dados
+
+    - Atualizar dados
+
+    - Excluir dados
+
+- Manipulação de dados(`DDL`):
 
