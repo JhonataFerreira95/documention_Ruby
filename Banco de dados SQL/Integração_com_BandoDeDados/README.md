@@ -12,5 +12,11 @@
 
 - Com já abordei mais do que o básico em [Modelagem de banco de dados](../Modelagem_BancoDeDados/README.md), aqui falarei de uma maneira mais breve e irei me aprofundar em assunto mais complexos como `ORM` por exemplo.
 
+- Coleção de dados relacionados.
 
+    - Uma coleção lógica e coerente de dados algum significado inerente.
+
+    - Projetado, construído e povoado por dados com um propósito.
+
+    
 
