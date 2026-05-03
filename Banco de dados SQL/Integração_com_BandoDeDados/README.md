@@ -35,3 +35,9 @@
 
 - Manipulação de dados(`DDL`):
 
+    - Criar estrutura
+
+    - Alterar estrutura
+
+    - Remover estrutura
+
