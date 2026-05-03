@@ -41,3 +41,9 @@
 
     - Remover estrutura
 
+- Manipulação de dados(`DCL`):
+
+    - Concede permissões
+
+    - Revogar permissões
+
