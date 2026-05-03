@@ -4,6 +4,7 @@
 
 1. [Introdução conceitual](#integração-com-banco-de-dados-ao-ruby)
 2. [O que é o SQL](#o-que-é-sql)
+3. [SGBDs](#importância-de-sgbds)
 
 ---
 
@@ -21,7 +22,7 @@
 
 ## O que é `SQL`?
 
-> Linguagem de consulta estrutura, e é uma linguagem de consulta para os `SGBDs` relacionais.
+> Linguagem de consulta estrutura, e é uma linguagem de consulta para os [`SGBDs`](#importância-de-sgbds) relacionais.
 
 - Manipulação de dados(`DML`):
 
@@ -52,3 +53,7 @@
     - Efetiva uma transação(`commit`)
 
     - Descarta uma transação(`rollback`)
+
+## Importância de `SGBDs`
+
+> 
