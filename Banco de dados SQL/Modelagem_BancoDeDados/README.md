@@ -2,1518 +2,1180 @@
 
 ## Índice
 
-1. [Introdução conceitual](#introdução-ao-conceitos-de-bandos-de-dados)
+1. [Introdução conceitual](#introdução-ao-conceito-de-bancos-de-dados)
 2. [Fundamentos sobre SQL](#fundamentos-de-banco-de-dados-sql)
 3. [Conhecendo a linguagem SQL](#conhecendo-a-linguagem-sql)
 4. [Tipos de dados](#tipos-de-dados)
 5. [PSQL via CLI](#comando-do-banco-via-cli)
 6. [Inserindo linhas em uma tabela](#inserindo-linhas-em-uma-tabela)
 7. [Consultar dados de uma tabela](#consultando-dado-de-uma-tabela)
-8. [Comandos avançados de consulta](#comandos-avançados-de-consulta")
+8. [Comandos avançados de consulta](#comandos-avançados-de-consulta)
 9. [Atualização e exclusão de linhas](#atualização-e-exclusão-de-linhas)
 10. [Backup e restauração](#backup-e-restauração)
 11. [Relacionamentos entre tabelas](#relacionamentos-entre-tabelas)
-12. [Relacionamntos 1:1, 1:n, JOIN e n:n](#relacionamntos-11-1n-e-nn)
+12. [Relacionamentos 1:1, 1:n, JOIN e n:n](#relacionamentos-11-1n-e-nn)
 13. [Integridade Referencial](#integridade-referencial)
 14. [Encadeamento de consultas com JOIN](#encadeamento-de-consulta-com-join)
 15. [Modelagem de banco de dados](#modelagem-de-banco-de-dados-1)
 16. [Normalização de banco de dados](#normalização-banco-de-dados)
 17. [Modelando um banco de dados](#modelando-um-banco-de-dados)
 
-## Introdução ao conceito de Bandos de dados
+---
 
-- São um conjutos de arquivos relacionados entre si que armazenam todo tipo de dados(sobre pessoas, usuários, objetos, etc).
+## Introdução ao conceito de Bancos de Dados
 
-- No começo, eram gerenciados pelo próprio sistemas de arquivos e `SOs`, até que sugiram os `SGBDs`(sistema de gerenciamento de banco de dados).
+> Bancos de dados são a espinha dorsal de qualquer aplicação moderna — de sistemas web a aplicativos mobile, quase tudo persiste dados em algum lugar.
+
+- São um conjunto de arquivos relacionados entre si que armazenam todo tipo de dados (sobre pessoas, usuários, objetos, etc).
+
+- No começo, eram gerenciados pelo próprio sistema de arquivos e `SOs`, até que surgiram os `SGBDs` (Sistema de Gerenciamento de Banco de Dados).
 
     - Um `SGBD` é um software encarregado de cuidar do acesso, persistência, manipulação e organização dos dados.
 
-    - Um `SGBD`(do inglês, `DBMS`) é o que hoje chamamos informalmente de `banco de dados`, mas ele não é o banco de dados em si.
+    - Um `SGBD` (do inglês, `DBMS`) é o que hoje chamamos informalmente de "banco de dados" — mas ele não é o banco de dados em si. O `SGBD` inclui o banco de dados, mas pode incluir várias outras ferramentas em seu ecossistema.
 
-    - O `SGBD` inclui o banco de dados, mas pode incluir várias outras ferramentas em seu ecossistema.
+    - Exemplos de `SGBDs` conhecidos: `PostgreSQL`, `SQL Server`, `MySQL`, `MariaDB`, `Oracle`, `Firebird`, `MongoDB`.
 
-    - Exemplos de `SGBDs` conhecidos:
+### Categorias de Bancos de Dados
 
-        - `PostegreSQL`
+- **Relacionais ou SQL:** bancos mais tradicionais que trabalham com uma linguagem de consulta estruturada padrão (`SQL`).
 
-        - `SQL Server`
+- **Não-relacionais ou NoSQL:** bancos mais modernos que se popularizaram a partir da década de 2010 para solução de diversos problemas específicos, não utilizando os conceitos tradicionais e a linguagem `SQL`.
 
-        - `MySQL`
+---
 
-        - `MariaDB`
+## Fundamentos de Banco de Dados SQL
 
-        - `Oracle`
+> Antes de escrever qualquer query, é essencial entender os blocos fundamentais que compõem um banco de dados relacional.
 
-        - `Firebird`
+- **Tabelas:** forma estruturada de armazenar os dados. Um banco de dados é composto de várias tabelas (relacionadas ou não).
 
-        - `MongoDB`
+- **Relacionamentos:** formas de vincular uma tabela a outra para criar estruturas mais robustas e coesas.
 
-- Categorias de Bancos de Dados:
+- **Colunas:** definem quais dados podem ser inseridos em uma tabela — equivalem aos campos de um formulário.
 
-    - `Relacionais ou SQL:`
+- **Linhas:** são os registros de dados em si. Cada linha é considerada uma entrada individual em uma tabela.
 
-        - Banco mais tradicionais que trabalham com uma linguagem de consulta estruturada padrão(`SQL`).
+- **Chave primária:** a coluna de uma tabela que é única e serve para identificar cada linha sem ambiguidade.
 
-    - `Não-relacionais ou NoSQL:`
+- **Constraints:** limitações e regras impostas sobre o banco de dados para garantir a integridade dos dados.
 
-        - Bancos mais modernos que se popularizaram a partir da década de 2010 para solução de diversos problemas específicos, não utilizando os conceitos tradicionais e liguagem `SQL`.
-
-## Fundamentos de Banco de dados SQL
-
-- `Tabelas:`
-
-    - Forma estruturada de armazenar os dados, um banco de dados é composto de várias tabbelas(relacionadas ou não).
-
-- `Relacionamentos:`
-
-    - Formas de vincular uma tabela a outra para criar estruturas mais robusta e coesas.
-
-- `Colunas:`
-
-    - Definem quais dados podem ser inseridos em uma tabela.
-
-- `Linhas:`
-
-    - São registros de dados em si, cada linha é considerada uma entrada individual em uma tabela.
-
-- `Chave primária:`
-
-    - A coluna de uma tabela que é única e serve para identificar cada linha.
-
-- `Constraints:`
-
-    - Limitações e regras impostas sobre o banco de dados.
+---
 
 ## Conhecendo a linguagem SQL
 
-- O que é `SQL`?
+### O que é SQL?
 
-    - Foi criada na década de 1970 pela `IBM` posteriomente padronizada pela `ANSI` e `ISO`.
+> `SQL` (Structured Query Language) foi criada na década de 1970 pela `IBM` e posteriormente padronizada pela `ANSI` e `ISO`. É a linguagem padrão utilizada para gerenciar e manipular bancos de dados relacionais — presente em praticamente toda aplicação web.
 
-    - `SQL`(Structured Query language) é a linguagem padrão utilizada para gerenciar e manipular bancos de dados relacionais.
+- Serve para criação de tabelas, inserção de linhas, consulta e manipulação dos dados, gerenciamento de acesso, etc.
 
-    - Serve para criação de tabelas, inserção de linhas, consulta e manipulação dos dados, gerenciamento de acesso, etc.
+```sql
+CREATE TABLE clientes;
 
-    - Exemplos de comandos `SQL`:
+SELECT nome, telefone FROM clientes;
+```
 
-        ```SQL
+---
 
-            CREATE TABLE clientes;
+### Categorias de comandos da linguagem SQL
 
-            SELECT nome, telefone FROM clientes;
+- **DDL** (Data Definition Language) — comandos para **definir a estrutura** do banco:
 
-        ```
+    ```sql
+    CREATE TABLE,
+    ALTER TABLE,
+    DROP TABLE
+    ```
 
-- Categorias de comandos da linguagem `SQL`:
+- **DML** (Data Manipulation Language) — comandos para **manipular dados**:
 
-    - `DDL`(Data Definition Language):
+    ```sql
+    SELECT,
+    INSERT,
+    UPDATE,
+    DELETE
+    ```
 
-        - Comandos para definir a estrutura do banco de dados.
+- **DCL** (Data Control Language) — comandos para **controlar o acesso** aos dados:
 
-        ```SQL
+    ```sql
+    GRANT,
+    REVOKE
+    ```
 
-            CREATE TABLE,
-            ALTER TABLE,
-            DROP TABLE
+- **TCL** (Transaction Control Language) — comandos para **gerenciar transações**:
 
-        ```
+    ```sql
+    BEGIN,
+    COMMIT,
+    ROLLBACK
+    ```
 
-    - `DML`(Data Manipulation Language):
-
-        - Comandos para manipulação de dados.
-
-        ```SQL
-
-            SELECT, 
-            INSERT,
-            UPDATE,
-            DELETE
-
-        ```
-
-    - `DCL`(Data Control Language):
-
-        - Comandos para controlar o acesso aos dados.
-
-        ```SQL
-
-            GRANT,
-            REVOKE
-
-        ```
-
-    - `TCL`(Transaction Control Language):
-
-        - Comandos para gerenciar transações.
-
-        ```SQL
-
-            BEGIN,
-            COMMIT,
-            ROLLBACK
-
-        ```
+---
 
 ## Tipos de dados
 
-- Tipo de dados definem a natureza dos valores que podem ser armazenados em uma coluna de uma tabela.
+> Tipos de dados definem a natureza dos valores que podem ser armazenados em uma coluna. Escolher o tipo adequado é crucial para a eficiência, integridade e otimização do banco.
 
-- Escolher o tipo de dado adequeado é crucial para a eficiência, integridade e otimização do banco de dados.
+### Dados numéricos
 
-- Dados numéricos:
+| Tipo              | Descrição                                               |
+|-------------------|---------------------------------------------------------|
+| `SMALLINT`        | Inteiro de 2 bytes                                      |
+| `INT / INTEGER`   | Inteiro de 4 bytes                                      |
+| `BIGINT`          | Inteiro de 8 bytes                                      |
+| `FLOAT`           | Número com ponto flutuante de precisão simples          |
+| `DOUBLE`          | Número com ponto flutuante de precisão dupla            |
+| `DECIMAL/NUMERIC` | Precisão fixa — ideal para valores monetários           |
 
-    - `SMALLINT`:
+### Dados de texto
 
-        - Inteiro de 2 bytes.
+| Tipo          | Descrição                                     |
+|---------------|-----------------------------------------------|
+| `CHAR(n)`     | Cadeia de caracteres de comprimento fixo      |
+| `VARCHAR(n)`  | Cadeia de caracteres de comprimento variável  |
+| `TEXT`        | Cadeia de caracteres de comprimento muito grande |
 
-    - `INT/INTEGER`:
+### Dados de data e hora
 
-        - Inteiro de 4 bytes.
+| Tipo        | Descrição                                    |
+|-------------|----------------------------------------------|
+| `DATE`      | Data (ano, mês, dia)                         |
+| `TIME`      | Hora (hora, minuto, segundo)                 |
+| `DATETIME`  | Combinação de data e hora                    |
+| `TIMESTAMP` | Data e hora — muito usado para metadados     |
 
-    - `BEGINT`:
+### Outros tipos
 
-        - Inteiro com 8 bytes.
+| Tipo      | Descrição                                                          |
+|-----------|--------------------------------------------------------------------|
+| `BOOLEAN` | Valores lógicos (`TRUE` ou `FALSE`)                                |
+| `BLOB`    | Dados binários grandes — para armazenar imagens, vídeos (pouco usado) |
+| `ENUM`    | Conjuntos de valores predefinidos                                  |
+| `JSON`    | Armazena dados em formato JSON                                     |
 
-    - `FLOAT`:
+---
 
-        - Número com ponto flutuante de precisão simples.
-    
-    - `DOUBLE`:
-
-        - Número com ponto flutuante de precisão dupla.
-
-    - `DECIMAL/NUMERIC`:
-
-        - Número de precisão fixa, útil para valores monetários.
-
-- Dados de texto:
-
-    - `CHAR(n)`:
-
-        - Cadeia de caracteres de comprimento fixo.
-
-    - `VARCHAR(n)`:
-
-        - Cadeia de caracteres de comprimento variável.
-
-    - `TEXT`:
-
-        - Cadeia de caracteres de comprimento muito grande.
-
-- Dados de data e hora:
-
-    - `DATE`:
-
-        - Data(ano, mês, dia).
-
-    - `TIME`:
-
-        - Hora(hora, minuto, segundo).
-
-    - `DATETIME`:
-
-        - Combinação de qualquer data e hora.
-
-    - `TIMESTAMP`:
-
-        - Data e hora, muito usado para metadados.
-
-- Outros tipos de dados variados:
-
-    - `BOOLEAN`:
-
-        - Representa valores lógicos(`TRUE` ou `FALSE`).
-
-    - `BLOB`:
-
-        - Dados binários grandes, usados para armazenar aqruivos como imagens e vídeos(pouco usado).
-
-    - `ENUM`:
-
-        - Conjuntos de valores predefinidos.
-
-    - `JSON`:
-
-        - Armazena dados em formato `JSON`.
-    
 ## Comando do banco via CLI
 
-- Normlamente utilizamos algum recurso visual para manipular o `SGBD` exemplos como `DATAGRIPE`, `PHPmyAdmin` ou `PGmyAdmin` porém aqui irei utlizar diretamente via `CLI` ou interface de linha de comando.
+> Normalmente utilizamos algum recurso visual para manipular o `SGBD` — como `DataGrip`, `PHPmyAdmin` ou `PGAdmin` — porém aqui utilizaremos diretamente via `CLI` (interface de linha de comando).
 
-- Primeiramente escolhe o diretório onde irá alocar o banco, após utilize esse comando para inicializar o `postgres`:
+**Inicializando o PostgreSQL:**
 
-    ```SQL
+```sql
+psql -U postgres
+```
 
-        psql -U postgres
+![Resultado SQL](../Assets/SQL.png)
 
-    ```
-    ![Resultado SQL](../Assets/SQL.png)
+> Após o comando, digite a senha que você definiu na instalação.
 
-    - Após o comando digite a senha que você definiu na hora da instalação.
+![Resultado 2 SQL](../Assets/SQL_FININSH.png)
 
-    - Resultado após a senha:
+> Você já está dentro do servidor do banco. Agora basta criar um banco com o comando:
 
-        ![Resultado 2 SQL](../Assets/SQL_FININSH.png)
+```sql
+CREATE DATABASE nome-do-banco;
+```
 
-        - Obeserve que você já está no servidor do banco, apenas crie um banco com o comando básico que já foi introduzido a cima.
+**Listar todos os bancos existentes:**
 
-            ```SQL
+```psql
+\l
+```
 
-                CREATE DATABASE nome-do-banco;
+![\l](../Assets/comando_l.png)
 
-            ```
+> Observa-se que ele lista todos os bancos presentes no servidor.
 
-        - Caso queira consultar se o banco foi criado, utilize o comando:
+---
 
-            ```psql
+### Logar em outro banco via CLI
 
-                \l
-            
-            ```
+**Deslogar do banco atual:**
 
-            ![\l](../Assets/comando_l.png)
+```psql
+\q
+```
 
-            - Observa-se que ele lista todos os bancos presentes.
+**Logar diretamente em um banco específico:**
 
-- Logar em outro banco via `CLI`:
+```psql
+psql -U postgres -d nome-do-banco;
+```
 
-    - Antes de logar em um banco existente via `CLI`, utilize o comando:
+![testing_database](../Assets/testing_database.png)
 
-        ```psql
+**Trocar de banco rapidamente sem sair:**
 
-            \q
-        
-        ```
+```psql
+\c nome-do-banco;
+```
 
-        - Esse comando permite você deslogar de um banco, após isso utlize o comando:
+---
 
-            ```psql
+### Alterando nome do banco via CLI
 
-                psql -U postgres -d nome-do-banco;
-            
-            ```
+```sql
+ALTER DATABASE nome-do-banco RENAME TO novo-nome;
+```
 
-        - E a senha que foi definido na instalção.
+---
 
-            ![testing_database](../Assets/testing_database.png)
+### Excluindo banco de dados via CLI
 
-            - Caso queira troca de banco de uma forma rápida utilize o comando:
+```sql
+DROP DATABASE nome-do-banco;
+```
 
-            ```psql
+---
 
-                \c nome-do-banco;
+### Criando uma tabela no banco
 
-            ```
+```sql
+CREATE TABLE nome-da-tabela(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(100) UNIQUE
+);
+```
 
-- Altrando nome do banco via `CLI`:
+> - `NOT NULL` — a coluna não pode ser vazia.
+> - `SERIAL` — cria um auto-incremento automático para o `id`.
+> - `UNIQUE` — garante que o valor do campo `email` seja único na tabela.
 
-    - Vamos supor que queremos alterar o nome do nosso banco, para isso utilizamos o comando:
+**Listar tabelas existentes:**
 
-        ```SQL
+```psql
+\dt
+```
 
-            ALTER DATABASE  nome-do-banco RENAME TO novo-nome;
+**Excluir uma tabela:**
 
-        ```
-- Excluindo banco de dados via `CLI`:
+```sql
+DROP TABLE nome-da-tabela-que-deseja-excluir;
+```
 
-    - Caso deseje excluir algum banco existente, utilize o comando:
+---
 
-        ```SQL
+### Modificando uma tabela existente
 
-            DROP DATABASE nome-do-banco;
+**Adicionar uma nova coluna:**
 
-        ```
+```sql
+ALTER TABLE nome-da-tabela ADD COLUMN nova-coluna TIPO-DA-NOVA-COLUNA;
+```
 
-- Criando uma tabela em nosso banco, utilize o comando:
+**Excluir uma coluna existente:**
 
-    ```SQL
+```sql
+ALTER TABLE nome-da-tabela DROP COLUMN nome-da-coluna;
+```
 
-        CREATE TABLE nome-da-tabela(
-            id SERIAL PRIMARY KEY,
-            name VARCHAR(255) NOT NULL,
-            phone VARCHAR(20) NOT NULL,
-            email VARCHAR(100) UNIQUE
-        );
+**Definir uma coluna como NOT NULL:**
 
-    ```
+```sql
+ALTER TABLE nome-da-tabela ALTER COLUMN coluna-desejada SET NOT NULL;
+```
 
-    - Aqui eu citei alguns comandos novos, como o `NOT NULL`, é bem intuitivo pelo mas caso não saiba, isso significa que a coluna `nome` e `phone` não podem ser vázias.
+**Remover o NOT NULL de uma coluna:**
 
-    - Criamos um `id` como chave primária da nossa tabela, definimos como auto-incremento com o `SERIAL`.
+```sql
+ALTER TABLE nome-da-tabela ALTER COLUMN coluna-desejada DROP NOT NULL;
+```
 
-    - Utilizei o `UNIQUE` para que o campo do `email` seja único.
+**Renomear uma coluna:**
 
-    - Caso queira consulta as tabelas via `psql`, utilize o comando:
+```sql
+ALTER TABLE nome-da-tabela RENAME COLUMN coluna-desejada TO novo-nome-da-coluna;
+```
 
-        ```psql
+**Criar uma coluna somente se ela não existir:**
 
-            \dt
-        
-        ```
+```sql
+ALTER TABLE nome-da-tabela ADD COLUMN IF NOT EXISTS nome-da-coluna tipo-de-dado;
+```
 
-- Se deseja excluir uma tabela, utilize esse comando:
+> O `IF NOT EXISTS` garante que, se já houver uma coluna com esse nome, a operação não será executada — evitando erros.
 
-    ```SQL
-
-        DROP TABLE nome-da-tabela-que-deseja-excluir;
-
-    ```
-
-- Modificando uma tabela existente como o esse comando:
-
-    ```SQL
-
-        ALTER TABLE nome-da-tabela ADD COLUMN nova-coluna TIPO-DA-NOVA-COLUNA;
-
-    ```
-
-    - Observa-se que criei uma nova coluna com o comando `ALTER` e `ADD COLUMN`. E para excluir uma coluna existente utilize o comando:
-
-    ```SQL
-
-        ALTER TABLE nome-databela DROP COLUMN nome-da-coluna;
-
-    ```
-
-    - Outros exemplos:
-
-    ```SQL
-
-        ALTER TABLE nome-da-tabela ALTER COLUMN coluna-desejada SET NOT NULL;
-
-    ```
-
-    - Alterando um valor de uma coluna para que ele não seja nulo com `SET NOT NULL`. Caso deseje remover o `NOT NULL` de alguma coluna, utilize o comando:
-
-    ```SQL
-
-        ALTER TABLE nome-da-tabela ALTER COLUMN coluna-desejada DROP NOT NULL;
-
-    ```
-
-    - Se deseja renomear uma coluna utilize o comando:
-
-    ```SQL
-
-        ALTER TABLE nome-da-tabela RENAME COLUMN coluna-desejada TO novo-nome-da-coluna;
-
-    ```
-
-    - Para alterar o nome, utilizamos o `TO`.
-
-- Criando uma coluna em uma tabela existente, utilize o comando:
-
-    ```SQL
-
-        ALTER TABLE nome-da-tabela ADD COLUMN IF NOT EXIST nome-da-coluna tipo-de-dado;
-    
-    ```
-
-    - O `IF NOT EXIST` é para garantir que se houver uma coluna com o nome igual, essa mesma coluna que estamos criando não seja criada.
+---
 
 ## Inserindo linhas em uma tabela
 
-- Para adicionamos algo em nossa tabela já existente utilizamos o comando:
+> O `INSERT INTO` é o comando usado para adicionar novos registros em uma tabela existente.
 
-    ```SQL
+```sql
+INSERT INTO nome-da-tabela(name, address, phone) VALUES(
+    'bass', 'rua A, n380', '(84)98160-5893'
+);
+```
 
-        INSERT INTO nome-da-tabela(name, address, phone) VALUES(
-            'bass', 'rua A, n380', '(84)98160-5893'
-        );
+> - `INSERT INTO` — indica que queremos inserir algo e referencia a tabela de destino.
+> - As colunas são listadas entre parênteses após o nome da tabela.
+> - `VALUES` — os dados a inserir, **na mesma ordem** das colunas declaradas.
 
-    ```
-
-    - Observa-se que, para inserir o dados em uma tabela necessito referência a mesma com o `INSERT INTO`, insert serve para eu dizer que quero inserir algo e o into para referência a tabela desejada. Após isso passo as colunas das tabelas, que no caso foram `name, address, phone`, após isso utilizo o `VALUES` para adiconar valores e abro pârenteses e passo os dados de acordo com a ordem definida dentro do pârenteses da tabela.
+---
 
 ## Consultando dado de uma tabela
 
-- Como fazer uma consulta a uma tabela existente no banco com `SQL`, basta apenas consultar com esse comando:
+> O `SELECT` é o comando mais utilizado no SQL — responsável por buscar e exibir dados de uma ou mais tabelas.
 
-    ```SQL
+```sql
+-- Selecionar colunas específicas
+SELECT coluna1, coluna2 FROM nome-da-tabela;
 
-        SELECT quais-colunas-eu-quero-selecionar FROM nome-da-tabela;
+-- Selecionar todas as colunas
+SELECT * FROM nome-da-tabela;
+```
 
-        SELECT * FROM nome-da-tabela;
+> O `*` seleciona todas as colunas da tabela. Para selecionar colunas específicas, separe-as por vírgula. O `FROM` aponta para qual tabela a consulta será feita.
 
-    ```
+---
 
-    - Aqui eu fiz dois comandos utilizando o `SELECT`, um com o nome da coluna e o outro com `*`, utilizando o `*` seleciona todas as colunas existente da nossa tabela caso deseje selecionar uma ou mais colunas use a vírgula para separar as colunas desejadas, o `FROM` aponta para a tabela que desejamos consultar.
+### Utilizando `WHERE`, `AS`, `AND`, `OR` e `IN`
 
-- Utilizando o `WHERE`, `AS`, `AND`, `OR` e `IN` na consulta do banco:
+**`WHERE` — filtrar registros (equivalente a um `if`):**
 
-    - `WHERE:`
+```sql
+SELECT * FROM nome-da-tabela WHERE coluna-desejada <condição>;
 
-        - A clásula `WHERE` server para filtra registro em uma consulta no `SQL` ou condição como `if`.
+SELECT * FROM stock WHERE quantity < 20;
+```
 
-        ```SQL
+> Aqui utilizei o `WHERE` para buscar todos os produtos com quantidade menor que 20 na tabela `stock`.
 
-            SELECT * FROM nome-da-tabela WHERE coluna-desejada <condição>;
+---
 
-            SELECT * FROM stock WHERE quantity < 20;
+**`AS` — renomear colunas temporariamente na consulta:**
 
-        ```
+```sql
+SELECT nome-da-coluna AS novo-nome, nome-da-coluna AS novo-nome FROM nome-da-tabela;
 
-        - Aqui utilizei a palavra reservada `WHERE` para pesquisa todos os produtos com a quantidade menor que 20 na tabela `stock`.
+SELECT id AS identificação, name AS nome FROM clients;
+```
 
-    - `AS:`
+> O alias criado com `AS` existe apenas naquela consulta — diferente do `RENAME`, não altera o banco.
 
-        - A palavra reservadar `AS`, serve renomear os nomes de colunas do banco.
+---
 
-        ```SQL
+**`AND` — ambas as condições precisam ser verdadeiras:**
 
-            SELECT nome-da-coluna AS novo-nome-da-coluna-temporario, nome-da-coluna AS novo-nome-da-coluna-temporario FROM nome-da-tabela;
+```sql
+SELECT * FROM nome-da-tabela WHERE condição1 AND condição2;
 
-            SELECT id AS identificação, name AS nome FROM clients;
-        
-        ```
-        
-        - Aqui utilizei 2 exemplos de colunas para demonstrar que dá pra fazer com várias. O nome fica apenas naquela consulta, não é como o `RENAME`.
+SELECT * FROM stock WHERE category = 'grãos' AND amount < 20;
+```
 
-    - `AND:`
+---
 
-        - Irei abordar o operador booleano `AND`, como já de conhecimento geral, para que a saída do operador seja `true` é necessário que ambas condições sejam `true`.
+**`OR` — apenas uma das condições precisa ser verdadeira:**
 
-        ```SQL
+```sql
+SELECT * FROM nome-da-tabela WHERE condição1 OR condição2;
 
-            SELECT * FROM nome-da-tabela WHERE coluna-desejada-e-condição AND coluna-desejada-e-condição;
+SELECT * FROM stock WHERE category = 'massas' OR amount = 100;
+```
 
-            SELECT * FROM stock WHERE category = 'grãos' AND amount < 20;
-        
-        ```
-    
-    - `OR:`
+> Aqui utilizei o `OR` para verificar se existe uma categoria chamada `massas` **ou** algum item com quantidade 100.
 
-        - Irei abordar o operador booleano `OR`, como já de conhecimento geral, para que a saída do operador seja `true` é necessário que apenas uma condição seja `true`.
+---
 
-        ```SQL
+**`IN` — verificar se o valor pertence a uma lista:**
 
-            SELECT * FROM nome-da-tabela WHERE coluna-desejada-e-condição OR coluna-desejada-e-condição;
+```sql
+SELECT * FROM nome-da-tabela WHERE coluna IN ('valor1', 'valor2');
 
-            SELECT * FROM stock WHERE category = 'massas' OR amount = 100;
+SELECT * FROM stock WHERE category IN ('massas', 'grãos');
+```
 
-        ```
+> O `IN` verifica se o valor de `category` é `massas` ou `grãos` — equivalente a múltiplos `OR` encadeados, mas mais legível.
 
-        - Aqui utilizei o `OR` para verificar no banco se existe uma categoria chamada `massas` em `category` ou algum item de quantidade 100 em `amount`.
-
-    - `IN:`
-
-        - Irei aborda o operador booleano `IN`, como já de conhecimento geral, para que ele funcione o item desejado esteja dentro da condição que você deseja, verificando se um valor pertence a uma lista ou conjunto específico.
-
-        ```SQL
-
-            SELECT * FROM nome-da-tabela WHERE coluna-desejada-e-condição IN ('condição');
-
-            SELECT * FROM stock WHERE category IN ('massas', 'grãos');
-
-        ```
-
-        - Aqui utilizei o `IN` para verificar se em `category` existem alguma categoria com os nomes `massas ou grãos`.
+---
 
 ## Comandos avançados de consulta
 
-- Irei aborda o comando de ordenação, que serve para filtar as ordens de consulta, o comando é:
+### Ordenação com `ORDER BY`
 
-    ```SQL
+> Ordena os resultados da consulta de acordo com a coluna especificada.
 
-        SELECT * FROM tabela-desejada ORDER BY ordem-desejada;
+```sql
+SELECT * FROM tabela-desejada ORDER BY coluna-desejada;
 
-        SELECT * FROM clients ORDER BY name;
+SELECT * FROM clients ORDER BY name;
+```
 
-    ```
+> Aqui filtrei por `name` — resultados em ordem alfabética.
 
-    - Observa-se que filtrei como `name`, isso séria a ordem alfabética mas antes da ordem utilizei o comando `ORDER BY` para informa que vai em ordem por `name`.
+**Crescente com `ASC`:**
 
-- Aqui ire falar de filtos para combinar com o comando `ORDER BY`, filtro ascendente(crescente) e o filtro descendente(decrescente) que são:
+```sql
+SELECT * FROM tabela-desejada ORDER BY coluna-desejada ASC;
 
-    - `ASC:`
+SELECT * FROM clients ORDER BY id ASC;
+```
 
-        ```SQL
+> Do menor `id` para o maior.
 
-            SELECT * FROM tabala-desejada ORDER BY ordem-desejada ASC;
+**Decrescente com `DESC`:**
 
-            SELECT * FROM clients ORDER BY id ASC;
+```sql
+SELECT * FROM tabela-desejada ORDER BY coluna-desejada DESC;
 
-        ```
-        
-        - Observa-se que filtei com o `id` porém utilizei o comando `ASC` para que o resultado seja de uma forma crescente, do menor `id` para o maior `id`.
+SELECT * FROM clients ORDER BY id DESC;
+```
 
-    - `DESC:`
+> Do maior `id` para o menor.
 
-        ```SQL
+---
 
-            SELECT * FROM tabela-desejada ORDER BY ordem-desejada DEC;
+### Limitando resultados com `LIMIT` e `OFFSET`
 
-            SELECT * FROM clients ORDER BY id DESC;
+**`LIMIT` — limita a quantidade de resultados:**
 
-        ```
+```sql
+SELECT * FROM tabela-desejada LIMIT quantidade-desejada;
 
-        - Observa-se que filtei com novamente com `id` porém utilizei o comando `DESC` para que o resultado seja de uma forma decrescente, do maior `id` para o menor `id`.
+SELECT * FROM clients LIMIT 5;
+```
 
-- Aqui irei aborda outro comando que limita a quantidade de resultado na busca, que é:
+> Retorna apenas os 5 primeiros registros.
 
-    - `LIMIT:`
+**`OFFSET` — pula uma quantidade de registros (usado para paginação):**
 
-        ```SQL
+```sql
+SELECT * FROM tabela-desejada LIMIT 4 OFFSET 4;
+```
 
-            SELECT * FROM tabala-desejada LIMIT quantidade-desejada;
+> Pula os primeiros 4 registros e retorna os próximos 4. Combinado com `LIMIT`, cria um mecanismo de paginação.
 
-            SELECT * FROM clients LIMIT 5;
+---
 
-        ```
-        
-        - Aqui utilizei o limit para ele limitar a apenas 5 resultados em minha consulta.
-    
-    - `OFFSET:`
+### Funções de agregação: `COUNT`, `SUM` e `AVG`
 
-        ```SQL
+**`COUNT` — conta a quantidade de registros:**
 
-            SELECT * FROM tabela-desejada LIMIT quantidade-desajda OFFSET quantidade-desejada;
+```sql
+SELECT COUNT(coluna-desejada) AS nome-desejado FROM tabela;
 
-            SELECT * FROM tabela-desejada LIMIT 4 OFFSET 4;
+SELECT COUNT(id) AS usuarios FROM clients;
+```
 
-        ```
+> Conta quantos `id` existem e renomeia o resultado com `AS`.
 
-        - Aqui usamos com frequência em conjunto com o comando de pular resultados `OFFSET` para criar um mecanismo de paginação.
+**`SUM` — soma os valores de uma coluna:**
 
-- Irei aborda os comandos de contagem de registro `count`, soma `sum` e média aritmética `avg`:
+```sql
+SELECT SUM(coluna-desejada) AS nome-desejado FROM tabela;
 
-    - `COUNT:`
+SELECT SUM(amount) AS total FROM stock;
+```
 
-        ```SQL
+> Soma o total de itens da coluna `amount` e renomeia como `total`.
 
-            SELECT COUNT(colunda-desejada) AS nome-desejado FROM tabela-que-corresponda-a-consulta;
+**`AVG` — calcula a média aritmética:**
 
-            SELECT COUNT(id) AS usuarios FROM clients;
+```sql
+SELECT AVG(coluna-desejada) AS nome-desejado FROM tabela;
 
-        ```
+SELECT AVG(amount) AS media FROM stock_ingredients;
+```
 
-        - Aqui utilizei o `COUNT` para contas quantos `id` existem dentro da minha coluna `id` e renomei com o comando `AS`.
+> Calcula a média dos valores da coluna `amount` e renomeia como `media`.
 
-    - `SUM:`
+---
 
-        ```SQL
+### Filtros avançados com `LIKE`, `%` e `_`
 
-            SELECT SUM(colunda-desejada) AS nome-desejado FROM tabela-que-corresponda-a-consulta;
+> O `LIKE` é sempre combinado com `WHERE` e permite buscas por padrões dentro de strings. O `%` representa qualquer sequência de caracteres, e o `_` representa um único caractere qualquer.
 
-            SELECT SUM(amount) AS total FROM stock;
+**`LIKE 'B%'` — começa com a letra B:**
 
-        ```
+```sql
+SELECT * FROM tabela WHERE coluna LIKE 'b%';
 
-        - Aqui utilizei o `SUM` para soma o total de itens da minha coluna `amount` e renomei ela de total.
+SELECT * FROM clients WHERE name LIKE 'b%';
+```
 
-    - `AVG:`
+**`LIKE '_A%'` — tem A como segunda letra:**
 
-        ```SQL
+```sql
+SELECT * FROM tabela WHERE coluna LIKE '_a%';
 
-            SELECT AVG(colunda-desejada) AS nome-desejado FROM tabela-que-corresponda-a-consulta;
+SELECT * FROM clients WHERE name LIKE '_a%';
+```
 
-            SELECT AVG(amount) AS media FROM stock_ingredients;
+**`LIKE '%D'` — termina com a letra D:**
 
-        ```
+```sql
+SELECT * FROM tabela WHERE coluna LIKE '%d';
 
-        - Aqui utilizei o `AVG` para tira a média total de itens da minha coluna `amount` e renomei ela de media;
+SELECT * FROM clients WHERE name LIKE '%d';
+```
 
-- Utilizando operadores avançado com `WHERE`, `LIKE`, `%` e `_`:
+**`LIKE '%AN%'` — contém AN em qualquer posição:**
 
-    - Para utilizar o `LIKE` com filtro primeiramente precisamos do `WHERE`, utilze desse forma:
+```sql
+SELECT * FROM tabela WHERE coluna LIKE '%an%';
 
-        - `LIKE 'B%':`
+SELECT * FROM clients WHERE name LIKE '%an%';
+```
 
-            ```SQL
+> Os dois `%` indicam que o trecho `an` pode aparecer em qualquer posição da string.
 
-                SELECT * FROM tabela-desejada WHERE coluna-desejada LIKE 'letra-desajada-para-o-filtro%'
+---
 
-                SELECT * FROM clients WHERE name LIKE 'b%'
+### `ILIKE` — busca case-insensitive
 
-            ```
+> Funciona como o `LIKE`, porém **não diferencia maiúsculas de minúsculas** — exclusivo do PostgreSQL.
 
-            - Vamos por parte, esse primeiro comando com `LIKE 'b%'` serve para busca todos os dados que começam com a letra B na coluna `name`, irei dar mais alguns exemplos de como utilizar o `LIKE`.
-        
-        - `LIKE '_A%':`
+```sql
+SELECT * FROM tabela WHERE coluna ILIKE '%b%';
 
-            ```SQL
+SELECT * FROM clients WHERE name ILIKE '%B%';
+```
 
-                SELECT * FROM tabela-desejada WHERE coluna-desejada LIKE '_letra-desejada-para-o-filtro%';
+> Retorna tanto `Bass` quanto `bass`, `BASS`, etc.
 
-                SELECT * FROM clients WHERE name LIKE '_a%';
-
-            ```
-
-            - Esse filtro com `LIKE '_a%'` serve para busca todas as palavras que conteham A como segunda letra na consulta.
-
-        - `LIKE '%D':`
-
-            ```SQL
-
-                SELECT * FROM tabela-desejada WHERE coluna-desejada LIKE '%letra-desejada-para-o-filtro';
-
-                SELECT * FROM clients WHERE name LIKE '%d';
-
-            ```
-
-            - O filtro atual é simples, ele basicamente busca todo o resultado com `LIKE '%d'` que termina com a letra D.
-
-        - `LIKE '%AN%:'`
-
-            ```SQL
-
-                SELECT * FROM tabela-desejada WHERE coluna-desejada LIKE '%letra-ou-frase-desejada-para-o-filtro';
-
-                SELECT * FROM clients WHERE name LIKE '%an%';
-
-            ```
-
-            - Aqui utilizamos dois % para falar para o `LIKE` que queremos todos os resultado que possuam o `AN` juntos.
-            
-- Comando `ILIKE` que funciona como o LIKE, porém é case-insensitive, ou seja, não diferencia maiúsculas e minúsculas:
-
-    ```SQL
-
-        SELECT * FROM tabela-desejada WHERE coluna-desejada ILIKE '%letra-desejada';
-
-        SELECT * FROM clients WHERE name ILIKE '%B%';
-
-    ```
-
-    - Como já foi mencionado, aqui ele busca tudo, tanto maiúsculo quanto menúsculo, e funciona da mesma forma que o `LIKE`.
+---
 
 ## Atualização e exclusão de linhas
 
-- Irei aborda o comandos para atualizar os dados de tabela, para isso utilizamos o comando:
+### `UPDATE` — atualizar dados de uma tabela
 
-    ```SQL
+> O `UPDATE` modifica registros existentes. A cláusula `WHERE` é essencial — sem ela, **todos os registros da tabela serão atualizados**.
 
-        UPDATE nome-da-tabela-desejada SET coluna-desejada = 'mudança-desejada' WHERE condicao-desejada;
+```sql
+UPDATE nome-da-tabela SET coluna = 'novo-valor' WHERE condição;
 
-        UPDATE serie_tv SET situacao = 'Finalizada' WHERE situacao = 'Acabou';
+UPDATE serie_tv SET situacao = 'Finalizada' WHERE situacao = 'Acabou';
+```
 
-    ```
+> - `UPDATE` — indica qual tabela será atualizada.
+> - `SET` — define qual coluna e qual o novo valor.
+> - `WHERE` — filtra quais registros serão afetados.
 
-    - Aqui utilizei o comando `UPDATE`, para atualizar os valores da coluna `situacao` de `acabou` para `Finalizada`, para indicar essa ação ao `SQL` utilizei a apalavra reservada `SET` e uma condição com a cláusula `WHERE` para sinalizar que tudo na coluna `situacao` que é igual a `Acabou` seja substituido por `Finalizada`.
+**Atualizando múltiplas colunas ao mesmo tempo:**
 
-- Utilizando o `UPDATE` com múltiplos campos:
+```sql
+UPDATE tabela SET coluna1='valor', coluna2='valor', coluna3='valor' WHERE condição;
 
-    ```SQL
+UPDATE filmes SET titulo='Star Wars: A nova esperança', genero='Sci-fi/Fantasy' WHERE titulo='Star Wars';
+```
 
-        UPDATE tabela-desejada SET coluna-desejada='condicao', coluna-desejada='condicao', coluna-desejada='condicao' WHERE condicao;
+> Múltiplas colunas são separadas por vírgula dentro do `SET`. O `WHERE` garante que apenas o filme com o título `Star Wars` seja afetado.
 
-        UPDATE filmes SET titulo='Star Wars: A nova esperança', genero='Sci-fi/Fantasy' WHERE titulo='Star Wars';
+---
 
-    ```
+### `DELETE` — excluir registros de uma tabela
 
-    - Observa-se que atualizei múltiplas colunas apenas separando com vírgula, na cláusula `WHERE` adicionei a condição onde eu sabia que o filme que queria atualizar tinha o titulo de `Star Wars`.
+> O `DELETE` remove registros permanentemente. Assim como o `UPDATE`, sempre use com `WHERE` para evitar exclusões em massa acidentais.
 
-- Agora irie aborda o comando para deletar dados de nossas colunas:
+```sql
+DELETE FROM tabela-desejada WHERE condição;
 
-    ```SQL
+DELETE FROM serie_tv WHERE titulo = 'The Office';
+```
 
-        DELETE FROM tabela-desejada WHERE condicao-desejada;
+> Aqui excluímos apenas o registro onde `titulo` é igual a `The Office`.
 
-        DELETE FROM serie_tv WHERE titulo = 'The Office';
-
-    ```
-
-    - Utilizei o comodando de `DELETE` para excluir o dado da coluna `titulo`, para isso precisamos deixa claro a condição para nossa cláusa `WHERE`.
+---
 
 ## Backup e restauração
 
-- Irei aborda como fazer o `backup` e `restauração` via `CLI`.
+> Fazer backup regularmente é uma das práticas mais importantes em banco de dados — garante que os dados possam ser recuperados em caso de falha, acidente ou migração de servidor.
 
-    - `Backup:`
+### Backup com `pg_dump`
 
-        - Para criar um `backup` via `CLI` utilizamos o comando:
+```psql
+pg_dump -U postgres -v -f "caminho/do/diretório/desejado/nome-do-backup" nome-do-banco
+```
 
-            ```psql
+> - `-v` — verbose: exibe os detalhes do que está acontecendo.
+> - `-f` — aponta o caminho e nome do arquivo de destino.
 
-                pg_dump -U usuario-do-branco argumentos nome-do-banco
+**Formatos disponíveis para o dump:**
 
-                pg_dump -U postgres -v -f "caminho/do/diretório/desejado/nome-do-backup" nome-do-banco
+| Flag   | Formato      | Descrição                       |
+|--------|--------------|---------------------------------|
+| `c`    | custom       | Formato binário comprimido      |
+| `d`    | directory    | Diretório com arquivos separados|
+| `t`    | tar          | Arquivo tar                     |
+| `p`    | plain text   | SQL puro (padrão)               |
 
-            ```
+**Backup em formato customizado:**
 
-            - Fiz o `dump` de um banco, o `-v` é verbose ou seja, detalhes do que está acontecendo. O `-f` serve para aponta o caminho de qual diretório você deseja salvar.
+```psql
+pg_dump -U postgres -v -F c -f "caminho/do/diretório/desejado/nome-do-backup" nome-do-banco
+```
 
-            - Existem algums formatos para nosso arquivo `dump`, eles são representados por letras, são elas:
-            
-            ```psql
+**Backup de apenas uma tabela:**
 
-                c
-                d
-                t
-                p
+```psql
+pg_dump -U postgres -v -F c -f "caminho/do/diretório/desejado/nome-do-backup" -t nome-da-tabela nome-do-banco
+```
 
-            ```
+> O `-t` referencia a tabela específica que será incluída no backup.
 
-            - Letra `c` para arquivos `custom`, `d` para arquivos `directory`, `t` para arquivos `tar` e `p` para arquivos `plain text` que é a opção padrão, ou seja em `SQL`.
-            
-            - `dump` em outros formatos:
+---
 
-                ```psql
+### Restauração
 
-                    pg_dump -U postgres -v -F c -f "caminho/do/diretório/desejado/nome-do-backup" nome-do-banco
+> **Importante:** o `pg_restore` só funciona com arquivos nos formatos `c`, `d` e `t`. Para arquivos `.sql` (formato `p`), use o `psql`.
 
-                ```
+**Restaurar com `pg_restore` (formatos custom, directory, tar):**
 
-                - Aqui no comando o `-F c` define o formato o formato backup, que seria `custom`.
+```psql
+pg_restore --create -U postgres -v caminho/desejado/nome-do-banco.pgbackup
+```
 
-                - Caso deseja fazer backup de apenas uma tabela do banco, o comando para isso é:
+**Restaurar um arquivo `.sql` com `psql`:**
 
-                ```psql
+```psql
+psql -U postgres -d nome_do_banco -f caminho/do/backup.sql
+```
 
-                    pg_dump -U postgres -v -F c -f "caminho/do/diretório/desejado/nome-do-backup" -t nome-da-tabela nome-do-banco
+**Restaurar apenas uma tabela:**
 
-                ```
+```psql
+pg_restore -U postgres -t nome-da-tabela -d nome-do-banco caminho/onde/está/o/banco
+```
 
-                - Para referênciar a tabela utilizamos o `-t` e em seguido o seu nome.
+> - `-t` — informa que é uma tabela específica.
+> - `-d` — indica o banco de destino.
 
-    - `Restauração:`
-
-        - Para restaurar o banco via `psql` utilizamos o seguinte comando:
-
-            ```psql
-
-                pg_restore --create -U postgres -v caminho/desejado/nome-do-banco.pgbackup
-
-            ```
-
-            - Vale ressaltar que o `pg_restore` não restaura arquivos `SQL` só em formatos `custom` como `c`, `d` e `t`.
-
-            - Como nosso `backup` foi em formato `p`, o comando acima não vai funcionar, então usamos o `psql` que é apropriado para `SQL`:
-
-            ```psql
-
-                psql -U postgres -d nome_do_banco -f caminho/do/backup.sql
-
-            ```
-
-            - Comando para restaurar uma tabela:
-
-            ```psql
-
-                pg_restore -U postgres -t nome-da-tabela -d nome-do-banco caminho/onde/está/o/banco
-
-            ```
-
-            - Aqui o `-t` informa que é uma tabela que vai ser restaurada, o `-d` indica o nome do banco e após isso digitamos onde se encontra o banco.
+---
 
 ## Relacionamentos entre tabelas
 
-- O que são relacionamentos?
+### O que são relacionamentos?
 
-    - Também chamados de associações, são formas de vincularmos os dados de uma tabela aos dados de outra tabela.
+> Também chamados de associações, são formas de **vincular os dados de uma tabela aos dados de outra**, permitindo modelar relações do mundo real dentro do banco.
 
-        - Exemplo:
+**Exemplo:**
 
-            - Temos duas tabelas clientes e endereços. Um relacionamento entre essas tabelas permite que associemos uma linha de tabela usuários a um endereço específico.
+- Temos duas tabelas: `clientes` e `endereços`. Um relacionamento entre elas permite associar uma linha da tabela `usuarios` a um endereço específico.
 
-                - `Usuario:`
+```sql
+-- Usuario:
+id: 312
+nome: 'Bass'
+email: 'bass123@gmail.com'
+id_endereco: 9634
 
-                    ```SQL
+-- Endereço:
+id: 9634
+rua: 'Av. Presidente Vargas'
+numero: '34'
+id_usuario: 312
+```
 
-                        id: 312
-                        nome: 'Bass'
-                        email: 'bass123@gmail.com'
-                        id_endereco: 9634
-                    
-                    ```
+> Nos exemplos acima utilizamos o relacionamento `1:1` para ligar as tabelas `usuario` e `endereco` via `id_usuario` e `id_endereco`.
 
-                - `Endereço:`
+---
 
-                    ```SQL
+### Como funcionam os relacionamentos?
 
-                        id: 9634
-                        rua: 'Av. Presidente Vargas'
-                        numero: '34'
-                        id_usuario: 312
+- **Chave primária (`Primary Key` / `PK`):** coluna ou conjunto de colunas que identificam unicamente cada linha de uma tabela.
 
-                    ```
+- **Chave estrangeira (`Foreign Key` / `FK`):** coluna ou conjunto de colunas que estabelecem uma ligação entre duas tabelas.
 
-                - Nos exemplos acima utilizamos o relacionamento de `1:1` para ligar as tabelas `usuario` com `endereco` via `id_usuario` e `id_endereco`.
+---
 
-    - Como funcionam os relacionamentos?
+### Os 3 tipos de relacionamento no SQL
 
-        - Chave primária(`Primary Key,` ou simplesmente `PK`):
+| Tipo                   | Descrição                                                                               | Exemplo                                                            |
+|------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| Um-para-Um (`1:1`)     | Cada linha de uma tabela está relacionada a no máximo uma linha de outra tabela         | Um usuário possui um endereço e um endereço pertence a um usuário  |
+| Um-para-Muitos (`1:n`) | Cada linha de uma tabela pode estar relacionada a múltiplas linhas de outra tabela      | Um gênero pode ser usado em vários filmes                          |
+| Muitos-para-Muitos (`n:n`) | Linhas de ambas as tabelas podem estar relacionadas entre si — usa tabela intermediária | Uma tag pode classificar vários posts e um post pode ter várias tags |
 
-            - Coluna ou conjunto de colunas que identificam unicamente cada linha de uma tabela.
+---
 
-        - Chaves estrangeiras(`Foreign Key,` ou `FK`):
+### Por que os relacionamentos são importantes?
 
-            - Coluna ou conjuntos de colunas que estabelecem uma ligação entre duas tabelas.
+- **Garantir integridade:** chaves estrangeiras evitam a inserção de dados órfãos ou inconsistentes — você não pode inserir um pedido para um cliente que não existe.
 
-    - Existem 3 tipos de relacionamentos no `SQL`:
+- **Evitar redundância:** a normalização divide os dados em tabelas relacionadas, onde cada informação é armazenada uma única vez. Atualizações em uma tabela se refletem automaticamente nas associações.
 
-        - Um-para-Um(`1:1`):
+- **Consultas eficientes:** relacionamentos bem estruturados permitem `JOINs` eficientes para consultas complexas envolvendo múltiplas tabelas.
 
-            - Cada linha de uma tabela está relacionada a, no máximo, uma linha de outra tabela.
+- **Modelagem intuitiva:** o modelo de dados reflete as relações do mundo real entre diferentes entidades.
 
-            - Exemplo:
+- **Controle de acesso e segurança:** permissões podem ser definidas por tabela, protegendo dados sensíveis de acessos não autorizados.
 
-                - Um usuário possui um endereço e uma endereço só pode pertencer a um usuário.
+---
 
-        - Um-para-Muitos(`1:n`):
+## Relacionamentos 1:1, 1:n e n:n
 
-            - Cada linha de uma tabela pode estar relacionada a múltiplas linhas de outra tabela.
+### Criando o banco de exemplo
 
-            - Exemplo:
+```sql
+CREATE DATABASE relacionamentos;
+```
 
-                - Um filme possui um gênero, mas um mesmo gênero pode ser usado para vários filmes.
+---
 
-        - Muitos-para-Muitos(`n:n`):
+### Relacionamento `1:1`
 
-            - Linhas de uma tabela podem estar relacionadas a múltiplas linhas de outra tabela e vice-versa, implementado com a ajuda de uma tabela intermediária.
+**Primeira tabela:**
 
-            - Exemplo:
+```sql
+CREATE TABLE employees(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    phone VARCHAR(30)
+);
+```
 
-                - Um post do blog pode ser classificado com várias tagas, e uma mesma tag pode ser usada para classificar vários post.
+**Segunda tabela — com chave estrangeira:**
 
-    - Por que os relacionamentos são importantes?
+```sql
+CREATE TABLE addresses(
+    id SERIAL PRIMARY KEY,
+    street VARCHAR(255) NOT NULL,
+    number VARCHAR(10),
+    complement VARCHAR(255),
+    city VARCHAR(255) NOT NULL,
 
-        - Garantir integridade:
+    employee_id INT UNIQUE,
+    FOREIGN KEY(employee_id) REFERENCES employees(id)
+);
+```
 
-            - Relacionamentos ajudam a manter a consistência dos dados ao garantir que as assosiações entre tabelas sejam válidas.
+> - `FOREIGN KEY` — declara a chave estrangeira.
+> - `REFERENCES` — indica qual tabela e coluna serão referenciadas.
+> - `UNIQUE` — garante o comportamento `1:1` (sem UNIQUE seria `1:n`).
 
-                - Exemplo:
+---
 
-                    - Se uma tabela pedidos tem uma chave estrangeira que referencia a tabela Clientes, cada pedido deve estar associado a um cliente existente.
+### Relacionamento `1:n`
 
-            - As chaves entrangeiras impõem restrições que evitam a inserção de dados órfãos ou inconsistentes.
+```sql
+CREATE TABLE departaments(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
 
-                - Exemplo:
+ALTER TABLE employees ADD COLUMN departament_id INT;
 
-                    - Você não pode inserir um pedido para um cliente que não existe na tabela Clientes.
+ALTER TABLE employees ADD CONSTRAINT fk_departament
+FOREIGN KEY(departament_id) REFERENCES departaments(id);
+```
 
-        - Evitar redundância:
+> - Primeiro adicionamos a coluna `departament_id` à tabela `employees`.
+> - Depois criamos a constraint de chave estrangeira com um nome (`fk_departament`) — necessário ao alterar uma tabela existente.
+> - A chave estrangeira fica na tabela `employees` porque ela é o lado "muitos" do relacionamento.
 
-            - Relacionamentos permitem a normalização do banco de dados, onde os dados são divididos em tabelas relacionadas de forma que cada peça de informação seja armazenada uma única vez.
+**Criando já com chave estrangeira (tabela do zero):**
 
-                - Normalização:
+```sql
+CREATE TABLE employees(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    phone VARCHAR(30),
+    departament_id INT NOT NULL,
 
-                    - É um conjunto de regras que visa a organização de um projeto de banco de dados para reduzir a redundância de dados, aumentar a integridade de dados e o desempenho.
+    FOREIGN KEY(departament_id) REFERENCES departaments(id)
+);
+```
 
-            - Com redução da redundância, a manutenção dos dados se torna mais simples e menos propensa a erros.
+> A diferença para o `1:1` é a ausência do `UNIQUE` — sem ele, vários funcionários podem pertencer ao mesmo departamento.
 
-            - Atualizações feitas em uma tabela relacionada automaticamente se refletem nas associações, eliminando a necessidade de múltiplas atualizações em várias tabelas.
+---
 
-        - Consultas eficientes:
+### Utilizando o `JOIN`
 
-            - Relacionamentos bem estruturados permitem a execução de operações de junção(`JOIN`) eficientes, que são essenciais para consultas complexas envolvendo múltiplas tabelas ao mesmo tempo.
+> O `JOIN` serve para fazer a junção de duas ou mais tabelas em uma única consulta, aproveitando as chaves estrangeiras como "ponte" entre elas.
 
-            - Exemplo:
+```sql
+SELECT * FROM employees JOIN addresses ON employees.id = addresses.employee_id;
+```
 
-                - Para obter todos os pedidos feitos por um cliente, uma junção entre tabelas `Clientes` e `Pedidos` pode ser realizada.
+> - `JOIN` — indica qual tabela será unida.
+> - `ON` — define a condição de junção (qual coluna liga as duas tabelas).
+> - `employees.id = addresses.employee_id` — o ponto referencia `tabela.coluna`.
 
-        - Modelagem intuitiva:
+**Selecionando colunas específicas com JOIN (evitando ambiguidade):**
 
-            - Relacionamentos permitem que o modelo de dados do banco de dados reflita as relações do mundo real entre diferentes `entidades`.
+```sql
+SELECT
+    employees.id AS ID,
+    employees.name AS Funcionário,
+    employees.phone AS Telefone,
+    departaments.name AS Departamento
+FROM employees JOIN departaments ON employees.departament_id = departaments.id;
+```
 
-        - Controle de acesso e segurança:
+> Quando duas tabelas têm colunas com o mesmo nome (como `id`), é necessário prefixar com `tabela.coluna` para evitar consultas ambíguas. O `AS` deixa o resultado mais legível.
 
-            - Relacionamento permitem controles de acesso mais precisos, permissões podem ser estabelecidas para que apenas determinandos usuários possam modificar dados em uma tabela específica, enquanto outros possam apenas visualizar dados agregados ou relacionados.
+---
 
-            - Através de relacionamentos bem definidos, é possível implementar políticas de segurança que garantem que os dados sensíveis sejam protegidos e acessados apenas conforme necessários, evitando o vazamentos de acessos não autorizados.
+### Relacionamento `n:n`
 
-## Relacionamntos 1:1, 1:n e n:n
+> Acontece quando os registros de uma tabela podem se relacionar com vários registros de outra tabela e vice-versa. É implementado com uma **tabela intermediária (ASSOCIATIVA)**.
 
-- Aqui irei implementar os relacionamentos na prática mas precisamos criar um banco para isso, então vamos lá.
+**Criando as tabelas principais:**
 
-    ```SQL
+```sql
+CREATE TABLE students(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
+);
 
-        CREATE DATABASE relacionamentos;
+CREATE TABLE courses(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
+);
+```
 
-    ```
-- Relacionamento `1:1`:
+**Criando a tabela associativa:**
 
-    - Criado o banco, agorei irei criar 2 tabelas para elas se relacionar;
+```sql
+CREATE TABLE student_courses(
+    student_id INT,
+    course_id INT,
 
-        - Primeira tabela:
+    PRIMARY KEY (student_id, course_id),
+    FOREIGN KEY(student_id) REFERENCES students(id),
+    FOREIGN KEY(course_id) REFERENCES courses(id)
+);
+```
 
-            ```SQL
+> - A **chave primária composta** `(student_id, course_id)` garante que o mesmo aluno não seja inscrito no mesmo curso duas vezes — mas pode ser inscrito em vários cursos diferentes.
+> - Duas chaves estrangeiras fazem a ligação com as tabelas `students` e `courses`.
 
-                CREATE TABLE employees(
-                    id SERIAL PRIMARY KEY,
-                    name VARCHAR(255),
-                    phone VARCHAR(30)
-                );
+**Inserindo dados na tabela associativa:**
 
-            ```
+```sql
+INSERT INTO student_courses(student_id, course_id)
+VALUES(1,1), (2,1), (3,1), (3,2);
+```
 
-        - Segunda tabela:
+> Aluno `id 1` no curso `id 1`, aluno `id 2` no curso `id 1`, aluno `id 3` no curso `id 1` e no curso `id 2`.
 
-            ```SQL
+**Consultando com JOIN nas três tabelas:**
 
-                CREATE TABLE addresses(
-                    id SERIAL PRIMARY KEY,
-                    street VARCHAR(255) NOT NULL,
-                    number VARCHAR(10),
-                    complement VARCHAR(255),
-                    city VARCHAR(255) NOT NULL,
+```sql
+SELECT * FROM student_courses
+JOIN students ON student_courses.student_id = students.id
+JOIN courses ON student_courses.course_id = courses.id;
+```
 
-                    employee_id INT UNIQUE,
-                    FOREIGN KEY(employee_id) REFERENCES employees(id)
-                );
-
-            ```
-
-            - Observa-se que utilizei duas novas constraints, que foram `FOREIGN KEY` e `REFERENCES`, ela servem para indicar uma chave estrangeira e referência qual tabela será feito o relacionamento. Em nosso caso criamos a coluna `employee_id` para ser a nossa chanve estrangeira e referênciamos na tabela `employees` na coluna `id` que essa será a chave estrangeira para nosso relacionamento, nesse exemplo usamos a lógica de relacionamento de `1:1` ou Um para Um.
-
-- Relacionamento `1:n`:
-
-    - Agora irei aborda a relação de um para muitos, para isso irei criar uma nova tabela:
-
-        ```SQL
-
-            CREATE TABLE departaments(
-                id SERIAL PRIMARY KEY,
-                name VARCHAR(255) NOT NULL
-            );
-
-            ALTER TABLE employees ADD COLUMN departament_id INT;
-
-            ALTER TABLE employees ADD CONSTRAINT fk_departament 
-            FOREIGN KEY(departament_id) REFERENCES departaments(id);
-
-        ```
-
-        - Para que possamos adicionar um campo da chave estrangeira primeiramente termos que mudar a nossa tabela principal para adicionar a coluna que vai ser responsável pela chanve estrangeira que no caso seria `departament_id`, após isso vamos modificar mais uma vez nossa tabela para enfim criar a refeência de nossa chanve estrangeira, já que vamos alterar uma tabela existente precisamos dar um nome a nossa `CONSTRAINT` que em nosso caso foi `fk_departament`. Nossa chanve estrangeira é `departament_id` referenciado na tabela `departaments` em sua coluna `id`, essa é nossa chave estrangeira para nos relacionar com outra tabela.
-
-        - Vale ressaltar que criamos a nossa chave estrangeira na tabela `employees` já que por via de regras geralmente criamos sempre a `foreign` na tabela que se relacionar `1:n` ou Um para Muitas, que em nosso caso é a tabela `departaments`.
-
-    - Usando a criação da tabelas para criar a tabela do zero com a chave estrangeira:
-
-        ```SQL
-
-            CREATE TABLE employees(
-                id SERIAL PRIMARY KEY,
-                name VARCHAR(255) NOT NULL,
-                phone VARCHAR(30),
-                departament_id INT NOT NULL,
-
-                FOREIGN(departaments_id) REFERENCES departaments(id);
-            );
-
-        ```
-
-        - A única diferença dessa criação de tabela com chave estrangeira para a outro lá em cima é o `UNIQUE`, já que quanod utilizamos o mesmo a tabela se comporta de `1:1` e não `1:n`.
-
-- Utilizando o `JOIN`:
-
-    - O `JOIN` server para fazer a junção de duas tabelas, para consultas mais avançadas onde queremos dados de algumas tabelas e juntar tudo em uma consulta, para isso que usamos o conceito de chave estrangeira.
-
-        ```SQL
-
-            SELECT * FROM employees JOIN addresses ON employees.id = addresses.employee_id;
-
-        ```
-
-        - Aqui eu fiz um consulta utilizando o `JOIN`, usei a tabela `employees` e fiz a junção com a outra tabela `addresses` e quis juntar oa coluna `id` da tabela `employees` com a coluna `employee_id` da tabela `addresses`, para isso utlizo o `ON` que server de ponte para conectar as tabelas e após isso uso o `employees.id` = `addresses.employee_id` o ponto serve para referênciar a coluna desejada.
-
-        - Vale ressaltar que quando trabalhamos com `JOIN`, na hora e especificar a colunas no `SELECT`, temos 2 colunas `id` em diferentes tabelas, para selecionar a coluna desejada utilize essa sintaxe:
-
-            ```SQL
-
-                SELECT
-                    employees.id AS ID,
-                    employees.name AS Funcionário,
-                    employees.phone AS Telefone,
-                    departaments.name AS Departamento
-                FROM employees JOIN departaments ON employees.department_id = departaments.id;
-
-            ```
-            
-            - Observa-se que aqui até utilizei o `AS` para deixar algo mair limpo, e utilizei o `tabela-deseja.coluna-desejada` para referênciar a coluna e a tabela que queremos para não ser uma consulta ambigua.
-
-- Relacionamento `n:n`
-
-    - Um relaciomaneto de Muitos para Mutiso `n:n` acontecem quando os registros de uma tabela pertencem a várias outras tabelas. Irei criar a tabela com a relação de `n:n`:
-
-        ```SQL
-
-            CREATE TABLE students(
-                id SERIAL PRIMARY KEY,
-                name VARCHAR(255)
-            );
-
-            CREATE TABLE courses(
-                id SERIAL PRIMARY KEY,
-                name VARCHAR(255)
-            );
-
-        ```
-
-        - Obeseva-se que as tabelas não foram relacionado, até porque irei utlizar outra tabela para fazer a intermediação entre essas duas tabelas, que será a relação de `n:n`.
-
-        ```SQL
-
-            CREATE TABLE student_courses(
-                student_id INT,
-                course_Id INT,
-
-                PRIMARY KEY (student_id, course_id),
-                FOREIGN KEY(student_id) REFERENCES students(id),
-                FOREIGN KEY(course_id) REFERENCES courses(id)
-            );
-
-        ```
-
-        - Observa-se que aqui eu criei o relacionamento de `n:n` a partir de outra tabela, usando uma chave primária composta que foi `student_id, course_id`. Graças a chave primária composta eu posso tanto cadastra um `id` de um aluno em um curso mas não posso cadatra o mesmo no mesmo curso porém posso cadastra o mesmo `id` do aluno em vários outro cursos.
-
-        - Utilizei o conceito de chave estrangeira dupla para fazer ligamento as tabelas `students` e `courses` para seja aplicado o relacionamento `n:n`, foi usado a referência da coluna `student_id` para a coluna `id` da tabela `students`, foi usado a referência da coluna `course_id` para a coluna `id` da tabela `courses`, assim completando o relacionamento e possibilitando o uso de `JOIN` para junção dos dados futuros. Esse conceito de tabela para `n:n` é chamada de tabela `ASSOCIATIVA`.
-
-    - Iserindo dados na tabela `ASSOCIATIVA`:
-
-        - Antes de prosseguir precisamos adicionar dados em nossas tabelas `students` e `courses` após isso adicionamos em nossa tabela `student_courses`.
-
-        ```SQL
-
-            INSERT INTO student_courses(student_id, course_id)
-            VALUES(1,1), (2,1), (3,1), (3,2);
-
-        ```
-
-        - Aqui eu inserir o aluno com `id 1` no curso com `id 1`, aluno com `id 2` no curso com `id 1`, aluno com `id 3` no curso com `id 1` e novamente o aluno com `id 3` no curso com `id 2`.
-
-    - Consultando tabelas com relacionamentos `n:n`:
-
-        ```SQL
-
-            SELECT * FROM student_courses
-            JOIN students ON student_courses.student_id = students.id
-            JOIN courses ON student_courses.course_id = courses.id;
-
-        ```
-
-        - Aqui utilizei o `JOIN` para fazer a junção entre as 3 tabelas, e pegar os dados. A referência usada foi a nossa chave primária composta e as chave estrangeiras.
+---
 
 ## Integridade Referencial
 
-- Integridade referêncial são regras feitas para que nosso banco seja coesso e funcional, além de organizar e deixa a nossa lógica funcional e sem ferir nenhum conceito e regras de normalização.
+> Integridade referencial são regras que garantem que nosso banco seja **coeso e consistente** — sem dados "pendurados" ou referências inválidas entre tabelas.
 
-    - `Consistência de estado:`
-        
-        - Garante que o banco de dados nunca entre em um estado inválido. Se o Dado A depende do Dado B, o sistema impede que o Dado B desapareça e deixe o Dado A "pendurado" (o que chamamos de registro órfão).
+- **Consistência de estado:** se o Dado A depende do Dado B, o sistema impede que o Dado B seja removido e deixe o Dado A como um "registro órfão".
 
-    - `Semântica dos Dados:`
+- **Semântica dos dados:** sem chaves estrangeiras e restrições, números em uma coluna são apenas números. Com a integridade, esses números se tornam **referências com significado** — estabelecendo um contrato de confiança entre as tabelas.
 
-        - A integridade define o que os dados significam. Sem chaves estrangeiras e restrições, os números em uma coluna são apenas números. Com a integridade, esses números tornam-se referências, estabelecendo um contrato de confiança entre as tabelas.
+---
 
-- irei criar duas tabela para usar de exemplo para falar sobre a integridade referêncial:
+### Exemplo prático de integridade referencial
 
-    ```SQL
+```sql
+CREATE TABLE customers(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
 
-        CREATE TABLE customers(
-            id SERIAL PRIMARY KEY,
-            name VARCHAR(255) NOT NULL,
-            email VARCHAR(100) UNIQUE NOT NULL
-        );
+CREATE TABLE orders(
+    id SERIAL PRIMARY KEY,
+    total DECIMAL(10, 2),
+    customer_id INT,
+    FOREIGN KEY(customer_id) REFERENCES customers(id)
+);
+```
 
-        CREATE TABLE orders(
-            id SERIAL PRIMARY KEY,
-            total DECIMAL(10, 2),
-            customer_id INT,
-            FOREIGN KEY(customer_id) REFERENCES customers(id)
-        );
+```sql
+INSERT INTO customers(name, email)
+VALUES('clark', 'clark@gmail.com'), ('bruce wayne', 'bruce@gmail.com'), ('diana prince', 'diana@gmail.com');
 
-    ```
+INSERT INTO orders(total, customer_id)
+VALUES(100.00, 1), (240.00, 2), (200.00, 1), (420.00, 3), (700.00, 2);
+```
 
-    - Agora irei adiconar dados nessas tabelas, creio que a partir desse ponto de leitura já sabemos interpreta essas tabelas.
+```sql
+SELECT * FROM orders JOIN customers ON customers.id = orders.customer_id;
+```
 
-        ```SQL
+![Resultado](../Assets/consulta.png)
 
-            INSERT INTO customers(name, email)
-            VALUES('clark', 'clark@gmail.com'), ('bruce wayne', 'bruce@gmail.com'), ('diana prince', 'diana@gmail.com');
+> Nossa relação de `1:n` está funcional!
 
-            INSERT INTO orders(total, customer_id)
-            VALUES(100.00, 1), (240.00, 2), (200.00, 1), (420.00, 3), (700.00, 2);
+---
 
-        ```
+### Comportamento ao excluir registros relacionados
 
-    - Após inserir os dados irei fazer uma consulta rápida para ver os resultado usando o `JOIN`:
-    
-        ```SQL
+```sql
+DELETE FROM customers WHERE id = 1;
+```
 
-            SELECT * FROM orders JOIN customers ON customers.id = orders.customer_id;
+> Isso gerará um erro — estamos violando a restrição da chave estrangeira. Para alterar esse comportamento, recriamos a tabela com as cláusulas `ON DELETE` e `ON UPDATE`:
 
-        ```
+```sql
+DROP TABLE orders;
 
-        ![Resultado](../Assets/consulta.png)
+CREATE TABLE orders(
+    id SERIAL PRIMARY KEY,
+    total DECIMAL(10, 2),
+    customer_id INT,
+    FOREIGN KEY(customer_id) REFERENCES customers(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+```
 
-        - Perfeito, nossa relação de `1:n` estar funcional!
+> - **`CASCADE`** — ao excluir ou atualizar um registro pai, a alteração se propaga automaticamente para todos os registros filhos relacionados.
+> - **`RESTRICT`** (padrão) — impede a exclusão/atualização se houver registros filhos relacionados.
+> - **`SET NULL`** — mantém os registros filhos, mas define o valor da chave estrangeira como `NULL`.
 
-- Vamos tentar excluir um dados da nossa tabela `customers`:
-
-    ```SQL
-
-        DELETE FROM customers WHERE id = 1;
-
-    ```
-
-    - Isso ira gerar um erro, afinal estamos violando a restrição da chave estrangeira, para alterar esse padrão é necessário ajusta isso na criação da tabela, vamos recriar essas tabelas:
-
-        ```SQL
-
-            DROP TABLE orders;
-
-            CREATE TABLE orders(
-                id SERIAL PRIMARY KEY,
-                total DECIMAL(10, 2),
-                customer_id INT,
-                FOREIGN KEY(customer_id) REFERENCES customers(id)
-                ON DELETE CASCADE
-                ON UPDATE CASCADE
-            );
-
-        ```
-
-        - Observa-se que na criação da tabela eu utilizei as cláusulas `ON DELETE` e `ON UPDATE` ela servem para espelha uma alteração ou excluão nas tabelas com relacionamentos `1:n`, no padrão isso não é permitido mas quando usamos o `CASCADE` ou cascata toda alteração ou exclução vai ser feito em toda tabela que estiver relacionada com a nossa chave estrnageira.
-
-        - O modo padrão seria o `RESTRICT`, oq utilizamos foi o `CASCADE` e também existe o `SET NULL` que define o dado como nulo mas quando você tentar excluir um X dados, ele mantem o dado da tabela de nossa chanve estrangeira e define o `id` da nossa outra tabela referênciada como nulo.
+---
 
 ## Encadeamento de consulta com JOIN
 
-- Irei aborda sobre o encadeamento de `JOIN` ou em termos mais comuns, como fazer a consultar entrando em tabelas por tabelas via `FOREIGN/FK` ou chave estrangeira,segue o exemplo:
+> É possível encadear múltiplos `JOINs` em uma única consulta, "saltando" de tabela em tabela via chaves estrangeiras para buscar dados de toda a hierarquia.
 
-    ```SQL
+```sql
+SELECT
+    doctors.id AS doctor_id,
+    doctors.name AS doctor_name,
+    consultations.id AS consultation_id,
+    consultations.consultation_date,
+    patients.id AS patient_id,
+    patients.name AS patient_name
+FROM
+    doctors
+JOIN
+    consultations ON doctors.id = consultations.doctor_id -- Primeiro salto: doctors → consultations
+JOIN
+    patients ON consultations.patients_id = patients.id  -- Segundo salto: consultations → patients
+WHERE
+    doctors.id = 1;
+```
 
-        SELECT 
-            doctors.id AS doctor_id,
-            doctors.name AS doctor_name,
-            consultations.id AS consultation_id,
-            consultations.consultation_date,
-            patients.id AS patient_id,
-            patients.name AS patient_name
-        FROM
-            doctors
-        JOIN
-            consultations ON doctors.id = consultations.doctor_id -- Primeiro salto para a tabala consultations
-        JOIN
-            patients ON consultations.patients_id = patients.id -- Segundo salto da tabela consultations para patients
-        WHERE
-            doctors.id = 1;
+> - O primeiro `JOIN` conecta `doctors` a `consultations` via `doctor_id`.
+> - O segundo `JOIN` conecta `consultations` a `patients` via `patients_id`.
+> - O `WHERE` filtra apenas os dados do médico com `id = 1`.
+>
+> A lógica é percorrer as relações como se fossem elos de uma corrente — cada `JOIN` é um passo na hierarquia de relacionamentos.
 
-    ```
-
-    - Aqui eu fiz o encadeamento de `JOIN` para buscar o `id`, `nome` do doutor, a `consultations.id` para `id` da consulta, o `consultations.consultation_date` para a data da consulta e o `patients.id` e `patients.name` para o nome e `id` do paciente.
-    
-    - Para eu puxar os dados da tabela `consultations` eu preciso fazer um `JOIN` da tabela `doctors` via `FOREIGN` para puxar a datas da consultas e os `ids` das consultas. Após isso tenho que dá um `JOIN` da tabela `patients` a partir da tabela `consultations` para buscar os dados do nome do paciente e o `id` do mesmo via `FOREIGN`, feito isso utilizo a cláusula `WHERE` para definir a minha condição, quero apenas os dados da datas de consultas e pacientes atendidos pelo doutor com `id=1`.
+---
 
 ## Modelagem de banco de dados
 
-- O que a modagela de banco de dados?
+### O que é modelagem de banco de dados?
 
-    - É o ato de pensar de como ele é, de como vai ser, isso é a modelagem do banco de dados, nossa interpretação de pensamento lógico serão cruciais para isto.
+> Modelagem é o processo de **pensar e planejar** como o banco será estruturado antes de criá-lo. É onde a lógica do sistema se transforma em tabelas, colunas e relacionamentos.
 
-- Introdução à modelagem de banco de dados:
+- **Processo de criar uma representação visual** do sistema de banco de dados.
+- **Organizar os dados de maneira lógica e eficiente**, definindo quais informações precisam ser armazenadas e como se relacionam.
 
-    - `O que é e para que serve?`
+---
 
-        - Processo de criar uma representação visual do sistema de banco de dados.
+### Identificando requisitos
 
-        - Organizar os dados de maneira lógica e eficiente, ajudando a definir quais informações precisam ser armazenadas
+> Chamamos de requisitos as funcionalidades e regras necessárias para o sistema.
 
-    - `Identificando requisitos:`
+- Os **Stakeholders** (partes interessadas no desenvolvimento) têm papel importante nessa etapa — geralmente são quem melhor define o que o sistema precisa fazer.
+- Devem ser coletadas o máximo de informações possível sobre como o sistema deverá se comportar.
+- Após analisar as informações coletadas, devem ser identificadas as **entidades** do sistema (o que queremos armazenar).
 
-        - Chamamos de requisitos as funcionalidades e regras necessárias para o sistema.
+---
 
-        - Os `StakeHolders` tem um papel importante nessa etapa:
+### Definindo as tabelas
 
-            - `Stakeholders` são as partes interessadas no desenvolvimento do sistema, geralmente é quem melhor consegue definir o que o sistema precisa fazer.
+> As informações coletadas são utilizadas para mapear tabelas e colunas.
 
-        - Devem ser coletadas tantas informações quando for possível sobre como o sistema deverá se comportar.
+- **Entidades** costumam se tornar tabelas. **Atributos** costumam se tornar colunas:
 
-        - Após analisar analisar as informações coletadas, devem ser identificadas as `entidades` do sistema(do que queremos armazenar os dados).
+```bash
+Entidade "alunos"     → tabela "alunos"
+Entidade "professor"  → tabela "professores"
 
-    - `Definindo as tabelas:`
+Atributos "nome", "telefone", "matrícula", "data de nascimento" → colunas
+```
 
-        - As informações coletadas são utilizadas para mapear tabelas e colunas.
+---
 
-        - `Entidades` costumam se tornar tabelas, `atributos` costumam se tornar colunas:
+### Pensando nos relacionamentos
 
-            - Exemplo:
+> Alguns relacionamentos são intuitivos — podem ser inferidos a partir das características das entidades. Outros são "artificiais" — criados a partir de uma necessidade do sistema.
 
-                ```bash
+- **Relacionamento intuitivo:** uma publicação e um autor são entidades diferentes, mas uma publicação necessita de um autor → temos um relacionamento.
 
-                    Entidade "alunos" -> tabela "alunos"
-                    Entidade "professor" -> tabela "professores"
+- **Relacionamento artificial:** um paciente e um médico não têm conexão direta, mas o sistema precisa saber quais pacientes foram atendidos por quais médicos → criamos uma tabela de "consultas" para intermediar.
 
-                    Atributos "nome", "telefone", "matrícula", 
-                    "data de nascimento" se tornam colunas.
+- **Dica prática:** use as consultas que deverão ser executadas como referência para planejar os relacionamentos necessários.
 
-                ```
-
-    - `Pensando nos relacionamentos:`
-
-        - Alguns relacionamentos são intuitos, podem ser inferidos a partir das características das `entidades`:
-
-            - Exemplo:
-
-                - Uma publicação e um autor são `entidades(e tabelas)` diferentes, mas uma publicação necessita de um autor, logo temos um relacionamento.
-
-        - Outros relacionamentos são um pouco mais "artificiais", modelamos a partir de uma necessidade do sistema:
-
-            - Exemplo:
-
-                - Um paciente e um médico são `entidades(e tabelas)` diferentes, e a princípio não tem conexão. No entando o sistema necessita saber quais pacientes foram atendidos por quais médicos, logo, temos que criar um relacionamento(que pode ser feito através de outra tabela, como a de "consultas").
-
-        - E uma última dica é usar como referência as consultas que deverão ser executadas para planejar os relacionamentos necessários:
-
-            - Exemplo:
-
-                - Um sistema de imóveis precisa que seja possível realizar uma consulta para obter os usuários que demonstraram interesse em um imóvel disponível, logo, precisamos de uma forma de armazenar isso(antes mesmo de alugar o imóvel, que seria um relacionamento mais intuitivo).
+---
 
 ## Normalização banco de dados
 
-- Normalização é o conjunto de regras que visa mininizar as anomalias de modificações dos dados e dar maior felxibilidade em utilização.
+> Normalização é o conjunto de regras que visa **minimizar anomalias, redundâncias e inconsistências** nos dados, dando maior flexibilidade e facilidade de manutenção ao banco.
 
-- Por que normalizar?
+**Por que normalizar?**
 
-    - 1-`Minimização de redundâncias e inconsistências;`
-    - 2-`Facilidade de manipulação do banco de dados;`
-    - 3-`Facilidade de manutenção do sistema de informações;`
+1. Minimização de redundâncias e inconsistências.
+2. Facilidade de manipulação do banco de dados.
+3. Facilidade de manutenção do sistema de informações.
 
-- Para que você compreenda melhor vou dar um exemplo. Vamos supor quee você criou entidade `funcionários` para armazenar as informações dos funcionários de uma empresa e que o resultado físico final seja a tabela mostrada abaixo:
+---
 
-    ![Tabela](../Assets/tabela_funcionarios.png)
+### Exemplo de tabela não normalizada
 
-- Se voceê olhar bem para a tabela acima vai ter que concordar comigo que ela sofre seguintes anomalias:
+![Tabela](../Assets/tabela_funcionarios.png)
 
-    - `Anomalia de exclusão:`
+> Essa tabela sofre as seguintes anomalias:
 
-        - O que acontece se excluir o funcionário com código 3? O setor vai ser excluído junto e ai você perdeu os dados...
+- **Anomalia de exclusão:** excluir o funcionário de código 3 apagaria os dados do setor junto.
+- **Anomalia de alteração:** renomear o setor "suporte" para "apoio" exigiria atualizar **todos** os registros com esse setor.
+- **Anomalia de inclusão:** contratar um novo funcionário para o setor suporte exigiria atualizar o campo `QuantidadeFuncionarios` em **todas** as ocorrências desse setor.
 
-    - `Anomalia de alteração:`
+---
 
-        - O nome do setor suporte mudou para apoio. Você vai ter que alterar o nome em todo os registros da tabela, mais uma perca de tempo...
+### As três Formas Normais
 
-    - `Anomalia de inclusão:`
+**1ª Forma Normal (1FN):**
 
-        - Foi contratado um novo funcionários para o setor suporte. Você vai ter que incluir um funcionário ao campo `QunatidadeFuncionarios` em todas as ocorrências com setor de nome `suporte`, mais perca de tempo...
+> Uma relação está na `1FN` se todos os domínios básicos contiverem apenas **valores atômicos** (sem grupos repetitivos).
 
-- Para resolver o dilema acima temos que normalizar a entidade. Para que isto aplicamos as `formais normais` a saber:
+- Identificar a chave primária da entidade.
+- Identificar o grupo repetitivo e excluí-lo da entidade.
+- Criar uma nova entidade com a chave primária da entidade anterior e o grupo repetitivo.
 
-    - 1-`Primeira forma normal (1FN):`
+---
 
-        - Uma relação está na `1FN` se somente todos os domínios básicos contiverem somente valores atômicos(não contiver grupos repetitivos). Para atingir esta forma normal devemos eliminar grupos de repetição. Como?
+**2ª Forma Normal (2FN):**
 
-            - Identificar a chave primária da entidade;
-            - Identificar o grupo e excluí-lo da entidade; 
-            - Criar uma nova entidade com chave primária da entidade anterior e o grupo repetitivo.
+> Uma relação está na `2FN` se estiver na `1FN` **e** todos os atributos dependerem totalmente da chave primária (não apenas de parte dela).
 
-        - A chave primária da nova entidade será obtida pela concentração da chave primária da entidade inicial e a do grupo repetitivo.
+- Identificar atributos que não dependem funcionalmente de toda a chave primária.
+- Removê-los e criar uma nova entidade com eles.
+- A chave primária da nova entidade será o atributo do qual os removidos são dependentes.
 
-    - 2-`Segunda forma normal (2FN):`
+---
 
-        - Uma relação `R` está na `2FN` se e somente se ela estiver na primeira e todos os atributos da chave forem totalmente dependentes da chave primária(depende de toda a chave e não apenas de parte dela).
+**3ª Forma Normal (3FN):**
 
-            - Identificar os atributos que não são funcionalmente dependentes de toda a chave primária.
-            - Remover da entidade todos esses atributos identificados e criar uma nova entidade com eles.
-        
-        - A chave primária da nova entidade será o atributo do qual os atributos do qual os atributos removidos são funcionalmente dependentes.
+> Uma relação está na `3FN` se estiver na `2FN` **e** todos os atributos não-chave forem independentes entre si (sem dependência transitiva).
 
-    - 3-`Terceira forma normal (3FN):`
+- Identificar atributos funcionalmente dependentes de outros atributos não-chave.
+- Removê-los e criar uma nova entidade com eles.
+- A chave primária da nova entidade será o atributo do qual os removidos são dependentes.
 
-        - Uma relação `R` está na `3FN` se e somente se estiver na `2FN` e todos os atributos não chave forem dependentes não transitivos da chanve primária(cada atributo funcionalmente depende apenas dos atributos componentes da chave primária ou se todos os seus atributos não chave forem independentes entre si).
-
-            - Identificar todos os atributos que são funcionalmente dependentes de outros atributos não chave;
-            - Removê-los e criar uma nova entidade com os mesmos.
-
-        - A chave primária da nova entidade será o atributo do qual os atributos removidos são funcionalmente dependentes.
+---
 
 ## Modelando um banco de dados
 
-- Vou partir de um cenário para identificar as `entidades` e `atributos`:
+### Cenário 1 — Sistema de chamados técnicos
 
-    ```bash
+```bash
+Nossa empresa atua com serviços gerais de informática para pequenas e médias empresas,
+como manutenção de computadores, redes e impressoras, tanto em modelo help-desk quanto
+em service-desk. Precisamos de um sistema automatizado para gerenciamento dos chamados
+de atendimento técnico...
+```
 
-        Nossa empresa atua com serviços gerais de informática para pequenas e médias empresas, como manutenção de computadores, redes e impressoras, tanto em modelo help-desk quanto em service-desk. Sabendo disso, precisamos de um sistema automatizado que atue no gerenciamento dos chamados de atendimento técnico.
+**Entidades identificadas:**
 
-        Esse sistema deverá permitir que um chamado de atendimento seja aberto pelos nossos clientes, onde eles informarão qual é o problema e escolherão a categoria do atendimento, que pode ser problema de hardware, instalação ou configuração, suíte office, impressora, rede e outros. O chamado também precisa possuir um campo de “situação”, onde o cliente pode acompanhar o andamento e nossa equipe técnica pode ir atualizando conforme o andamento do atendimento.
+- Chamados
+- Clientes
+- Funcionários
+- Mensagens
 
-        Outra funcionalidade importante é a de mensagens/comentários nos chamados. A equipe técnica e o cliente devem ser capazes de anexar mensagens no chamado, informando um ao outro sobre atualizações ou observações mais detalhadas do atendimento.
+**Atributos:**
 
-        Nesse sistema também queremos ter um perfil individual para cada funcionário da equipe técnica, para que ele possa ser identificado e responder diretamente aos chamados. Também precisamos que nossos clientes possuam seu próprio cadastro, assim os chamados podem ser consultados por cliente ou por responsável da equipe técnica, a fim de metrificar o desempenho de nossa equipe.
+- **Chamado:** descrição, categoria, situação, data e hora de abertura, cliente que abriu, técnico que respondeu.
+- **Clientes:** cnpj, nome, usuário, senha.
+- **Funcionários:** nome, usuário, senha.
+- **Mensagens:** conteúdo, data e hora de envio, remetente, chamado.
 
-    ```
+**Diagrama:**
 
-    - A partir do cenário proposto ache as `entidades` e os `atributos`.
+![diagrama](../Assets/diagrama.png)
 
-    - `Entidades:`
+---
 
-        - Chamados.
-        - Clientes.
-        - Funcionários.
-        - Mensagens.
+### Cenário 2 — Sistema de editora independente
 
-    - `Atributos`:
+```bash
+Somos uma editora independente especializada na publicação de livros de diversos gêneros
+literários. Precisamos de um sistema para gerenciar nosso acervo de livros e o relacionamento
+com autores e leitores...
+```
 
-        - Chamado:
+**Entidades identificadas:**
 
-            ```bash
+- Autores
+- Livros
+- Leitores
+- ISBN
+- Avaliação
 
-                Descrição
-                categoria
-                situação
-                data e hora de abertura
-                cliente que abriu
-                técnico que respondeu
+**Atributos:**
 
-            ```
+- **Autores:** nome, cpf, data de nascimento, biografia.
+- **Livros:** título, data de publicação, nome do autor, empresa que publicou.
+- **Leitores:** nome, cpf, telefone, email, data de nascimento.
+- **ISBN:** código ISBN, descrição.
 
-        - Clientes:
+---
 
-            ```bash
+### Modelagem via SQL
 
-                cnpj
-                nome
-                usuário
-                senha
-            
-            ```
-        
-        - Funcionários
+```sql
+CREATE TABLE IF NOT EXISTS autores(
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cpf VARCHAR(255) NOT NULL,
+    data_nascimento DATE
+);
 
-            ```bash
+CREATE TABLE IF NOT EXISTS livros(
+    id SERIAL PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    genero VARCHAR(255) NOT NULL,
+    data_de_lançamento DATE NOT NULL,
+    empresa_que_publicou VARCHAR(255) NOT NULL,
+    auto_id INT,
 
-                nome
-                usuário
-                senha
+    FOREIGN KEY (auto_id) REFERENCES autores(id) ON DELETE CASCADE
+);
 
-            ```
+CREATE TABLE IF NOT EXISTS leitores(
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    data_nascimento DATE,
+    phone VARCHAR(50),
+    email VARCHAR(255) UNIQUE
+);
 
-        - Mensagens
+CREATE TABLE IF NOT EXISTS avaliacao(
+    id SERIAL PRIMARY KEY,
+    titulo_avaliacao VARCHAR(50) NOT NULL,
+    data_avaliacao DATE NOT NULL DEFAULT CURRENT_DATE,
+    nota_avaliacao INT NOT NULL CHECK ( nota_avaliacao >= 0 AND nota_avaliacao <= 10 ),
+    descricao_avaliacao VARCHAR(255) NOT NULL,
+    leitores_id INT,
 
-            ```bash
+    FOREIGN KEY (leitores_id) REFERENCES leitores(id) ON DELETE CASCADE
+);
 
-                conteúdo
-                data e hora de envio
-                rementente
-                chamado
+CREATE TABLE IF NOT EXISTS isbn(
+    id SERIAL PRIMARY KEY,
+    autor_id INT,
+    titulo_id INT,
+    codigo_isbn VARCHAR(13) NOT NULL UNIQUE,
+    descricao VARCHAR(255) NOT NULL,
 
-            ```
-
-    - Diagrama:
-
-        ![diagrama](../Assets/diagrama.png)
-
-- Vou partir de um cenário para identificar as `entidades` e os `atributos:`
-
-    ```bash
-
-        “Somos uma editora independente especializada na publicação de livros de diversos gêneros literários, incluindo ficção, não-ficção, biografias e autoajuda. Para gerenciar nosso acervo de livros e o relacionamento com autores e leitores, precisamos de um sistema automatizado.
-
-        Esse sistema deverá permitir que novos livros sejam cadastrados com informações detalhadas, como título, autor, gênero, data de publicação, ISBN e um breve resumo. É essencial que o sistema também permita o cadastro de autores, com informações como nome, biografia, data de nascimento e, é claro, uma lista de livros publicados. Como muitos autores publicam mais de um livro, é importante que o cadastro do autor seja reaproveitado para todos os seus livros publicados.
-
-        Outra funcionalidade importante é o registro de leitores. Os leitores podem se registrar de forma anônima, mas deve ser possível se registrar informando o nome, pois enviaremos e-mails com avisos, novidades e promoções. Considerando isso, o e-mail é uma informação obrigatória para o cadastro. Outras informações importantes sobre os nossos leitores são a idade e o gênero, mas que devem ser opcionais, para que possamos entender melhor o nosso público.
-
-        Por fim, queremos que o sistema permita a inclusão de resenhas e avaliações dos leitores para os livros que leram. Cada resenha deve estar associada a um livro específico e a um leitor, e deve incluir um campo para a avaliação (nota de 1 a 5) e um comentário detalhado.”
-
-    ```
-
-    - A partir do cenário proposto ache as `entidades` e os `atributos`.
-
-    - `Entidades:`
-
-        - Autores.
-        - Livros.
-        - Leitores.
-        - ISBN.
-        - Avaliação
-
-    - `Atributos`:
-
-        - Autores:
-
-            ```bash
-
-                nome
-                cpf
-                data nascimento
-                biografia
-
-            ```
-
-        - Livros:
-
-            ```bash
-
-                titulo
-                data de publicação
-                nome do autor
-                nome da empresa que públicou o livro
-            
-            ```
-        
-        - Leitores
-
-            ```bash
-
-                nome
-                cpf
-                telefone
-                email
-                data nascimento
-
-            ```
-
-        - ISBN
-
-            ```bash
-
-                código ISBN
-                descrição
-
-            ```
-
-    - Modelagem via `SQL`
-
-        ```SQL
-
-            create table if not exists autores(
-            id serial primary key,
-            nome varchar(255) not null,
-            cpf varchar(255) not null,
-            data_nascimento date
-            );
-
-            create table if not exists livros(
-                id serial primary key,
-                titulo varchar(255) not null,
-                genero varchar(255) not null,
-                data_de_lançamento date not null,
-                empresa_que_publicou varchar(255) not null,
-                auto_id int,
-
-                foreign key (auto_id) references autores(id) on delete cascade
-            );
-
-            create table if not exists leitores(
-                id serial primary key,
-                nome varchar(255) not null,
-                cpf varchar(14) not null unique,
-                data_nascimento date,
-                phone varchar(50),
-                email varchar(255) unique
-            );
-
-            create table if not exists avaliacao(
-                id serial primary key,
-                titulo_avaliacao varchar(50) not null,
-                data_avaliacao date not null default current_date,
-                nota_avaliacao int not null check ( nota_avaliacao >= 0 and nota_avaliacao <= 10 ),
-                descricao_avaliacao varchar(255) not null,
-                leitores_id int,
-
-                foreign key (leitores_id) references leitores(id) on delete cascade
-            );
-
-            create table if not exists isbn(
-                id serial primary key,
-                autor_id int,
-                titulo_id int,
-                codigo_isbn varchar(13) not null unique,
-                descricao varchar(255) not null,
-
-                foreign key (autor_id) references autores(id),
-                foreign key (titulo_id) references livros(id)
-            );
-
-        ```
+    FOREIGN KEY (autor_id) REFERENCES autores(id),
+    FOREIGN KEY (titulo_id) REFERENCES livros(id)
+);
+```
