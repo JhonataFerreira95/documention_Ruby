@@ -47,3 +47,8 @@
 
     - Revogar permissões
 
+- Manipulção de dados(`DTL`):
+
+    - Efetiva uma transação(`commit`)
+
+    - Descarta uma transação(`rollback`)
