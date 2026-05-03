@@ -73,6 +73,19 @@
 
     ```SQL
 
-        CREATE DATABASE intregation_to_ruby
+        CREATE DATABASE fliperama
+
+    ```
+
+- Criação da tabela:
+
+    ```SQL
+
+        CREATE TABLE jogos(
+            id serial primary key,
+            nome varchar(255) not null,
+            ano date not null,
+            nota_do_jogo double precision not null
+        );
 
     ```
