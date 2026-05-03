@@ -1,467 +1,445 @@
-# Git e Github
+# Git e GitHub
 
-## índice
+## Índice
 
 1. [Introdução](#introdução)
 2. [Conceitos](#conceitos)
 3. [Básico do Git](#básico-do-git)
-4. [Boas práticas no Git](#boas-práticas)
+4. [Boas Práticas no Git](#boas-práticas)
 5. [Branches](#branches)
 6. [Conflitos de Merge](#conflitos-de-merge)
 7. [Repositórios Remotos](#repositórios-remotos)
 8. [Trabalhando com SSH](#trabalhando-com-ssh)
 9. [Trabalhando com Forks](#forks-e-como-contribuir)
-10. [Usando o gitignore](#utilizando-o-gitignore)
+10. [Usando o .gitignore](#utilizando-o-gitignore)
+
+---
 
 ## Introdução
 
-- O que é `Git`?
+### O que é Git?
 
-    - `Git` é um sistema de controler de versão de software criado pelo `Linus Torvalds` para gerenciamento do código do `Linux`.
+> `Git` é um **sistema de controle de versão distribuído** criado por `Linus Torvalds` em 2005 para gerenciar o desenvolvimento do kernel do `Linux`. Hoje é a ferramenta de controle de versão mais utilizada no mundo.
 
-    - Além de ajuda os desenvolvedores a colaborar entre si, guarda um hístorico de alterações e reverter para versões anteriores se necessário.
+- Além de ajudar os desenvolvedores a colaborar entre si, guarda um **histórico completo de alterações** e permite reverter para versões anteriores se necessário.
+- Cada desenvolvedor possui uma cópia completa do repositório — incluindo todo o histórico — em sua máquina local.
+
+---
 
 ## Conceitos
 
-- `Repositório:`
+> Antes de começar a usar o Git, é importante entender os principais conceitos que formam sua base de funcionamento.
 
-    - Como nos referimos ao projeto como um todo, o diretório raiz a partir de onde serão monitorados todas as alterações.
+- **Repositório:** como nos referimos ao projeto como um todo — o diretório raiz a partir de onde todas as alterações são monitoradas.
 
-- `commit:`
+- **Commit:** é o ato de salvar uma ou mais alterações no código. Também pode se referir ao conjunto dessas alterações. Cada commit é um ponto na linha do tempo do projeto.
 
-    - É o ato de salvar uma ou mais alerações no código e também pode ser referir ao conjuto dessas alterações
+- **Working tree:** é o espaço de trabalho onde você faz modificações nos arquivos do seu projeto. Quando você edita, cria ou deleta arquivos, essas mudanças acontecem na `working tree`.
 
-- `Working tree:`
+- **Staging:** é a área de preparação onde as alterações são separadas para serem salvas em um commit. Ela permite escolher exatamente **o que será incluído** no próximo commit — dando controle granular sobre o histórico.
 
-    - É o espaço de trabalho onde você faz modificações nos arquivos do sue projeto. Quando você edita, cria ou deleta arquivos, essas mudançãs acontecem no `working tree`.
+- **Branches:** são ramificações que podemos criar a partir de um ponto histórico do projeto para trabalhar paralelamente, sem afetar a ramificação principal. Todo repositório precisa de pelo menos uma `branch` para servir como principal — geralmente chamada de `main` ou `master`.
 
-- `Staging`
-
-    - É a área de preparação onde as alterações são separadas para serem salvas em um commit, ou seja, elas permitem escolher exatamente o que será salvo.
-
-- `Branches:`
-
-    - São ramificações que podemos criar a partir de um ponto histórico do projeto para trabalhar paralelamente, assim é possível trabalhar sem afetar a ramificação principal.
-
-    - Todo repositório precisa de pelo menos uma `branch`, para servir como principal(Geralmente chamada de `main` ou `master`)
+---
 
 ## Básico do Git
 
-- `git init:`
+### `git init`
 
-    - Para inicializar um projeto com `Git`, utilizamos o comando `git init` no terminal do diretório desejado.
+> Inicializa um repositório Git em um diretório existente. Cria a pasta oculta `.git` que contém toda a estrutura de controle de versão.
 
-    - Exemplo na prática:
+```git
+git init
+```
 
-        ```git
+---
 
-            git init
+### `git status`
 
-        ```
+> Exibe o estado atual da `working tree` e da `staging area` — quais arquivos foram modificados, quais estão prontos para commit e quais ainda estão pendentes.
 
-- `git status:`
+```git
+git status
+```
 
-    - Assim que modificamos um arquivos, para checarmos se os arquivos foram adicionado `git` utilizamos o comando
-    utlizamos o comando `git status`, assim ele nos mostra quais arquivos foram modificados, quais foram salvo e quais estão pendende para ser salvo.
+> Resultado:
 
-    - Exemplo na pratica:
+![Git status](../Banco%20de%20dados%20SQL/Assets/git_status.png)
 
-        ```git
+> Observa-se que o arquivo foi modificado mas ainda não foi adicionado à staging area para ser salvo.
 
-            git status
+---
 
-        ```
+### `git add`
 
-    - Resultado: 
+> Adiciona arquivos à `staging area`, preparando-os para o próximo commit. Use `git add nome-do-arquivo` para um arquivo específico ou `git add .` para adicionar **todas** as alterações do diretório atual.
 
-        ![Git status](../Banco%20de%20dados%20SQL/Assets/git_status.png)
+```git
+git add .
+```
 
-        - Observa-se que o arquivo foi modificado mas não foi salvo.
+> Resultado:
 
-- `git add:`
+![Git add](../Banco%20de%20dados%20SQL/Assets/git_add.png)
 
-    - Para adicionarmos um arquivo ao git utilizamos o comando `git add <nome do arquivo>` ou `git add .`, o `.` após o `add` significa que é para adicionar todos os arquivos que foram modificado no diretório.
+> Observa-se que utilizei o `git add .` para adicionar todos os arquivos modificados e, após, confirmei com `git status` que tudo foi adicionado corretamente.
 
-    - Exemplo na prática:
+---
 
-        ```git
+### `git restore --staged`
 
-            git add .
+> Desfaz um `git add` — remove os arquivos da `staging area` sem perder as modificações feitas. Equivalente a "desmarcar" um arquivo antes do commit.
 
-        ```
+```git
+git restore --staged .
+```
 
-    - Resultado: 
+> Resultado:
 
-        ![Git add](../Banco%20de%20dados%20SQL/Assets/git_add.png)
+![Git restorage](../Banco%20de%20dados%20SQL/Assets/git_restorage.png)
 
-        - Observa-se que utilizei o `git add .` para adcionar todos os arquivos modificados e após para confirma que tudo que foi modificado foi adicionado utilizei o comando `git status` para checar que está tudo ok.
+> Observa-se que utilizei o `git status` para checar as modificações, após utilizei o `git add .` para adicionar todos os arquivos modificados e, em seguida, o `git restore --staged .` para removê-los da staging area.
 
-- `git restore --staged:`
+---
 
-    - Para desfazer um `git add .<ou nome do arquivo>` utilizamos o `git restore --staged .<ou nome do arquivo>`.
+### `git commit`
 
-    - Exemplo na prática:
+> Registra todas as modificações que estão na `staging area` no repositório local, criando um ponto permanente no histórico do projeto. O flag `-m` permite adicionar uma mensagem descritiva diretamente no comando.
 
-        ```git
+> **Importante:** o `git commit` só funciona se você adicionar as alterações com `git add` antes de usá-lo.
 
-            git restore --staged .
+```git
+git commit -m "adicionado alterações"
+```
 
-        ```
-    - Resultado:
+> Resultado:
 
-        ![Git restorage](../Banco%20de%20dados%20SQL/Assets/git_restorage.png)
+![git commit](../Banco%20de%20dados%20SQL/Assets/git_commit.png)
 
-        - Observa-se que utilizei o comando `git status` para checar as modificações e após utilizei o `git add .` para adicionar todos os arquivos modificados após isso utilizei o `git restore --staged .` para remover todos os arquivos que foram adicionados com o `git add .`.
+> Observa-se que utilizei o `git add .` e após chequei com `git status` se as alterações foram adicionadas, finalizando com `git commit -m "adicionado alterações"`. O `-m` é referente à mensagem do commit e `develop` é a branch para onde o commit foi enviado.
 
-- `git commit:`
+---
 
-    - O `git commit` registra todas as modificações no repositório local antes de serem enviadas para repositório remoto.
+### `git log`
 
-    - Exemplo na prática:
+> Exibe o histórico completo de commits do repositório — mostrando o hash, autor, data e mensagem de cada commit. Útil para rastrear o que foi feito e por quem.
 
-        ```git
+```git
+git log
+```
 
-            git commit -m "adicionado alterações"
+> Resultado:
 
-        ```
+![git log](../Banco%20de%20dados%20SQL/Assets/git_log.png)
 
-    - Resultado: 
+> Observa-se que utilizei o comando `git log` para verificar o histórico de `commits` do meu repositório.
 
-        ![git commit](../Banco%20de%20dados%20SQL/Assets/git_commit.png)
+---
 
-        - Observa-se que utilizei o `git add .` e após chequei com `git status` se as altrações foram feitas, finalzei salvando com `git commit -m "adicionado alterações"`.
+### `git diff`
 
-        - Vale ressaltar que o `git commit` só funciona se você adiconar as alterações feitas antes de usa-lo, o `-m` após `git commit` é referente a sua `branch main` e o `develop`é para onde o commit foi enviado, ou seja a a branch develop.
+> Mostra as diferenças entre arquivos modificados e o último commit — ou entre dois commits distintos. Útil para revisar o que foi alterado antes de fazer um commit.
 
-- `git log:`
+```git
+git diff
+```
 
-    - O `git log` serve para ver os históricos de `commit` no `git`.
+> Resultado:
 
-    - Exemplo na prática:
+![git diff](../Banco%20de%20dados%20SQL/Assets/git_diff.png)
 
-        ```git
+> Aqui utilizamos o `git diff` para ver as modificações que estão pendentes em determinados arquivos.
 
-            git log
-
-        ```
-
-    - Resultado:
-
-        ![git log](../Banco%20de%20dados%20SQL/Assets/git_log.png)
-
-        - Observa-se que utilizei o comando `git log` para verificar o histórico de `commits` do meu repositório.
-
-- `git diff:`
-
-     - O `git diff` mostra as alterações entre diferente `commits`, entre um `commit` e a `working tree`.
-
-     - Exemplo na prática:
-
-        ```git
-
-            git diff
-
-        ```
-
-    - Resultado:
-
-        ![git diff](../Banco%20de%20dados%20SQL/Assets/git_diff.png)
-
-        - Aqui utilizamos o ´git diff´ para ver as modificações que estão pendentes em determinados arquivos.
+---
 
 ## Boas Práticas
 
-- Nomear os `commits` com cuidado:
+> Adotar boas práticas no Git desde o início evita dores de cabeça no futuro — especialmente em times e projetos de longa duração.
 
-    - Menssagens de `commit` bem escritas e pragmática ajudam a entender o que foi alterado e por quê.
+### Nomear os commits com cuidado
 
-    - Obedeça os padrões impostos pelo seu time.
+- Mensagens de commit bem escritas e pragmáticas ajudam a entender **o que** foi alterado e **por quê**.
+- Obedeça os padrões impostos pelo seu time.
+- Conheça as convenções de nomenclatura de commits:
 
-    - Conheça as convenções de nomeclatura de `commits`:
+  [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/)
 
-        [Convenções](https://www.conventionalcommits.org/pt-br/v1.0.0/)
+---
 
-- Revise mudanças:
+### Revise mudanças antes de commitar
 
-    - Ajuda a evitar `commits` de código incompleto ou errado.
+- Ajuda a evitar commits de código incompleto ou com erros.
+- Use o `git diff` para ver as mudanças que serão commitadas e `git status` para ver os arquivos modificados.
 
-    - Use o `git diff` para ver as mudanças que serão commitadas e `git status` para ver os arquivos modificados.
+---
 
-- Commits pequenos e frequentes:
+### Commits pequenos e frequentes
 
-    - São fáceis de revisar, testar e reverter se necessário.
+- São fáceis de revisar, testar e reverter se necessário.
+- Tente fazer commits cada vez que você completar uma pequena funcionalidade ou correção — evite acumular muitas mudanças em um único commit gigante.
 
-    - Tente fazer `commits` cade vez que você completar uma pequena funcionalidade ou correção.
+---
 
-- Tipos de versões semântico:
+### Tipos de versionamento semântico
 
-    - `Major(Versão principal):`
+> O versionamento semântico (SemVer) define um padrão para numerar versões no formato `MAJOR.MINOR.PATCH` — ex: `2.1.4`.
 
-        - Indicada pela primeira parte do número da versão. Esta versão inclui mudanças significativas, grandes novas funcionalidades ou reestruturações que podem quebrar a compatibilidade com versões anteriores.
+- **Major (Versão principal):** indicada pela primeira parte do número. Inclui mudanças significativas, grandes novas funcionalidades ou reestruturações que **podem quebrar a compatibilidade** com versões anteriores.
 
-    - `Minor(Versão secundária):`
+- **Minor (Versão secundária):** indicada pela segunda parte do número. Adiciona funcionalidades ou melhorias novas, mas **mantém a compatibilidade** com versões anteriores.
 
-        - Indicada pela segunda parte do número da versão. Esta versão adiciona funcionalidades ou melhorias novas, mas mantém a compatibilidade com versões anteriores.
+- **Patch (Correções de bugs):** indicada pela terceira parte do número. Focada em correção de bugs e pequenas melhorias que **não afetam a compatibilidade** com versões anteriores.
 
-    - `Patch(Correções de bugs):`
-
-        - Indicada pela terceira parte do número da versão. Esta versão é focada na correção de bugs e pequenas melhorias que não afetam a compatibilidade com versões anteriores.
+---
 
 ## Branches
 
-- O que são `branches no git`?
-    
-    - O que são `branches`? São ramificações que permitem trabalhar em diferentes linhas de desevolvimento dentro de um mesmo repositório.
+### O que são branches no Git?
 
-    - Cada `branch` pode conter uma série de `commits` independentes, permitindo que desenvolvedores trabalhem em funcionalidades ou correções sem intefetir na `branch` principal.
+> Branches são ramificações que permitem trabalhar em diferentes linhas de desenvolvimento dentro de um mesmo repositório, de forma **paralela e isolada**.
 
-- Por que usar `branches`?
+- Cada branch pode conter uma série de commits independentes, permitindo que desenvolvedores trabalhem em funcionalidades ou correções sem interferir na branch principal.
 
-    - Permite isolar o trabalho em funcionalidades novas ou correções de bugs, facilitando o desenvolvimento paralelo.
+### Por que usar branches?
 
-    - Ajudam a manter o historico de desevolvimento organizado e claro.
+- Permitem isolar o trabalho em funcionalidades novas ou correções de bugs, facilitando o desenvolvimento paralelo.
+- Ajudam a manter o histórico de desenvolvimento organizado e claro.
+- Facilitam a colaboração entre desenvolvedores — cada um trabalha em sua própria branch e depois integra (`merge`) as mudanças.
 
-    - Facilitam a colaboração entre desenvolvedores, permitindo que cada um trabalhe em sua própria `brach` e depois integre(`merge`) as mudanças.
+### Conceitos fundamentais sobre branches
 
-- Conceitos fudamentais sobre `branches:`
+- **Branch principal:** normalmente chamada de `main` ou `master`, é a linha principal de desenvolvimento onde o código mais estável é mantido.
 
-    - `Branch principal:`
+- **Branch de funcionalidade:** usada para desenvolver uma nova funcionalidade ou melhoria. É criada a partir da branch principal e, depois de finalizada, suas mudanças são integradas de volta à branch principal.
 
-        - Normalmente chamada de `main` ou `master`, é a linha principal de desenvolvimento onde o código mais estável é mantido.
+- **Branch de correção:** usada para corrigir bugs. Funciona de maneira similar à branch de funcionalidade, mas focada em resolver problemas específicos.
 
-    - `Brach de funcionalidade:`
+---
 
-        - Uasada para desenvolver uma nova funcionalidade ou melhoria, é criada a partir da `branch` principal e, depois de finalizada, suas mudanças são integradas de volta à `branch` principal.
+### Trabalhando com branches
 
-    - `Branch de correção:`
+**Criar uma nova branch:**
 
-        - Usada para corrigir bugs, funciona de maneira similar à `branch` de funcionaldiade, mas fora em resolver problemas específicos.
+```git
+git branch nome-da-branch
+```
 
-- Trabalhando com `branches:`
+**Mudar para uma branch existente:**
 
-- Para criar uma nova `branch` utilize o:
+```git
+git checkout nome-da-branch
+```
 
-    ```git
+> Você também pode usar `git checkout -b nome-da-branch` para **criar e mudar** para a nova branch em um único comando.
 
-        git branch nome-da-branch
+**Listar todas as branches:**
 
-    ```
+```git
+git branch
+```
 
-- Para mudar de uma `branch` para outra utilize o:
+**Integrar mudanças de uma branch para outra (merge):**
 
-    ```git
+```git
+git merge nome-da-branch
+```
 
-        git checkout -b nome-da-branch
+> Este comando aplica as mudanças da branch especificada na branch **atual**.
 
-    ```
+**Deletar uma branch:**
 
-    - Você tanbém pode usar o `git checkout -b nome-da-branch` para criar e mudar para a nova branch em um único comando.
+```git
+git branch --delete nome-da-branch
+```
 
-- Use para ver a lista de `branch`:
-
-    ```git
-
-        git branch
-
-    ```
-
-- Para integrar mudanças de uma `branch` para outra, use o:
-
-    ```git 
-
-        git merge nome-da-branch
-    
-    ```
-
-    - Este comando aplica as mudanças da `branch` especificada na `bracnh` atual.
-
-
-- Para deletar uma `branch` utilize:
-
-    ```git
-
-        git branch --delete nome-da-branch
-
-    ```
+---
 
 ## Conflitos de Merge
 
-- O que são conflito de `merge`?
+### O que são conflitos de merge?
 
-    - Conflitos de `merge` ocorrem quando o `git` não consegue automaticamente combinar mudanças de duas `branches` diferentes.
+> Conflitos de merge ocorrem quando o Git **não consegue automaticamente combinar** mudanças de duas branches diferentes. Isso geralmente acontece quando há alterações conflitantes no mesmo trecho de código ou arquivo.
 
-    - Isso geralmente acontece quando há alterações conflitantes no mesmo trecho de código ou arquivo.
+### Como identificar conflitos de merge?
 
-- Como identificar conflitos de `merge`?
+- Quando um conflito ocorre, o Git interrompe o merge e marca os arquivos em conflito.
+- Você verá mensagens de erro no terminal e os arquivos conflitantes conterão marcações especiais como `<<<<`, `====` e `>>>>`.
 
-    - Quando um conflito ocorre, o `git` interrompe o `merge` e marca os arquivos em conflito.
+### Passos para resolver conflitos de merge
 
-    - Você verá menssagens de erro no terminal, e arquivos conflitantes conterão marcações especiais como `<<<<`, `====` e `>>>>`.
+1. **Identifique os arquivos em conflito:**
+   - Use `git status` para listar os arquivos em conflito — eles estarão marcados como `both modified`.
 
-- Passos para resolver conflitos de `merge`:
+2. **Abra os arquivos em conflito:**
+   - Edite os arquivos para combinar as mudanças de forma adequada.
+   - Remova as marcações de conflito `<<<<`, `====`, `>>>>` após resolver cada conflito.
 
-    - Identifique os arquivos em conflito:
+3. **Marque os conflitos como resolvidos:**
+   - Após editar, adicione os arquivos resolvidos à staging area:
 
-        - Após um conflito de `merge`, use o `git` para listar os arquivos em confllito.
+   ```git
+   git add nome-do-arquivo
+   ```
 
-        - Os arquivos em conflito estarão marcados como `bosth modified`.
+4. **Complete o merge:**
+   - Faça um commit para finalizar o merge com as alterações resolvidas:
 
-    - Abra os arquivos em conflito.
+   ```git
+   git commit -m "resolvido conflito de merge"
+   ```
 
-    - Marque os confflitos como resolvidos:
-
-        - Edite os arquivos para combinar as mudanças de forma adequada.
-
-        - Remova as marcações de conflito `<<<<`, `====`, `>>>>`, após resolver o conflito.
-
-    - Complete o `merge`
-
-        - Após resolver os conflitos, adicione os arquivos resolvidos à área de preparação `staging area` usando o ´git add nome-do-arquivo´ e faça um ´commit´ para salvar as alterações.
+---
 
 ## Repositórios Remotos
 
-- O que são os repostórios remotos?
+### O que são repositórios remotos?
 
-    - São versões do sue projeto hospedada na internet. Permitem que você e outros trabalhem no mesmo projeto a partir de diferentes locais.
+> São versões do seu projeto **hospedadas na internet**. Permitem que você e outros desenvolvedores trabalhem no mesmo projeto a partir de diferentes locais.
 
-- por que usar repositório remoto?
+### Por que usar repositório remoto?
 
-    - Facilitam a colaboração entre desenvolvedores, permitindo que todos tenham acesso à versão mais recente do projeto.
+- Facilitam a colaboração entre desenvolvedores, permitindo que todos tenham acesso à versão mais recente do projeto.
+- Servem como **backup** do seu código, garantindo que ele não seja perdido caso algo aconteça com seu repositório local.
+- Possibilitam a integração contínua e outras práticas de `DevOps`.
 
-    - Servem como um backup do seu código, garantindo que ele não seja perdido caso alog aconteça com seu repositório local.
+### O que é GitHub?
 
-    - Possibilitam a integração contínua e outra prática de `DevOps`.
+> É a **plataforma de hospedagem de código-fonte** mais popular para trabalhar com repositórios remotos usando Git.
 
-- O que é `Github`?
+- Oferece uma interface web amigável e várias ferramentas adicionais para colaboração, como `pull requests`, `issues`, `wikis`, `kanban`, etc.
 
-    - É uma plataforma de hospedagem de código-fonte para trabalhar com repositórios remotos.
+### Trabalhando com repositório remoto
 
-    - Oferece uma interface web amigável e várias ferramentas adicionais para colaboração, como `pull requests`, `issues`, `wikis`, `kanban`, etc.
+**Clonar um repositório remoto para sua máquina:**
 
-- Trabalhando com repostório remoto:
+```git
+git clone url-do-repositorio
+```
 
-    - Clone o repositório com `git clone url-do-repositorio` para criar uma cópia local dele onde você irá trabalhar.
+**Enviar commits locais para o repositório remoto:**
 
-    - Quando possuir `commits` que deseja integrar ao repositório remoto, envie-os com `git push nome-do-remote nome-da-brach`.
+```git
+git push nome-do-remote nome-da-branch
+```
 
-    - Quando quiser sincronizar o repositório para manter o projeto local atualizado use o `git pull nome-do-remote nome-da-brach`.
+**Sincronizar o repositório local com o remoto:**
+
+```git
+git pull nome-do-remote nome-da-branch
+```
+
+---
 
 ## Trabalhando com SSH
 
-- O que é `SSH`?
+### O que é SSH?
 
-    - É um protocolo criptografado utilizado para acessar, gerenciar e controlar sistemas e servidores remotamente de forma segura, no nosso caso o repositório remoto no `Github`.
+> `SSH` (Secure Shell) é um **protocolo criptografado** utilizado para acessar, gerenciar e controlar sistemas e servidores remotamente de forma segura — no nosso caso, o repositório remoto no GitHub.
 
-- Como verificar se `SSH` está na sua marquina e criar uma chave:
+### Verificar se o SSH está ativo na sua máquina
 
-    - Antes de utilizar o `SSH`, verifique se o mesmo está ativo na sua maquina com o seguinte comando:
+```git
+netstat -an | grep :22
+```
 
-        ```git 
+> Após a confirmação de que o SSH está ativo, prossiga com a criação da chave.
 
-            netstat -an | grep :22
+### Criar uma nova chave SSH
 
-        ```
-    
-        - Após a confirmação que o `SSH` está ativo prossiga. Vale ressaltar que irei partir do ponto que você está com `SSH` ativo e sabe manejar o termina.
+> Utilize o mesmo email da sua conta do GitHub ao criar a chave.
 
-    - Para criação de uma nova chave `SSH` utilize seu `email` após a criação da nova chave. O comando para criar a nova chave `SSH` é:
+```git
+ssh-keygen -C "seu-email-entre-aspas-duplas"
+```
 
-        ```git
+> Após isso sua chave será criada como pode ver abaixo:
 
-            ssh-keygen -C "seu-email-entre-aspas-duplas"
+![ssh_key](../Banco%20de%20dados%20SQL/Assets/ssh.png)
 
-        ```
+> Observa-se que rasuramos alguns pontos — email, nome do arquivo, senha e a própria chave SSH. A saída do seu terminal será exatamente assim.
 
-        - Utilize o mesmo `email` na sua conta do `Github` na sua chave `SSh`. Após isso sua chave será criado como pode ver abaixo:
+---
 
-        ![ssh_key](../Banco%20de%20dados%20SQL/Assets/ssh.png)
+### Executar o agente SSH no seu projeto local
 
-        - Obeserva-se que rasurei alguns pontos, que foram, meu email, nome do arquivo, senha e própria chave `SSH`, a saida do seu vai ser exatamente assim.
+> Antes de adicionar o cliente SSH, é necessário rodar o agente em si com o comando:
 
-- Execultar o agente `SSH` no seu projeto local:
+```git
+eval $(ssh-agent -s)
+```
 
-    - Antes de adicionar o cliente do `SSH` e necessário roda o agente em si com o comando:
+![Agente](../Banco%20de%20dados%20SQL/Assets/agentSSH.png)
 
-        ```git
+### Adicionar a chave SSH ao agente
 
-            eval $(ssh-agent -s)
+```git
+ssh-add ~/caminho/da/sua/chave/privada
+```
 
-        ```
+> Após o comando, você verá a mensagem solicitando a senha e, em seguida, a confirmação de que tudo foi adicionado com sucesso.
 
-        - Após isso siga o passo para utilizar o comando `SSH` no cliente.
+![ssh2](../Banco%20de%20dados%20SQL/Assets/ssh2.png)
 
-        ![Agente](../Banco%20de%20dados%20SQL/Assets/agentSSH.png)
-
-    - Para adicionar o cliente do `SSH` na maquina utilize o comando:
-
-        ```git
-
-            ssh-add ~/caminho/da/sua/chave/privada
-
-        ```
-
-        - Após o comando você verá a messagem solicitando a senha e após a confirmação que tudo foi feito.
-
-        ![ssh2](../Banco%20de%20dados%20SQL/Assets/ssh2.png)
+---
 
 ## Forks e como contribuir
 
-- O que são `forks`?
+### O que são forks?
 
-    - É uma forma de trabalha com projetos `open-source`, e contribuir para comunidade daquele determinado projeto com sugestões de melhorias ou resoluções de alguns problemas. Normalmente todo projeto `open-source` possuí regras para você seguir, caso queira contribuir com o projeto, é necessário seguir as regras para que sua resoluções sejam aceitam mas antes criaremos um `fork`.
+> Um `fork` é uma **cópia completa de um repositório** — você se torna o dono dessa cópia e está livre para modificá-la como quiser. É a forma padrão de contribuir com projetos `open-source`.
 
-    - `forks` são nada mais que um clone do repositório principal porém você se torna o dono e está livre para manosear o mesmo do jeito que bem entende, isso séria um `fork`.
+- Normalmente todo projeto `open-source` possui regras para contribuição. É necessário segui-las para que suas alterações sejam aceitas — geralmente documentadas em um arquivo chamado `CONTRIBUTING.md`.
 
-- Como fazer um `fork:`
+### Como fazer um fork
 
-    - Para criação de um `fork` é necessário escolher um repositório para duplicar o mesmo.
+**Passo 1:**
 
-        - Passo 1:
+![fork](../Banco%20de%20dados%20SQL/Assets/fork.png)
 
-            ![fork](../Banco%20de%20dados%20SQL/Assets/fork.png)
+> Clique em `fork` para clonar o repositório escolhido para a sua conta.
 
-            - Clique em `fork` para clona o repositório escolhido.
-        
-        - Passo 2:
+**Passo 2:**
 
-            ![fork copy](../Banco%20de%20dados%20SQL/Assets/fork_copy.png)
+![fork copy](../Banco%20de%20dados%20SQL/Assets/fork_copy.png)
 
-            - Obseva-se que tem a opção de copiar apenas a `branch main`, caso desmarque essa opção, ira copiar todos o repositório incluindo as `branches`.
+> Observa-se que há a opção de copiar apenas a `branch main`. Caso desmarque essa opção, irá copiar o repositório inteiro — incluindo todas as branches.
 
-        - Passo 3:
+**Passo 3:**
 
-            ![forked](../Banco%20de%20dados%20SQL/Assets/fork_from.png)
+![forked](../Banco%20de%20dados%20SQL/Assets/fork_from.png)
 
-            - Note que assim aparece `forked from`, isso índica que o repositório foi um `fork` de outro projeto, para boas prática crie uma nova ramificação ou `branch` com o comando:
+> Note que aparece `forked from` — isso indica que o repositório é um fork de outro projeto. Para boas práticas, crie uma nova branch para suas alterações:
 
-            ```git
+```git
+git branch -M nome-da-branch-do-fork
+```
 
-                git branch -M nome-da-branch-do-fork
+> Seu fork foi criado com sucesso.
 
-            ```
+**Passo 4:**
 
-            - Seu `fork` foi criado com sucesso.
+> Agora você tem 2 caminhos a seguir: modificar o repositório para um projeto pessoal seu ou contribuir com o projeto original. Caso deseje contribuir com o projeto `open-source`, leia o `CONTRIBUTING.md` e siga as instruções.
 
-        - Passo 4:
+> Após suas alterações, faça um `push` no seu repositório fork e, em seguida, crie um `pull request` para contribuir com o projeto original.
 
-            - Agora você tem 2 caminhos a seguir, modificar o repositório para um projeto pessoa seu ou contribuir. Caso deseje contribuir com o projeto `open-source`, sugiro ler as regras do projeto para poder contribuir, geralmente é um arquivo com a nomeclatura `CONTRIBUTING.md` e seguir as intruções para fazer o mesmo.
+![fork pull](../Banco%20de%20dados%20SQL/Assets/fork_pull.png)
 
-            - Após suas alterações, recomendo da um `push` em seu repositório e após isso criar um `pull request` para contribuir com o projeto `open-source`.
-
-            ![fork pull](../Banco%20de%20dados%20SQL/Assets/fork_pull.png)
+---
 
 ## Utilizando o .gitignore
 
-- O que é o `gitignore`?
+### O que é o `.gitignore`?
 
-    - O que `gitignore` serve para deixar aquivos fora dos nossos `commits`, imagine que você fez uma alteração e lá tem um diretório que você não quer enviar para seu repositório remoto, poderia utilizar o `git add nome-do-arquivo` certo? Sim mas se você toda vez que for fazer uma alteração nova e ter que fazer isso? Daí podemo usar o `gitignore`.
+> O `.gitignore` serve para **excluir arquivos e diretórios dos commits** — sem precisar usar `git add` seletivamente toda vez. Imagine que você tem um diretório de configurações locais, credenciais ou dependências que não devem ir para o repositório remoto. O `.gitignore` resolve isso de forma automática e permanente.
 
-- Como utilizar o `gitignore`?
+### Como utilizar o `.gitignore`?
 
-    - Sim, basta criar um arquivo com o nome `.gitignore`, após sua criação liste os diretórios ou aqruvios que deseja que o `git` ignore.
+> Basta criar um arquivo com o nome `.gitignore` na raiz do projeto e listar os diretórios ou arquivos que deseja que o Git ignore.
 
-        ![gitignore](../Banco%20de%20dados%20SQL/Assets/git_ignore.png)
+![gitignore](../Banco%20de%20dados%20SQL/Assets/git_ignore.png)
 
-- Como manter diretórios vázios com `git`?
+---
 
-    - Utilize o `.gitkeep` em um diretório vázio para mante-lo. Funciona da mesma forma que o `.gitignore`.
+### Como manter diretórios vazios com Git?
+
+> O Git não rastreia diretórios vazios por padrão — apenas arquivos. Para forçar o rastreamento de um diretório vazio, utilize um arquivo chamado `.gitkeep` dentro dele. Funciona da mesma forma que o `.gitignore`, mas com o propósito oposto: **garantir que o diretório seja incluído** no repositório mesmo sem conteúdo.
