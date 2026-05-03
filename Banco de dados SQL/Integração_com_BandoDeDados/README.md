@@ -5,6 +5,7 @@
 1. [Introdução conceitual](#integração-com-banco-de-dados-ao-ruby)
 2. [O que é o SQL](#o-que-é-sql)
 3. [SGBDs](#importância-de-sgbds)
+4. [Criando Banco e tabelas](#banco-e-tabelas)
 
 ---
 
@@ -64,4 +65,14 @@
 
     - `NoSQL` - Não Relacional
 
+## Banco e tabelas
 
+> Aqui irei fazer a crianção de um banco e algumas tabelas, sinta-se a vontade para selecionar o seu `SGBD`, escolhi o `postgres` e estou utilizando de `IDE` visual o `DataGrip`.
+
+- Criação do banco:
+
+    ```SQL
+
+        CREATE DATABASE intregation_to_ruby
+
+    ```
