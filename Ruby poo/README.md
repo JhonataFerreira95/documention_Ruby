@@ -1,1253 +1,1132 @@
-# Documentação Ruby POO
+# Documentação Ruby — POO (Programação Orientada a Objetos)
 
-## Índice   
+## Índice
 
 1. [Introdução](#introdução)
-2. [Classe e Objetos](#classes-e-objetos)
-3. [Initialize(Ou Constructor)](#initialize)
-4. [Métodos em Instância](#métodos-em-instânciaou-objetos)
+2. [Classes e Objetos](#classes-e-objetos)
+3. [Initialize (ou Constructor)](#initialize)
+4. [Métodos em Instância](#métodos-em-instância-ou-objetos)
 5. [Self](#self)
-6. [Getter e Setter](#getters-e-setters)
-7. [Atributos com Attr reader, Attr writer e Attr accessor](#atríbutos-em-ruby)
-8. [Parâmetros no Método Initialize(ou Construtor)](#parâmetros-no--método-initialize)
-9. [Encapsulamento(Privado, Público e Protegio)](#encapsulamento-privado-público-e-protegido)
+6. [Getters e Setters](#getters-e-setters)
+7. [Atributos com Attr reader, Attr writer e Attr accessor](#atributos-em-ruby)
+8. [Parâmetros no Método Initialize](#parâmetros-no-método-initialize)
+9. [Encapsulamento (Privado, Público e Protegido)](#encapsulamento-privado-público-e-protegido)
 10. [Métodos de Classe](#métodos-de-classe-em-ruby)
 11. [Variável de Classe](#variável-de-classe)
 12. [Herança em Ruby](#herança-em-ruby)
 13. [Polimorfismo em Ruby](#polimorfismo-em-ruby)
-14. [Módulo e Mixins em Ruby(Herança Múltipla)](#módulo-e-mixins-em-rubyherança-múltipla)
+14. [Módulos e Mixins em Ruby (Herança Múltipla)](#módulos-e-mixins-em-ruby-herança-múltipla)
+
+---
 
 ## Introdução
 
-- O que é o POO? Ou programação orientada a objetos.
+### O que é POO? (Programação Orientada a Objetos)
 
-    - Conceitos
+> POO é um paradigma de programação que organiza o código em torno de **objetos** — entidades que combinam dados (atributos) e comportamentos (métodos). É o paradigma central do Ruby e a base de todo o ecossistema Rails.
 
-        - Nova maneira de pensar no desenvolvimento, utilizando conceitos do mundo real.
+**Conceitos fundamentais:**
 
-        - Objetos do mundo real transforma-se em objetos no software.
+- Nova maneira de pensar no desenvolvimento, utilizando conceitos do mundo real.
+- Objetos do mundo real se transformam em objetos no software.
+- Torna mais fácil a manutenção do sistema ao longo do tempo.
+- Uma classe possui **atributos** (características) e **métodos** (comportamentos).
 
-        - Torna mais fácil a manutenção ao sistema.
+---
 
-        - Uma classe possui atríbutos(características) e métodos(comportamentos).
+### Encapsulamento
 
-    - Encapsulamento
+> Encapsulamento é o princípio de **esconder os detalhes internos** de uma classe, expondo apenas o necessário para o mundo externo. Protege a integridade dos dados e reduz o acoplamento entre partes do sistema.
 
-        - Esconder as funcionalidades e funcionamento do nosso código.
+- Esconder as funcionalidades e o funcionamento interno do código.
+- Proteger o acesso aos atributos, permitindo leitura ou escrita **somente via métodos controlados**.
 
-        - Proteger o acesso aos atríbutos, possibilitando o acesso a leitura ou escrita destes atributos, somente via métodos.
+**Modificadores de acesso:**
 
-        - Modificadores de acesso
+| Modificador  | Acesso                                              | Palavra-chave |
+|--------------|-----------------------------------------------------|---------------|
+| `public`     | Dentro e fora da classe, por qualquer objeto        | `public`      |
+| `protected`  | Dentro da classe e em suas subclasses               | `protected`   |
+| `private`    | Somente dentro da própria classe                    | `private`     |
 
-            - Público
+---
 
-                - Permite acesso aos membros dentro e fora da classe.
+### Herança
 
-                - Pode ser definido com um `public`
-            
-            - Protegido
+> Herança permite que uma classe **filha (subclasse)** reutilize atributos e métodos de uma classe **pai (superclasse)**, evitando repetição de código e criando hierarquias lógicas.
 
-                - Permite acesso aos membros dentro da classe e nas subclasses
+- **Superclasse (classe pai / classe genérica):** contém comportamentos comuns e reutilizáveis. É a mais abstrata e genérica da hierarquia.
+- **Subclasse (classe filha / classe especializada):** herda tudo da superclasse e pode adicionar ou modificar comportamentos específicos.
 
-                - Pode ser definido com um `protected`.
-            
-            - Privado
-                 
-                 - Permite acesso aos membros somente dentro da classe.
+**Relacionamento "é um":** quando temos `Animal` como superclasse e `Cachorro` e `Gato` como subclasses, dizemos que "um cachorro **é um** animal". As subclasses herdam atributos e métodos da superclasse e podem adicionar os seus próprios.
 
-                 - Pode ser definida com a palavra reservada `private`.
+**Sintaxe para herdar uma classe em Ruby:**
 
-    - Herança
+```ruby
+Gato < Animal # O operador < (menor que) define a herança — Gato herda de Animal
+```
 
-        - Possibilita que uma classe(filha) possa herdar atríbutos e métodos de outra classe(pai).
+---
 
-        - Classe Genérica
-
-            - Geralmente as classe Genérica são as `SUPER-CLASSE`(classe pai), por que classe Genérica? Ela pode conter informações que pode ser últi para outras classe deverivadas dela ou `SUB-CLASSES`(classe filha).
-        
-        - Classe Especialista
-
-            - As classe Especialistas são às `SUB-CLASSE`(classe filha), que herdam as informações da `SUPER-CLASSE`(classe pai), além de herda todos os atríbutos da `SUPER-CLASSE`, elas podem ter seus próprios atríbutos e métodos específico para sua finalidade.
-
-        - Relacionamento de Herança
-
-            - "é um" usando herança é quando temos uma classe geral Animal e classes específicas como Cachorro e Gato que herdam dela, pois um cachorro é um animal e um gato é um animal. Isso significa que as `SUB-CLASSE` (Cachorro, Gato) herdam os atributos e métodos da `SUPER-CLASSE` (Animal), adicionando ou modificando seus próprios comportamentos específicos. 
-
-        - Herdando uma classe em Ruby
-
-            - Para herda uma classe é só utilizar o operador `<`(menor que), exemplo abaixo:
-
-                ``` ruby
-
-                Gato < Animal
-
-                ```
-        
 ## Classes e Objetos
 
-- Vamos começar falando sobre o que é uma classe. É uma estrutura que define as propriedades (atributos) e comportamentos (métodos) que os objetos criados a partir dela terão. Os atributos são as características do objeto, enquanto os métodos são as ações que o objeto pode realizar. Em termos simples, uma classe é um template para criar objetos que compartilham um conjunto comum de campos e métodos.
+> Uma **classe** é um molde (template) que define quais atributos e comportamentos os objetos criados a partir dela terão. Em Ruby, tudo é um objeto — incluindo as próprias classes.
 
-- Como criar uma classe em `ruby`? Utilizando a palavra reservada `classe<NomeDesejado>` lembrando que o nome da sua `classe` deve começar com a lestra maiúscula. Siga o exemplo abaixo:
+- Atributos são as **características** do objeto.
+- Métodos são as **ações** que o objeto pode realizar.
 
-    ```ruby
+**Como criar uma classe em Ruby?** Usamos a palavra reservada `class` seguida do nome, que **obrigatoriamente deve começar com letra maiúscula**:
 
-    class Veiculo # Criamos uma classe chamada veiculos
+```ruby
+class Veiculo # Criamos uma classe chamada Veiculo
 
-    end
+end
+```
 
-    ```
-- O que uma `Instancia(objeto)`? Bem, uma instancia é uma crianção de um objeto a partir do modelo da `SUPER-CLASSE(classe pai)` e herda sua estrutura e métodos, num entando, vale resaltar que apesar de herda tudo da sua `classe pai` a sua instancia pode conter métodos e estruturas próprias que sua `classe pai` não contém.
+**O que é uma instância (objeto)?** Uma instância é um objeto criado a partir do molde da classe. Apesar de herdar toda a estrutura da classe, cada instância possui seus próprios valores de atributos — independentes das demais.
 
-- Como `instanciar(objeto)` algo em `ruby`? Para isso devemos utilizar o nome da `classe`, que acima foi `Veiculo` e a palavra reservada `.new`. Seugue o exemplo abaixo:
+**Como instanciar um objeto em Ruby?** Usamos o nome da classe seguido de `.new`:
 
-    ```ruby
+```ruby
+ford = Veiculo.new
+fiat = Veiculo.new
+byd  = Veiculo.new # caso queira ver o tipo de variável no console é só digitar <puts nome_da_variavel_desejada.class>
+```
 
-    ford = Veiculo.new
-    fiat = Veiculo.new
-    byd = Veiculo.new # caso queira ver o tipo de variável no console é só digitar <puts `nome_da_variavel_desejada.class`>
-
-    ```
+---
 
 ## Initialize
 
-- O método `initialize` funciona da mesma forma que um `construtor` em outras linguagens de programação.
+> O método `initialize` é o **construtor** da classe — executado automaticamente sempre que um novo objeto é criado com `.new`. É usado para definir a configuração inicial da instância.
 
-- Geralmente o método `initialize` é utilizado para definir a configuração inicial da sua `classe`, não só `classe` mais também `atríbuto` ou `objeto`.
+**Variáveis de instância (`@`):** em Ruby, atributos de um objeto são armazenados em variáveis de instância, prefixadas com `@`. Cada objeto criado tem suas próprias cópias dessas variáveis — isoladas das demais instâncias.
 
-- Irei aborda uma curiosidade na linguagem `ruby`, normalmente definimos atributos para nossas classes. Isso também acontece em outras linguagens, mas em Ruby temos algo chamado variável de instância. Após a criação da classe e do método initialize, podemos definir variáveis de instância com `@`. A função da `variável de instância` é guardar informações específicas de cada objeto criado. Assim, toda vez que você instancia um objeto, ele terá suas próprias características armazenadas nessas variáveis.
+```ruby
+class Carro
 
-    - Exemplo prático:
+    def initialize(marca, modelo)
+        @marca = marca   # Variável de instância — guarda o valor específico de cada objeto
+        @modelo = modelo
+    end
 
-        ```ruby
+    def apresentar
+        "Vejam nosso novo modelo de carro #{modelo} e sua marca #{marca}"
+    end
 
-            class Carro
+end
 
-                def initialize(marca, modelo)
-                    @marca = marca
-                    @modelo = modelo
-                end
+carro = Carro.new("Ford", "A23")
 
-                def apresentar
-                    "Vejam nosso novo modelo de carro #{modelo} e sua marca #{marca}"
-                end
+puts carro
+p carro
+```
 
-            end
+> Caso queira verificar os `atributos` das suas `variáveis de instância`, no lugar do `puts` utilize o `p`, já que se você utilizar o `puts` não irá acontecer nada. O `p` é um método de "impressão" que exibe a representação de um objeto e adiciona uma nova linha. Na prática seria assim:
 
-            carro = Carro.new("Ford", "A23")
+```ruby
+p carro
+```
 
-            puts carro
-            p carro
+---
 
-        ```
-    - Caso queira verificar a seus `atríbutos` das suas `váriavel de instância`, no lugar do `puts` utilize o `p`, já que se voce utilizar o `puts` não ira acontecer nada. É um método de "impressão" que exibe a representação de um objeto e adiciona uma nova linha. Na prática séria assim:
+## Métodos em Instância (ou objetos)
 
-        ```ruby
+> Métodos de instância pertencem a um objeto específico. Para usá-los, é necessário primeiro **instanciar a classe** — criar um objeto a partir dela.
 
-            p carro
+```ruby
+class Carro
 
-        ```
+    def initialize(marca, modelo)
+        @marca = marca
+        @modelo = modelo
+    end
 
-## Métodos em Instância(ou objetos)
+    def apresentar # Vamos supor que você deseja exibir isso no console
+        "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
+    end
 
-- Bem, vamos começa a falar sobre os métodos de `instância`, os métodos de instância são aqueles que pertencem a um objeto específico. Para utilizá-los, primeiro precisamos instanciar a classe, ou seja, criar um objeto a partir dela. Assim, podemos acessar os métodos definidos dentro da classe para aquele objeto
+end
 
-    - Exemplo na prática:
+carro = Carro.new("Ford", "A23") # Nossa classe instanciada
 
-        ```ruby
+puts carro.apresentar # Exibindo método instanciado
+```
 
-            class Carro
+> Agora eu posso utilizar o `método` já que ele é uma instância da minha `classe` que já foi instanciada. Vale ressaltar que podemos utilizar isso com todos os métodos que estão presentes em nossa `classe`, levando em consideração que ela já está instanciada.
 
-                def initialize(marca, modelo)
-                    @marca = marca
-                    @modelo = modelo
-                end
+---
 
-                def apresentar # Vamos supor que você deseja exibir isso no console
-                    "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
-                end
+### O método `to_s`
 
-            end
+> `to_s` é utilizado para converter qualquer `objeto` em sua representação em `string`. O método `p` apenas exibe no console a representação do `objeto`, enquanto o método `to_s` retorna a `string` do `objeto` desejado — ou seja, ele retorna a `string` que está dentro do `objeto`, enquanto o `p` retorna o `objeto` inteiro. Cada `objeto` em Ruby tem acesso ao método `to_s`, já que ele retorna uma `string` com informação do `objeto` desejado.
 
-            carro = Carro.new("Ford", "A23") # Nossa classe instânciada
+> Antes do método `to_s`, note que quando criamos um `objeto` sem definição do `to_s`, essa é sua mensagem de criação:
 
-            puts carro.apresentar # Exibindo  método instânciada
+![Sem o método to_s](../Banco%20de%20dados%20SQL/Assets/Metódo_p.png)
 
-        ```
-    - Agora eu posso utilizar o `método` já que ele é uma instância da minha `classe` que já foi instânciada. Vale ressaltar que podemos utilizar isso com todos os métodos que estão presentes em nossa `classe`, levando em consideração que ela já esta instânciada.
+```ruby
+class Carro
 
-- Agora irei aborda o `método` `to_s`, é utilizado para converte qualquer `objeto` em sua representação em `string`. Você deve está se perguntando para que utilizar o método `to_s` se ele faz a mesma coisa do método `p`, o método `p` apenas exibi no console a representação do `objeto`, enquanto o método `to_s` retorna a `string` do `objeto` desejado, ou seja, ele retorna a `string` que está dentro do `objeto`, enquanto o `p` retorna o `objeto` inteiro. Cada `objeto` em `ruby` tem acesso ao método `to_s`, já que o método retorna uma `string` com informação do `objeto` desejado.
+    def initialize(marca, modelo)
+        @marca = marca
+        @modelo = modelo
+    end
 
+    def apresentar # Vamos supor que você deseja exibir isso no console
+        "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
+    end
 
-    - Antes do método `to_s`, note que quando criamos um `objeto` sem definição do `to_s`, essa e sua mensagem de criação:
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
-        ![Sem o método to_s](../Banco%20de%20dados%20SQL/Assets/Metódo_p.png)
+end
 
-    - Aqui um exemplo na prática:
+carro = Carro.new("Ford", "A23") # Nossa classe instanciada
 
-        ```ruby
+puts carro.apresentar # Exibindo método instanciado
+```
 
-             class Carro
+> Depois da definição do método `to_s`, podemos ver a mensagem que foi definida nele:
 
-                def initialize(marca, modelo)
-                    @marca = marca
-                    @modelo = modelo
-                end
+![Com método to_s](../Banco%20de%20dados%20SQL/Assets/Metódo_to_s.png)
 
-                def apresentar # Vamos supor que você deseja exibir isso no console
-                    "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
-                end
-
-                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                end
-
-            end
-
-            carro = Carro.new("Ford", "A23") # Nossa classe instânciada
-
-            puts  carro.apresentar # Exibindo método instânciada
-
-        ```
-
-        - Depois da definição do método `to_s`, resaltar que para funcinar perfeitamente, utilize a palavra reservada `to_s`. Podemos ver a mensagem que foi definida no método `to_s`.
-
-            ![Com método to_s](../Banco%20de%20dados%20SQL/Assets/Metódo_to_s.png)
+---
 
 ## Self
 
-- Irei apresentar o `self`. O `self` não é um método, mas sim uma palavra reservada que representa o próprio objeto instanciado. Ele é utilizado dentro da classe para fazer referência à instância que está sendo criada ou manipulada.
+> `self` não é um método — é uma **palavra reservada** que representa o próprio objeto instanciado no contexto atual. Dentro de um método, `self` aponta para a instância. Fora dos métodos (mas dentro da classe), `self` aponta para a própria classe.
 
-    - Exemplo com self:
+```ruby
+class Carro
 
-        ```ruby
+    puts "Novo objeto foi criado #{self}" # Utilizando o self
 
-             class Carro
+    def initialize(marca, modelo)
+        @marca = marca
+        @modelo = modelo
+    end
 
-                puts "Novo objeto foi criado #{self}" # Utilizando o self
+    def apresentar # Vamos supor que você deseja exibir isso no console
+        "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
+    end
 
-                def initialize(marca, modelo)
-                    @marca = marca
-                    @modelo = modelo
-                end
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
-                def apresentar # Vamos supor que você deseja exibir isso no console
-                    "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
-                end
+end
 
-                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                end
+carro = Carro.new("Ford", "A23") # Nossa classe instanciada
 
-            end
+puts carro.apresentar # Exibindo método instanciado
+```
 
-            carro = Carro.new("Ford", "A23") # Nossa classe instânciada
+> No exemplo acima utilizamos o `self` para anunciar que um `objeto` foi criado.
 
-            puts  carro.apresentar # Exibindo  método instânciada
+---
 
+### Usando `self` dentro de métodos
 
-        ```
-    
-    - No exemplo acima utilizando o `self` para anúnciar que um `objeto` foi criado.
+> O `self` também pode ser utilizado em conjunto com o `to_s`. Caso você queira criar uma opção de detalhes manipulando algo dentro da sua classe, é só criar um novo método utilizando o `self` dentro do mesmo.
 
-- O `self` também pode ser utilizado em conjunto com o `to_s`, caso você criar uma opção de detalhes manipulando algo dentra da sua classe, vou seguir o exemplo com detalhe, é só criar um novo método utilizando o `self` dentro do mesmo.
+```ruby
+class Carro
 
-    - Exemplo:
+    puts "Novo objeto foi criado #{self}" # Utilizando o self
 
-        ```ruby
+    def initialize(marca, modelo)
+        @marca = marca
+        @modelo = modelo
+    end
 
-           class Carro
+    def apresentar # Vamos supor que você deseja exibir isso no console
+        "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
+    end
 
-                puts "Novo objeto foi criado #{self}" # Utilizando o self
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
-                def initialize(marca, modelo)
-                    @marca = marca
-                    @modelo = modelo
-                end
+    def detalhes
+        puts "detalhe do carro: #{self}" # utilizando o self
+    end
 
-                def apresentar # Vamos supor que você deseja exibir isso no console
-                    "Vejam nosso novo modelo de carro #{@modelo} e sua marca #{@marca}"
-                end
+end
 
-                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                end
+carro = Carro.new("Ford", "A23") # Nossa classe instanciada
 
-                def detalhes
-                    puts "detalhe do carro: #{self}" #utilizando o self
-                end
+puts carro.apresentar # Exibindo método instanciado
 
-            end
+puts carro.detalhes # Chamando o método que tem o self
+```
 
-            carro = Carro.new("Ford", "A23") # Nossa classe instânciada
+> Resultado:
 
-            puts carro.apresentar # Exibindo  método instânciada
+![Resultado](../Banco%20de%20dados%20SQL/Assets/self.png)
 
-            puts carro.detalhes # Chamando o método que tem o self
+> A palavra reservada `self` faz referência de acordo com o local que foi inserida — ela basicamente aponta para a instância atual do `objeto` criado. Como visto, utilizei 2 exemplos com o `self`: um para anunciar que a classe foi instanciada e outro para sobrescrever com o método `to_s`. Se utilizar o `self` fora dos métodos, ele se referencia à classe; dentro dos métodos, se referencia à instância.
 
-        ```
+---
 
-    - Resultado: 
+## Getters e Setters
 
-        ![Resultado](../Banco%20de%20dados%20SQL/Assets/self.png)
+> Em Ruby, variáveis de instância (`@variavel`) são privadas por padrão — não podem ser acessadas diretamente de fora da classe. `Getters` são métodos que **lêem** o valor de uma variável de instância, enquanto `setters` são métodos que **modificam** esse valor, sendo definidos com um sinal de igual (`=`) anexado ao nome.
 
-        - O palavra reservada `self` faz refência de acordo com o local que foi inserida. Ela basicamente aponta para instância atual que o `objeto` foi criado.
+### Getters
 
-        - Como visto, utilizei 2 exemplos com o `self`, tanto um para anúnciar que a classe foi instânciada como o outro que foi sobrescrever com o método `to_s`. Como visto, se utilizar o `self` foras dos métodos, ele se referência a classe, dentro dos métodos, se referência aos métodos.
+> O método `getter` geralmente é utilizado para retornar valores em `atributos` ou `variável` instanciada. Para utilizá-lo, damos um nome ao método — normalmente o mesmo nome da `variável de instância` ou `atributo`.
 
-## Getters e Setters 
+```ruby
+class Carro
 
-- Irei aborda o Getter e o Setter. Em `ruby`, `getters` são métodos que lêem o valor de uma variável de instância, enquanto `setters` são métodos que modificam esse valor, sendo definidos com um sinal de igual (=) anexado ao nome.
+    puts "Novo objeto foi criado #{self}" # Utilizando o self
 
-    - Getters
+    def initialize # removemos os parâmetros para ficar mais simples
+        @marca = marca
+        @modelo = modelo
+    end
 
-        - O método `getters` geralmente são utilizados para retorna valores em `atríbutos` ou `variável` instânciada.
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
-        - Para se utilizar o `getter` se da um nome para o método, normalmente se atribuí o mesmo nome da `variável de instância` ou `atríbuto`. 
+    def marca # Utilizando o Getter
+        @marca # Para variável de instância
+    end
 
-            - Exemplo para `váriavel de instância`:
+    def modelo # Utilizando o Getter
+        @modelo # Para variável de instância
+    end
 
-                ```ruby
+end
+```
 
-                class Carro
+---
 
-                    puts "Novo objeto foi criado #{self}" # Utilizando o self
+### Setters
 
-                    def initialize # removemos o parâmetros para fica mais simples
-                        @marca = marca
-                        @modelo = modelo
-                    end
+> O método `setter` geralmente é utilizado para alterar valores de uma `variável de instância` — lembrando que isso só é possível depois que o `objeto é criado`. Para utilizar o `setter`, criamos um método com o mesmo nome da variável de instância acrescido de `=`, recebendo um parâmetro com nome diferente para atribuir o novo valor.
 
-                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                    end
+> **Importante:** para usar setters, os getters correspondentes devem estar definidos antes.
 
-                    def marca # Utilizando o Getter
-                        @marca # Para variável de instância
-                    end
+```ruby
+class Carro
 
-                    def modelo # Utilizando o Getter
-                        @modelo # Para variável de instância
-                    end
+    puts "Novo objeto foi criado #{self}" # Utilizando o self
 
-                end
+    def initialize # removemos os parâmetros para ficar mais simples
+        @marca = marca
+        @modelo = modelo
+    end
 
-                ```
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
-    - Setters
+    def marca # Utilizando o Getter
+        @marca # Para variável de instância
+    end
 
-        - O método `setters` geralmente são utilizado para alterar valores de uma `variável de instância`, lembrando que isso só é possível depois que o `objeto é criado`.
+    def modelo # Utilizando o Getter
+        @modelo # Para variável de instância
+    end
 
-        - Para utilizar o `setters` criamos uma nova `variável de instância` com o mesmo nome do da `variável de instância` com um parâmetro com nome diferente, para que possamos atríbuir um novo valor utilizando o `setters`. Levando em consideração que para utilização do `setters` é necessário definir os `getters` antes de prosseguir
+    def marca=(nova_marca) # utilizando o setter para atribuir algo novo para nossa variável de instância
+        @marca = nova_marca # o parâmetro é utilizado para que possamos atribuir um valor ao atributo de instância que foi criado
+    end
 
-            - Exemplo utilizando o `setters` com `variável de instância` e `atríbuto de instância`:
+    def modelo=(novo_modelo)
+        @modelo = novo_modelo
+    end
 
-                ``` ruby 
-                
-                class Carro
+end
 
-                    puts "Novo objeto foi criado #{self}" # Utilizando o self
+carro = Carro.new        # Para instanciar nossa classe
+carro.marca = "Fiat"     # utilizando a nova atribuição com setters
+carro.modelo = "uno"
 
-                    def initialize # removemos o parâmetros para fica mais simples
-                        @marca = marca
-                        @modelo = modelo
-                    end
+puts carro.marca, carro.modelo
+```
 
-                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                    end
+---
 
-                    def marca # Utilizando o Getter
-                        @marca # Para variável de instância
-                    end
+## Atributos em Ruby
 
-                    def modelo # Utilizando o Getter
-                        @modelo # Para variável de instância
-                    end
+> Ruby oferece três métodos especiais que **eliminam a necessidade de escrever getters e setters manualmente** — tornando o código mais conciso e legível. O objetivo desses métodos é evitar o uso explícito de `getters` e `setters`.
 
-                    def marca=(nova_marca) # utlizando o setters para atribuir algo novo para nossa variável de instância
-                        @marca = nova_marca # o parâmentro é utilizando para que possamos atribuir um valor ao atríbuto de instância que foi criado
-                    end
+### `attr_reader` — somente leitura
 
-                    def modelo=(novo_modelo) 
-                        @modelo = novo_modelo
-                    end
+> É utilizado para definir um atributo como atributo de leitura.
 
-                end
+```ruby
+class Carro
 
-                carro = Carro.new # Para instânciar nossa classe
-                carro.marca = "Fiat" # utilizando a nova atríbuição com setters
-                carro.modelo = "uno"
+    attr_reader :marca, :modelo # Utilizando o método <attr_reader> para definir que os atributos são de leitura
 
-                puts carro.marca, carro.modelo
+    def initialize # removemos os parâmetros para ficar mais simples
+        @marca = marca
+        @modelo = modelo
+    end
 
-                ```
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
-## Atríbutos em Ruby
+end
 
-- Métodos especiais para definição atríbutos com rótulo de leitura, escrita ou leitura e escrita ao mesmo tempo. O objetivo desses métodos é evitar o usor explicito de `getters` e `setters`.
+carro = Carro.new # instanciando a classe
 
-    - Attr_reader
+p carro.marca  # Exibição do atributo com método <p>
+p carro.modelo
+```
 
-        - É utilizado para definir um atríbuto como atríbuto de leitura
+---
 
-            - Exemplo na prática:
+### `attr_writer` — somente escrita
 
-                ```ruby 
+> É utilizado para definir um atributo como atributo de escrita.
 
-                class Carro
-                    
-                    attr_reader :marca, :modelo # Utilizando o método <attr_reader> para definir que os atríbutos são de leitura
-                    
-                    def initialize # removemos o parâmetros para fica mais simples
-                        @marca = marca
-                        @modelo = modelo
-                    end
+```ruby
+class Carro
 
-                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                    end 
+    attr_writer :marca, :modelo # Utilizando o método <attr_writer> para definir que os atributos são de escrita
 
-                end
+    def initialize # removemos os parâmetros para ficar mais simples
+        @marca = marca
+        @modelo = modelo
+    end
 
-                carro = Carro.new # instânciado a classe
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
-                p carro.marca # Exibição do atríbuto com método <p>
-                p carro.modelo
+end
 
-                ```
+carro = Carro.new
 
-    - Attr_writer
+carro.marca  = "Ford" # Utilizando o método <attr_writer>
+carro.modelo = "Gol"
 
-        - É utilizado para definir um atríbuto como atríbuto de escrita.
+p carro.marca  # Exibição do atributo alterado com <attr_writer>
+p carro.modelo
+```
 
-            - Exemplo na prática:
+---
 
-                ```ruby 
+### `attr_accessor` — leitura e escrita
 
-                class Carro
-                    
-                    attr_writer :marca, :modelo # Utilizando o método <attr_writer> para definir que os atríbutos são de escrita
-                    
-                    def initialize # removemos o parâmetros para fica mais simples
-                        @marca = marca
-                        @modelo = modelo
-                    end
+> É utilizado para definir um atributo de leitura e escrita ao mesmo tempo — é a junção do `attr_reader` e `attr_writer`.
 
-                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                    end
+```ruby
+class Carro
 
-                end
+    attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-                carro = Carro.new # instânciado a classe
-                
-                carro.marca="Ford" # Utilizando o método <attr_writer>
-                carro.modelo="Gol"
+    def initialize # removemos os parâmetros para ficar mais simples
+        @marca = marca
+        @modelo = modelo
+    end
 
-                p carro.marca # Exibição do atríbuto alterado com <attr_writer>
-                p carro.modelo
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
+end
 
-                ```
+carro = Carro.new
 
-    - Attr_acessor
+p carro.marca             # Utilizando o método <attr_accessor> para ler
+p carro.marca = "Ferrari" # Exibição do atributo alterado com <attr_accessor> para alterar
+p carro.marca             # Utilizando o método <attr_accessor> para ler o novo valor alterado
+```
 
-        - É utilizado para definir um atríbuto leitura e escrita ao mesmo tempo, é a junção do `attr_reader` e `attr_writer`.
-
-            - Exemplo na prática:
-
-                ```ruby
-
-                class Carro
-                    
-                    attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                    
-                    def initialize # removemos o parâmetros para fica mais simples
-                        @marca = marca
-                        @modelo = modelo
-                    end
-
-                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                    end
-
-                end
-
-                carro = Carro.new # instânciado a classe
-                
-                p carro.marca # Utilizando o método <attr_accessor> para ler
-
-                p carro.marca="Ferrari" # Exibição do atríbuto alterado com <attr_accessor> para alterar 
-
-                p carro.marca # Utilizando o método <attr_accessor> para ler o novo valor alterado 
-
-                ```
+---
 
 ## Parâmetros no Método Initialize
 
-- Para deixa os `valores` do método `initialize` estatícos, e torná-los mais dinâmico. Começando a trabalha com `parâmetros` em nosso método `initialize`.
+> Para deixar os `valores` do método `initialize` dinâmicos ao invés de estáticos, trabalhamos com `parâmetros`. Para utilizá-los, precisamos defini-los (de preferência seguindo a mesma nomenclatura do nosso `objeto` que está dentro do `initialize`) e após a sua definição iremos instanciar nossa classe e passar seus valores de forma dinâmica.
 
-    - Para utlizamos `parâmetros` no lugar de `valores` em nosso `initialize` precisamos definir-los(de preferência seguindo a mesma nomeclatura do nosso `objeto` que está dentro do `ìnitialize`) e após a sua definição iremos instância nossa classe e passsar seus valores de uma forma dinâmica.
+> Os parâmetros devem ser informados **na mesma ordem** em que foram declarados. Se algum obrigatório for omitido, o Ruby lançará um erro.
 
-      - Exemplo na prática:
+```ruby
+class Carro
 
-        ```ruby 
+    attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-            class Carro
-                    
-                attr_accessor :marca, :modelo # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                                        
-                def initialize(marca, modelo) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                    @marca = marca
-                    @modelo = modelo
-                end
+    def initialize(marca, modelo) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca = marca
+        @modelo = modelo
+    end
 
-                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}" # Definido a menssagem de criação do objeto
-                end
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}" # Definindo a mensagem de criação do objeto
+    end
 
-                def tecnico
-                    puts "#Dados do Carro"
-                    puts "Sua marca é #{@marca}"
-                    puts "Seu modelo é #{@modelo}"
-                end
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+    end
 
-            end
+end
 
-            carro = Carro.new("ford", "car") # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+carro = Carro.new("ford", "car") # devem seguir a ordem, primeiro vem o modelo e depois a marca, como foi definido nos parâmetros
 
-            puts carro
+puts carro
 
-            puts carro.tecnico # exibição do método de instância
+puts carro.tecnico # exibição do método de instância
 
-            carro2 = Carro.new("Fiat", "uno")
+carro2 = Carro.new("Fiat", "uno")
 
-            puts carro2
+puts carro2
 
-            puts carro2.tecnico 
+puts carro2.tecnico
+```
 
-         ```
+> Vale ressaltar que se todos os parâmetros não forem informados, após a execução irá dar erro como pode ser visto:
 
-    - Vale ressaltar se todos os parâmetro não forem informados após a execução irá da erro como pode ser visto. E que os parâmetros devem ser inserido seguindo a ordem de precedência dos mesmo.
+![Sem passar todos os valores em nossos parâmetros](../Banco%20de%20dados%20SQL/Assets/ruby_erro_sem_definicao_dos_parametros.png)
 
-        - Resultado sem todos os valores:
+> Como pode ser visto, é obrigatório passar os dados em nossos parâmetros para que nosso método `initialize` de forma dinâmica funcione.
 
-        ![Sem passar todos os valores em nossos parâmetros](../Banco%20de%20dados%20SQL/Assets/ruby_erro_sem_definicao_dos_parametros.png)
-
-        - Como pode ser visto, é obrigatório passar os dados em nossos parâmetros para que nosso método `initialize` de forma dinâmica funcione.
+---
 
 ## Encapsulamento. Privado, Público e Protegido
 
-- O conceito de `Encapsulamento`, a função principal do `encapsulamento` é esconder os detalhes internos e a complexidade de um objeto, expondo apenas uma interface controlada (os métodos públicos) para interação externa.
+> A função principal do encapsulamento é **esconder os detalhes internos** e a complexidade de um objeto, expondo apenas uma interface controlada (os métodos públicos) para interação externa.
 
-- Existem 3 tipos de modificador de acesso no `Encapsulamento`, sendo eles `Privado`, `Público` e `Protegido`.
+Existem 3 tipos de modificador de acesso no encapsulamento: `Privado`, `Público` e `Protegido`.
 
-    - Privado
+---
 
-        - Em `ruby`, métodos ou atributos `privados` só podem ser chamados dentro da mesma instância da `classe` onde foram definidos, inclusive nas `sub-classes` que os herdam. Eles não podem ser acessados por outras `classes`, nem chamados diretamente em outra instância do mesmo tipo, mesmo que pertença à mesma `classe`. Além disso, métodos `privados` não podem ser invocados com um receptor explícito `obj.metodo`, apenas de forma implícita dentro do objeto.
+### Privado (`private`)
 
-        - Utilizamos a palavra reservada `private` para definir um método privado em `ruby`, tudo que está abaixo da palavra reservada `private` está privado. 
+> Em Ruby, métodos ou atributos `privados` só podem ser chamados dentro da mesma instância da `classe` onde foram definidos. Eles não podem ser acessados por outras `classes`, nem chamados diretamente em outra instância do mesmo tipo. Além disso, métodos `privados` não podem ser invocados com um receptor explícito `obj.metodo`.
 
-        - Para torna os próximos métodos público abaixo do `private`, se utilizar a palavra reservada `public`.
+> Tudo que estiver **abaixo** da palavra `private` será privado. Para voltar ao modo público, use `public`. Seguindo a mesma lógica, vale o mesmo para o `protected`.
 
-        - Seguindo a mesma lógica, vale o mesmo para o `protected`.
+```ruby
+# Irei utilizar o método <Privado>
 
-            - Exemplo na prática:
+class Carro
 
-                ```ruby
+    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-                # Irei utilizar o método <Privado>
+    attr_reader
 
-                class Carro
-                        
-                    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
+    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca  = marca
+        @modelo = modelo
+        @preco  = preco
+    end
 
-                    attr_reader
-                                            
-                    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                        @marca = marca
-                        @modelo = modelo
-                        @preco = preco
-                    end
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}-#{@preco}" # Definindo a mensagem de criação do objeto
+    end
 
-                    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                        "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
-                    end
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+        puts "Seu preço é #{@preco}"
+    end
 
-                    def tecnico
-                        puts "#Dados do Carro"
-                        puts "Sua marca é #{@marca}"
-                        puts "Seu modelo é #{@modelo}"
-                        puts "Seu preco é #{@preco}"
-                    end
+    private # Para utilizar o método privado utilizamos da palavra reservada <private>
 
-                    private # Para utilizar o método privado utilizamos da palavra resevada <private>
+    def desconto_carro(desconto_aplicado) # Criando o método de desconto
+        @preco -= (@preco * desconto_aplicado / 100)
+    end
 
-                    def desconto_carro(desconto_aplicado) # Criando o método de desconto
-                        @preco -= (@preco * desconto_aplicado / 100)
-                    end
-                    
-                end
+end
 
-                carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, como foi definido nos parâmetros
 
-                puts carro # Imprimir resultado no console
+puts carro # Imprimir resultado no console
 
-                carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
+carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
+```
 
-                ```
+> Resultado:
 
-            - Resultado:
+![Resultado na prática](../Banco%20de%20dados%20SQL/Assets/método_privado.png)
 
-                ![Resultado na prática](../Banco%20de%20dados%20SQL/Assets/método_privado.png)
+> Isso acontece porque o método `private` não pode ser acessado por instância fora da nossa `classe` — apenas dentro da mesma, utilizando um receptor explícito já mencionado acima, nosso `self`.
 
-                - Isso acontece porque o método `private` não pode ser acessado por instância fora da nossa `classe` apenas dentro da mesma utilizando um recptor explícito já mencionado acima, nosso `self`.
+---
 
-    - Public        
+### Público (`public`)
 
-         - Em `ruby`, métodos ou atributos `public` podem ser chamados em qualquer lugar na`classe` ou fora dela, inclusive nas `sub-classes` que os herdam. Eles podem ser acessados por outras `classes`, ser chamados diretamente em outra instância do mesmo tipo, mesmo que pertença à mesma `classe`. Além disso, métodos `public`  podem ser invocados com um receptor explícito `obj.metodo`, podem ser usados para acessar até mesmo algum método `privado`.
+> Em Ruby, métodos ou atributos `public` podem ser chamados em qualquer lugar na `classe` ou fora dela, inclusive nas `sub-classes` que os herdam. Além disso, métodos `public` podem ser invocados com um receptor explícito `obj.metodo` e podem ser usados para acessar até mesmo algum método `privado`.
 
-        - Utilizamos a palavra reservada `public` para definir um método público em `ruby`, tudo que está abaixo da palavra reservada `public` está público. 
+> Tudo que estiver **abaixo** da palavra `public` estará público. Para tornar os próximos métodos privados abaixo do `public`, utilize a palavra reservada `private`. Seguindo a mesma lógica, vale o mesmo para o `protected`.
 
-        - Para torna os próximos métodos privado abaixo do `public`, se utilizar a palavra reservada `private`.
+```ruby
+# Irei utilizar o método <public> para acessar o método <Private>
 
-        - Seguindo a mesma lógica, vale o mesmo para o `protected`.
+class Carro
 
-            - Exemplo na prática:
+    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-                ```ruby
+    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca  = marca
+        @modelo = modelo
+        @preco  = preco
+    end
 
-                    # Irei utilizar o método <public> para acessar o método <Private>
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}-#{@preco}" # Definindo a mensagem de criação do objeto
+    end
 
-                    class Carro
-                            
-                        attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                                                
-                        def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                            @marca = marca
-                            @modelo = modelo
-                            @preco = preco
-                        end
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+        puts "Seu preço é #{@preco}"
+    end
 
-                        def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                            "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
-                        end
+    private # Para utilizar o método privado utilizamos da palavra reservada <private>
 
-                        def tecnico
-                            puts "#Dados do Carro"
-                            puts "Sua marca é #{@marca}"
-                            puts "Seu modelo é #{@modelo}"
-                            puts "Seu preco é #{@preco}"
-                        end
+    def desconto_carro(desconto_aplicado) # Criando o método de desconto
+        @preco -= (@preco * desconto_aplicado / 100)
+    end
 
-                        private # Para utilizar o método privado utilizamos da palavra resevada <private>
+    public # Criando o método para acessar o nosso outro método que se encontra no <private>
 
-                        def desconto_carro(desconto_aplicado) # Criando o método de desconto
-                            @preco -= (@preco * desconto_aplicado / 100)
-                        end
+    def desconto_10_aplicar # Método para chamar o outro método privado
+        desconto_carro(20)
+    end
 
-                        public # Criando o método para acesar o nosso outro método que se encontra no <private>
+end
 
-                        def desconto_10_aplicar # Método para chama o outro método privado
-                            desconto_carro(20)
-                        end
-                        
-                    end
+carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, como foi definido nos parâmetros
 
-                    carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o modelo e dps a marca, como foi definido nos parâmetros
+puts carro # Imprimir resultado no console
 
-                    puts carro # Imprimir resultado no console
+# carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
 
-                   # carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
+puts carro.desconto_10_aplicar # No lugar de chamar o método <private>, passamos um método <public> para chamá-lo
 
-                    puts carro.desconto_10_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
+puts carro # Imprimir resultado no console
 
-                    puts carro # Imprimir resultado no console
+# carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
 
-                    # carro.desconto_carro(20) # Chamando o método privado para aplicar o desconto
+puts carro # Imprimir resultado no console
 
-                    puts carro # Imprimir resultado no console
+puts carro.preco # Antes do desconto
 
-                    puts carro.preco # Antes do desconto
+carro.desconto_10_aplicar # No lugar de chamar o método <private>, passamos um método <public> para chamá-lo
 
-                    carro.desconto_10_aplicar # No lugar de chama o método <private>, passamos um método <public> para chama-ló
+puts carro.preco # Depois do desconto
+```
 
-                    puts carro.preco # Depois do desconto
+> Resultado:
 
-                 ```
+![Método Público](../Banco%20de%20dados%20SQL/Assets/método_publico.png)
 
-            - Resultado: 
+> A lógica aqui foi a seguinte: criei um método `public` para chamar o método privado de dentro da própria `classe` — o único lugar onde isso é permitido. Assim controlamos **como** e **quando** a lógica privada é acionada.
 
-                ![Método Público](../Banco%20de%20dados%20SQL/Assets/método_publico.png)
+---
 
-                - Aqui fiz a seguinte lógica para acessar o método dentro `private`, criei um método `public` para chama o método privado dentro da própria `classe` para acessar a lógica do método `privado`.
+### Protegido (`protected`)
 
-    - Protected
+> Em Ruby, métodos ou atributos `protected` podem ser chamados a partir de instâncias da mesma `classe` onde foram definidos ou em suas `sub-classes`.
 
-        - Em `ruby`, métodos ou atributos `protected` podem ser chamados a partir de instâncias da mesma `classe` onde foram definidos ou em suas `sub-classes`.
+> Tudo que estiver **abaixo** da palavra `protected` estará protegido. Para tornar os próximos métodos privados ou públicos, utilize `private` ou `public`.
 
-        - Utilizamos a palavra reservada `protected` para definir um método protegido em `ruby`, tudo que está abaixo da palavra reservada `protected` está protegido. 
+```ruby
+# Irei utilizar o método <protected>
 
-        - Para torna os próximos métodos privado ou público abaixo do `protected`, se utilizar a palavra reservada `private` ou `public`, fica a cargo do que você está fazendo.
+class Carro
 
-        - Seguindo a mesma lógica acima de se utilizar, vale o mesmo para o `private` ou `public`, apenas existem algumas restrições que devem ser levadas em consideração.
+    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-            - Exemplo na prática:
+    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca  = marca
+        @modelo = modelo
+        @preco  = preco
+    end
 
-                ```ruby
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}-#{@preco}" # Definindo a mensagem de criação do objeto
+    end
 
-                    # Irei utilizar o método <protected> para acessar o método <Private>
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+        puts "Seu preço é #{@preco}"
+    end
 
-                    class Carro
-                            
-                        attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                                                                        
-                        def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                            @marca = marca
-                            @modelo = modelo
-                            @preco = preco
-                        end
+    # Comentei o método <private> e <public> para trabalhar apenas com o <protected>
 
-                        def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                            "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
-                        end
+    # private # Para utilizar o método privado utilizamos da palavra reservada <private>
 
-                        def tecnico
-                            puts "#Dados do Carro"
-                            puts "Sua marca é #{@marca}"
-                            puts "Seu modelo é #{@modelo}"
-                            puts "Seu preco é #{@preco}"
-                        end
+    # def desconto_carro(desconto_aplicado) # Criando o método de desconto
+    #     @preco -= (@preco * desconto_aplicado / 100)
+    # end
 
-                        # Comentei o método <private> e <public> para trabalha apenas com o <protected>
+    # public # Criando o método para acessar o nosso outro método que se encontra no <private>
 
-                        # private # Para utilizar o método privado utilizamos da palavra resevada <private>
+    # def desconto_10_aplicar # Método para chamar o outro método privado
+    #   desconto_carro(20)
+    # end
 
-                        # def desconto_carro(desconto_aplicado) # Criando o método de desconto
-                        #     @preco -= (@preco * desconto_aplicado / 100)
-                        # end
+    protected # Para utilizar o método protegido utilizamos a palavra reservada <protected>
 
-                        # public # Criando o método para acesar o nosso outro método que se encontra no <private>
+    def desconto_geral(desconto_carros) # Novo método de desconto usando o <protected>
+        @preco -= (@preco * (desconto_carros.to_f / 100)) # converter o desconto para float com o <.to_f>
+    end
 
-                        # def desconto_10_aplicar # Método para chama o outro método privado
-                        #   desconto_carro(20)
-                        # end
+end
 
-                        protected # Para utilizar o método protegido utilizamos a palavra reservada <protected>
+# instanciando minha classe
 
-                        def desconto_geral(desconto_carros) # Novo método de desconto usando o <protected>
-                            @preco -= (@preco * (desconto_carros.to_f / 100)) # convetir o desconto para float com o <.to_f>
-                        end
-                                                
-                        end
+carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, como foi definido nos parâmetros
 
-                        # instânciando minha classe
+puts carro
 
-                        carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o marca e dps modelo, como foi definido nos parâmetros
+puts carro.tecnico # pré do desconto
 
-                        puts carro 
+carro.send(:desconto_geral, 20) # Utilizando o <.send> que permite chamar dinamicamente outro método de um objeto
 
-                        puts carro.tecnico # pré do desconto
+puts carro.tecnico # após desconto
+```
 
-                        carro.send(:desconto_geral, 20) #  Irei utilizar o <.send.> que permite chaama dinamicamente outro método de um objeto
+> Resultado:
 
-                        puts carro.tecnico # após desconto
+![Método Protegido](../Banco%20de%20dados%20SQL/Assets/método_protegido.png)
 
-                ```
+> Nesse exemplo, a única coisa que fiz foi comentar os métodos `private` e `public` para criar o mesmo exemplo com o `protected` — a mesma lógica de aplicar o desconto, instanciar a `classe` e depois imprimir os valores com o método `tecnico`.
 
-            - Resultado: 
+> **Sobre o `.send`:** é um método que chama outros métodos de objetos de forma dinâmica, passando o nome do método como `symbol` ou `string`. Os argumentos devem ser recebidos exatamente nessa ordem: `(:metodo, symbol/string/number)`.
 
-                ![Método Protegido](../Banco%20de%20dados%20SQL/Assets/método_protegido.png)
+```ruby
+carro.send(:desconto_geral, 20)
+```
 
-                - Nesse exemplo acima, única coisa que fiz foi comentar os métodos `private` e `public` para criar o mesmo exemplo com o `protected`, a mesma lógica de aplicar o desconto, instância a `classe` e depois imprimir os valores com o método `tecnico` foi o mesmo.
-
-                - Sobre a utilização do `send`, usei porque é um método que chama outros métodos de objetos de uma forma dinânmica, passando o nome do método como `symbol` ou `string`, e os argumentos devem receber exatamente nessa ordem `(:metodo, symbol/string/number(desejado))`
-
-                    - Exemplo:
-
-                        ```ruby
-
-                            carro.send(:desconto_geral, 20)
-
-                        ```
+---
 
 ## Métodos de Classe em Ruby
 
-- Irei aborda o método de `Classe`, consiste em um método que pode ser chamado diretamente na `Classe` sem a necessidade de criar uma instância da mesma.
+> Métodos de classe consistem em métodos que podem ser chamados diretamente na `Classe` sem a necessidade de criar uma instância da mesma. Para defini-los, utilizamos a palavra reservada `self` com a sintaxe `def self.nome_do_metodo`.
 
-- Como se utilizar um método de `Classe`? Para definir um método de `Classe` utilizamos a palavra reservada `self`, vista em anteriormente. Para torna nosso método desejado em método de `Classe`  usamos a sintaxe `def self.<nome do método desejado>`.
+> É equivalente aos métodos estáticos (`static`) em linguagens como Java ou C#.
 
-    - Exemplo na prática:
-    
-        ```ruby
+```ruby
+class Carro
 
-        class Carro
-                            
-            attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                                                                                    
-            def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                @marca = marca
-                @modelo = modelo
-                @preco = preco
-            end
+    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-            def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
-            end
+    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca  = marca
+        @modelo = modelo
+        @preco  = preco
+    end
 
-            def tecnico
-                puts "#Dados do Carro"
-                puts "Sua marca é #{@marca}"
-                puts "Seu modelo é #{@modelo}"
-                puts "Seu preco é #{@preco}"
-            end
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}-#{@preco}" # Definindo a mensagem de criação do objeto
+    end
 
-            # Definição do método de <Classe>
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+        puts "Seu preço é #{@preco}"
+    end
 
-            def self.calcular_desconto(preco, desconto_preco) # Para definir um método de <Classe> usamos a palavra reservada <self>
-                preco -= (preco * (desconto_preco.to_f / 100))
-            end
-                                                
-        end
+    # Definição do método de <Classe>
 
-        # instânciando minha classe
+    def self.calcular_desconto(preco, desconto_preco) # Para definir um método de <Classe> usamos a palavra reservada <self>
+        preco -= (preco * (desconto_preco.to_f / 100))
+    end
 
-        carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, primeiro vem o marca e dps modelo, como foi definido nos parâmetros
+end
 
-        puts carro 
+# instanciando minha classe
 
-        puts carro.tecnico # pré do desconto
+carro = Carro.new("ford", "car", 80600) # devem seguir a ordem, como foi definido nos parâmetros
 
-        # carro.calcular_desconto(carro.preco, 20) # Forçando erro do método de classe
+puts carro
 
-        # Chamando o méotodo de <Classe> pela <Classe>
+puts carro.tecnico # pré do desconto
 
-        puts Carro.calcular_desconto(carro.preco, 20) # Chamando ele por sua <Clsse>, usei um <puts> para imprimir no terminal
+# carro.calcular_desconto(carro.preco, 20) # Forçando erro do método de classe
 
-        ```
+# Chamando o método de <Classe> pela <Classe>
 
-    - Resultado: 
-    
-        ![Erro no método de Classe](../Banco%20de%20dados%20SQL/Assets/erro_método_de_classe.png)
+puts Carro.calcular_desconto(carro.preco, 20) # Chamando ele por sua <Classe>, usei um <puts> para imprimir no terminal
+```
 
-        - Esse erro acontece porque o método de `Classe` não pode ser acessado por uma instância e sim por sua própria `classe`.
+> Resultado do erro ao tentar chamar pelo objeto:
 
-            - Resultado:
+![Erro no método de Classe](../Banco%20de%20dados%20SQL/Assets/erro_método_de_classe.png)
 
-                ![Método de Classe](../Banco%20de%20dados%20SQL/Assets/metodo_de_classe.png)
+> Esse erro acontece porque o método de `Classe` não pode ser acessado por uma instância — e sim pela própria `classe`.
 
-                - Nesse exemplo eu chamei o método de `Classe` pela `Classe`, sem instância, desse jeito que funciona o método de `Classe`.
+> Resultado correto chamando pela classe:
+
+![Método de Classe](../Banco%20de%20dados%20SQL/Assets/metodo_de_classe.png)
+
+> Nesse exemplo chamei o método de `Classe` pela `Classe`, sem instância. Desse jeito que funciona o método de `Classe`.
+
+---
 
 ## Variável de Classe
 
-- Em `ruby`, uma variável de `classe` é um valor compartilhado por uma `classe` e todas as suas `sub-classes`, denotada  pelo  prefixo `@@` e em seguida o nome da sua variável.
+> Em Ruby, uma variável de `classe` é um valor **compartilhado por uma `classe` e todas as suas `sub-classes`**, denotada pelo prefixo `@@` seguido do nome da variável.
 
-    - Exemplo na prática: 
+```ruby
+@@variavel_de_classe
+```
 
-        ```ruby
+> São acessíveis em qualquer lugar dentro ou fora da `classe` onde foram definidas e mantêm um estado único compartilhado entre todas as instâncias (objetos) criados a partir dessa `classe`.
 
-            @@variavel_de_classe
+```ruby
+class Carro
 
-        ```
+    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-- Elas são acessíveis em qualquer lugar, dentro ou fora da`classe` onde foram definidas e mantêm estado único que é compartilhado entre todas as instâncias(objetos) criados a partir dessa `classe`.
+    # Inicializando minha variável de <classe>
 
-    - Exemplo na prática:
+    @@contador_carro = 0
 
-        ```ruby
+    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca  = marca
+        @modelo = modelo
+        @preco  = preco
 
-            class Carro
-                                
-                attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                          
-                # Inicializando minha variável de <classe>
+        # Utilizando a variável de <classe>
+        @@contador_carro += 1 # Incrementador para saber a quantidade de <Classes> instanciadas
+    end
 
-                @@contador_carro = 0
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}-#{@preco}" # Definindo a mensagem de criação do objeto
+    end
 
-                def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                    @marca = marca
-                    @modelo = modelo
-                    @preco = preco
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+        puts "Seu preço é #{@preco}"
+    end
 
-                    # Utilizando a variável de <classe>
-                    @@contador_carro += 1 # Icrementador para saber a quantidade de <Classes> instânciada
-                end
+    # Utilizando o método de <classe> em conjunto com a variável de <classe>
 
-                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
-                end
+    def self.conta_vendas
+        @@contador_carro
+    end
 
-                def tecnico
-                    puts "#Dados do Carro"
-                    puts "Sua marca é #{@marca}"
-                    puts "Seu modelo é #{@modelo}"
-                    puts "Seu preco é #{@preco}"
-                end
+end
 
-                # Utilizando o método de <classe> em conjunto com a variável de <classe>
+# instanciando minhas <classes>
 
-                def self.conta_vendas
-                    @@contador_carro
-                end
-                                                    
-            end
+carro = Carro.new("Ford", "Kar", 34000)
+puts carro
+puts carro.tecnico
 
-            # instânciando minhas <classes>
+carro1 = Carro.new("Fiat", "Marea", 14000)
+puts carro1
+puts carro1.tecnico
 
-            carro = Carro.new("Ford", "Kar", 34000)
-            puts carro
-            puts carro.tecnico
+carro2 = Carro.new("BYD", "Dolph-mine", 111000)
+puts carro2
+puts carro2.tecnico
 
-            carro1 = Carro.new("Fiat", "Marea", 14000)
-            puts carro1
-            puts carro1.tecnico
+# Chamando o método de <classe> que consome uma variável de <classe> em nosso <initialize>
 
-            carro2 = Carro.new("BYD", "Dolph-mine", 111000)
-            puts carro2
-            puts carro2.tecnico
+puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
+```
 
-            # Chamando o método de <classe> que consume uma variável de <classe> em nosso <initialize>
+> Resultado:
 
-            puts "Quantidade de carros vendidos #{Carro.conta_vendas}" 
+![variavel de classe](../Banco%20de%20dados%20SQL/Assets/variavel_de_classe.png)
 
-        ```
-    
-    - Resultado:
+> Utilizei uma variável de `Classe` para ver a quantidade de instâncias (objetos) criados da `Class Carro`. Inicializei a variável de `classe` como `0` e, após, passei nossa variável de `Classe` em nosso `initialize` incrementando para que a cada `Classe` instanciada seja adicionada ao contador.
 
-        ![variavel de classe](../Banco%20de%20dados%20SQL/Assets/variavel_de_classe.png)
-    
-        - Utilizei uma váriavel de `Classe` para ver a quantidade instância(objetos) criados da minha `Class Carro`, inicializei a minha variável de `classe` como `0`, após passei nossa variável de `Classe` em nosso `initialize(constructor)` incrementadno para que a cada `Classe` instânciada seja adicionada a nossa variável de `Classe`.
+---
 
 ## Herança em Ruby
 
-- Utilizamos bastante a `herança` para reutilização de código e a criação de nova estruturas a partir de estruturas já definidas, onde a `sub-classe` pode herda tudo da `super-Classe` que já foi criada e definida, reutilizando o código já feito de maneira muito eficiênte.
+> Herança é o mecanismo que permite criar uma **nova classe a partir de uma existente**, reutilizando todo seu código. A subclasse herda atributos e métodos da superclasse e pode adicionar os seus próprios ou modificar os herdados.
 
-- Para utilizar a `herança` em `ruby` é muito simples, você já tem sua `super-classe` definida e quer criar outra a partir da mesma, utilizando o símbolos menor que `<` para herda os parâmetros da sua `super-class` para sua nova `sub-classe`, a sintaxe é a seguinte `Class Moto < Carro`, nessa ordem, a direira está sua `super-classe` e a eesquerda está sua `sub-classe`.
+> Para utilizar a `herança` em Ruby, usamos o símbolo menor que `<` para herdar os parâmetros da `super-classe` para a nova `sub-classe`. A sintaxe é: `class Moto < Carro` — à direita está a `super-classe` e à esquerda a `sub-classe`.
 
-- Quando falamos sobre `super-classe` e `sub-classe`, sempre deixamos claro que a `super-classe` é sempre a `classe` mais generica, enquanto a `sub-classe` é uma classe mais especializada.  O porque a `super-classe` é mais generica? Por que ela deve ser uma classe que tenha muito código e funções, sendo mais fácil de se reutilizar. A `sub-classe` é especializada para adaptar ou entender esse comportamento de forma concreta, Essa separação evita repetição de código e dá flexibilidade ao sistema.
+> A palavra reservada `super` dentro da subclasse chama a implementação correspondente da superclasse — essencial para reaproveitar o `initialize` e outros métodos sem reescrevê-los.
 
-    - Exemplo na prática: 
+```ruby
+class Carro
 
-        ```ruby
+    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-            class Carro
-                                
-                attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                          
-                # Inicializando minha variável de <classe>
+    @@contador_carro = 0
 
-                @@contador_carro = 0
+    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca  = marca
+        @modelo = modelo
+        @preco  = preco
+        @@contador_carro += 1 # Incrementador para saber a quantidade de <Classes> instanciadas
+    end
 
-                def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                    @marca = marca
-                    @modelo = modelo
-                    @preco = preco
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}-#{@preco}" # Definindo a mensagem de criação do objeto
+    end
 
-                    # Utilizando a variável de <classe>
-                    @@contador_carro += 1 # Icrementador para saber a quantidade de <Classes> instânciada
-                end
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+        puts "Seu preço é #{@preco}"
+    end
 
-                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
-                end
+    def self.conta_vendas
+        @@contador_carro
+    end
 
-                def tecnico
-                    puts "#Dados do Carro"
-                    puts "Sua marca é #{@marca}"
-                    puts "Seu modelo é #{@modelo}"
-                    puts "Seu preco é #{@preco}"
-                end
+end
 
-                # Utilizando o método de <classe> em conjunto com a variável de <classe>
+# criando a nossa <sub-classe>
 
-                def self.conta_vendas
-                    @@contador_carro
-                end
-                                                    
-            end
+class Moto < Carro # Utilizando o sinal de < para que nossa nova <classe> herde os parâmetros da <super-classe>
 
-            # criando a nossa <sub-classe>
+    # Definição dos atributos pelo <attr_accessor> que é escrita e leitura
 
-            class Moto < Carro # Utilizando o sinal de `menor que <` para que nossa nova <classe> herde os parâmetros da <super-classe>
+    attr_accessor :motor
 
-                # Definição dos atributos pelo <attr_acessor> que é escrita e leitura
-                
-                attr_accessor :motor
+    # definição do nosso <initialize>
 
-                # dinição do nosso <initialize>
+    def initialize(marca, modelo, preco, motor)
+        # A palavra reservada <super> é utilizada para trazer os métodos da nossa <super-classe> para nossa <sub-classe>
+        super(marca, modelo, preco)
+        @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em nosso <initialize>
+    end
 
-                def initialize(marca, modelo, preco, motor)
-                    # A palavra reservada <supe> é utilizada para trazer os métodos da nossa <super-classe> para nossa <sub-classe>
-                    super(marca, modelo, preco) 
-                    @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em noosso <initialize>
-                end
+    def to_s
+        "#{super}-#{@motor}" # Herdando o <to_s> e adicionando nosso parâmetro com polimorfismo
+    end
 
-                def to_s
-                    "#{super}-#{@motor}" # Herdando o <to_s> e adc nosso parâmetro com polimorfismo
-                end
+end
 
-            end
+# instanciando minhas <classes>
 
-            # instânciando minhas <classes>
+carro = Carro.new("Ford", "Kar", 34000)
+puts carro
+puts carro.tecnico
 
-            carro = Carro.new("Ford", "Kar", 34000)
-            puts carro
-            puts carro.tecnico
+# Chamando o método de <classe> que consome uma variável de <classe> em nosso <initialize>
 
-            # Chamando o método de <classe> que consume uma variável de <classe> em nosso <initialize>
+puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
 
-            puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
+# Instanciando a nossa <sub-classe>
 
-            # Instânciando a nossa <sub-classe>
+carro1 = Moto.new("BYD", "Dolphe", 11000, "eletrico")
+puts carro1
+puts carro1.tecnico
+```
 
-            carro1 = Moto.new("BYD", "Dolphe", 11000, "eletrico")
-            puts carro1
-            puts carro1.tecnico
+> Resultado:
 
-        ```
+![Herança](../Banco%20de%20dados%20SQL/Assets/herança.png)
 
-    - Resultado:
+> Em nossa `sub-classe` definimos nosso `initialize` e chamamos a palavra reservada `super` que puxa os métodos da nossa `super-classe`. Após, passamos os parâmetros de nossa `super-classe` de forma ordenada, seguidos pelos da nossa `sub-classe`.
 
-        ![Herança](../Banco%20de%20dados%20SQL/Assets/herança.png)
-
-        - Em nossa `sub-classe` definimos nosso `initialize` e chamamos a palavra reservada `super` que puxa os métodos da nossa `super-classe`, após passamos os parâmetros de nossa `super-classe` de forma ordenanda, passamos o da nossa `sub-classe`, sendo assim, primeiro os parâmetros de nossa `super-classe` em seguida os da nossa `sub-classe`.
+---
 
 ## Polimorfismo em Ruby
 
-- O polimorfismo(sobrescrita de método) posse definido da seguinte forma, habilidade de objetos diferentes `classes` responderem à mesma mensagem(chamada de método) de maneiras diferentes, permitindo que uma única interface seja usada para interagir com vários tipos de objetos. Isso pode ser alcançado por meio de `herança`, onde `sub-classes` sobrescrevam método da `super-classe`, ou pelo `duck typing`.
+> Polimorfismo (sobrescrita de método) pode ser definido da seguinte forma: habilidade de objetos de diferentes `classes` responderem à mesma mensagem (chamada de método) de maneiras diferentes, permitindo que uma única interface seja usada para interagir com vários tipos de objetos. Isso pode ser alcançado por meio de `herança`, onde `sub-classes` sobrescrevem métodos da `super-classe`, ou pelo `duck typing`.
 
-- Para utilizarmos o polimorfismo, primeiro temos que pegar o método desejado e sobrescrever da nossa `super-classe` para nossa `sub-classe` utilizando a palavra reservada `super` já que a mesma chama a implementação do método de nossa `super-classe`, após isso podemos manipular livremente o nosso método e adicionar mais parâmetros caso for desejado.
+> Para utilizarmos o polimorfismo, primeiro temos que pegar o método desejado e sobrescrever da nossa `super-classe` para nossa `sub-classe` utilizando a palavra reservada `super` — que chama a implementação do método da `super-classe`. Após isso, podemos manipular livremente o método e adicionar mais parâmetros caso desejado.
 
-    - Exemplo na prática:
+```ruby
+class Carro
 
-        ```ruby
+    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-            class Carro
-                                
-                attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                          
-                # Inicializando minha variável de <classe>
+    @@contador_carro = 0
 
-                @@contador_carro = 0
+    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca  = marca
+        @modelo = modelo
+        @preco  = preco
+        @@contador_carro += 1 # Incrementador para saber a quantidade de <Classes> instanciadas
+    end
 
-                def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                    @marca = marca
-                    @modelo = modelo
-                    @preco = preco
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}-#{@preco}" # Definindo a mensagem de criação do objeto
+    end
 
-                    # Utilizando a variável de <classe>
-                    @@contador_carro += 1 # Icrementador para saber a quantidade de <Classes> instânciada
-                end
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+        puts "Seu preço é #{@preco}"
+    end
 
-                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
-                end
+    def self.conta_vendas
+        @@contador_carro
+    end
 
-                def tecnico
-                    puts "#Dados do Carro"
-                    puts "Sua marca é #{@marca}"
-                    puts "Seu modelo é #{@modelo}"
-                    puts "Seu preco é #{@preco}"
-                end
+end
 
-                # Utilizando o método de <classe> em conjunto com a variável de <classe>
+# criando a nossa <sub-classe>
 
-                def self.conta_vendas
-                    @@contador_carro
-                end
-                                                    
-            end
+class Moto < Carro # Utilizando o sinal de < para que nossa nova <classe> herde os parâmetros da <super-classe>
 
-            # criando a nossa <sub-classe>
+    attr_accessor :motor
 
-            class Moto < Carro # Utilizando o sinal de `menor que <` para que nossa nova <classe> herde os parâmetros da <super-classe>
+    def initialize(marca, modelo, preco, motor)
+        super(marca, modelo, preco) # A palavra reservada <super> é utilizada para trazer os métodos da nossa <super-classe>
+        @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em nosso <initialize>
+    end
 
-                # Definição dos atributos pelo <attr_acessor> que é escrita e leitura
-                
-                attr_accessor :motor
+    def to_s
+        "#{super}-#{@motor}" # Herdando o <to_s> e adicionando nosso parâmetro com polimorfismo
+    end
 
-                # dinição do nosso <initialize>
+    def tecnico
+        super # A palavra reservada <super> aproveita todo método da nossa <super-classe> e podemos adicionar mais parâmetros caso seja desejado
+        puts "O motor do carro é #{@motor}."
+    end
 
-                def initialize(marca, modelo, preco, motor)
-                    # A palavra reservada <supe> é utilizada para trazer os métodos da nossa <super-classe> para nossa <sub-classe>
-                    super(marca, modelo, preco) 
-                    @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em noosso <initialize>
-                end
+end
 
-                def to_s
-                    "#{super}-#{@motor}" # Herdando o <to_s> e adc nosso parâmetro com polimorfismo
-                end
+# instanciando minhas <classes>
 
-                def tecnico
-                  super # A palavra reservada <super> aproveita todo métood da nosssa <super-classe> e podemos adicionar mais parâmetros casos seja desejado
-                  puts "O motor do carro é #{@motor}."
-                end
+carro = Carro.new("Ford", "Kar", 34000)
+puts carro
+puts carro.tecnico
 
-            end
+# Chamando o método de <classe> que consome uma variável de <classe> em nosso <initialize>
 
-            # instânciando minhas <classes>
+puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
 
-            carro = Carro.new("Ford", "Kar", 34000)
-            puts carro
-            puts carro.tecnico
+# Instanciando a nossa <sub-classe>
 
-            # Chamando o método de <classe> que consume uma variável de <classe> em nosso <initialize>
+carro1 = Moto.new("BYD", "Dolphe", 11000, "eletrico")
+puts carro1
+puts carro1.tecnico
+```
 
-            puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
+> Resultado:
 
-            # Instânciando a nossa <sub-classe>
+![Polimorfismo](../Banco%20de%20dados%20SQL/Assets/Polimorfismo.png)
 
-            carro1 = Moto.new("BYD", "Dolphe", 11000, "eletrico")
-            puts carro1
-            puts carro1.tecnico
+> Utilizei dois exemplos para o polimorfismo — um no método `to_s` e outro no método `tecnico`. Na `super-classe` instanciada, o `to_s` exibe `marca, modelo, preco`. Na `sub-classe` instanciada, exibe `marca, modelo, preco, motor`. O mesmo acontece para o método `tecnico` — isso é polimorfismo em ação.
 
-        ```
+---
 
-    - Resultado: 
+## Módulos e Mixins em Ruby (Herança Múltipla)
 
-        ![Polimorfismo](../Banco%20de%20dados%20SQL/Assets/Polimorfismo.png)
+### Módulos
 
-        - Aqui utilizei dois exemplo para o `polimorfismo`, um em nosso método `to_s` e outro no método `tecnico`. Repare que destaquei o método `to_s` para repara a diferença da `super-classe` instânciada para a `sub-classe` instânciada, fiz o mesmo para o método `tecnico` só que com uma seta, apontando o mesmo, já que o método muda da `super-classe` para `sub-classe`, isso é polimorfismo. Em nossa `super-classe` no método `to_s` vemos as seguintes informações `marca, modelo, preco` e em nossa `sub-classe` vemos as seguintes informações `marca, modelo, preco, motor`, o mesmo acontece para o método `tecnico`.
+> Módulos são coleções de métodos e constantes que **não podem ser instanciados** — diferente de classes. A utilização de `modulos` em Ruby é algo bem comum, já que podemos agrupar um grupo de métodos para realizar uma determinada tarefa e compartilhar essa solução em específico para outros problemas, reaproveitando o código já escrito.
 
-## Módulo e Mixins em Ruby(Herança Múltipla)
+Servem principalmente para:
 
-- Módulo
+- **Namespaces:** agrupar métodos e constantes sob um nome para evitar conflitos.
+- **Mixins:** compartilhar código entre classes sem herança direta.
 
-    - Bem, a utilização de `modulo` em `ruby` é algo bem comum e básico, já que podemo agrupar um grupo de métodos para realizar uma determinada tarefa, podemos além disso compartiha a solução de algum `modulo` em específico para outra problemas e reaproveitar o código já escrito
+```ruby
+module Anuncio
+    def exibicao_anuncio
+        puts "---Este é um dos carros da BYD---
+        "
+        self.tecnico # Utilizando o <self> para usar o método <tecnico> dentro da <classe> que incluir este módulo
+        puts "=-=-=" * 8
+    end
+end
+```
 
-    - Módulos são coleções de métodos, constantes e outras definições de `modulos/classes`. A principal diferença de uma classe é que você não pode criar instâncias de um módulo. Eles servem principalmente para:
+> Aqui criamos um `modulo` para utilizar dentro das nossas `classes` usando os `mixins`.
 
-        - `Namespaces:` 
-            
-            - Agrupar métodos e constantes sob um nome para evitar conflitos.
+---
 
-        - `Mixins:`
+### Mixins
 
-            - Compartilhar código entre classes.
+> Ruby **não suporta herança múltipla** diretamente — uma classe só pode herdar de uma superclasse. Os **mixins** resolvem isso: permitem "misturar" os métodos de um módulo dentro de qualquer classe usando `include`.
 
-    - Exemplo na prática:
+> Isso evita o famoso **"Problema do Diamante"** — ambiguidade de herança presente em linguagens que permitem herança múltipla direta. Quando você usa a palavra-chave `include` para adicionar um módulo a uma classe, os métodos de instância desse módulo se tornam métodos de instância da classe.
 
-        ```ruby
+```ruby
+module Anuncio # Criação do módulo para reutilizar mais tarde
+    def exibicao_anuncio
+        puts "---Este é um dos carros da BYD---
+        "
+        self.tecnico # Utilizando o <self> para usar no método <tecnico> dentro da <classe> moto
+        puts "=-=-=" * 7
+    end
+end
 
-            module Anuncio
-                def exibicao_anuncio
-                puts "---Este é um dos carros da BYD---
-                "
-                self.tecnico
-                puts "=-=-=" * 8
-                end
-            end
+class Carro
 
-        ```
+    attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atributos são de escrita e leitura ao mesmo tempo
 
-    - Resultado:
+    @@contador_carro = 0
 
-        - Aqui criamos um `modulo` para utilizar dentro na nossas `classes` usando os `mixins.`
+    def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para ficar algo dinâmico, sem valores estáticos
+        @marca  = marca
+        @modelo = modelo
+        @preco  = preco
+        @@contador_carro += 1 # Incrementador para saber a quantidade de <Classes> instanciadas
+    end
 
-- Mixins
+    def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
+        "#{@marca}-#{@modelo}-#{@preco}" # Definindo a mensagem de criação do objeto
+    end
 
-    - Bem, `ruby` não suporta a herança múltipla, para isso temos o `mixin`, que não mais é que um `modulo` que é incluido em uma `classe`. Muitas linguagens de `programação orientadas a objetos (POO)` permitem a herança múltipla, onde uma `classe` pode herdar de várias `super-classes`. No entanto, isso pode levar ao temido "Problema do Diamante" (conflitos de nomes e complexidade na hierarquia).
+    def tecnico
+        puts "# Dados do Carro"
+        puts "Sua marca é #{@marca}"
+        puts "Seu modelo é #{@modelo}"
+        puts "Seu preço é #{@preco}"
+    end
 
-    - Quando você usa a palavra-chave `include` para adicionar um módulo a uma classe, os métodos de instância desse módulo se tornam métodos de instância da classe. É como se a classe estivesse "misturando" (mixing in) o código do módulo.
+    def self.conta_vendas
+        @@contador_carro
+    end
 
-    - Exemplo na Prática: 
+end
 
-        ```ruby
+# criando a nossa <sub-classe>
 
-            module Anuncio # Criação do módulo para reutilizar mais tarde
-                def exibicao_anuncio
-                puts "---Este é um dos carros da BYD---
-                "
-                self.tecnico # Utilizando o <self> para usar no método <tecnico> dentro da <classe> moto
-                puts "=-=-=" * 7
-                end
-            end
+class Moto < Carro # Utilizando o sinal de < para que nossa nova <classe> herde os parâmetros da <super-classe>
 
-            class Carro
-                                
-                attr_accessor :marca, :modelo, :preco # Utilizando o método <attr_accessor> para definir que os atríbutos são de escrita e leitura ao mesmo tempo
-                          
-                # Inicializando minha variável de <classe>
+    include Anuncio # Para utilização do módulo usamos o <include> — isso é chamado de <Mixins>
 
-                @@contador_carro = 0
+    attr_accessor :motor
 
-                def initialize(marca, modelo, preco) # Adicionamos novamente os parâmetros para fica algo dinâmico, sem valores estáticos
-                    @marca = marca
-                    @modelo = modelo
-                    @preco = preco
+    def initialize(marca, modelo, preco, motor)
+        super(marca, modelo, preco) # A palavra reservada <super> é utilizada para trazer os métodos da nossa <super-classe>
+        @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em nosso <initialize>
+    end
 
-                    # Utilizando a variável de <classe>
-                    @@contador_carro += 1 # Icrementador para saber a quantidade de <Classes> instânciada
-                end
+    def to_s
+        "#{super}-#{@motor}" # Herdando o <to_s> e adicionando nosso parâmetro com polimorfismo
+    end
 
-                def to_s # Tem que ser criado com esse nome para que funcione, já que é uma palavra reservada
-                    "#{@marca}-#{@modelo}-#{@preco}" # Definido a menssagem de criação do objeto
-                end
+    def tecnico
+        super # A palavra reservada <super> aproveita todo método da nossa <super-classe> e podemos adicionar mais parâmetros caso seja desejado
+        puts "O motor do carro é #{@motor}."
+    end
 
-                def tecnico
-                    puts "#Dados do Carro"
-                    puts "Sua marca é #{@marca}"
-                    puts "Seu modelo é #{@modelo}"
-                    puts "Seu preco é #{@preco}"
-                end
+end
 
-                # Utilizando o método de <classe> em conjunto com a variável de <classe>
+# instanciando minhas <classes>
 
-                def self.conta_vendas
-                    @@contador_carro
-                end
-                                                    
-            end
+carro = Carro.new("Ford", "Kar", 34000)
+puts carro
+puts carro.tecnico
 
-            # criando a nossa <sub-classe>
+# Chamando o método de <classe> que consome uma variável de <classe> em nosso <initialize>
 
-            class Moto < Carro # Utilizando o sinal de `menor que <` para que nossa nova <classe> herde os parâmetros da <super-classe>
+puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
 
-                include Anuncio # Para utilização do módulo usamos o <include> isso é chamado de <Mixins>
+# Instanciando a nossa <sub-classe>
 
-                # Definição dos atributos pelo <attr_acessor> que é escrita e leitura
-                
-                attr_accessor :motor
+carro1 = Moto.new("BYD", "Dolphe", 11000, "eletrico")
+puts carro1
+puts carro1.tecnico
+```
 
-                # dinição do nosso <initialize>
-
-                def initialize(marca, modelo, preco, motor)
-                    # A palavra reservada <supe> é utilizada para trazer os métodos da nossa <super-classe> para nossa <sub-classe>
-                    super(marca, modelo, preco) 
-                    @motor = motor # Como nosso único atributo é motor, então só precisamos declarar o mesmo em nosso <initialize>
-                end
-
-                def to_s
-                    "#{super}-#{@motor}" # Herdando o <to_s> e adc nosso parâmetro com polimorfismo
-                end
-
-                def tecnico
-                  super # A palavra reservada <super> aproveita todo método da nossa <super-classe> e podemos adicionar mais parâmetros casos seja desejado
-                  puts "O motor do carro é #{@motor}."
-                end
-
-            end
-
-            # instânciando minhas <classes>
-
-            carro = Carro.new("Ford", "Kar", 34000)
-            puts carro
-            puts carro.tecnico
-
-            # Chamando o método de <classe> que consume uma variável de <classe> em nosso <initialize>
-
-            puts "Quantidade de carros vendidos #{Carro.conta_vendas}"
-
-            # Instânciando a nossa <sub-classe>
-
-            carro1 = Moto.new("BYD", "Dolphe", 11000, "eletrico")
-            puts carro1
-            puts carro1.tecnico
-
-        ```
-
-    - Resultado:
-
-        - Aqui estamos importando o `modulo` com `include` em nossa `class moto`, isso é chamado de `mixin`.
-
-
+> Aqui estamos importando o `modulo` com `include` em nossa `class Moto` — isso é chamado de **mixin**. O `self.tecnico` dentro do módulo chama o método `tecnico` da classe que o incluiu, tornando o módulo reutilizável em qualquer classe que tenha esse método.
