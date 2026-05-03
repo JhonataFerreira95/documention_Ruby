@@ -6,6 +6,7 @@
 2. [O que é o SQL](#o-que-é-sql)
 3. [SGBDs](#importância-de-sgbds)
 4. [Criando Banco e tabelas](#banco-e-tabelas)
+5. [Inserindo dados em nossa tabela](#inserindo-dados-em-uma-tabela)
 
 ---
 
@@ -89,3 +90,24 @@
         );
 
     ```
+
+## Inserindo dados em uma tabela
+
+> Novamente utilizei o `DataGrip` para inserir os dados e vamos utilizar um dos comandos `DML` do `SQL`.
+
+- Iserindo dados:
+
+    ```SQL
+
+        INSERT INTO jogos(nome, ano, nota_do_jogo)
+        VALUES(
+            'Pragmata', '2026-05-03', 9.2
+        ), (
+            'Silksong', '2025-07-12', 9.8
+        ), (
+            'Cs2', '2023-07-02', 8.6
+        );
+
+    ```
+
+    
