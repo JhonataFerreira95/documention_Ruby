@@ -2,7 +2,7 @@
 
 ## índice
 
-1. [Introdução conceitual](#integração-com-banco-de-dados-ao-ruby)
+1. [Introdução conceitual](#introdução-conceitual-de-banco-de-dados)
 2. [O que é o SQL](#o-que-é-sql)
 3. [SGBDs](#importância-de-sgbds)
 4. [Criando Banco e tabelas](#banco-e-tabelas)
@@ -111,5 +111,7 @@
 
     ```
 
-## Intregação com banco de dados
-    
+## Integrão com banco de dados
+
+> Aqui farei a integração do nosso `SGBD` com o `Ruby`, para começamos, crie um novo diretório para alocar o seu banco de dados, no meu caso irei alocar tudo em [Banco de dados SQL](/Banco%20de%20dados%20SQL/).
+
