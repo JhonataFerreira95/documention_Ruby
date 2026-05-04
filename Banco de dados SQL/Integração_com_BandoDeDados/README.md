@@ -9,6 +9,7 @@
 5. [Inserindo dados em nossa tabela](#inserindo-dados-em-uma-tabela)
 6. [Integração com banco de dados](#intregação-com-banco-de-dados")
 7. [Inserindo dados em uma tabela via Ruby](#inserção-de-dados-via-ruby)
+8. [Atualizando dados em uma tabela via Ruby](#atualizando-dados-de-uma-tabela-via-ruby)
 
 ---
 
@@ -242,3 +243,5 @@
         ![Resultado](../Assets/inserção_ruby.png)
 
         - Os dados dentro no nosso banco.
+
+## Atualizando dados de uma tabela via `Ruby`
