@@ -8,6 +8,7 @@
 4. [Criando Banco e tabelas](#banco-e-tabelas)
 5. [Inserindo dados em nossa tabela](#inserindo-dados-em-uma-tabela)
 6. [Integração com banco de dados](#intregação-com-banco-de-dados")
+7. [Inserindo dados em uma tabela via Ruby](#inserção-de-dados-via-ruby)
 
 ---
 
@@ -153,6 +154,7 @@
         result = conn.exec(query)
 
         #Itera as linhas do resultado
+
         result.each do |row|
             puts "ID: #{row['id']}, NOME: #{row['nome']}, DATA: #{row['ano']}, NOTA: #{row['nota_do_jogo']}"
         end
@@ -172,4 +174,6 @@
     - Resultado:
 
         ![coneão](../Assets/conexao_com_banco_ruby.png)
+
+## Inserção de dados via Ruby
 
