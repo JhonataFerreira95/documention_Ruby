@@ -133,3 +133,43 @@
 - Agora vamos ler nossos dados a partir de um arquivos `Ruby`.
 
     ```ruby
+
+        require 'pg'
+
+        conn = PG.connect(
+        dbname: 'fliperama',
+        user: 'postgres',
+        password: '2319',
+        host: 'localhost',
+        port: 5432
+        )
+
+        # Consulta SQL
+
+        query = 'SELECT * FROM jogos'
+
+        begin
+
+        result = conn.exec(query)
+
+        #Itera as linhas do resultado
+        result.each do |row|
+            puts "ID: #{row['id']}, NOME: #{row['nome']}, DATA: #{row['ano']}, NOTA: #{row['nota_do_jogo']}"
+        end
+
+        ensure
+
+        conn.close if conn
+
+        end
+
+    ```
+
+    > Bem, aqui utilizei o `require 'pg'` para importa a `gem`, utilizei o `conn` para ser a variável que guarda a conexão com o banco. Utilizei o `query` para usar como consulta que foi o `SELECT * FROM jogos`. 
+
+    > Iniciei um block com `begin` para caso a coneão de erro, após isso utilizei outra váriavel para guarda o resultado da `query`, que foi `result = con.exec(query)`. Nisso iniciei um block de repetição com `each` para ler os dados a partir da nossa váriavel `result` e formatei para fica algo mais apresentável. Finalizei com `ensure` para fecha o bloco `begin` e adicionei uma condição SE a conexão estiver eu a fecho com um `conn.close if conn`. Ou seja, se a conexão estiver ativa e para finaliza-lá.
+    
+    - Resultado:
+
+        ![coneão](../Assets/conexao_com_banco_ruby.png)
+

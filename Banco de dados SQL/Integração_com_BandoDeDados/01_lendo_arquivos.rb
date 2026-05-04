@@ -12,4 +12,20 @@ conn = PG.connect(
 
 # Consulta SQL
 
-query = 'SELECT * FROM jogo'
+query = 'SELECT * FROM jogos'
+
+begin
+
+  result = conn.exec(query)
+
+  #Itera as linhas do resultado
+  result.each do |row|
+    puts "ID: #{row['id']}, NOME: #{row['nome']}, DATA: #{row['ano']}, NOTA: #{row['nota_do_jogo']}"
+  end
+
+ensure
+
+  conn.close if conn
+
+end
+
