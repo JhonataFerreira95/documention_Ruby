@@ -115,3 +115,10 @@
 
 > Aqui farei a integração do nosso `SGBD` com o `Ruby`, para começamos, crie um novo diretório para alocar o seu banco de dados, no meu caso irei alocar tudo em [Banco de dados SQL](/Banco%20de%20dados%20SQL/).
 
+- Para conseguir trabalha com o `Ruby` e o `posgresSQL` e fazer nossa integração, precisamos utilizadr uma `gem` chamada `pg`. Irei utilizar o método de instalção em `gemfile`:
+
+    ```bash
+
+        gem 'pg', '~> 1.5', '>= 1.5.9'
+
+    ```
