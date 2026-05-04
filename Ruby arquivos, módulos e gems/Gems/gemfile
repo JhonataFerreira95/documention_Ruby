@@ -19,3 +19,7 @@ group :development do
   gem "ruby-lsp"
 end
 
+# Aqui importe a <gem> para utilizar o posgresql, a <gem> chama-se <pg>.
+
+gem 'pg', '~> 1.5', '>= 1.5.9'
+
