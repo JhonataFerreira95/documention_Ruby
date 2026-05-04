@@ -6,7 +6,7 @@
 
 ### Gems 
 
-  - Faker, Roo, Byebug Securerandom e RubyLSP foram utlizadas. 
+  - Faker, Roo, Byebug Securerandom, RubyLSP e Pg foram utlizadas. 
 
 ## Índice
 

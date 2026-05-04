@@ -122,3 +122,11 @@
         gem 'pg', '~> 1.5', '>= 1.5.9'
 
     ```
+
+    - Para que a gem funcione precisamos utilizar o comando `bundle`:
+
+    ```bash
+
+        bundle install gem_desejada
+
+    ```
