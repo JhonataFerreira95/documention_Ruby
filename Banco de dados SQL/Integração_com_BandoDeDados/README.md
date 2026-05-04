@@ -224,3 +224,21 @@
         conn.close
 
     ```
+
+    - Aqui utilizei o `array` composto por um `hahs` para guarda as inserções, utilzei o `registros` para guarda os dados e dentro do mesmo usei os pâremotros idêntico as colunas que se encontram em nosso banco `nome`, `ano` e `nota_do_jogo`.
+
+    - A abordagem que utilizei para inserir todos os dados foi usar um `each` em nosso array `registros` para percorrer e fazer a inserções quantas vezes for preciso(foram apenas 2 dados inseridos). 
+
+    - Criei outra variável para ser nossa query que foi `insert_query` e passei o comando do banco para inserção `INSERT INTO`, após a inserção com nosso `conn.exec(insert_query)` fechei a conexão com o bacndo atráves do `conn.close` pré fechamento adicionei um `puts` para avisar que tudo foi registrado com sucesso.
+
+    - Resultado:
+
+        > Resultado 1
+        
+        ![Resultado1](../Assets/registro_feito_com_ruby.png)
+
+        > Resultado 2
+
+        ![Resultado](../Assets/inserção_ruby.png)
+
+        - Os dados dentro no nosso banco.
