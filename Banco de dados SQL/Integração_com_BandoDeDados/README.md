@@ -130,3 +130,6 @@
         bundle install gem_desejada
 
     ```
+- Agora vamos ler nossos dados a partir de um arquivos `Ruby`.
+
+    ```ruby
