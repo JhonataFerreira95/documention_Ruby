@@ -291,6 +291,13 @@
 
     ```
 
-    - Observa-se que utilizei a variável `id_registro` para alocar o `id` que desejo fazer o `UPDATE`. Fiz o mesmo esquema com `new_name`, `new_year` e `new_ratting`
+    - Observa-se que utilizei a variável `id_registro` para alocar o `id` que desejo fazer o `UPDATE`. Fiz o mesmo esquema com `new_name`, `new_year` e `new_ratting`. Lemrbando que irei interpolar essas `strings` correspondendo as colunas de nosso banco.
+
+    - utilizei a variável `update_query` para inserir nosso comando `UPDATE` e fiz referência a nossa tabela `jogos` após passei os parâmetro correspondentes como ` nome='#{new_name}'`, `ano='#{new_year}'` e `nota_do_jogo=#{new_ratting}`. Além disso utilizei a cláusula `WHERE` para passar que o `UPDATE` aconteca apenas com quem possui o `id=#{id_registro}`, que nossa caso é o `id=1`.
+
+        - Resultado:
+
+            ![resultado](../Assets/update_via_ruby.png)
+
 
 
