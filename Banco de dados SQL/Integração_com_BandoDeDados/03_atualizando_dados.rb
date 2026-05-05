@@ -23,4 +23,14 @@ new_ratting = 8.0
 
 # instrução SQL de Update
 
-update_query = "UPDATE jogos SET nome=#{new_name}, ano=#{new_year}, nota_do_jogo=#{new_ratting}"
+update_query = "UPDATE jogos SET nome='#{new_name}', ano='#{new_year}', nota_do_jogo=#{new_ratting} WHERE id=#{id_registro}"
+
+conn.exec(update_query)
+
+puts "A query foi execultado com sucesso!"
+
+puts "<===========================================>"
+
+print update_query
+
+conn.close
