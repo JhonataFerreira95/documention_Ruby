@@ -10,6 +10,7 @@
 6. [Integração com banco de dados](#intregação-com-banco-de-dados")
 7. [Inserindo dados em uma tabela via Ruby](#inserção-de-dados-via-ruby)
 8. [Atualizando dados em uma tabela via Ruby](#atualizando-dados-de-uma-tabela-via-ruby)
+9. [Removendo dados de uma tabela via Ruby](#removendo-dados-de-uma-tabela-via-ruby)
 
 ---
 
@@ -299,5 +300,5 @@
 
             ![resultado](../Assets/update_via_ruby.png)
 
-
+## Removendo dados de uma tabela via `Ruby`
 
