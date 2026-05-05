@@ -340,5 +340,11 @@
 
     ```
 
-    
+    - Usei o método de guarda meu `id` em uma váriavel, que foi o `id_exclusão` para passar futuramente em nossa query.
+
+    - Em nossa query utilizei uma várivel para guarda o comando que foi `delete_query` e passei as instruções `SQL` coomo a tabela desejado e utilizei a cláusula `WHERE` para que todo o `id=#{id_exclusão}` seja apagado.
+
+        - Resultado:
+
+            ![resultado](../Assets/deletando_dados_via_ruby.png)
 
