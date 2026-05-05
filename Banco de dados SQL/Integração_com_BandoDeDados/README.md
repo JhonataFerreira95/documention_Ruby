@@ -245,3 +245,52 @@
         - Os dados dentro no nosso banco.
 
 ## Atualizando dados de uma tabela via `Ruby`
+
+> Aqui irei aborda como fazer um `UPDATE` no banco via `Ruby`, de uma forma simples e clara! Óbvio que você está livre para personalizar do jeito que deseja, como uma entra com `get.chomp`, seguindo a ordem do banco, como `varchar`, `int` ou `date`.
+
+- Código:
+
+    ```ruby
+
+        require 'pg'
+
+        # conexão com o BD
+
+        conn = PG.connect(
+        dbname: 'fliperama',
+        user: 'postgres',
+        password: '2319',
+        host: 'localhost',
+        port: 5432
+        )
+
+        # Update via id 
+
+        id_registro = 1
+
+        # passando parâmetros para atualização 
+
+        new_name = 'Minecraft dungeons'
+        new_year = '2022-02-20'
+        new_ratting = 8.0
+
+
+        # instrução SQL de Update
+
+        update_query = "UPDATE jogos SET nome='#{new_name}', ano='#{new_year}', nota_do_jogo=#{new_ratting} WHERE id=#{id_registro}"
+
+        conn.exec(update_query)
+
+        puts "A query foi execultado com sucesso!"
+
+        puts "<===========================================>"
+
+        print update_query
+
+        conn.close
+
+    ```
+
+    - Observa-se que utilizei a variável `id_registro` para alocar o `id` que desejo fazer o `UPDATE`. Fiz o mesmo esquema com `new_name`, `new_year` e `new_ratting`
+
+
