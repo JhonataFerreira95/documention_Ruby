@@ -11,6 +11,7 @@
 7. [Inserindo dados em uma tabela via Ruby](#inserção-de-dados-via-ruby)
 8. [Atualizando dados em uma tabela via Ruby](#atualizando-dados-de-uma-tabela-via-ruby)
 9. [Removendo dados de uma tabela via Ruby](#removendo-dados-de-uma-tabela-via-ruby)
+10. [O que é ORM](#o-que-é-orm)
 
 ---
 
@@ -348,3 +349,4 @@
 
             ![resultado](../Assets/deletando_dados_via_ruby.png)
 
+## O que é `ORM`?
