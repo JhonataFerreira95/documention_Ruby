@@ -350,3 +350,9 @@
             ![resultado](../Assets/deletando_dados_via_ruby.png)
 
 ## O que é `ORM`?
+
+> Primeiramente qual o significado de `ORM` que é `MAPEAMENTO OBJETO RELACIONAL`. Devemos entender o porque precisamos utilizar um `ORM`.
+
+- Motvio de utilizar `ORM`:
+
+    > 
