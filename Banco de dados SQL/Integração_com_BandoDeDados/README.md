@@ -12,6 +12,7 @@
 8. [Atualizando dados em uma tabela via Ruby](#atualizando-dados-de-uma-tabela-via-ruby)
 9. [Removendo dados de uma tabela via Ruby](#removendo-dados-de-uma-tabela-via-ruby)
 10. [O que é ORM](#o-que-é-orm)
+11. [Utilizando ActiveRecord](#utilizando-activerecord)
 
 ---
 
@@ -359,4 +360,8 @@
 
     > A ideia é que uma classe se torne uma tabela e os atributos se tornem colunas. Por meio do `ORM` podemos remover instruções `SQL`.
 
+
+## Utilizando `ActiveRecord`
+
+>
 
