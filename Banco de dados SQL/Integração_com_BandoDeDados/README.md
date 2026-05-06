@@ -355,4 +355,6 @@
 
 - Motvio de utilizar `ORM`:
 
-    > 
+    > Para apróximar a comunicação do `POO` com banco de dados relacionado(`SQL`) e o mapeamento entre estruturas `POO` e banco de dados relacional(`SQL`).
+
+-
