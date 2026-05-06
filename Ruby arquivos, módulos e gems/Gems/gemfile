@@ -23,3 +23,7 @@ end
 
 gem 'pg', '~> 1.5', '>= 1.5.9'
 
+# Aqui importei a <gem> para utlize o activerecord
+
+gem 'activerecord-import', '~> 0.15.0'
+
