@@ -353,8 +353,10 @@
 
 > Primeiramente qual o significado de `ORM` que é `MAPEAMENTO OBJETO RELACIONAL`. Devemos entender o porque precisamos utilizar um `ORM`.
 
-- Motvio de utilizar `ORM`:
+- Motivo de utilizar `ORM`:
 
-    > Para apróximar a comunicação do `POO` com banco de dados relacionado(`SQL`) e o mapeamento entre estruturas `POO` e banco de dados relacional(`SQL`).
+    > Para apróximar a comunicação do `POO` com banco de dados relacionado(`SQL`) e o mapeamento entre estruturas `POO` e banco de dados relacional(`SQL`). Essa abordabem é a técnica que une `POO` com `SQL`.
 
--
+    > A ideia é que uma classe se torne uma tabela e os atributos se tornem colunas. Por meio do `ORM` podemos remover instruções `SQL`.
+
+
