@@ -421,5 +421,15 @@
 
     ```
 
-    
+    - Oberva-se que para fazer a conexão com banco via `ActiveRecord` é bem diferente do `pg`. Para conectar via `ActiveRecord` utilizamos o `ActiveRecord::Base.esteblish_connection` e os parâmetros de nosso banco de dados. 
+
+    - Para criação de tabela via `ActiveRecord` utilizamos o `ActiveRecord::Schema.define` e criamos um loop onde vamos definir nossa nova tabela `create_table :users` e suas linhas que foram `t.string :nome` e `t.string :email`.
+
+    - Após isso definimos o modelo importante a base do nosso `ORM` via herança para a nossa `Classe` que vai guarda nosso dados, que em nosso caso foi `User`. Após passar nossa `Classe` para uma variável para ser reutilizada, usamos um `user.save` para que os dados sejam salvos em nossa váriavel.
+
+    - 
+
+> Detalhe, se você quiser utilizar o `ORM` com outro `SGBD` é necessário fazer a instalção de sua `gem` equivalente e só dps utilizar o `ActiveRecord` para fazer a conexão.
+
+
 
