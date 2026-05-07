@@ -13,6 +13,7 @@
 9. [Removendo dados de uma tabela via Ruby](#removendo-dados-de-uma-tabela-via-ruby)
 10. [O que é ORM](#o-que-é-orm)
 11. [Utilizando ActiveRecord](#utilizando-activerecord)
+12. [O que NoSQL?](#o-que-é-nosql)
 
 ---
 
@@ -74,7 +75,7 @@
 
 ## Banco e tabelas
 
-> Aqui irei fazer a crianção de um banco e algumas tabelas, sinta-se a vontade para selecionar o seu `SGBD`, escolhi o `postgres` e estou utilizando de `IDE` visual o `DataGrip`.
+> Aqui irei fazer a crianção de um banco e algumas tabelas, sinta-se a vontade para selecionar o seu `SGBD`, escolhi o `postgres` e estou utilizando de `IDE` visual o `DataGrip`."
 
 - Criação do banco:
 
@@ -436,6 +437,4 @@
 > Detalhe, se você quiser utilizar o `ORM` com outro `SGBD` é necessário fazer a instalção de sua `gem` equivalente e só dps utilizar o `ActiveRecord` para fazer a conexão.
 
 
-
-
-
+## O que é `NoSQL`?
