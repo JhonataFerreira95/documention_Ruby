@@ -363,5 +363,18 @@
 
 ## Utilizando `ActiveRecord`
 
->
+> Aqui vamos utilizar um `ORM` mais famoso do `Ruby` que é o `ActiveRecord`, para instalção do mesmo é necessário utilizar uma `Gem`, utilizei via `gemfile`:
+
+- `Gem`
+
+    ```bash
+
+        gem 'activerecord-import', '~> 0.15.0'
+
+    ```
+
+    - Após adicionar o aqui em meu `gemfile` execulto o comanndo `bundle install` dentro do diretório da minha `gemfile`.
+
+
+
 
