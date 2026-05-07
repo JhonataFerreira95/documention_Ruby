@@ -427,7 +427,7 @@
 
     - Após isso definimos o modelo importante a base do nosso `ORM` via herança para a nossa `Classe` que vai guarda nosso dados, que em nosso caso foi `User`. Após passar nossa `Classe` para uma variável para ser reutilizada, usamos um `user.save` para que os dados sejam salvos em nossa váriavel.
 
-    - 
+    - Irei recuperar os dados usando um loop, em criei uma nova váriavel chamada `users` e atribui o `User.all`(que é equivalente a um `SELECT * FROM users`) para consulta uma tabela via `ActiveRecord`. Usei um `users.each` para exibir os dados de nossa tabela `Users`.
 
 > Detalhe, se você quiser utilizar o `ORM` com outro `SGBD` é necessário fazer a instalção de sua `gem` equivalente e só dps utilizar o `ActiveRecord` para fazer a conexão.
 
