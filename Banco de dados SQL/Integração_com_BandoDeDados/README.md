@@ -429,7 +429,13 @@
 
     - Irei recuperar os dados usando um loop, em criei uma nova váriavel chamada `users` e atribui o `User.all`(que é equivalente a um `SELECT * FROM users`) para consulta uma tabela via `ActiveRecord`. Usei um `users.each` para exibir os dados de nossa tabela `Users`.
 
+    - Resultado:
+
+        ![Resultado](../Assets/active_record.png)
+
 > Detalhe, se você quiser utilizar o `ORM` com outro `SGBD` é necessário fazer a instalção de sua `gem` equivalente e só dps utilizar o `ActiveRecord` para fazer a conexão.
+
+
 
 
 
