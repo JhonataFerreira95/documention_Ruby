@@ -11,13 +11,22 @@ conection = PG.connect(
 
 begin
 
-cadastro = []
+  while true
+    
+    cadastro = []
 
-query_select = 'SELECT * FROM'
-query_insert = 'INSERT INTO cadastro(login, senha, nome_usuario) VALUES()'
-query_update = "UPDATE cadastro SET login='#{}', senha='#{}', nome_usuario='#{}'"
-query_delet = "DELETE FROM cadastro WHERE id=#{}"
+    login = {}
+    senha = {}
+    nome_usuario = {}
+    id = {}
 
+    query_select = 'SELECT * FROM'
+    query_insert = 'INSERT INTO cadastro(login, senha, nome_usuario) VALUES()'
+    query_update = "UPDATE cadastro SET login='#{}', senha='#{}', nome_usuario='#{}'"
+    query_delet = "DELETE FROM cadastro WHERE id=#{}"
 
+    
+
+  end
 
 end
