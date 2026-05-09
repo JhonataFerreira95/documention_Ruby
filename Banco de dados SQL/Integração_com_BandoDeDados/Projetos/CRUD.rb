@@ -46,6 +46,24 @@ begin
     elsif operacoes == 3
 
     elsif operacoes == 4
+      puts "Digite o id do usuario que deseja fazer a exclusão: "
+      id = gets.chomp.to_i
+
+      query_delete = "DELETE FROM cadastro WHERE id=#{id}"
+      conexao = conection.exec(query_delete)
+
+      conexao.each do |row|
+        puts "Dados deletado ID: #{row['id']}, LOGIN: #{row['login']}, SENHA #{row['nome_usuario']}"
+      end
+
+      sleep 2
+      puts "Deseja continuar?[S/N] "
+      opcao = gets.chomp.upcase
+      if opcao.include?("N")
+        break
+      else
+        next
+      end
 
     else
       puts "Digite um número válido"
