@@ -48,7 +48,25 @@ begin
     puts "Para deletar dados digite [4]: "
     delete = gets.chom.to_i
 
-    
+    if select == 1
+      query_select = 'SELECT * FROM cadastro' 
+      puts "Deseja continuar?[S/N] "
+      opcao = gets.chomp.upcase
+      if  opcao.include?("N")
+        break
+      else
+        next
+      end 
+    elsif insert == 2
+
+    elsif update == 3
+
+    elsif delete == 4
+
+    else
+      puts "Digite um número válido"
+      next
+    end
     
 
   end
