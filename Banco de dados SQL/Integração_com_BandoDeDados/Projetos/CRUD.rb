@@ -22,7 +22,7 @@ begin
     puts "  Ver dados digite [1]:\
     Para inserir dados digite [2]:\
     Para atualizar dados digite [3]:\
-    Para deleter dados digite [4]: "
+    Para delete dados digite [4]: "
     operacoes = gets.chomp.to_i
 
     if operacoes == 1
@@ -34,7 +34,7 @@ begin
       end
       
       sleep 2
-      puts "Deseja continuar?[S/N] "
+      puts "Deseja continuar?[S/N]? "
       opcao = gets.chomp.upcase
       if  opcao.include?("N")
         break
@@ -42,6 +42,30 @@ begin
         next
       end 
     elsif operacoes == 2
+      insercao = {}
+
+      puts "Digite o seu login: "
+      insercao[:login] = gets.chomp
+      sleep 0.5
+      puts "Digite a sua senha: "
+      insercao[:senha] = gets.chomp
+      sleep 0.5
+      puts "Digite o seu nome de usuario: "
+      insercao[:nome_usuario] = gets.chomp
+
+      query_insert = "INSERT INTO cadastro(login, senha, nome_usuario) VALUES('#{insercao[:login]}', '#{insercao[:senha]}', '#{insercao[:nome_usuario]}');"
+      conexao = conection.exec(query_insert)
+
+      puts "Inserção feita com sucesso! Seu login: #{insercao[:login]}, sua senha é #{insercao[:senha]}, seu nome de usuario é #{insercao[:nome_usuario]}"
+
+      sleep 2
+      puts "Deseja continuar[S/N]? "
+      opcao = gets.chomp.upcase
+      if opcao.include?("N")
+        break
+      else
+        next
+      end
 
     elsif operacoes == 3
 
@@ -57,14 +81,13 @@ begin
       end
 
       sleep 2
-      puts "Deseja continuar?[S/N] "
+      puts "Deseja continuar?[S/N]? "
       opcao = gets.chomp.upcase
       if opcao.include?("N")
         break
       else
         next
       end
-
     else
       puts "Digite um número válido"
       sleep 2
