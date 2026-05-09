@@ -11,9 +11,9 @@ conection = PG.connect(
 
 begin
 
+  cadastro = []
+
   while true
-    
-    cadastro = []
 
     login = {}
     senha = {}
@@ -25,8 +25,21 @@ begin
     query_update = "UPDATE cadastro SET login='#{}', senha='#{}', nome_usuario='#{}'"
     query_delet = "DELETE FROM cadastro WHERE id=#{}"
 
+    puts "Bem vindo ao CRUD básico sobre Cadastro de usuarios!"
+
+    sleep 0.5
+
+    puts "Selecione uma das operações abaixo: "
+    puts "Ver dados digite [1]: "
+    select = gets.chomp.to_i
+    
+    sleep 0.5
+
+    puts "Inserir dados digite [2]: "
+    insert = gets.chomp.to_i
     
 
   end
 
+  conection.close
 end
