@@ -49,6 +49,8 @@ begin
 
     else
       puts "Digite um número válido"
+      sleep 2
+      puts "=-" * 30
       next
     end
     
@@ -58,5 +60,5 @@ begin
   ensure
 
   conection.close
-  
+
 end
