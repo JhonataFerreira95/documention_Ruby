@@ -37,6 +37,18 @@ begin
 
     puts "Inserir dados digite [2]: "
     insert = gets.chomp.to_i
+
+    sleep 0.5
+
+    puts "Para atualizar dados digite [3]: "
+    update = gets.chomp.to_i
+
+    sleep 0.5
+
+    puts "Para deletar dados digite [4]: "
+    delete = gets.chom.to_i
+
+    
     
 
   end
