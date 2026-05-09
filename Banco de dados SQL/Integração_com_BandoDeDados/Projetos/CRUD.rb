@@ -11,14 +11,7 @@ conection = PG.connect(
 
 begin
 
-  cadastro = []
-
   while true
-
-    login = {}
-    senha = {}
-    nome_usuario = {}
-    id = {}
 
 
     puts "Bem vindo ao CRUD básico sobre Cadastro de usuarios!"
@@ -35,8 +28,12 @@ begin
     if operacoes == 1
       query_select = 'SELECT * FROM cadastro' 
       conexao = conection.exec(query_select)
-      puts "Os dados disponiveis são #{query_select}"
-      sleep 1
+
+      conexao.each do |row|
+        puts "ID: #{row['id']}, LOGIN: #{row['login']}, SENHA: #{row['senha']}, NOME: #{row['nome_usuario']}"
+      end
+      
+      sleep 2
       puts "Deseja continuar?[S/N] "
       opcao = gets.chomp.upcase
       if  opcao.include?("N")
@@ -58,5 +55,8 @@ begin
 
   end
 
+  ensure
+
   conection.close
+  
 end
