@@ -13,7 +13,8 @@
 9. [Removendo dados de uma tabela via Ruby](#removendo-dados-de-uma-tabela-via-ruby)
 10. [O que é ORM](#o-que-é-orm)
 11. [Utilizando ActiveRecord](#utilizando-activerecord)
-12. [O que NoSQL?](#o-que-é-nosql)
+12. [Praticando com ActiveRecord](#projeto-com-activerecord)
+13. [O que NoSQL?](#o-que-é-nosql)
 
 ---
 
@@ -436,5 +437,6 @@
 
 > Detalhe, se você quiser utilizar o `ORM` com outro `SGBD` é necessário fazer a instalção de sua `gem` equivalente e só dps utilizar o `ActiveRecord` para fazer a conexão.
 
+## Projeto com ActiveRecord
 
 ## O que é `NoSQL`?

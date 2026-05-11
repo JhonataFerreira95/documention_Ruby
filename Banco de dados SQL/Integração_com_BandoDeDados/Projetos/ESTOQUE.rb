@@ -20,3 +20,10 @@ ActiveRecord::Schema.define do
     end
 end
 
+class Category < ActiveRecord::Base
+  has_many :products
+end
+
+class Product < ctiveRecord::Base
+  belongs_to :Category
+end
