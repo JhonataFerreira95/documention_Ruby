@@ -72,16 +72,22 @@ begin
 
       puts "Digite o id que deseja ser modificado: "
       update[:id] = gets.chomp.to_i
+      sleep 0.5
       puts "Digite o novo login: "
       update[:login] = gets.chomp
+      sleep 0.5
       puts "Digite a nova senha: "
       update[:senha] = gets.chomp
+      sleep 0.5
       puts "Digite o novo nome de usuario: "
       update[:nome_usuario] = gets.chomp
 
       query_upadate = "UPDATE cadastro SET login='#{update[:login]}', senha='#{update[:senha]}', nome_usuario='#{update[:nome_usuario]}' WHERE id='#{update[:id]}'"
+      conexao = conection.exec(query_upadate)
 
-      
+      puts "A atualização dos dados foi feita com sucesso! Seu novo LOGIN: #{update[:login]}, sua nova SENHA: #{update[:senha]}, seu novo NOME DE USUARIO: #{update[:nome_usuario]}"
+
+      sleep 2
 
     elsif operacoes == 4
       puts "Digite o id do usuario que deseja fazer a exclusão: "
