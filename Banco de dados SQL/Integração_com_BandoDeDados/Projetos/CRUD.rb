@@ -65,9 +65,19 @@ begin
         break
       else
         next
-      end
+      end 
 
     elsif operacoes == 3
+      update = {}
+
+      puts "Digite o id que deseja ser modificado: "
+      update[:id] = gets.chomp.to_i
+      puts "Digite o novo login: "
+      update[:login] = gets.chomp
+      puts "Digite a nova senha: "
+      update[:senha] = gets.chomp
+      puts "Digite o novo nome de usuario: "
+      update[:nome_usuario] = gets.chomp
 
     elsif operacoes == 4
       puts "Digite o id do usuario que deseja fazer a exclusão: "
