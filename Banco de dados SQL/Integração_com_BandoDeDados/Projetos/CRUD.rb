@@ -88,6 +88,13 @@ begin
       puts "A atualização dos dados foi feita com sucesso! Seu novo LOGIN: #{update[:login]}, sua nova SENHA: #{update[:senha]}, seu novo NOME DE USUARIO: #{update[:nome_usuario]}"
 
       sleep 2
+      puts "Deseja continuar[S/N]? "
+      opcao = gets.chomp.upcase
+      if opcao.include?("N")
+        break
+      else
+        next
+      end
 
     elsif operacoes == 4
       puts "Digite o id do usuario que deseja fazer a exclusão: "
