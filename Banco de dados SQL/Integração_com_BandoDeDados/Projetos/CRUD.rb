@@ -79,6 +79,10 @@ begin
       puts "Digite o novo nome de usuario: "
       update[:nome_usuario] = gets.chomp
 
+      query_upadate = "UPDATE cadastro SET login='#{update[:login]}', senha='#{update[:senha]}', nome_usuario='#{update[:nome_usuario]}' WHERE id='#{update[:id]}'"
+
+      
+
     elsif operacoes == 4
       puts "Digite o id do usuario que deseja fazer a exclusão: "
       id = gets.chomp.to_i
