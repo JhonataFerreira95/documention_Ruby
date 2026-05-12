@@ -35,4 +35,9 @@ class Product < ctiveRecord::Base
       puts "não há estoque!"
     end
   end
+
+  def increase_stock(amount)
+    self.stock_quantity += amount
+    self.save
+  end
 end
