@@ -465,8 +465,24 @@
 
     ```ruby
 
-    
+        ActiveRecord::Schema.define do
+            create_table :categories do |t|
+            t.string :name
+            end
+
+            create_table :products do |t|
+            t.string :name
+            t.integer :category_id
+            t.integer :stock_amount, default: 0
+            end
+        end
 
     ```
+
+    > Criando as tabelas e as colunas com o `ActiveRecord`, a primeira tabela temos apenas a coluna `name` que é do tipo `string(varchar)` mas para criação dos mesmo e necessário iniciamos um loop. Na segunda tabela seguimos a mesma lógica no entando temos duas colunas com o tipo `integer` e a coluna `stock_amount` foi difinida como padrão inicializar como `0`.
+
+    ---
+
+    
 
 ## O que é `NoSQL`?
