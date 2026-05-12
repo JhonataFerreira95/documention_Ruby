@@ -21,11 +21,11 @@ ActiveRecord::Schema.define do
 end
 
 class Category < ActiveRecord::Base
-  has_many :Products
+  has_many :products
 end
 
 class Product < ctiveRecord::Base
-  belongs_to :Category
+  belongs_to :category
 
   def descrease_stock(amount)
     if self.stock_quantity >= amount
@@ -41,5 +41,13 @@ class Product < ctiveRecord::Base
     self.save
   end
 end
+
+category = Category.create(name: 'Eletrônicos')
+
+product1 = category.products.create(name: 'phone', stock_quantity: 10)
+product2 = category.products.create(name: 'notebook', stock_quantity: 5)
+
+product1.descrease_stock(3)
+product2.increase_stock(10)
 
 

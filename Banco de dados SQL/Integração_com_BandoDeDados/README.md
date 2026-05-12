@@ -486,11 +486,11 @@
     ```ruby
 
         class Category < ActiveRecord::Base
-        has_many :Products
+        has_many :products
         end
 
         class Product < ActiveRecord::Base
-        belongs_to :Category
+        belongs_to :category
 
         def descrease_stock(amount)
             if self.stock_quantity >= amount
@@ -510,5 +510,12 @@
     ```
 
     > Em nossa `classe/tabela Category` herdamos a base do `ActiveRecord` e definimos um relacionamento de `1:N` ou um para muitos. Seguindo a mesma linda em nossa `classe/tabela Products` herdamos a base do `ActiveRecord` e definimos um relacionamento de `1:N`, e falamos que essa `classe` é dependente de quem possuí o `has_many`, utilizando o `belong_to` assim criando o relacionamento de chave estrangeira. Aqui mesmo dentro de nossa `classe` vamos criar um sistema acrescentar de dimunuir estoque da loja atráves do método `descrease_stock` para decrementar e `increase_stock` para incrementar.
+
+    ---
+
+    ```ruby
+
+
+    ```
 
 ## O que é `NoSQL`?
