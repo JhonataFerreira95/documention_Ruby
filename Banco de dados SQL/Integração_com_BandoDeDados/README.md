@@ -515,7 +515,22 @@
 
     ```ruby
 
+        category = Category.create(name: 'Eletrônicos')
+
+        product1 = category.products.create(name: 'phone', stock_amount: 10)
+        product2 = category.products.create(name: 'notebook', stock_amount: 5)
+
+        product1.descrease_stock(3)
+        product2.increase_stock(10)
+
+        all_products = Product.all
+
+        all_products.each do |p|
+        puts "Nome: #{p.name}, Cateogria #{p.category.name}, Estoque: #{p.stock_amount}"
+        end
 
     ```
+
+    > Utilizando as `classes` e nossas tabelas, em `category` utilizei uma variável para guarda nossa `classe` e criar nossa coluna em nosso banco via `ORM` após isso fiz o mesmo processo para guarda o nomes dos protudos e a quantidade em estoque. Feito isso, criei uma variável para listar tudo com o `.all` que é básicamente um `SELECT * FROM`, fiz isso em um bloco loop para lista todos os dados formatados.
 
 ## O que é `NoSQL`?
