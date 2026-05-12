@@ -21,7 +21,7 @@ ActiveRecord::Schema.define do
 end
 
 class Category < ActiveRecord::Base
-  has_many :products
+  has_many :Products
 end
 
 class Product < ctiveRecord::Base
