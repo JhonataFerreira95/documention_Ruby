@@ -439,4 +439,13 @@
 
 ## Projeto com ActiveRecord
 
+> Irei criar um sistema de estoque utilizando o `ActiveRecord`, já que a partir do mesmo podemos criar tabelas e linhas, diferente de só consumir a gem `pg` que só podemos usar `DDL` e `DML`.
+
+- Código:
+
+    ```ruby
+
+
+    ```
+
 ## O que é `NoSQL`?

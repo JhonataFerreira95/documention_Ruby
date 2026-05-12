@@ -41,3 +41,5 @@ class Product < ctiveRecord::Base
     self.save
   end
 end
+
+
