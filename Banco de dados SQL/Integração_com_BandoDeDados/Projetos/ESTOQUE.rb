@@ -1,7 +1,7 @@
 require 'active_record'
 
 ActiveRecord::Base.establish_connection(
-  adpater: 'postgres',
+  adapter: 'postgres',
   host: 'localhost',
   username: 'postgres',
   password: '2319',
@@ -24,12 +24,12 @@ class Category < ActiveRecord::Base
   has_many :products
 end
 
-class Product < ctiveRecord::Base
+class Product < ActiveRecord::Base
   belongs_to :category
 
   def descrease_stock(amount)
-    if self.stock_quantity >= amount
-      self.stock_quantity -= amount
+    if self.stock_amount >= amount
+      self.stock_amount -= amount
       self.save
     else
       puts "não há estoque!"
@@ -37,17 +37,23 @@ class Product < ctiveRecord::Base
   end
 
   def increase_stock(amount)
-    self.stock_quantity += amount
+    self.stock_amount += amount
     self.save
   end
 end
 
 category = Category.create(name: 'Eletrônicos')
 
-product1 = category.products.create(name: 'phone', stock_quantity: 10)
-product2 = category.products.create(name: 'notebook', stock_quantity: 5)
+product1 = category.products.create(name: 'phone', stock_amount: 10)
+product2 = category.products.create(name: 'notebook', stock_amount: 5)
 
 product1.descrease_stock(3)
 product2.increase_stock(10)
+
+all_products = Product.all
+
+all_products.each do |p|
+  puts "Nome: #{p.name}, Cateogria #{p.category.name}, Estoque: #{p.stock_amount}"
+end
 
 
