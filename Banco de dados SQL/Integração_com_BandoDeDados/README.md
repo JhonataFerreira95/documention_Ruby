@@ -441,10 +441,31 @@
 
 > Irei criar um sistema de estoque utilizando o `ActiveRecord`, já que a partir do mesmo podemos criar tabelas e linhas, diferente de só consumir a gem `pg` que só podemos usar `DDL` e `DML`.
 
+- Como pe um projeto relativamente grande, irei separar as parte do mesmo e explicar de uma forma mais clara.
+
 - Código:
 
     ```ruby
 
+        require 'active_record'
+
+        ActiveRecord::Base.establish_connection(
+        adpater: 'postgres',
+        host: 'localhost',
+        username: 'postgres',
+        password: '2319',
+        database: 'estoque'
+        )
+
+    ```
+
+    > Aqui importamos o `ActiveRecord` e utilizamos o mesmo para estabelecer uma conexão com nosso banco de dados.
+
+    ---
+
+    ```ruby
+
+    
 
     ```
 
