@@ -26,4 +26,13 @@ end
 
 class Product < ctiveRecord::Base
   belongs_to :Category
+
+  def descrease_stock(amount)
+    if self.stock_quantity >= amount
+      self.stock_quantity -= amount
+      self.save
+    else
+      puts "não há estoque!"
+    end
+  end
 end
