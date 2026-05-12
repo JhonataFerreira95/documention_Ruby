@@ -450,7 +450,7 @@
         require 'active_record'
 
         ActiveRecord::Base.establish_connection(
-        adapter: 'postgres',
+        adapter: 'postgresql',
         host: 'localhost',
         username: 'postgres',
         password: '2319',
@@ -493,8 +493,8 @@
         belongs_to :category
 
         def descrease_stock(amount)
-            if self.stock_quantity >= amount
-            self.stock_quantity -= amount
+            if self.stock_amount >= amount
+            self.stock_amount -= amount
             self.save
             else
             puts "não há estoque!"
@@ -502,7 +502,7 @@
         end
 
         def increase_stock(amount)
-            self.stock_quantity += amount
+            self.stock_amount += amount
             self.save
         end
         end

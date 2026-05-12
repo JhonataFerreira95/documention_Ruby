@@ -1,7 +1,7 @@
 require 'active_record'
 
 ActiveRecord::Base.establish_connection(
-  adapter: 'postgres',
+  adapter: 'postgresql',
   host: 'localhost',
   username: 'postgres',
   password: '2319',
