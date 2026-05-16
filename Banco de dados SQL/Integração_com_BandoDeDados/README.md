@@ -486,25 +486,25 @@
     ```ruby
 
         class Category < ActiveRecord::Base
-        has_many :products
+            has_many :products
         end
 
         class Product < ActiveRecord::Base
-        belongs_to :category
+            belongs_to :category
 
-        def descrease_stock(amount)
-            if self.stock_amount >= amount
-            self.stock_amount -= amount
-            self.save
-            else
-            puts "não há estoque!"
+            def descrease_stock(amount)
+                if self.stock_amount >= amount
+                self.stock_amount -= amount
+                self.save
+                else
+                puts "não há estoque!"
+                end
             end
-        end
 
-        def increase_stock(amount)
-            self.stock_amount += amount
-            self.save
-        end
+            def increase_stock(amount)
+                self.stock_amount += amount
+                self.save
+            end
         end
 
     ```
@@ -534,3 +534,5 @@
     > Utilizando as `classes` e nossas tabelas, em `category` utilizei uma variável para guarda nossa `classe` e criar nossa coluna em nosso banco via `ORM` após isso fiz o mesmo processo para guarda o nomes dos protudos e a quantidade em estoque. Feito isso, criei uma variável para listar tudo com o `.all` que é básicamente um `SELECT * FROM`, fiz isso em um bloco loop para lista todos os dados formatados.
 
 ## O que é `NoSQL`?
+
+> O que é o `NoSQL`? Aqui é um novo modo de se utilizar o banco de dados mas não da maneira relacional, ou seja, com tabelas colunas e linhas.
