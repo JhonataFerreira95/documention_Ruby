@@ -537,3 +537,13 @@
 
 > O que é o `NoSQL`? Aqui é um novo modo de se utilizar o banco de dados mas não da maneira relacional, ou seja, com tabelas colunas e linhas. Isso acontece porque não temos uma estruturas prévias para os tipo de dados que serão recebido mas a vantagem do `NoSQL` é sua velocidade, flexibilidade e escalabilidade.
 
+- Categorias:
+
+    - Orientado a família de colunas
+
+    - Orientado a chave e valor
+
+    - Orientado a grafos
+
+    - Orientado a documentos
+    
