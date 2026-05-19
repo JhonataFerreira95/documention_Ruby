@@ -580,11 +580,25 @@
 
         ![cruddb](../Assets/mongo_cruddb.png)
 
+    - Criação de `Collections(tabelas)` via `mongosh`:
+
+        ```mongodb
+
+            db.createCollection('users');
+
+        ```
+
+        - Para criação de `collections` no `MongoDB` é super simples, basta utilizar o comando acima e da o nome de sua `collection`.
+
+        ![collection](../Assets/mongo_db_collections.png)
+
         - Aqui no `MongoDB` as colunas do banco são chamadas de `collections` e para exibi-las é utilizado o comando:
 
         ```mongodb
 
-            show collections
+            show collections;
 
         ```
-        
+
+        ![show](../Assets/mongo_show_collections.png)
+
