@@ -567,3 +567,15 @@
         - Mostra os bando de dados que estão dentro do `MongoDB`.
 
         ![mongodb](../Assets/mongo_show_dbs.png)
+
+    - Criando um banco via `mongosh`:
+
+        ```mongodb
+
+            use cruddb;
+
+        ```
+
+        - Aqui criei um novo banco com o nomde de `cruddb` e logo após a criação ele troca autômaticamente para o banco que foi criado.
+
+        ![cruddb](../Assets/mongo_cruddb.png)
