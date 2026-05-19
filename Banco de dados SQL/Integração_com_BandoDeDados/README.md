@@ -553,3 +553,17 @@
 > Para utilização dos comandos via `MongoDB` é necessário utilizar o `mongosh` para execultar os comandos:
 
 ![mongosh](../Assets/mongosh.png)
+
+- Comandos:
+
+    - Para verificar as bases de dados no `MongoDB`:
+
+        ```mongodb
+
+            show dbs;
+
+        ```
+
+        - Mostra os bando de dados que estão dentro do `MongoDB`.
+
+        ![mongodb](../Assets/mongo_show_dbs.png)
