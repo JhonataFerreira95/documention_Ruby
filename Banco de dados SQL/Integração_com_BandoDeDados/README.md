@@ -579,3 +579,12 @@
         - Aqui criei um novo banco com o nomde de `cruddb` e logo após a criação ele troca autômaticamente para o banco que foi criado.
 
         ![cruddb](../Assets/mongo_cruddb.png)
+
+        - Aqui no `MongoDB` as colunas do banco são chamadas de `collections` e para exibi-las é utilizado o comando:
+
+        ```mongodb
+
+            show collections
+
+        ```
+        
