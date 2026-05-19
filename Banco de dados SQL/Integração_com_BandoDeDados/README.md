@@ -566,7 +566,7 @@
 
         - Mostra os bando de dados que estão dentro do `MongoDB`.
 
-        ![mongodb](../Assets/mongo_show_dbs.png)
+            ![mongodb](../Assets/mongo_show_dbs.png)
 
     - Criando um banco via `mongosh`:
 
@@ -578,7 +578,7 @@
 
         - Aqui criei um novo banco com o nomde de `cruddb` e logo após a criação ele troca autômaticamente para o banco que foi criado.
 
-        ![cruddb](../Assets/mongo_cruddb.png)
+            ![cruddb](../Assets/mongo_cruddb.png)
 
     - Criação de `Collections(tabelas)` via `mongosh`:
 
@@ -590,7 +590,7 @@
 
         - Para criação de `collections` no `MongoDB` é super simples, basta utilizar o comando acima e da o nome de sua `collection`.
 
-        ![collection](../Assets/mongo_db_collections.png)
+            ![collection](../Assets/mongo_db_collections.png)
 
         - Aqui no `MongoDB` as colunas do banco são chamadas de `collections` e para exibi-las é utilizado o comando:
 
@@ -601,4 +601,16 @@
         ```
 
         ![show](../Assets/mongo_show_collections.png)
+
+    - Inserindo dados em uma `collection`:
+
+        ```mongodb
+
+            db.tabela_desejada.insertOne({name:"Bass", email:"bass@gmail.com", phone:"2323232"});
+
+        ```
+
+        - Aqui estamos inserindo dados em uma `collection` ou seja padrão `DML`.
+
+            ![insert](../Assets/mongo_insert.png)
 
