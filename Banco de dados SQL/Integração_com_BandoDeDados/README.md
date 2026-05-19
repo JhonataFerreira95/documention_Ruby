@@ -618,7 +618,7 @@
 
         ```mongodb
 
-            db.tabela_desejada.find({})
+            db.tabela_desejada.find({});
 
         ```
 
@@ -630,8 +630,20 @@
 
             ```mongodb
 
-                db.users.find({name:"Bass"})
+                db.users.find({name:"Bass"});
             
             ```
 
         - Ele recupera todos os itens que contém `Bass` como nome.
+
+    - Deletando dados de uma `collection`:
+
+        ```mongodb
+
+            db.tabela_desejada.deleteOne({name:"nome_desejado"});
+
+        ```
+
+        - O processo de deletar dados a partir de um nome desejado via `mongosh`.
+
+            ![delete](../Assets/mongo_delete.png)
