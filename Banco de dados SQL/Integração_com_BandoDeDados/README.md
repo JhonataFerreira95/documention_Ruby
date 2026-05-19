@@ -16,6 +16,7 @@
 12. [Praticando com ActiveRecord](#projeto-com-activerecord)
 13. [O que NoSQL?](#o-que-é-nosql)
 14. [Comandos do MongoDB](#comandos-do-mongodb)
+15. [Inserindo dados no mongo via Ruby](#inserindo-dados-no-mongodb-via-ruby)
 
 ---
 
@@ -647,3 +648,5 @@
         - O processo de deletar dados a partir de um nome desejado via `mongosh`.
 
             ![delete](../Assets/mongo_delete.png)
+
+## Inserindo dados no `MongoDB` via `Ruby`
