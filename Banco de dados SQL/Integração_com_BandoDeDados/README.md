@@ -625,3 +625,13 @@
         - Esse comando `.find({})` é equivalente ao `SELECT * FROM` que já vimos muito, para lista tudo de uma tabela.
 
             ![find](../Assets/mongo_find.png)
+
+        - Filtro no `find`:
+
+            ```mongodb
+
+                db.users.find({name:"Bass"})
+            
+            ```
+
+        - Ele recupera todos os itens que contém `Bass` como nome.
