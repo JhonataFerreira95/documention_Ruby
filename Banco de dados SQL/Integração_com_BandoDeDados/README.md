@@ -614,3 +614,14 @@
 
             ![insert](../Assets/mongo_insert.png)
 
+    - Listando dados de uma `collection`:
+
+        ```mongodb
+
+            db.tabela_desejada.find({})
+
+        ```
+
+        - Esse comando `.find({})` é equivalente ao `SELECT * FROM` que já vimos muito, para lista tudo de uma tabela.
+
+            ![find](../Assets/mongo_find.png)
