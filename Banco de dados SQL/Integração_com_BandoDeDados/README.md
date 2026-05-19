@@ -549,3 +549,7 @@
     - Orientado a documentos
 
 ## Comandos do `MongoDB`
+
+> Para utilização dos comandos via `MongoDB` é necessário utilizar o `mongosh` para execultar os comandos:
+
+![mongosh](../Assets/mongosh.png)
