@@ -657,5 +657,17 @@
 
     ```ruby
 
+        require 'mongo'
+
+        client = Mongo::Client.new(['localhost:27017'], :database => 'ecommerce')
+
+    ```
+
+    - Aqui eu importei o `MongoDB` e configurei o servidor do mesmo para o `localgost` e a sua porta padrão `27017`, e criei uma `collection` com o nome `ecommerce`.
+
+    ---
+
+    ```ruby
+
 
     ```
