@@ -27,3 +27,7 @@ gem 'pg', '~> 1.5', '>= 1.5.9'
 
 gem 'activerecord-import', '~> 0.15.0'
 
+# Aqui importei a <gem> para utilizar o mongodb via ruby
+
+gem 'mongo', '~> 2.21'
+
