@@ -650,3 +650,12 @@
             ![delete](../Assets/mongo_delete.png)
 
 ## Inserindo dados no `MongoDB` via `Ruby`
+
+> Aqui irei inserir dados em nosso banco `NoSQL` orientado a documentos `MongoDB` via `Ruby`.
+
+- Código:
+
+    ```ruby
+
+
+    ```
