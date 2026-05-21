@@ -669,5 +669,33 @@
 
     ```ruby
 
+        result = client[:products].insert_one({
+            'name' => 'smarthphone',
+            'category' => {
+                'name' => 'eletronicos'
+            }
+            })  
 
     ```
+
+    - Aqui criei o documento com nome `smartphone`(que seria a linha da tabela) e o documento embutido que é `eletronicos`(que seria a coluna da tabela).
+
+    ---
+
+    ```ruby
+
+        if result.successful?
+            puts "Dados foram inserido com sucesso. Id: #{result.inserted_id}"
+        else
+            puts "Falha ao inserir os dados!"
+        end
+
+    ```
+
+    - Aqui eu confirmei se os dados foram inseridos ou não.
+
+        ![inserção](../Assets/Inserção_via_ruby_mongo.png)
+
+    - `Datagrip`
+
+        ![inserçao_datagrip](../Assets/inserção_mongo_datagripe.png)
