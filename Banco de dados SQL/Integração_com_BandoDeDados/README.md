@@ -19,6 +19,7 @@
 15. [Inserindo dados no MongoDB via Ruby](#inserindo-dados-no-mongodb-via-ruby)
 16. [Listando dados no MongoDB via Ruby](#listando-dados-no-mongodb-via-ruby)
 17. [Atualização de dados no MongoDB via Ruby](#atualização-de-dados-no-mongodb-via-ruby)
+18. [Excluindo dados do MongoDB via Ruby](#excluindo-dados-do-mongodb-via-ruby)
 
 ---
 
@@ -784,4 +785,6 @@
 
     ```
 
-    - Validação dos dados de forma dinâmica com um simples condicional
+    - Validação dos dados de forma dinâmica com um simples condicional.
+
+## Excluindo dados do `MongoDB` via `Ruby`
