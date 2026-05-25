@@ -794,3 +794,39 @@
 - Código:
 
     ```ruby
+
+        require 'mongo'
+
+        client = Mongo::Client.new(['localhost:27017'], :database => 'ecommerce')
+
+    ```
+
+    - Aqui definimos a nossa conexão com o `MongoDB`
+
+    ---
+
+    ```ruby
+
+        result = client[:products].delete_one({name: 'smartphone'})
+
+    ```
+
+    - A lógica feita para deletar apenas os itens com o nome `smartphone`, utilizamos nesse caso o `delete_one` que deleta apenas um registro por consulta.
+
+    ---
+
+    ```ruby
+
+        if result.deleted_count > 0
+
+            puts "Registro excluído com sucesso."
+
+        else
+
+            puts "nenhum registro excluído!"
+
+        end
+
+    ```
+
+    - Uma condicional para verificar se os registros foram deletados ou não
