@@ -18,6 +18,7 @@
 14. [Comandos do MongoDB](#comandos-do-mongodb)
 15. [Inserindo dados no MongoDB via Ruby](#inserindo-dados-no-mongodb-via-ruby)
 16. [Listando dados no MongoDB via Ruby](#listando-dados-no-mongodb-via-ruby)
+17. [Atualização de dados no MongoDB via Ruby](#atualização-de-dados-no-mongodb-via-ruby)
 
 ---
 
@@ -742,3 +743,5 @@
     ```
 
     - Formatando a saida dos dados via interpolação em uma laço com `each` para listagem de nosso documento `:name` e nosso documento embutido `:category`
+
+## Atualização de dados no `MongoDB` via `Ruby`
