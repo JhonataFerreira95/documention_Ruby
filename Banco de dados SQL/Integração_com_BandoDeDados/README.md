@@ -763,7 +763,6 @@
     ---
 
     ```ruby
-        # Atualização de dados (podemos ter o update_one ou update_many)
 
         result = client[:products].update_one({name: 'smarthphone'}, {
         "$set" => {category: {name: 'dispositivo móveis'}}
@@ -773,4 +772,16 @@
 
     - Atualizando os dados do bando via `ruby`, vale lembra que existem 2 tipo de `update` aqui no `MongoDB`, que é o `update_one` ou seja, para atualizar um documento e o `update_many` para atualizar vários documentos.
 
-    
+    ---
+
+    ```ruby
+
+        if result.modified_count > 0
+        puts "Dados atualizados!"
+        else
+        puts "Nenhum documentos foi atualizado"
+        end
+
+    ```
+
+    - Validação dos dados de forma dinâmica com um simples condicional
