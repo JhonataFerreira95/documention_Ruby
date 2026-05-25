@@ -702,3 +702,7 @@
         ![inserçao_datagrip](../Assets/inserção_mongo_datagripe.png)
 
 ## Listando dados no `MongoDB` via `Ruby`
+
+> Aqui irei aborda como podemos atráveis do `Ruby` a listar dados como o `MongoBD` de forma prática.
+
+- Código:
