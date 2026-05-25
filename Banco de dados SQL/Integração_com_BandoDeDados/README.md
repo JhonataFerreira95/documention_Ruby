@@ -16,7 +16,7 @@
 12. [Praticando com ActiveRecord](#projeto-com-activerecord)
 13. [O que NoSQL?](#o-que-é-nosql)
 14. [Comandos do MongoDB](#comandos-do-mongodb)
-15. [Inserindo dados no mongo via Ruby](#inserindo-dados-no-mongodb-via-ruby)
+15. [Inserindo dados no MongoDB via Ruby](#inserindo-dados-no-mongodb-via-ruby)
 16. [Listando dados no MongoDB via Ruby](#listando-dados-no-mongodb-via-ruby)
 
 ---
