@@ -788,3 +788,9 @@
     - Validação dos dados de forma dinâmica com um simples condicional.
 
 ## Excluindo dados do `MongoDB` via `Ruby`
+
+> Irei aborda a exclusão de dados no `MongoDB` via `Ruby` de forma prática e dinâmica.
+
+- Código:
+
+    ```ruby
