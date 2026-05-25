@@ -706,3 +706,39 @@
 > Aqui irei aborda como podemos atráveis do `Ruby` a listar dados como o `MongoBD` de forma prática.
 
 - Código:
+
+    ```ruby
+
+        require 'mongo'
+
+
+        client = Mongo::Client.new(['localhost:27017'], :database => 'ecommerce')
+
+    ```
+
+    - Configuração de conexão ao `MongoDB`
+
+    ---
+
+    ```ruby
+
+        collection = client[:products]
+        documents = collection.find
+
+    ```
+
+    - Definindo as collections e nossa busca das mesma com o `.find`
+
+    ---
+
+    ```ruby
+
+         puts "Produtcs: "
+
+        documents.each do |document|
+        puts "Nome: #{document[:name]}, Categoria: #{document[:category][:name]}"
+        end
+
+    ```
+
+    - Formatando a saida dos dados via interpolação em uma laço com `each` para listagem de nosso documento `:name` e nosso documento embutido `:category`
