@@ -745,3 +745,32 @@
     - Formatando a saida dos dados via interpolação em uma laço com `each` para listagem de nosso documento `:name` e nosso documento embutido `:category`
 
 ## Atualização de dados no `MongoDB` via `Ruby`
+
+> Aqui irei aborda como fazer atualização de dados no `MongoDB` via `Ruby` de forma prática.
+
+- Código:
+
+    ```ruby
+
+        require 'mongo'
+
+        client = Mongo::Client.new(['localhost:27017'], :database => 'ecommerce')
+
+    ```
+
+    - Estabelecendo a coneão com o banco via `ruby`
+
+    ---
+
+    ```ruby
+        # Atualização de dados (podemos ter o update_one ou update_many)
+
+        result = client[:products].update_one({name: 'smarthphone'}, {
+        "$set" => {category: {name: 'dispositivo móveis'}}
+        })
+
+    ```
+
+    - Atualizando os dados do bando via `ruby`, vale lembra que existem 2 tipo de `update` aqui no `MongoDB`, que é o `update_one` ou seja, para atualizar um documento e o `update_many` para atualizar vários documentos.
+
+    
