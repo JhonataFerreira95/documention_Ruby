@@ -64,11 +64,32 @@ while true
         dados[:senha] = gets.chomp
 
         collection = connection_db[:users].insert_one({
-            name => 'Usuarios',
+            nome => "#{dados[:nome]}",
+            idade => "#{dados[:idade]}}",
+            login => "#{dados[:login]}",
+            senha => "#{dados[:senha]}",
             category => {
-                
+                name => 'Usuarios'
             }
         })
+
+        if collection.successful?
+            puts "Dados foram inserindo com sucesso #{collection.inserted_id}"
+        else
+            puts "Falha ao inserir dados na collection!"
+        end
+
+        puts "-=" * 15
+        sleep 1
+
+        puts "Desejar continuar?[S/N] "
+        opcoes = gets.chomp.upcase
+
+        if opcoes.include?("N")
+            break
+        else
+            next
+        end
 
     elsif operacoes == 3
 
