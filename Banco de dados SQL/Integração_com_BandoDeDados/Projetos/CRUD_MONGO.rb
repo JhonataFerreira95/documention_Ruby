@@ -1,6 +1,6 @@
 require 'mongo'
 
-conection_db = Mongo::Connection_db.new(['localhost:27017'], database => 'cadastroDB')
+connection_db = Mongo::Client.new(['localhost:27017'], :database => 'cadastroDB')
 
 while true
 
@@ -24,7 +24,7 @@ while true
 
         puts "-=" * 15
 
-        collection = conection_db[:users]
+        collection = connection_db[:users]
         show = collection.find
 
         show.each do |d|
