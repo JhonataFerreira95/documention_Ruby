@@ -64,12 +64,12 @@ while true
         dados[:senha] = gets.chomp
 
         collection = connection_db[:users].insert_one({
-            nome => "#{dados[:nome]}",
-            idade => "#{dados[:idade]}}",
-            login => "#{dados[:login]}",
-            senha => "#{dados[:senha]}",
-            category => {
-                name => 'Usuarios'
+            'nome' => "#{dados[:nome]}",
+            'idade' => "#{dados[:idade]}}",
+            'login' => "#{dados[:login]}",
+            'senha' => "#{dados[:senha]}",
+            'category' => {
+                'name' => 'Usuarios'
             }
         })
 
