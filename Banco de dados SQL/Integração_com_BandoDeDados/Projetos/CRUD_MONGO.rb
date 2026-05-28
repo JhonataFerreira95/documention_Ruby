@@ -28,7 +28,7 @@ while true
         show = collection.find
 
         show.each do |d|
-            puts "Nome: #{show[:nome]}, Idade: #{show[:idade]}, Login: #{show[:login]}, Senha: #{show[:senha]}"
+            puts "Nome: #{d[:nome]}, Idade: #{d[:idade]}, Login: #{d[:login]}, Senha: #{d[:senha]}"
         end
 
         puts "-=" * 15
@@ -38,6 +38,8 @@ while true
         opcoes = gets.chomp.upcase
 
         if opcoes.include?("N")
+            sleep 1
+            puts "Saindo da aplicação..."
             break
         else
             next
@@ -86,6 +88,8 @@ while true
         opcoes = gets.chomp.upcase
 
         if opcoes.include?("N")
+            sleep 1
+            puts "Saindo da aplicação..."
             break
         else
             next
