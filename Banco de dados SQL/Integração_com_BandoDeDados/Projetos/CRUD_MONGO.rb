@@ -27,6 +27,10 @@ while true
         collection = conection_db[:users]
         show = collection.find
 
+        show.each do |d|
+            puts "Nome: #{show[:nome]}, Idade: #{show[:idade]}, Login: #{show[:login]}, Senha: #{show[:senha]}"
+        end
+
         puts "-=" * 15
         sleep 1.0
 
