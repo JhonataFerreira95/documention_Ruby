@@ -44,6 +44,31 @@ while true
         end
 
     elsif operacoes == 2
+        puts "Inserindo dados em nossa collection: "
+        sleep 0.5
+
+        puts "-=" * 15
+
+        dados = {}
+
+        puts "Digite o seu nome: "
+        dados[:nome] = gets.chomp
+        sleep 0.5
+        puts "Digite a sua idade: "
+        dados[:idade] = gets.chomp.to_i
+        sleep 0.5
+        puts "Digite o sua login: "
+        dados[:login] = gets.chomp
+        sleep 0.5
+        puts "Digite a sua senha: "
+        dados[:senha] = gets.chomp
+
+        collection = connection_db[:users].insert_one({
+            name => 'Usuarios',
+            category => {
+                
+            }
+        })
 
     elsif operacoes == 3
 
