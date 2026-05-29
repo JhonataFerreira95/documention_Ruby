@@ -104,6 +104,13 @@ while true
         dados = {}
 
         puts "Digite o seu nome para atualização: "
+        dados[:nome_update] = gets.chomp
+        puts "Digite a sua idade para atualização: "
+        dados[:idade_update] = gets.chomp.to_i
+        puts "Digite o seu login para atualização: "
+        dados[:login_update] = gets.chomp
+        puts "Digite sua senha para atualização: "
+        dados[:senha_update] = gets.chomp
 
     elsif operacoes == 4
 
