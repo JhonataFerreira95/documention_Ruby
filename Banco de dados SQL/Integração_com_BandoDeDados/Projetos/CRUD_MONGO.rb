@@ -96,6 +96,14 @@ while true
         end
 
     elsif operacoes == 3
+        puts "Atualizando dados da nossa Collection: "
+        sleep 0.5
+
+        puts "-=" * 15
+        
+        dados = {}
+
+        puts "Digite o seu nome para atualização: "
 
     elsif operacoes == 4
 
