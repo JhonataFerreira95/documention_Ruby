@@ -112,6 +112,8 @@ while true
         puts "Digite sua senha para atualização: "
         dados[:senha_update] = gets.chomp
 
+        update = connection_db[users].update_one({name:dados[:nome_update]})
+
     elsif operacoes == 4
 
     else
