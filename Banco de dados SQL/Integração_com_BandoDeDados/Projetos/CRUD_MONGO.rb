@@ -112,7 +112,9 @@ while true
         puts "Digite sua senha para atualização: "
         dados[:senha_update] = gets.chomp
 
-        update = connection_db[users].update_one({name:dados[:nome_update]})
+        update = connection_db[users].update_one({nome: dados[:nome_update], idade: dados[:idade_update], login: dados[:login_update], senha: dados[:senha_update]},
+        "$set" => {category: {name: }}
+        )
 
     elsif operacoes == 4
 
