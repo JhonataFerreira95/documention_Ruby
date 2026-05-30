@@ -115,7 +115,7 @@ while true
         update = connection_db[:users].update_one({nome: dados[:nome], idade: dados[:idade], login: dados[:login], senha: dados[:senha]},
         "$set" => {category: {nome: dados[:nome_update], idade: dados[:idade_update], login: dados[:login_update], senha: dados[:senha_update]}})
         
-        if result.modified_count > 0
+        if update.modified_count > 0
             puts "Dados atualizado com sucesso!"
         else
             puts "Nenhum documento foi atualizado."
