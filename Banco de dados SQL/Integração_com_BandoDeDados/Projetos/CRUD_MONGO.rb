@@ -112,9 +112,14 @@ while true
         puts "Digite sua senha para atualização: "
         dados[:senha_update] = gets.chomp
 
-        update = connection_db[users].update_one({nome: dados[:nome_update], idade: dados[:idade_update], login: dados[:login_update], senha: dados[:senha_update]},
-        "$set" => {category: {name: }}
-        )
+        update = connection_db[:users].update_one({nome: dados[:nome], idade: dados[:idade], login: dados[:login], senha: dados[:senha]},
+        "$set" => {category: {nome: dados[:nome_update], idade: dados[:idade_update], login: dados[:login_update], senha: dados[:senha_update]}})
+        
+        if result.modified_count > 0
+            puts "Dados atualizado com sucesso!"
+        else
+            puts "Nenhum documento foi atualizado."
+        end
 
     elsif operacoes == 4
 
