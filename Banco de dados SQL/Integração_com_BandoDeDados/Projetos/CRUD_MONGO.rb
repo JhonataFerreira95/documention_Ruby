@@ -99,6 +99,9 @@ while true
         puts "Atualizando dados da nossa Collection: "
         sleep 0.5
 
+        puts "Digite o seu login para seguir: "
+        login_user = dados[:login]
+
         puts "-=" * 15
         
         dados = {}
@@ -111,7 +114,7 @@ while true
         puts "Digite o seu nome para atualização: "
         dados[:nome_update] = gets.chomp
         puts "Digite a sua idade para atualização: "
-        dados[:idade_update] = gets.chomp.to_i
+        dados[:idade_update] = gets.chomp
         puts "Digite o seu login para atualização: "
         dados[:login_update] = gets.chomp
         puts "Digite sua senha para atualização: "
