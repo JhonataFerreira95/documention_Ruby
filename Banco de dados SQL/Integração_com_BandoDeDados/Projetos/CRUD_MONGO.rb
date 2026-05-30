@@ -103,6 +103,11 @@ while true
         
         dados = {}
 
+        puts "Digite o seu login para alterar os dados: "
+        login = {login: dados[:login]}
+        sleep 2
+        puts "-=" * 15
+
         puts "Digite o seu nome para atualização: "
         dados[:nome_update] = gets.chomp
         puts "Digite a sua idade para atualização: "
@@ -112,8 +117,7 @@ while true
         puts "Digite sua senha para atualização: "
         dados[:senha_update] = gets.chomp
 
-        update = connection_db[:users].update_one({nome: dados[:nome], idade: dados[:idade], login: dados[:login], senha: dados[:senha]},
-        "$set" => {category: {nome: dados[:nome_update], idade: dados[:idade_update], login: dados[:login_update], senha: dados[:senha_update]}})
+        
         
         if update.modified_count > 0
             puts "Dados atualizado com sucesso!"
