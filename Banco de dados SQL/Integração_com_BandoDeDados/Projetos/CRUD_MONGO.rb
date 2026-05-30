@@ -103,7 +103,7 @@ while true
         
         dados = {}
 
-        puts "Digite o seu login para alterar os dados: "
+        puts "Inicializando a conexão..."
         login = {login: dados[:login]}
         sleep 2
         puts "-=" * 15
@@ -117,13 +117,25 @@ while true
         puts "Digite sua senha para atualização: "
         dados[:senha_update] = gets.chomp
 
-        
+        update = {
+            "$set" =>{
+                nome: dados[:nome_update],
+                idade:  dados[:idade_update],
+                login: dados[:login_update],
+                senha: dados[:senha_update]
+            }
+        }
+
+        update = connection_db[:users].update_one(login, update)
         
         if update.modified_count > 0
             puts "Dados atualizado com sucesso!"
         else
             puts "Nenhum documento foi atualizado."
         end
+
+        puts "-=" * 15
+        sleep 1
 
     elsif operacoes == 4
 
