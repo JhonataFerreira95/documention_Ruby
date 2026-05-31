@@ -96,6 +96,7 @@ while true
         end
 
     elsif operacoes == 3
+        dados = {}
         puts "Atualizando dados da nossa Collection: "
         sleep 0.5
 
@@ -103,8 +104,6 @@ while true
         login_user = dados[:login]
 
         puts "-=" * 15
-        
-        dados = {}
 
         puts "Inicializando a conexão..."
         login = {login: dados[:login]}
