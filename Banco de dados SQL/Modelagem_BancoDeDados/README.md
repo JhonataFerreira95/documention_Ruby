@@ -19,7 +19,7 @@
 15. [Modelagem de banco de dados](#modelagem-de-banco-de-dados-1)
 16. [Normalização de banco de dados](#normalização-banco-de-dados)
 17. [Modelando um banco de dados](#modelando-um-banco-de-dados)
-18. [Gerênciamento de usuarios](#gerênciamento-de-usuarios)
+18. [Gerênciamento de usuários](#gerênciamento-de-usuários)
 
 ---
 
@@ -1183,6 +1183,6 @@ CREATE TABLE IF NOT EXISTS isbn(
 
 ---
 
-## Gerênciamento de usuarios
+## Gerênciamento de usuários
 
 > Gerênciamento de permissões de usuário em um banco de dados, para que serve e porque utilizar esses tipos de permissões. Já adinto que é mais por questões de segurança em si, já que normalmente só o `DBA` tem acesso total ao banco de uma aplicação.
