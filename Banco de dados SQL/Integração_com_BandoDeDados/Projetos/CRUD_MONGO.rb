@@ -101,7 +101,7 @@ while true
         sleep 0.5
 
         puts "Digite o seu login para seguir: "
-        login_user = dados[:login]
+        dados[:login] = gets.chomp
 
         puts "-=" * 15
 
