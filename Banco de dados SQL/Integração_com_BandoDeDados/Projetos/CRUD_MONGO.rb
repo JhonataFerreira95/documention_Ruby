@@ -158,6 +158,22 @@ while true
         puts "Digite o seu login para seguir: "
         dados[:login] = gets.chomp
 
+        puts "Inicializando a conexão..."
+        login = {login: dados[:login]}
+        sleep 2
+        puts "-=" * 15
+
+        puts "Digite o seu nome para deletar os dados: "
+        dados[:nome_delete] = gets.chomp
+        puts "Digite a sua idade para deletar os dados: "
+        dados[:idade_delete] = gets.chomp
+        puts "Digite sua senha para deletar os dados: "
+        dados[:senha_delete] = gets.chomp
+
+        delete = connection_db[:users].delete_one({nome: "#{dados[:nome_delete]}", idade: "#{dados[:idade_delete]}", login: "#{dados[:login]}", senha: "#{dados[:senha_delete]}"})
+
+        
+
         puts "-=" * 15
         sleep 1
 
