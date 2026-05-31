@@ -15,7 +15,7 @@ while true
     puts "  Ver dados digite [1]:\
     Para inserir dados digite [2]:\
     Para atualizar dados digite [3]:\
-    Para delete dados digite [4]: "
+    Para deletar dados digite [4]: "
     operacoes = gets.chomp.to_i
 
     if operacoes == 1
@@ -172,7 +172,11 @@ while true
 
         delete = connection_db[:users].delete_one({nome: "#{dados[:nome_delete]}", idade: "#{dados[:idade_delete]}", login: "#{dados[:login]}", senha: "#{dados[:senha_delete]}"})
 
-        
+        if delete.deleted_count > 0 
+            puts "Registro excluídos com sucesso."
+        else
+            puts "Nenhum registro foi excluído!"
+        end
 
         puts "-=" * 15
         sleep 1
