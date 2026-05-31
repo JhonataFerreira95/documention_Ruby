@@ -139,6 +139,17 @@ while true
         puts "-=" * 15
         sleep 1
 
+        puts "Deseja continuar?[S/N] "
+        opcoes = gets.chomp.upcase
+
+        if opcoes.include?("N")
+            sleep 1
+            puts "Saindo da aplicação..."
+            break
+        else
+            next
+        end
+
     elsif operacoes == 4
 
     else
