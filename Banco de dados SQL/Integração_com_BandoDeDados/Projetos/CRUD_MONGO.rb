@@ -113,7 +113,7 @@ while true
         puts "Digite o seu nome para atualização: "
         dados[:nome_update] = gets.chomp
         puts "Digite a sua idade para atualização: "
-        dados[:idade_update] = gets.chomp
+        dados[:idade_update] = gets.chomp.to_i
         puts "Digite o seu login para atualização: "
         dados[:login_update] = gets.chomp
         puts "Digite sua senha para atualização: "
@@ -163,14 +163,16 @@ while true
         sleep 2
         puts "-=" * 15
 
+        puts "Digite o login para deletar os dados: "
+        dados[:login_delete] = gets.chomp
         puts "Digite o seu nome para deletar os dados: "
         dados[:nome_delete] = gets.chomp
         puts "Digite a sua idade para deletar os dados: "
-        dados[:idade_delete] = gets.chomp
+        dados[:idade_delete] = gets.chomp.to_i
         puts "Digite sua senha para deletar os dados: "
         dados[:senha_delete] = gets.chomp
 
-        delete = connection_db[:users].delete_one({nome: "#{dados[:nome_delete]}", idade: "#{dados[:idade_delete]}", login: "#{dados[:login]}", senha: "#{dados[:senha_delete]}"})
+        delete = connection_db[:users].delete_one({nome: dados[:nome_delete], idade: dados[:idade_delete], login: dados[:login_delete], senha: dados[:senha_delete]})
 
         if delete.deleted_count > 0 
             puts "Registro excluídos com sucesso."
