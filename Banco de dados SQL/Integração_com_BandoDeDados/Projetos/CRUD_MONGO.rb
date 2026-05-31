@@ -152,6 +152,11 @@ while true
 
     elsif operacoes == 4
         dados = {}
+        puts "Deletando dados da collection: "
+        sleep 0.5
+
+        puts "Digite o seu login para seguir: "
+        dados[:login] = gets.chomp
 
         puts "-=" * 15
         sleep 1
