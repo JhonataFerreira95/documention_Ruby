@@ -1218,7 +1218,7 @@ CREATE TABLE IF NOT EXISTS isbn(
 
 ## Projeto de Banco de Dados
 
-> Aqui ire modelar o banco e tabelas via `DBdesigner` mas irei deixar o dataDump do banco aqui.
+> Aqui ire modelar o banco e tabelas via `Datagrip` mas irei deixar a criação das tabelas do banco aqui.
 
 - Criação da tabela products:
 
@@ -1252,3 +1252,7 @@ CREATE TABLE IF NOT EXISTS isbn(
         );
 
     ```
+
+- Criação da tabele vendedor:
+
+    ```SQL
