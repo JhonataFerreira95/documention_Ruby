@@ -1220,7 +1220,7 @@ CREATE TABLE IF NOT EXISTS isbn(
 
 > Aqui ire modelar o banco e tabelas via `DBdesigner` mas irei deixar o dataDump do banco aqui.
 
-- Criação da tabela porducts:
+- Criação da tabela products:
 
     ```SQL
 
@@ -1236,3 +1236,19 @@ CREATE TABLE IF NOT EXISTS isbn(
     ```
 
     - Creio que nesse ponto da leitura já é possível entender esse tipo de estrutura, então essa é a tabela base `products`
+
+- Criação da tabela cliente:
+
+    ```SQL
+
+        CREATE TABLE IF NOT EXISTS clients(
+            id_client SERIAL PRIMARY KEY,
+            name_client VARCHAR(100) NOT NULL,
+            birthdate_client DATE,
+            address_client VARCHAR(100),
+            city_client VARCHAR(50),
+            email_client VARCHAR(255),
+            phone_client VARCHAR(100)
+        );
+
+    ```
