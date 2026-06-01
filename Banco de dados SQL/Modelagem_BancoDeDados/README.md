@@ -20,6 +20,7 @@
 16. [Normalização de banco de dados](#normalização-banco-de-dados)
 17. [Modelando um banco de dados](#modelando-um-banco-de-dados)
 18. [Gerênciamento de usuários](#gerênciamento-de-usuários)
+19. [Projeto de banco de dados](#projeto-de-banco-de-dados)
 
 ---
 
@@ -1195,7 +1196,7 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     - Esse comando cria uma usuário de da a permissão do mesmo criar um banco de dados.
 
-    ![criação_user](../Assets/criaçãoUsuariopsql.png)
+        ![criação_user](../Assets/criaçãoUsuariopsql.png)
 
     - Observa-se que o usuário que criei como o nome `bass` está listado com a opção de apenas criação de banco. Para lista os usuários ativos no seu terminal use:
 
@@ -1211,4 +1212,8 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     - Aqui alterei o usuário `bass` para ser super usuário e herda tudo do usuário `postgres` e permitir a criação de cargos(roles) no usuário `bass`.
 
-    ![alter_role](../Assets/alter_role.png)
+        ![alter_role](../Assets/alter_role.png)
+
+---
+
+## Projeto de Banco de Dados
