@@ -1225,7 +1225,7 @@ CREATE TABLE IF NOT EXISTS isbn(
     ```SQL
 
         CREATE TABLE IF NOT EXISTS products(
-            id_product SERIAL PRIMARY KEY,
+            id SERIAL PRIMARY KEY,
             prod_name VARCHAR(100) NOT NULL,
             category VARCHAR(100) NOT NULL,
             description TEXT,
@@ -1242,7 +1242,7 @@ CREATE TABLE IF NOT EXISTS isbn(
     ```SQL
 
         CREATE TABLE IF NOT EXISTS clients(
-            id_client SERIAL PRIMARY KEY,
+            id SERIAL PRIMARY KEY,
             name_client VARCHAR(100) NOT NULL,
             birthdate_client DATE,
             address_client VARCHAR(100),
@@ -1258,7 +1258,7 @@ CREATE TABLE IF NOT EXISTS isbn(
     ```SQL
 
         CREATE TABLE IF NOT EXISTS seller(
-            id_seller SERIAL PRIMARY KEY,
+            id SERIAL PRIMARY KEY,
             name_seller VARCHAR(100) NOT NULL,
             birthdate_saller DATE,
             address_saller VARCHAR(100),
@@ -1267,5 +1267,12 @@ CREATE TABLE IF NOT EXISTS isbn(
             register_number INT,
             admission_date DATE NOT NULL
         );
+
+    ```
+
+- Criação da tabela de vendas:
+
+    ```SQL
+        
 
     ```
