@@ -21,6 +21,7 @@
 17. [Modelando um banco de dados](#modelando-um-banco-de-dados)
 18. [Gerênciamento de usuários](#gerênciamento-de-usuários)
 19. [Projeto de banco de dados](#projeto-de-banco-de-dados)
+20. [Constraints](#constraints)
 
 ---
 
@@ -1286,3 +1287,9 @@ CREATE TABLE IF NOT EXISTS isbn(
         );
 
     ```
+
+- Finalizado a criação do banco e suas respectivas tabelas, irei aborda as `Constraints`.
+
+---
+
+## Constraints
