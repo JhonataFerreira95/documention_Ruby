@@ -1203,3 +1203,12 @@ CREATE TABLE IF NOT EXISTS isbn(
         \du
     ```
 
+- Alerando permissões de um usuário:
+
+    ```psql
+        ALTER USER bass SUPERUSER INHERIT CREATEROLE;
+    ```
+
+    - Aqui alterei o usuário `bass` para ser super usuário e herda tudo do usuário `postgres` e permitir a criação de cargos(roles) no usuário `bass`.
+
+    ![alter_role](../Assets/alter_role.png)
