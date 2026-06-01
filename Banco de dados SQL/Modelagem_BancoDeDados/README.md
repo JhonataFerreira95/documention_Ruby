@@ -1186,3 +1186,13 @@ CREATE TABLE IF NOT EXISTS isbn(
 ## Gerênciamento de usuários
 
 > Gerênciamento de permissões de usuário em um banco de dados, para que serve e porque utilizar esses tipos de permissões. Já adinto que é mais por questões de segurança em si, já que normalmente só o `DBA` tem acesso total ao banco de uma aplicação.
+
+- Código para criar um usuário via `psql`:
+
+    ```psql
+        CREATE USER bass WITH ENCRYPTED PASSWORD 'senha_desejada' CREATEDB;
+    ```
+
+    - Esse comando cria uma usuário de da a permissão do mesmo criar um banco de dados.
+
+    
