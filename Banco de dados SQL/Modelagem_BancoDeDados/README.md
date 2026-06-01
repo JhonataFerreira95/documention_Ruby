@@ -1195,4 +1195,11 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     - Esse comando cria uma usuário de da a permissão do mesmo criar um banco de dados.
 
-    
+    ![criação_user](../Assets/criaçãoUsuariopsql.png)
+
+    - Observa-se que o usuário que criei como o nome `bass` está listado com a opção de apenas criação de banco. Para lista os usuários ativos no seu terminal use:
+
+    ```psql
+        \du
+    ```
+
