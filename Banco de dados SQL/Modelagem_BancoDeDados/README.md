@@ -1273,6 +1273,16 @@ CREATE TABLE IF NOT EXISTS isbn(
 - Criação da tabela de vendas:
 
     ```SQL
-        
+
+        CREATE TABLE IF NOT EXISTS sales(
+            id_sales SERIAL PRIMARY KEY,
+            id_products int,
+            id_clients int,
+            id_sallers int,
+
+            FOREIGN KEY (id_sales) REFERENCES products(id),
+            FOREIGN KEY (id_sales) REFERENCES clients(id),
+            FOREIGN KEY (id_sales) REFERENCES seller(id)
+        );
 
     ```
