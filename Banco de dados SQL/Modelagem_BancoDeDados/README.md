@@ -1217,3 +1217,22 @@ CREATE TABLE IF NOT EXISTS isbn(
 ---
 
 ## Projeto de Banco de Dados
+
+> Aqui ire modelar o banco e tabelas via `DBdesigner` mas irei deixar o dataDump do banco aqui.
+
+- Criação da tabela porducts:
+
+    ```SQL
+
+        CREATE TABLE IF NOT EXISTS products(
+            id_product SERIAL PRIMARY KEY,
+            prod_name VARCHAR(100) NOT NULL,
+            category VARCHAR(100) NOT NULL,
+            description TEXT,
+            quantity_availible INT NOT NULL,
+            price DECIMAL
+        );
+
+    ```
+
+    - Creio que nesse ponto da leitura já é possível entender esse tipo de estrutura, então essa é a tabela base `products`
