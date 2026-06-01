@@ -1300,8 +1300,17 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     - **NOT NULL**
 
+        - O `NOT NULL` significa que o campo não pode ser nulo ou vázio, que o campo deve ser preenchido.
+
     - **UNIQUE**
+
+        - O `UNIQUE` significa que o campo vai ter valores únicos, não pode ser algo repetido.
 
     - **PRIMARY KEY**
 
+        - O `PRIMARY KEY` a chave primária é o dado que não pode se repetir, é único na tebela e é único para identificação de uma tabela ou seja, sua referência.
+
     - **FOREIGN KEY**
+
+        - O `FOREIGN KEY` é a chave estrageira que vai única e não pode se repetir já que vai ser utilizado para se ligar em outra tabela ou seja, referênciar um outra tabela. Ela haje como uma chave primária que foi importada de outra tabela para fazer o `JOIN` entre tabelas, ou a junção de tabelas.
+
