@@ -1293,3 +1293,15 @@ CREATE TABLE IF NOT EXISTS isbn(
 ---
 
 ## Constraints
+
+> O que são `Constraints`? São regras que impomos em nossas linhas e colunas do banco de dados e determinamos como receber os dados do usuário. Isso serve para garantir que os dados seja armazenados de forma correta e como foi definido na `Constraints`.
+
+- Principais `Constraints` dentro do SQL:
+
+    - **NOT NULL**
+
+    - **UNIQUE**
+
+    - **PRIMARY KEY**
+
+    - **FOREIGN KEY**
