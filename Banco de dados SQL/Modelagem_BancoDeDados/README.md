@@ -1256,3 +1256,16 @@ CREATE TABLE IF NOT EXISTS isbn(
 - Criação da tabele vendedor:
 
     ```SQL
+
+        CREATE TABLE IF NOT EXISTS seller(
+            id_seller SERIAL PRIMARY KEY,
+            name_seller VARCHAR(100) NOT NULL,
+            birthdate_saller DATE,
+            address_saller VARCHAR(100),
+            city_seller VARCHAR(50),
+            email_client VARCHAR(255),
+            register_number INT,
+            admission_date DATE NOT NULL
+        );
+
+    ```
