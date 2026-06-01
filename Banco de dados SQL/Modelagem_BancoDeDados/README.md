@@ -1278,11 +1278,11 @@ CREATE TABLE IF NOT EXISTS isbn(
             id_sales SERIAL PRIMARY KEY,
             id_products int,
             id_clients int,
-            id_sallers int,
+            id_sellers int,
 
-            FOREIGN KEY (id_sales) REFERENCES products(id),
-            FOREIGN KEY (id_sales) REFERENCES clients(id),
-            FOREIGN KEY (id_sales) REFERENCES seller(id)
+            FOREIGN KEY (id_products) REFERENCES products(id),
+            FOREIGN KEY (id_clients) REFERENCES clients(id),
+            FOREIGN KEY (id_sellers) REFERENCES seller(id)
         );
 
     ```
