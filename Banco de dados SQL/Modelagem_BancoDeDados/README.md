@@ -22,6 +22,7 @@
 18. [Gerênciamento de usuários](#gerênciamento-de-usuários)
 19. [Projeto de banco de dados](#projeto-de-banco-de-dados)
 20. [Constraints](#constraints)
+21. [Joins](#joins)
 
 ---
 
@@ -1314,3 +1315,4 @@ CREATE TABLE IF NOT EXISTS isbn(
 
         - O `FOREIGN KEY` é a chave estrageira que vai única e não pode se repetir já que vai ser utilizado para se ligar em outra tabela ou seja, referênciar um outra tabela. Ela haje como uma chave primária que foi importada de outra tabela para fazer o `JOIN` entre tabelas, ou a junção de tabelas.
 
+## Joins
