@@ -1316,3 +1316,5 @@ CREATE TABLE IF NOT EXISTS isbn(
         - O `FOREIGN KEY` é a chave estrageira que vai única e não pode se repetir já que vai ser utilizado para se ligar em outra tabela ou seja, referênciar um outra tabela. Ela haje como uma chave primária que foi importada de outra tabela para fazer o `JOIN` entre tabelas, ou a junção de tabelas.
 
 ## Joins
+
+> A função dos `JOINS` são para fazer consulta em tabelas diferentes mas fazendo junção de 2 ou mais tabelas, como campos especificos de uma tabela e outros campos de outras tabelas. Essa função é muito importante para filtra dados e a junção dos mesmo caso necessário.
