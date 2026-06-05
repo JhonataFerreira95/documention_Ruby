@@ -1355,12 +1355,34 @@ CREATE TABLE IF NOT EXISTS isbn(
         ```SQL
 
             INSERT INTO seller (name_seller, birthdate_saller, register_number, admission_date)
-            VALUES ('João', '13/02/1987', 'Rua cinco, 3. Bairro novo', 'joao@email.com', 123, '25/02/2020')
+            VALUES ('João', '13/02/1987', 'Rua cinco, 3. Bairro novo', 'joao@email.com', 123, '25/02/2020');
 
-            INSERT INTO seller (name_seller, birthdate_saller, register_number, admission_date)
-            VALUES ('Marina', '15/03/1980', 'Rua oito, 3. Bairro novo', 'marina@email.com', 12, '25/02/2019')
+            INSERT INTO seller (name_seller, birthdate_saller, register_number, admission_date);
+            VALUES ('Marina', '15/03/1980', 'Rua oito, 3. Bairro novo', 'marina@email.com', 12, '25/02/2019');
 
         ```
 
         ---
 
+    - **SELECT * FROM**
+
+        - Um select para ver se tudo foi inserido de forma correta
+
+            ```SQL
+
+                SELECT * FROM products;
+                SELECT * FROM clients;
+                SELECT * FROM seller;
+
+            ```
+
+    ---
+
+    - **Sales*
+
+        ```SQL
+
+            INSERT INTO sales (id_sales, id_products, id_clients, id_sellers) VALUES (1, 1, 2, 3)
+            INSERT INTO sales (id_sales, id_products, id_clients, id_sellers) VALUES (2, 2, 1, 4)
+
+        ```
