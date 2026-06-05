@@ -1391,6 +1391,8 @@ CREATE TABLE IF NOT EXISTS isbn(
 
         ```
 
+        ---
+
     - **Dados extras**
 
         ```SQL
