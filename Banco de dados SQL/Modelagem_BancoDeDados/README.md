@@ -1379,7 +1379,7 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     ---
 
-    - **Sales*
+    - **Sales**
 
         ```SQL
 
@@ -1388,5 +1388,19 @@ CREATE TABLE IF NOT EXISTS isbn(
 
             INSERT INTO sales (id_products, id_clients, id_sellers)
             VALUES (2, 1, 2);
+
+        ```
+
+    - **Dados extras**
+
+        ```SQL
+
+            insert into products(prod_name, category, description, quantity_availible, price)
+            values ('zowie fk2', 'eletronicos', 'mouse para e-sports', 20, 1400),
+                ('zowie gsr 3', 'perifericos', 'mousepad para e-sports', 10, 349),
+                ('fallen morcego pro', 'eletronicos', 'headset para e-sports', 50, 600);
+
+            insert into clients(name_client, birthdate_client, address_client, city_client, email_client, phone_client)
+            values ('Bass', TO_DATE('28-08-2001', 'DD-MM-YYYY'), 'Rua gg n 28 bairro bosque', 'natal', 'bassgames@gmail.com', '8598160323');'
 
         ```
