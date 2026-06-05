@@ -1383,7 +1383,10 @@ CREATE TABLE IF NOT EXISTS isbn(
 
         ```SQL
 
-            INSERT INTO sales (id_sales, id_products, id_clients, id_sellers) VALUES (1, 1, 2, 3)
-            INSERT INTO sales (id_sales, id_products, id_clients, id_sellers) VALUES (2, 2, 1, 4)
+            INSERT INTO sales (id_products, id_clients, id_sellers)
+            VALUES (1, 2, 1);
+
+            INSERT INTO sales (id_products, id_clients, id_sellers)
+            VALUES (2, 1, 2);
 
         ```
