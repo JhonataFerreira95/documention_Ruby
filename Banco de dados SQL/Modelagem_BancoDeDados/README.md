@@ -1342,8 +1342,25 @@ CREATE TABLE IF NOT EXISTS isbn(
             INSERT INTO clients (name_client, birthdate_client, address_client, city_client, email_client, phone_client)
             VALUES ('Juliana', '01/01/1900', 'Rua dois, num3. Bairro novo', 'São Paulo', 'juliana@email.com', '(11)9999-9999');
 
+            INSERT INTO clients (name_client, birthdate_client, address_client, city_client, email_client, phone_client)
+            VALUES ('Pedro', '01/01/1950', 'Rua dois, num4. Bairro velho', 'Belo Horizonte', 'pedro@email.com', '(31)9988-9988');
+
+
         ```
 
         ---
 
-        
+    - **Seller**
+
+        ```SQL
+
+            INSERT INTO seller (name_seller, birthdate_saller, register_number, admission_date)
+            VALUES ('João', '13/02/1987', 'Rua cinco, 3. Bairro novo', 'joao@email.com', 123, '25/02/2020')
+
+            INSERT INTO seller (name_seller, birthdate_saller, register_number, admission_date)
+            VALUES ('Marina', '15/03/1980', 'Rua oito, 3. Bairro novo', 'marina@email.com', 12, '25/02/2019')
+
+        ```
+
+        ---
+
