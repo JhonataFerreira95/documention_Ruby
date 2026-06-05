@@ -1324,7 +1324,7 @@ CREATE TABLE IF NOT EXISTS isbn(
     - **Producs:**
 
         ```SQL
-        
+
             INSERT INTO products (prod_name, category, description, quantity_availible, price)
             VALUES ('notebook', 'eletrônicos', 'notebook da marca x, com processador y', 200, 6000);
 
@@ -1332,3 +1332,18 @@ CREATE TABLE IF NOT EXISTS isbn(
             VALUES ('monitor', 'eletrônicos', 'monitor 25 polegadas da marca x', 300, 1200);
 
         ```
+
+        ---
+
+    - **Clients**
+
+        ```SQL
+
+            INSERT INTO clients (name_client, birthdate_client, address_client, city_client, email_client, phone_client)
+            VALUES ('Juliana', '01/01/1900', 'Rua dois, num3. Bairro novo', 'São Paulo', 'juliana@email.com', '(11)9999-9999');
+
+        ```
+
+        ---
+
+        
