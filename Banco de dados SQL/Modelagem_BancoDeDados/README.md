@@ -1354,11 +1354,12 @@ CREATE TABLE IF NOT EXISTS isbn(
 
         ```SQL
 
-            INSERT INTO seller (name_seller, birthdate_saller, register_number, admission_date)
-            VALUES ('João', '13/02/1987', 'Rua cinco, 3. Bairro novo', 'joao@email.com', 123, '25/02/2020');
+            INSERT INTO seller (name_seller, birthdate_saller, address_saller, email_client, register_number, admission_date)
+            VALUES ('João', '1987-02-13', 'Rua cinco, 3. Bairro novo', 'joao@email.com', 123, '2020-02-25');
 
-            INSERT INTO seller (name_seller, birthdate_saller, register_number, admission_date);
-            VALUES ('Marina', '15/03/1980', 'Rua oito, 3. Bairro novo', 'marina@email.com', 12, '25/02/2019');
+            INSERT INTO seller (name_seller, birthdate_saller, address_saller, email_client, register_number, admission_date)
+            VALUES ('Marina', '1980-03-15', 'Rua oito, 3. Bairro novo', 'marina@email.com', 12, '2019-02-25');
+
 
         ```
 
