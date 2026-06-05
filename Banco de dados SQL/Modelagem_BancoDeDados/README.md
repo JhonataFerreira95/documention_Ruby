@@ -1318,3 +1318,17 @@ CREATE TABLE IF NOT EXISTS isbn(
 ## Joins
 
 > A função dos `JOINS` são para fazer consulta em tabelas diferentes mas fazendo junção de 2 ou mais tabelas, como campos especificos de uma tabela e outros campos de outras tabelas. Essa função é muito importante para filtra dados e a junção dos mesmo caso necessário.
+
+- Inserindo dados para fazer o `JOIN`:
+
+    - **Producs:**
+
+        ```SQL
+        
+            INSERT INTO products (prod_name, category, description, quantity_availible, price)
+            VALUES ('notebook', 'eletrônicos', 'notebook da marca x, com processador y', 200, 6000);
+
+            INSERT INTO products (prod_name, category, description, quantity_availible, price)
+            VALUES ('monitor', 'eletrônicos', 'monitor 25 polegadas da marca x', 300, 1200);
+
+        ```
