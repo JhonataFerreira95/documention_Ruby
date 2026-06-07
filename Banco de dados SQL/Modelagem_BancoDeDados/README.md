@@ -1497,5 +1497,14 @@ CREATE TABLE IF NOT EXISTS isbn(
 
         ---
 
+    - **`RIGHT JOIN`**
 
+        >O `RIGHT JOIN` faz é trazer os todos os dados da tabela B (mesmo que não estejam presente na tabela A) junto com o registro da tabela A que são comuns na tabela B. Básicamente é um contrário de um `LEFT JOIN`.
+
+        - Código:
+
+            ```SQL
+
+
+            ```
 
