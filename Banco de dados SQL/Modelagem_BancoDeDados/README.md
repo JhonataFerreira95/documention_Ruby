@@ -1459,5 +1459,18 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     - **`INNER JOIN`**:
 
+        > Utilizamos o `INNER JOIN` para trazer dados comuns entre as duas tabelas ou seja, dados que tem tanto em uma tabela quanto na outra, retorna apenas as linhas que possuem correspondência exata em ambas as tabelas envolvidas na condição de uma junção.
+
+        - Código:
+
+            ```SQL
+
+                SELECT t1.nome, t2.sabor
+                from frutas as t1
+                inner join produto as t2
+                on t1.nome = t2.sabor;
+
+            ```
+
 
 
