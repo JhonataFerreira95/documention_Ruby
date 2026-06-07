@@ -1480,5 +1480,22 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     - **`LEFT JOIN`**:
 
+        >O `LEFT JOIN` faz é trazer os todos os dados da tabela A (mesmo que não estejam presente na tabela B) junto com o registro da tabela B que são comuns na tabela A. 
+
+        - Código:
+
+            ```SQL
+
+                SELECT t1.nome, t2.sabor
+                FROM frutas as t1
+                LEFT JOIN produtos as t2
+                ON t1.nome = t2.sabor
+
+            ```
+
+            - Aqui usei um `SELECT` na coluna `name` com alias de `t1`, ela é pertecente a tabela `frutas` usei outro alias para a mesma chamado de `t1`. Também selecionei a coluna `sabor` e dei um alias para ela `t2`, pertecente a tabela `produto`. Inicializei um `LEFT JOIN` em `produtos` e passei um alias como `t2` e após isso conenectei as tabelas com `ON` e trouxe todos os dados de `t1` e os dados correspondente em `t2`, caso não haja dados correspondente em `t2` o valor exibido no terminal é `null`.
+
+        ---
+
 
 
