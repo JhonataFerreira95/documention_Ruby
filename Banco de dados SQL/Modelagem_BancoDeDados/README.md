@@ -1406,3 +1406,7 @@ CREATE TABLE IF NOT EXISTS isbn(
             values ('Bass', TO_DATE('28-08-2001', 'DD-MM-YYYY'), 'Rua gg n 28 bairro bosque', 'natal', 'bassgames@gmail.com', '8598160323');'
 
         ```
+
+        ---
+
+- **`JOINS`**:
