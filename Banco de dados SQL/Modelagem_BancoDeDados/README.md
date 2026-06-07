@@ -1457,6 +1457,8 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     - Nós temos vários tipos de junções, que são denominadas dependendo de quais dados de quais tabelas serão buscados.
 
+        ---
+
     - **`INNER JOIN`**:
 
         > Utilizamos o `INNER JOIN` para trazer dados comuns entre as duas tabelas ou seja, dados que tem tanto em uma tabela quanto na outra, retorna apenas as linhas que possuem correspondência exata em ambas as tabelas envolvidas na condição de uma junção.
@@ -1473,6 +1475,10 @@ CREATE TABLE IF NOT EXISTS isbn(
             ```
 
             - Aqui usei um `SELECT` na coluna `name` com alias de `t1`, ela é pertecente a tabela `frutas` usei outro alias para a mesma chamado de `t1`. Também selecionei a coluna `sabor` e dei um alias para ela `t2`, pertecente a tabela `produto`. Iniciei um `INNER JOIN` na tabela `produto` para fazer a junção e utilizei outro alias para a mesma como `t2`, após isso usei o `ON` para fazer a ligação das tabelas e adicionar a condição que foi `t1.nome = t2.sabor`, todo nome que for equivalente na coluna `t1` e `t2` será exibido no terminal.
+
+        ---
+
+    - **`LEFT JOIN`**:
 
 
 
