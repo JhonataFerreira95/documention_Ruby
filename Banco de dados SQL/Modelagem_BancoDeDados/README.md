@@ -1427,7 +1427,30 @@ CREATE TABLE IF NOT EXISTS isbn(
                 sabor VARCHAR(30)
             );
 
+            INSERT INTO frutas (nome) VALUES ('laranja');
+            INSERT INTO frutas (nome) VALUES ('morango');
+            INSERT INTO frutas (nome) VALUES ('maçã');
+            INSERT INTO frutas (nome) VALUES ('banana');
+            INSERT INTO frutas (nome) VALUES ('melancia');
+            INSERT INTO frutas (nome) VALUES ('goiaba');
+            INSERT INTO frutas (nome) VALUES ('manga');
+            INSERT INTO frutas (nome) VALUES ('pitaya');
+            INSERT INTO frutas (nome) VALUES ('pitanga');
+
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('suco', 'bebida','pitanga');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('chiclete', 'doce','morango');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('biscoito', 'mercearia','goiaba');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('bolo', 'confeitaria','laranja');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('suco', 'bebida','maçã');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('refrigerante', 'bebida','morango');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('suco', 'bebida','melancia');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('brigadeiro', 'doce','chocolate');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('suco', 'bebida','caju');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('água saborizada', 'bebida','limão');
+            INSERT INTO produtos (nome, tipo, sabor) VALUES ('suco', 'bebida','manga');
+
         ```
 
+        ---
+
         - Crie o banco e insira esse dados para iniciar a manipulação dos `JOINS`.
-        
