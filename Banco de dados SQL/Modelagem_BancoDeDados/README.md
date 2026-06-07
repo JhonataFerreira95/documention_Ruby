@@ -1466,11 +1466,13 @@ CREATE TABLE IF NOT EXISTS isbn(
             ```SQL
 
                 SELECT t1.nome, t2.sabor
-                from frutas as t1
-                inner join produto as t2
-                on t1.nome = t2.sabor;
+                FROM frutas AS t1
+                INNER JOIN produto AS t2
+                ON t1.nome = t2.sabor;
 
             ```
+
+            - Aqui usei um `SELECT` na coluna `name` com alias de `t1`, ela é pertecente a tabela `frutas` usei outro alias para a mesma chamado de `t1`. Também selecionei a coluna `sabor` e dei um alias para ela `t2`, pertecente a tabela `produto`. Iniciei um `INNER JOIN` na tabela `produto` para fazer a junção e utilizei outro alias para a mesma como `t2`, após isso usei o `ON` para fazer a ligação das tabelas e adicionar a condição que foi `t1.nome = t2.sabor`, todo nome que for equivalente na coluna `t1` e `t2` será exibido no terminal.
 
 
 
