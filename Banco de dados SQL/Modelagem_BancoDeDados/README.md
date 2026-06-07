@@ -1421,7 +1421,7 @@ CREATE TABLE IF NOT EXISTS isbn(
                 nome VARCHAR(30)
             );
 
-            CREATE TABLE produto(
+            CREATE TABLE produtos(
                 nome VARCHAR(30),
                 tipo VARCHAR(30),
                 sabor VARCHAR(30)
@@ -1451,6 +1451,13 @@ CREATE TABLE IF NOT EXISTS isbn(
 
         ```
 
+        - Crie o banco e insira esse dados para iniciar a manipulação dos `JOINS`.
+
         ---
 
-        - Crie o banco e insira esse dados para iniciar a manipulação dos `JOINS`.
+    - Nós temos vários tipos de junções, que são denominadas dependendo de quais dados de quais tabelas serão buscados.
+
+    - **`INNER JOIN`**:
+
+
+
