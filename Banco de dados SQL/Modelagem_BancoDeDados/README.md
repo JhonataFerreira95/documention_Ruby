@@ -1505,6 +1505,14 @@ CREATE TABLE IF NOT EXISTS isbn(
 
             ```SQL
 
+                SELECT t1.nome, t2.sabor
+                FROM frutas as t1
+                RIGHT JOIN produtos as t2
+                ON t1.nome = t2.sabor
 
             ```
+
+            - Aqui usei um `SELECT` na coluna `name` com alias de `t1`, ela é pertecente a tabela `frutas` usei outro alias para a mesma chamado de `t1`. Também selecionei a coluna `sabor` e dei um alias para ela `t2`, pertecente a tabela `produto`. Inicializei um `RIGHT JOIN` em `produtos` e passei um alias como `t2` e após isso conenectei as tabelas com `ON` e trouxe todos os dados de `t2` e os dados correspondente em `t1`, caso não haja dados correspondente em `t1` o valor exibido no terminal é `null`.
+
+        ---
 
