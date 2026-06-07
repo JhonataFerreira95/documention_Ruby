@@ -1410,3 +1410,24 @@ CREATE TABLE IF NOT EXISTS isbn(
         ---
 
 - **`JOINS`**:
+
+    - Antes de seguir com os `Joins` vou passar um banco mais simples de fazer a mnipulação dos mesmo.
+
+        ```SQL
+
+            CREATE DATABASE testing;
+
+            CREATE TABLE frutas(
+                nome VARCHAR(30)
+            );
+
+            CREATE TABLE produto(
+                nome VARCHAR(30),
+                tipo VARCHAR(30),
+                sabor VARCHAR(30)
+            );
+
+        ```
+
+        - Crie o banco e insira esse dados para iniciar a manipulação dos `JOINS`.
+        
