@@ -1519,7 +1519,7 @@ CREATE TABLE IF NOT EXISTS isbn(
 
 ## Functions
 
->As funções são rotinas dentro do banco de dados que criamos para execultar algum tipo de ação ou medidas, geralmente são chamadas por `triggers`.
+>As funções são rotinas executadas de acordo com as orientações e parâmetros especificado dentro do banco de dados que criamos para execultar algum tipo de ação ou medida, geralmente são chamadas por `triggers`.
 
 
 
