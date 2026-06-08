@@ -1521,5 +1521,23 @@ CREATE TABLE IF NOT EXISTS isbn(
 
 >As funções são rotinas executadas de acordo com as orientações e parâmetros especificado dentro do banco de dados que criamos para execultar algum tipo de ação ou medida, geralmente são chamadas por `triggers`.
 
+- Estrutura de uma função:
+
+    ```SQL
+
+        CREATE OR REPLACE FUNCTION up_storage() RETURNS TRIGGER
+        AS
+        $$
+        DECLARE 
+            quant_storage INTEGER;
+
+        BEGIN
+
+        END
+        $$
+
+    ```
+
+    - Estrutura de uma `FUNCTION` começa como `CREATE OR REPLACE` que é para criar ou sbustítuir uma função após a criação retornamos como ela vai ser ativada, que nesse caso vai ser atráves de um `TRIGGER`. O inicio da função é marcado por dois símbolos de `$`, depois declaramos `DECLARE` onde vai ser armazena nossa várivel e por fim o inicio da função com `BEGIN` que vai ser responsável por toda a lógica da função, por fim finalizamos a função com `END`
 
 
