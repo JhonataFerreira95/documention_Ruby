@@ -1567,4 +1567,10 @@ CREATE TABLE IF NOT EXISTS isbn(
 
         - Observa-se que, declarei no `DECLARE` a nossa coluna  como `INTEGER` e após isso no `BEGIN` passei as condições de funcionamento para a nossa função, após isso seguir  selecionando a coluna `quantity_availible` da tabela `products` e adiciono a cláusula `WHERE` com `id` e atríbuo o mesmo com um `NEW.products` referênciando a tabela para inserção de um coluna temporaria. Fiz uma condicional para verificar se a coluna temporaria é menor que a `quantity_sold`, caso tenha vai surgir uma mensagem no console e caso não vamos fazer o `UPDATE` na tabela `products` em que a `quantity_availible` vai decrementar da `quantity_sold` onde `id` é igual a `NEW.products`.
 
+    ---
+
+## Transações
+
+>
+
 
