@@ -1538,6 +1538,31 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     ```
 
-    - Estrutura de uma `FUNCTION` começa como `CREATE OR REPLACE` que é para criar ou sbustítuir uma função após a criação retornamos como ela vai ser ativada, que nesse caso vai ser atráves de um `TRIGGER`. O inicio da função é marcado por dois símbolos de `$`, depois declaramos `DECLARE` onde vai ser armazena nossa várivel e por fim o inicio da função com `BEGIN` que vai ser responsável por toda a lógica da função, por fim finalizamos a função com `END`
+    - Estrutura de uma `FUNCTION` começa como `CREATE OR REPLACE` que é para criar ou sbustítuir uma função após a criação retornamos como ela vai ser ativada, que nesse caso vai ser atráves de um `TRIGGER`. O inicio da função é marcado por dois símbolos de `$`, depois declaramos `DECLARE` onde vai ser armazena nossa várivel intermediária e por fim o inicio da função com `BEGIN` que vai ser responsável por toda a lógica da função, por fim finalizamos a função com `END`
+
+    ---
+
+    - Função para desincrementar a quantidade de itens do banco:
+
+        ```SQL
+        
+            CREATE OR REPLACE FUNCTION up_storage() RETURNS TRIGGER
+                AS
+                $$
+                DECLARE
+                    quant_storage INTEGER;
+                BEGIN
+                    SELECT quantity_availible FROM products WHERE id = NEW.products INTO quant_storage;
+                    IF quant_storage < NEW.quantity_sold THEN
+                        RAISE EXCEPTION 'Quantidade indisponível no estoque';
+                    ELSE
+                        UPDATE products SET quantity_availible = quantity_availible - NEW.quantity_sold
+                        WHERE id = NEW.products;
+                    END IF;
+                    RETURN NEW;
+                END
+                $$ LANGUAGE plpgsql;
+
+        ```
 
 
