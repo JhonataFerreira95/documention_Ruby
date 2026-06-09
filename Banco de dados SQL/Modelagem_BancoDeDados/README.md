@@ -1604,3 +1604,10 @@ CREATE TABLE IF NOT EXISTS isbn(
 ## Triggers
 
 > O que são `Triggers`? São procedimentos, que são chamados de gatilhos, pois são acionados por algum outro evento. Por exemplo, podemos acionar esse gatilho toda vez que uma coluna é atualizada ou inserida no banco de dados. Incluir triggers nas tabelas, pode impedir transações inválidas e aplicar a integridade referencial nas tabelas.
+
+---
+
+> Como exemplo disso, imagine que temos um formulário. Podemos criar uma trigger que impeça a alteração do nome da cidade quando alguém que se cadastrar escolher essa cidade. Quando uma pessoa escolhe a cidade no formulário, vai criar uma referência dentro do banco de dados e dependendo das regras de negócio é interessante impedir que depois dessa atribuição seja feita alteração da cidade por exemplo.
+
+---
+
