@@ -1573,20 +1573,30 @@ CREATE TABLE IF NOT EXISTS isbn(
 
 >O que são `Transações`? É um conjunto de execuções que são realizadas dentro do banco de dados, podendo ser formada por uma ou mais operações. Por exemplo, se quisermos realizar uma operação de update e delete ao mesmo tempo. É um conjunto de operações que devem seguir uma sequencia, de acordo com o especificado e elas só afetarão permanentemente o banco se as duas forem concluídas com sucesso. Caso contrário, não haverá modificação no banco de dados. Esse integridade é garantida, através das 4 propriedades fundamentais, que chamamos propriedades ACID.
 
+---
+
 - **`Atomicidade`**:
 
     > É o conceito que indica que o conjunto de operações é atômico, ou seja, indivisível. Garante que todas as operações que compõem o conjunto sejam executadas por completo ou nada será realizado. Por exemplo, se você for realizar um saque na sua conta bancária, existem várias operações a serem realizadas. É realizada a consulta para verificar se existe saldo suficiente, depois o dinheiro vai sair do caixa eletrônico e depois subtraído da sua conta. Se o dinheiro não sair pelo caixa eletrônico e houver algum erro nessa transação, o valor não será subtraído da sua conta e o saldo da sua conta permanece intacto como se nada tivesse acontecido. Então para o sucesso da transação, todas as operações devem ser executadas como o esperado.
+
+    ---
 
 - **`Consistência`**:
 
     > Garante que a operação será realizada apenas se todas as restrições e regras definidas serão obedecidas. Haverá uma checagem de chaves e valores para campos restritos. Por exemplo nessa operação bancária citada acima, é importante identificar que a conta é realmente da pessoa informada e que há saldo suficiente para que seja finalizada. Então a subtração do valor do saldo e a liberação do dinheiro só será realizada depois dessa verificação.
 
+    ---
+
 - **`Isolamento`**:
 
     > Todas as operações são realizadas de forma isolada e independente, uma não interfere na outra. Se por acaso, você tiver uma conta conjunta com alguém, onde 2 pessoas possuem um acesso para realizar operações nessa conta e elas tentarem realizar um saque ao mesmo tempo, uma operação não vai interferir na outra. Se houver saldo suficiente, as duas operações serão realizadas normalmente, sem uma interferir na outra. Caso haja 100 reais de saldo e as duas pessoas tentem sacar 100 reais ao mesmo tempo, aquele que iniciou a operação primeiro terá prioridade na operação e a segunda pessoa será informada de que o saldo é insuficiente. Então as duas realizam as operações de forma isolada, uma não interfere na outra e as duas fazem a verificação completa antes de finalizar.
+
+    ---
 
 - **`Durabilidade`**:
 
     > Garante que todas as transações sejam permanentes e sejam desfeitas apenas por outra transação que modifique seu estado. Então depois de realizar um depósito ou um saque na sua conta, seu saldo continuará o mesmo até que outra operação o modifique.
 
+    ---
 
+## Triggers
