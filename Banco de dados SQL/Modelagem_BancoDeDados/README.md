@@ -1577,4 +1577,8 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     > É o conceito que indica que o conjunto de operações é atômico, ou seja, indivisível. Garante que todas as operações que compõem o conjunto sejam executadas por completo ou nada será realizado. Por exemplo, se você for realizar um saque na sua conta bancária, existem várias operações a serem realizadas. É realizada a consulta para verificar se existe saldo suficiente, depois o dinheiro vai sair do caixa eletrônico e depois subtraído da sua conta. Se o dinheiro não sair pelo caixa eletrônico e houver algum erro nessa transação, o valor não será subtraído da sua conta e o saldo da sua conta permanece intacto como se nada tivesse acontecido. Então para o sucesso da transação, todas as operações devem ser executadas como o esperado.
 
+- **`Consistência`**:
+
+    > Garante que a operação será realizada apenas se todas as restrições e regras definidas serão obedecidas. Haverá uma checagem de chaves e valores para campos restritos. Por exemplo nessa operação bancária citada acima, é importante identificar que a conta é realmente da pessoa informada e que há saldo suficiente para que seja finalizada. Então a subtração do valor do saldo e a liberação do dinheiro só será realizada depois dessa verificação.
+
 
