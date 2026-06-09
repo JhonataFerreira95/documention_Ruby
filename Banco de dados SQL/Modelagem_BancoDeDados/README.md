@@ -1640,10 +1640,12 @@ CREATE TABLE IF NOT EXISTS isbn(
     ```SQL
 
         CREATE SEQUENCE IF NOT EXIST code_gen_seq
-            INCREMNTE 1
+            INCREMNTE BY 1
             MINVALUE 1
-            MAXVALUE
-            START 10000
+            MAXVALUE 99999999
+            START WITH 10000
             CACHE 1
 
     ```
+
+    - Aqui criamos uma `Sequence` com os parâmetros de incremento 1, mínimo valor de 1, máximo valor de 99999999, o `START WITH` significa que primeiro número que essa sequência vai cuspir na tabela será o 10000. Daí em diante, ela vai para 10001, 10002, etc.
