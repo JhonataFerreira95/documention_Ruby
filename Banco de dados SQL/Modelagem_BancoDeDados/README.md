@@ -1585,6 +1585,8 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     > Todas as operações são realizadas de forma isolada e independente, uma não interfere na outra. Se por acaso, você tiver uma conta conjunta com alguém, onde 2 pessoas possuem um acesso para realizar operações nessa conta e elas tentarem realizar um saque ao mesmo tempo, uma operação não vai interferir na outra. Se houver saldo suficiente, as duas operações serão realizadas normalmente, sem uma interferir na outra. Caso haja 100 reais de saldo e as duas pessoas tentem sacar 100 reais ao mesmo tempo, aquele que iniciou a operação primeiro terá prioridade na operação e a segunda pessoa será informada de que o saldo é insuficiente. Então as duas realizam as operações de forma isolada, uma não interfere na outra e as duas fazem a verificação completa antes de finalizar.
 
+- **`Durabilidade`**:
 
+    > Garante que todas as transações sejam permanentes e sejam desfeitas apenas por outra transação que modifique seu estado. Então depois de realizar um depósito ou um saque na sua conta, seu saldo continuará o mesmo até que outra operação o modifique.
 
 
