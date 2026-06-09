@@ -24,6 +24,8 @@
 20. [Constraints](#constraints)
 21. [Joins](#joins)
 22. [Functions](#functions)
+23. [Transações](#transações)
+24. [Triggers](#triggers)
 
 ---
 
