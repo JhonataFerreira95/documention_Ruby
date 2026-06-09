@@ -1632,3 +1632,18 @@ CREATE TABLE IF NOT EXISTS isbn(
 ## Sequences
 
 > O que são `Sequences`? São objetos geradores de inteiros baseados em instruções específicas, que estão vinculados à tabelas. Quando criamos um campo do tipo serial, como o id, por exemplo que fizemos nas tabelas anteriores, o próprio postgres já cria uma sequence para alimentar esse campo automaticamente.
+
+---
+
+- Criando uma `Sequence`:
+
+    ```SQL
+
+        CREATE SEQUENCE IF NOT EXIST code_gen_seq
+            INCREMNTE 1
+            MINVALUE 1
+            MAXVALUE
+            START 10000
+            CACHE 1
+
+    ```
