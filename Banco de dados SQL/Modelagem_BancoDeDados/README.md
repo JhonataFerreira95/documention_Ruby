@@ -1611,3 +1611,15 @@ CREATE TABLE IF NOT EXISTS isbn(
 
 ---
 
+- **`up_storege()`:**
+
+    - No nosso caso, vamos fazer um exemplo, onde executamos uma function (criada na aula anterior) logo depois de inserir um dado na tabela de vendas. Toda vez que uma venda for realizada, essa função será chamada. Consideremos a function `up_storage();`
+
+        ```SQL
+
+           CREATE TRIGGER trig_up_storage
+           BEFORE INSERT ON sales
+           FOR EACH ROW
+           EXECUTE PROCEDURE up_storage();
+
+        ``` 
