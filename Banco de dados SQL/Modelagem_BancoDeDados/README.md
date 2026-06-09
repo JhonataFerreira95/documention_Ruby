@@ -1581,4 +1581,10 @@ CREATE TABLE IF NOT EXISTS isbn(
 
     > Garante que a operação será realizada apenas se todas as restrições e regras definidas serão obedecidas. Haverá uma checagem de chaves e valores para campos restritos. Por exemplo nessa operação bancária citada acima, é importante identificar que a conta é realmente da pessoa informada e que há saldo suficiente para que seja finalizada. Então a subtração do valor do saldo e a liberação do dinheiro só será realizada depois dessa verificação.
 
+- **`Isolamento`**:
+
+    > Todas as operações são realizadas de forma isolada e independente, uma não interfere na outra. Se por acaso, você tiver uma conta conjunta com alguém, onde 2 pessoas possuem um acesso para realizar operações nessa conta e elas tentarem realizar um saque ao mesmo tempo, uma operação não vai interferir na outra. Se houver saldo suficiente, as duas operações serão realizadas normalmente, sem uma interferir na outra. Caso haja 100 reais de saldo e as duas pessoas tentem sacar 100 reais ao mesmo tempo, aquele que iniciou a operação primeiro terá prioridade na operação e a segunda pessoa será informada de que o saldo é insuficiente. Então as duas realizam as operações de forma isolada, uma não interfere na outra e as duas fazem a verificação completa antes de finalizar.
+
+
+
 
