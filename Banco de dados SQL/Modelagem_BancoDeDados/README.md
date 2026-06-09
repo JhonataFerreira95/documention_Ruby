@@ -26,6 +26,7 @@
 22. [Functions](#functions)
 23. [Transações](#transações)
 24. [Triggers](#triggers)
+25. [Sequences](#sequences)
 
 ---
 
@@ -1625,3 +1626,7 @@ CREATE TABLE IF NOT EXISTS isbn(
         ``` 
 
         - Utilizamos `CREATE TRIGGER` seguido pelo nome do gatilho. Com `BEFORE INSERT ON` `sales`, definimos que o gatilho deve ser disparado antes que qualquer inserção seja consolidada na tabela `sales`. O `FOR EACH ROW` indica que este gatilho é a nível de linha, ou seja, a função `up_storage()` será executada individualmente para cada nova linha que estiver sendo inserida.
+
+    ---
+
+## Sequences
