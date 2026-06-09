@@ -1571,6 +1571,10 @@ CREATE TABLE IF NOT EXISTS isbn(
 
 ## Transações
 
->
+>O que são `Transações`? É um conjunto de execuções que são realizadas dentro do banco de dados, podendo ser formada por uma ou mais operações. Por exemplo, se quisermos realizar uma operação de update e delete ao mesmo tempo. É um conjunto de operações que devem seguir uma sequencia, de acordo com o especificado e elas só afetarão permanentemente o banco se as duas forem concluídas com sucesso. Caso contrário, não haverá modificação no banco de dados. Esse integridade é garantida, através das 4 propriedades fundamentais, que chamamos propriedades ACID.
+
+- **`Atomicidade`**:
+
+    > É o conceito que indica que o conjunto de operações é atômico, ou seja, indivisível. Garante que todas as operações que compõem o conjunto sejam executadas por completo ou nada será realizado. Por exemplo, se você for realizar um saque na sua conta bancária, existem várias operações a serem realizadas. É realizada a consulta para verificar se existe saldo suficiente, depois o dinheiro vai sair do caixa eletrônico e depois subtraído da sua conta. Se o dinheiro não sair pelo caixa eletrônico e houver algum erro nessa transação, o valor não será subtraído da sua conta e o saldo da sua conta permanece intacto como se nada tivesse acontecido. Então para o sucesso da transação, todas as operações devem ser executadas como o esperado.
 
 
