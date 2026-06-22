@@ -3,6 +3,7 @@
 ## Índice
 
 1. [Introdução ao Redis](#o-que-o-redis)
+2. [Arquitetura](#artuitetura)
 
 ---
 
@@ -27,3 +28,9 @@
     - Ordered sets
 
     - Hash
+
+---
+
+## Artuitetura 
+
+> Normalmente o `Redis` é utilizado como banco secundário e nunca é o único banco de dados da aplicação, é usado para alguns momentos específicos da apliacação, onde os dados precisam ser carregados de forma extremamente rápidas. O `Redis` é utilizado como banco de dados de processamento(armazenamento quente - `hot storage`)
