@@ -5,6 +5,7 @@
 1. [Introdução ao Redis](#o-que-o-redis)
 2. [Arquitetura](#artuitetura)
 3. [Pontos positivos e negativos](#pontos-positivos-e-negativos-do-redis)
+4. [Instalação do Redis](#instalando-o-redis)
 
 ---
 
@@ -36,6 +37,8 @@
 
 > Normalmente o `Redis` é utilizado como banco secundário e nunca é o único banco de dados da aplicação, é usado para alguns momentos específicos da apliacação, onde os dados precisam ser carregados de forma extremamente rápidas. O `Redis` é utilizado como banco de dados de processamento(armazenamento quente - `hot storage`)
 
+---
+
 ## pontos positivos e negativos do `Redis`
 
 - Pontos positivos:
@@ -48,3 +51,13 @@
 
     - Possui supoorte para diversas linguagens como: `js`, `Ruby`, `Go` e muitas outras.
 
+- Pontos negativos:
+
+    - Você precisa ter mais memória primária que o normal
+
+    - Se a instância não for bem configurada e gerenciada, poderá sofrer pressão de memória afetando o desempenho da aplicação
+
+---
+
+## Instalando o `Redis`
+    
