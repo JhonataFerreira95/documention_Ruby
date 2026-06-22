@@ -37,3 +37,14 @@
 > Normalmente o `Redis` é utilizado como banco secundário e nunca é o único banco de dados da aplicação, é usado para alguns momentos específicos da apliacação, onde os dados precisam ser carregados de forma extremamente rápidas. O `Redis` é utilizado como banco de dados de processamento(armazenamento quente - `hot storage`)
 
 ## pontos positivos e negativos do `Redis`
+
+- Pontos positivos:
+
+    - Alto desempenho
+
+    - Plataforma de código aberto
+
+    - Permite que as apliacações sejam mais escaláveis
+
+    - Possui supoorte para diversas linguagens como: `js`, `Ruby`, `Go` e muitas outras.
+
