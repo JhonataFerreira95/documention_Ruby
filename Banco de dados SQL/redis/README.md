@@ -60,4 +60,5 @@
 ---
 
 ## Instalando o `Redis`
-    
+
+> Para instalação do `Redis` é recomendado o uso de `linux` mas como estou utlizando o `Windows`, irei seguir de acordo com a documentação do `redis`. Irei subir uma imagem `Redis` utilizando o `Docker`.
