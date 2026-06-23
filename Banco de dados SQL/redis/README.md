@@ -97,5 +97,11 @@
 
     ```
 
-- 
+- Comando para inicializar o `redis` novamente:
+
+    ```bash
+
+        docker start redis
+
+    ```
 
