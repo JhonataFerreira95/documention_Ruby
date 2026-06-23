@@ -70,3 +70,22 @@
         docker run -d --name redis -p 6379:6379 redis
 
     ```
+
+- Para testa se o `redis` foi instalado corretamente rode esse comando:
+
+    ```bash
+
+        docker ps
+
+    ```
+
+    - Para um teste mais prático rode:
+
+        ```bash
+
+            docker exec -it redis redis-cli ping
+
+        ```
+
+        - A saída deve retorna um `PONG`
+
