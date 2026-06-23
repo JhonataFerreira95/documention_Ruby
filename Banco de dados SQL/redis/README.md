@@ -89,3 +89,13 @@
 
         - A saída deve retorna um `PONG`
 
+- Comando para parar o `redis`:
+
+    ```bash
+
+        docker stop redis
+
+    ```
+
+- 
+
