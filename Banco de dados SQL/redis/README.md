@@ -62,3 +62,11 @@
 ## Instalando o `Redis`
 
 > Para instalação do `Redis` é recomendado o uso de `linux` mas como estou utlizando o `Windows`, irei seguir de acordo com a documentação do `redis`. Irei subir uma imagem `Redis` utilizando o `Docker`.
+
+- Após a instalação do `docker`, use esse comando abaixo para rodar o `redis`:
+
+    ```bash
+
+        docker run -d --name redis -p 6379:6379 redis
+
+    ```
