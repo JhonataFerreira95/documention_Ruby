@@ -136,5 +136,12 @@
 
     - Isso vai gerar uma mensaagem no seu terminal!
 
-- 
+---
+
+- Iserindo dados com `CREATE`:
+
+    ```bash
+
+
+    ```
 
