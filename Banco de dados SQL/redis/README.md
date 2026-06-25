@@ -146,11 +146,20 @@
 
     ```
 
-- Buscando dados com "READ"
+- Buscando dados com `READ`
 
     ```bash
 
         GET produto
 
     ```
+
+- Atualizando dados com `UPDATE`
+
+    ```bash
+
+        SET produto "tenis"
+
+    ```
+
 
