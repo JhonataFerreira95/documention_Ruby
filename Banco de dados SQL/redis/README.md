@@ -197,3 +197,13 @@
         - Caso tenha dados tudo certo, vai retorna um `nil` no terminal
 
 ---
+
+- Comando para sair do `Redis`:
+
+    ```bash
+
+        exit
+
+    ```
+
+    - Após a conclusão dos feitos, basta apenas digitar `exit` no terminal para finalizar ou sair do `redis`.
