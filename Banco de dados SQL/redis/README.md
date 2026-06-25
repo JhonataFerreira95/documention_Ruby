@@ -6,6 +6,7 @@
 2. [Arquitetura](#artuitetura)
 3. [Pontos positivos e negativos](#pontos-positivos-e-negativos-do-redis)
 4. [Instalação do Redis](#instalando-o-redis)
+5. [Principais operações Redis](#principais-operações-do-redis)
 
 ---
 
@@ -108,4 +109,6 @@
 ---
 
 ## Principais operações do `Redis`
+
+> Aqui irei abordar os principais comandos do `Redis`, como usar `get`, `set`, `echo`, `keys` e `del`. São operações do `Redis`, coisas básicas.
 
