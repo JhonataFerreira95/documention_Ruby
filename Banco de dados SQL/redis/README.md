@@ -142,6 +142,15 @@
 
     ```bash
 
+        SET produto "sapato"
+
+    ```
+
+- Buscando dados com "READ"
+
+    ```bash
+
+        GET produto
 
     ```
 
