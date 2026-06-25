@@ -122,3 +122,19 @@
 
     - Para abrir a sessão para manipulação do `redis`!
 
+---
+
+> Execução do `CRUD` com `Redis`:
+
+- Teste do `ECHO`:
+
+    ```docker
+
+        ECHO "Testando o Redis"
+
+    ```
+
+    - Isso vai gerar uma mensaagem no seu terminal!
+
+- 
+
