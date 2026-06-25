@@ -105,3 +105,7 @@
 
     ```
 
+---
+
+## Principais operações do `Redis`
+
