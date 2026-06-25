@@ -177,3 +177,23 @@
     ```
 
 ---
+
+- Deletando dados com `DELETE`:
+
+    ```bash
+
+        DEL produto
+
+    ```
+
+    - O `DEL` serve para apagar um dado no `Redis`, tente busca o mesmo dado `produto` para ver se consegue resposta via terminaL:
+
+        ```bash
+
+            GET produto
+
+        ```
+
+        - Caso tenha dados tudo certo, vai retorna um `nil` no terminal
+
+---
