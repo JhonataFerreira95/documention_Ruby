@@ -112,3 +112,13 @@
 
 > Aqui irei abordar os principais comandos do `Redis`, como usar `get`, `set`, `echo`, `keys` e `del`. São operações do `Redis`, coisas básicas.
 
+- Inicializar os teste via `CLI`:
+
+    ```bash
+
+        docker exec -it redis redis-cli
+
+    ```
+
+    - Para abrir a sessão para manipulação do `redis`!
+
