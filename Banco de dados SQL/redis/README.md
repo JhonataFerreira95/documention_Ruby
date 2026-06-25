@@ -146,7 +146,9 @@
 
     ```
 
-- Buscando dados com `READ`
+---
+
+- Buscando dados com `READ`:
 
     ```bash
 
@@ -154,7 +156,9 @@
 
     ```
 
-- Atualizando dados com `UPDATE`
+---
+
+- Atualizando dados com `UPDATE`:
 
     ```bash
 
@@ -162,4 +166,6 @@
 
     ```
 
+---
 
+- Listando todas as `KEYS` criadas:
