@@ -169,3 +169,11 @@
 ---
 
 - Listando todas as `KEYS` criadas:
+
+    ```bash
+
+        KEYS *
+
+    ```
+
+---
