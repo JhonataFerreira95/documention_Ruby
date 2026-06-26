@@ -176,6 +176,8 @@
 
     ```
 
+    - O comando `KEYS` serve para lista as chaves dentro do `redis`, com o `*` funcionando da forma que mostre todas as chaves criadas.
+
 ---
 
 - Deletando dados com `DELETE`:
