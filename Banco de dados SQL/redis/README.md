@@ -166,6 +166,8 @@
 
     ```
 
+    - O comando `SET` serve para atualiazr um dados já existenten no `redis`, basicamente use `SET` em sua chave(em nosso caso é `produto`) e após isso passe o novo dado/valor,
+
 ---
 
 - Listando todas as `KEYS` criadas:
