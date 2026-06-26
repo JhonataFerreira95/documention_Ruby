@@ -146,6 +146,8 @@
 
     ```
 
+    - O método para inserir dados no `redis`, basta apenas usar o `SET`, declarar a sua chave e após o seu valor
+
 ---
 
 - Buscando dados com `READ`:
