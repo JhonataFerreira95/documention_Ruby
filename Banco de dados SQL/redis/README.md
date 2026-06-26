@@ -156,6 +156,8 @@
 
     ```
 
+    - O método de puxar dados no `redis` usando o `GET`, que vai puxar todos os dados da sua chave
+
 ---
 
 - Atualizando dados com `UPDATE`:
