@@ -147,6 +147,8 @@
 
     ```
 
+    - O método para inserir dados no `redis`, basta apenas usar o `SET`, declarar a sua chave e após o seu valor
+
 ---
 
 - Buscando dados com `READ`:
@@ -156,6 +158,8 @@
         GET produto
 
     ```
+
+    - O método de puxar dados no `redis` usando o `GET`, que vai puxar todos os dados da sua chave
 
 ---
 
@@ -167,6 +171,8 @@
 
     ```
 
+    - O comando `SET` serve para atualiazr um dados já existenten no `redis`, basicamente use `SET` em sua chave(em nosso caso é `produto`) e após isso passe o novo dado/valor,
+
 ---
 
 - Listando todas as `KEYS` criadas:
@@ -176,6 +182,8 @@
         KEYS *
 
     ```
+
+    - O comando `KEYS` serve para lista as chaves dentro do `redis`, com o `*` funcionando da forma que mostre todas as chaves criadas.
 
 ---
 
@@ -208,4 +216,5 @@
     ```
 
     - Após a conclusão dos feitos, basta apenas digitar `exit` no terminal para finalizar ou sair do `redis`.
+
 
