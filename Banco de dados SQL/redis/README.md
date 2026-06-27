@@ -219,4 +219,10 @@
 
 ---
 
-## Pubsub
+## Pub/sub
+
+> O que é o `pubsub`? É um padrão de arquitetura de mensagens (um recurso especial) que o Redis possui para enviar dados em tempo real para muitos lugares ao mesmo tempo.
+
+- `pub`:
+    
+    - É quem envia a mensagem. Ele não sabe (e não importa) quem vai receber. Ele apenas joga a informação em um "canal" (como uma frequência de rádio).
