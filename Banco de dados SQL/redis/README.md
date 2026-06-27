@@ -7,6 +7,7 @@
 3. [Pontos positivos e negativos](#pontos-positivos-e-negativos-do-redis)
 4. [Instalação do Redis](#instalando-o-redis)
 5. [Principais operações Redis](#principais-operações-do-redis)
+6. [Pubsub](#pubsub)
 
 ---
 
@@ -108,7 +109,7 @@
 
 ---
 
-## Principais operações do `Redis`
+## Principais operações do `Redis` 
 
 > Aqui irei abordar os principais comandos do `Redis`, como usar `get`, `set`, `echo`, `keys` e `del`. São operações do `Redis`, coisas básicas.
 
@@ -207,3 +208,7 @@
     ```
 
     - Após a conclusão dos feitos, basta apenas digitar `exit` no terminal para finalizar ou sair do `redis`.
+
+---
+
+## Pubsub
