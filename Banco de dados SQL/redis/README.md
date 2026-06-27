@@ -217,4 +217,6 @@
 
     - Após a conclusão dos feitos, basta apenas digitar `exit` no terminal para finalizar ou sair do `redis`.
 
+---
 
+## Pubsub
