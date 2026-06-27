@@ -7,7 +7,7 @@
 3. [Pontos positivos e negativos](#pontos-positivos-e-negativos-do-redis)
 4. [Instalação do Redis](#instalando-o-redis)
 5. [Principais operações Redis](#principais-operações-do-redis)
-6. [Pubsub](#pubsub)
+6. [pub/sub](#pubsub)
 
 ---
 
@@ -226,3 +226,7 @@
 - `pub`:
     
     - É quem envia a mensagem. Ele não sabe (e não importa) quem vai receber. Ele apenas joga a informação em um "canal" (como uma frequência de rádio).
+
+- `sub`:
+
+    - É quem entra em um canal e fica escutando. Sempre que o publicador jogar uma mensagem ali, todos os assinantes conectados naquele exato milésimo de segundo recebem a informação.
