@@ -250,3 +250,14 @@
     
     - `pub`
 
+        ```bash
+
+            publish nome_do_canal_desejado_para_receber_a_mensagem mensagem desejada
+
+            publiish testing_for_redis testing_connection
+
+        ```
+
+        - Para utilização do `pub`, utiliza-se a palavra reservada `publish` para enviar para o canal desejado a mensagem a ser captada pelo `sub`, após isso utilze o nome do canal que deseja enviar a mensagem e posteriomente a mensagem desejada, que em nosso caso foi `testing_connection`
+
+        
