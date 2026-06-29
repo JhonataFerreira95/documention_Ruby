@@ -233,7 +233,7 @@
 
 ---
 
-- Para seguin com a demonstração do canal com essa aquirtetura adota pelo `redis`, irei aborda primeiramente o `sub` e após ele irei aborda o `pub`, um vai fica no canal para captar a mensagem e o outro irá envia-lá.
+- Para seguir com a demonstração do canal com essa arquitetura adota pelo `redis`, irei aborda primeiramente o `sub` e após ele irei aborda o `pub`, um vai fica no canal para captar a mensagem e o outro irá envia-lá.
 
     - `sub`:
 
@@ -248,4 +248,5 @@
         - Para utilização do `sub`, utiliza-se a palavra reservada `subscribe` para abrir o canal e fica apto para receber a mensagem do `pub`, após isso utilize o nome do canal que deseja, em nosso caso foi o `testing_for_redis`.
 
     
-    - 
+    - `pub`
+
