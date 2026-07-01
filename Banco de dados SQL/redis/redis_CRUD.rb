@@ -1,5 +1,6 @@
 require 'pg'
 require 'redis'
+require 'faker'
 
 pg_connection = PG.connect(
   dbname: 'cadastro',
