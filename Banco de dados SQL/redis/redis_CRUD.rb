@@ -19,7 +19,11 @@ redis_connection = Redis.new(
 
 # Definindo query de Inserção
 
-query_insert = "INSERT INTO clients(name, age, state) VALUES('$1', '$2', '$3')"
+query_insert = "INSERT INTO clients(name, age, state) VALUES($1, $2, $3)"
+
+# Definindo a query de Seleção 
+
+query_select = "SELECT * FROM clients"
 
 # Definindo o insert com faker
 
@@ -31,6 +35,8 @@ query_insert = "INSERT INTO clients(name, age, state) VALUES('$1', '$2', '$3')"
   # passando argumentos 
   
   pg_connection.exec(query_insert, [nome, age, state])
+
+  
 
 end
 
