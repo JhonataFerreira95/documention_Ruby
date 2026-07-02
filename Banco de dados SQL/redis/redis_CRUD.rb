@@ -18,7 +18,10 @@ redis_connection = Redis.new(
 )
 
 # Definindo o insert com faker
+
 100_00.times do 
-  conexao.exec()
+  nome = Faker::Name.Name
+  age = Faker::Number.between(from: 18, to:79)
+  state = Faker::Address.state_abbr
 end
 
