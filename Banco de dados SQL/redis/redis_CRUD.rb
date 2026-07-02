@@ -17,11 +17,20 @@ redis_connection = Redis.new(
   port: 6379
 )
 
+# Definindo query de Inserção
+
+query_insert = "INSERT INTO clients(name, age, state) VALUES('$1', '$2', '$3')"
+
 # Definindo o insert com faker
 
 100_00.times do 
   nome = Faker::Name.Name
   age = Faker::Number.between(from: 18, to:79)
   state = Faker::Address.state_abbr
+
+  # passando argumentos 
+  
+  pg_connection.exec(query_insert, [nome, age, state])
+
 end
 
