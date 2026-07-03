@@ -17,26 +17,43 @@ redis_connection = Redis.new(
   port: 6379
 )
 
-# Definindo query de Inserção
+begin
 
-query_insert = "INSERT INTO clients(name, age, state) VALUES($1, $2, $3)"
+  # Definindo query de Inserção
 
-# Definindo a query de Seleção 
+  query_insert = "INSERT INTO clients(name, age, state) VALUES($1, $2, $3)"
 
-query_select = "SELECT * FROM clients"
+  # Definindo a query de Seleção 
 
-# Definindo o insert com faker
+  query_select = "SELECT * FROM clients"
 
-100_00.times do 
-  nome = Faker::Name.Name
-  age = Faker::Number.between(from: 18, to:79)
-  state = Faker::Address.state_abbr
+  # Definindo o insert com faker
 
-  # passando argumentos 
-  
-  pg_connection.exec(query_insert, [nome, age, state])
+  5000.times do 
+    nome = Faker::Name.name
+    age = Faker::Number.between(from: 18, to:79)
+    state = Faker::Address.state_abbr
 
-  
+    # passando argumentos 
+    
+    conexao = pg_connection.exec(query_insert, [nome, age, state])
+
+    # execultando query_select
+
+    conexao = pg_connection.exec(query_select)
+
+    conexao.each do |row|
+      puts "ID: #{row['id']}, NOME: #{row['nome']}, AGE: #{row['age']}, STATE: #{row['state']}"
+    end
+
+  end
+
+  pg_connection.close
+  redis_connection.close
+
+ensure
 
 end
+
+
 
