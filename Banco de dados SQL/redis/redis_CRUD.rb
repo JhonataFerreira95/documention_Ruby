@@ -29,7 +29,7 @@ begin
 
   # Definindo o insert com faker
 
-  5000.times do 
+  100.times do 
     nome = Faker::Name.name
     age = Faker::Number.between(from: 18, to:79)
     state = Faker::Address.state_abbr
@@ -43,7 +43,7 @@ begin
     conexao = pg_connection.exec(query_select)
 
     conexao.each do |row|
-      puts "ID: #{row['id']}, NOME: #{row['nome']}, AGE: #{row['age']}, STATE: #{row['state']}"
+      puts "ID: #{row['id']}, NOME: #{row['name']}, AGE: #{row['age']}, STATE: #{row['state']}"
     end
 
   end
