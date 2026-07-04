@@ -13,3 +13,6 @@ redis_connection = Redis.new(
   host: 'localhost',
   port: 6379
 )
+
+# Consulta 
+

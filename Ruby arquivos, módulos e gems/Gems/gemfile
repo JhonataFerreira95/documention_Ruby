@@ -34,3 +34,7 @@ gem 'mongo', '~> 2.21'
 # Aqui importei a <gem> para utilizar o redis via ruby
 
 gem 'redis', '>= 5.4.1'
+
+# Aqui importe a <gem> para utilizar o Json via ruby
+
+gem 'json', '>= 2.20'

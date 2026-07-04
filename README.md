@@ -6,7 +6,7 @@
 
 ### Gems 
 
-  - Faker, Roo, Byebug Securerandom, RubyLSP, Pg, ActiveRecord, MongoDB e Redis foram utlizadas. 
+  - Faker, Roo, Byebug Securerandom, RubyLSP, Pg, ActiveRecord, MongoDB, Redis e json foram utlizadas. 
 
 ## Índice
 
