@@ -1,5 +1,6 @@
 require 'redis'
 require 'pg'
+require 'json'
 
 pg_connection = PG.connect(
   dbname: 'cadastro',
