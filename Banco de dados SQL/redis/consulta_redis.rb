@@ -51,9 +51,11 @@ redis_end = Time.now
 
 puts "Redis: #{((redis_end - redis_start) * 1000).round(2)}ms"
 
+redis_connection.close
+
 # Execultando com posgresql
 
-pg_start = TIme.now
+pg_start = Time.now
 
 query_time.times do
 
@@ -61,6 +63,12 @@ query_time.times do
       'SELECT * FROM clients WHERE id = $1 LIMIT 1',
       [id_cliente]
   ).first
-  
+
 end
+
+pg_end = Time.now
+
+puts "posgresql: #{((pg_end - pg_start) * 1000).round(2)}ms"
+
+pg_connection.close
 
