@@ -17,3 +17,9 @@ redis_connection = Redis.new(
 
 # Consulta 
 
+query_time = 1000
+id_cliente = 20
+
+## teste com redis
+
+redis start = Time.now 
