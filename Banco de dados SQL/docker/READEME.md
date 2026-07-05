@@ -33,3 +33,8 @@
 ---
 
 ## Diferenças entre `Docker` e `Máquina virtual`
+
+> Para criamos uma máquina virtual, precisamos instalar um sistema operacional do zero, como se estivéssemos configurando um novo computador. E para que todas elas subam, precisam passar por um processo de `boot` de inicialização. Além de ser necessário manter a rotina de atualização características do Sistema operacional.
+
+---
+
