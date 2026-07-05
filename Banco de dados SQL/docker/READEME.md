@@ -64,3 +64,15 @@
 
     - É um arquivo de definição, onde é possível preparar o ambiente a partir de um script de execução. É um arquivo de texte que contém instruções, comandos e passos que ao invés de serem execultado manualmente, o `Docker` o execulta atra´veis do comando `docker build` e encapsula cada camada dentro da imagem.
 
+    - Entendo como esse arquivo funciona, precisamos respeitar a ordem correta de formatação para que o `build` seja feito de forma correta.
+
+- `Docker Hub`:
+
+    - É um repositório público da `Docker`, onde estão disponibilizadas imagens de contêiners criados por várias empresas. É como se fosse um `github` de imagens `Docker`.
+
+    - Alguma imagens possuem um selo `Official Image`, que são imagens oficiais de determinadas tecnologias.
+
+    - Se você fizer o login no `Docker hub`, no seu terminal, e se executar um `docker push nome_da_imagem` você sobre no `Docker hub`. Logo em seguida, qualquer pessoa que acessar o endereço da sua imagem, poderá baixá-la.
+
+    
+
