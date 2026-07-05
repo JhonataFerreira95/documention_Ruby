@@ -3,14 +3,14 @@
 ## índice
 
 1. [Conceitos Docker](#conceitos-docker)
-2. [Como o docler funcionar]()
+2. [Diferenças de Docker e Máquina virtual](#diferenças-entre-docker-e-máquina-virtual)
 3. [Aplicações práticas]()
 4. [Docker vs Máquina virtual]()
 5. [Segunraças de containers]()
 
 ---
 
-## Conceitos Docker
+## Conceitos `Docker`
 
 > Docker é uma plataforma aberta, cuja a função é criar, execultar e implantar aplicações em ambientes virtuais isolados. Seu objetivo é disponibilizar uma aplicação o mais rápido possível.
 
@@ -29,3 +29,7 @@
 ---
 
 > Ele pode ser utilizado com todos os sitemas operacionais, porém seu desempenho fica muito maior quando utilizando no `linux`, pois ele foi feito para o `linux` mas irei utilizar no `Windows` com o software `Docker desktop`. 
+
+---
+
+## Diferenças entre `Docker` e `Máquina virtual`
