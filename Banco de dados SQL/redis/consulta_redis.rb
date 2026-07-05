@@ -23,6 +23,7 @@ id_cliente = 20
 # teste com redis
 
 redis_start = Time.now 
+client_cache = nil
 
 # Execultando o redis
 
