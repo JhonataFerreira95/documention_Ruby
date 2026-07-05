@@ -46,4 +46,10 @@
 
 > A principal vantagem é garantir que o ambiente de desnvolvimento seja idêntico ao de produção e que todos da equipe estejam trabalhando com o mesmo ambiente.Eliminando os casos de incompatibilidade entre ambientes que ocasiona aquele velho e conhecido problema: "Na minha máquina funciona", porque nesse caso, todos estão utilizando "a mesma máquina",  um ambiente idêntico.
 
-- 
+- Garante que todos utilizem o ambientes idênticos 
+
+- Processo de instalação e configuração é muito mais rápido
+
+- Leves, portáteis e facilitam o densenvolvimento(Sem preocupações com configurações de ambiente)
+
+- Utilizam menos memória que as máquinas virtuais e são inicializados e interrompidos de forma mais rápida
