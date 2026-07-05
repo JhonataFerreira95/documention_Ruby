@@ -6,7 +6,7 @@
 2. [Diferenças de Docker e Máquina virtual](#diferenças-entre-docker-e-máquina-virtual)
 3. [Vantagens de utilizar o Docker](#vantagens-de-utilizar-o-docker)
 4. [Recursos fundamentais do Docker](#recursos-fundamentais-do-docker)
-5. [Segunraças de containers]()
+5. [Docker vs Kubernets](#docker-vs-kubernetes)
 
 ---
 
@@ -83,4 +83,8 @@
     - É um orquestrador de container da `Docker`. Através de um arquivos chamado `docker-compose`(escrita em `YAML`), semelhante ao `dockerfile`, nós podemos gerenciar o comportamento dos containers. Ele facilita e agiliza o gerencimaneto de multiplos containers, realizando o isolamento de um grupo de containers, separando-aos por tipo de projeto, por exemplo. Imagine uma situação em que precisássemos executar vários containers de uma única vez e cada um com propósito distinto. Seria bastante trabalhoso executar o comando de subir um container (`docker run`) várias vezes e incluir os parâmetros para cada um isoladamente e manualmente.
 
     - Podemos inserir nesse aquivo o comportamento que determinados containers terão dependendo de saída da aplicação. Por exemplo, em caso de erro no banco de dados, o comportamente a ser adotado é reiniciá-lo ou subir outro bando de dados( que pode estar em outro container).
+
+--- 
+
+## `Docker` vs `kubernetes`
 
