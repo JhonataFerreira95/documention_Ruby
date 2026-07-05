@@ -43,7 +43,6 @@ query_time.times do
 
   else
     client_cache = JSON.parse(client_cache)
-    puts "deu ruim man"
   end
 
 end
@@ -51,3 +50,17 @@ end
 redis_end = Time.now
 
 puts "Redis: #{((redis_end - redis_start) * 1000).round(2)}ms"
+
+# Execultando com posgresql
+
+pg_start = TIme.now
+
+query_time.times do
+
+  pg_connection.exec_params(
+      'SELECT * FROM clients WHERE id = $1 LIMIT 1',
+      [id_cliente]
+  ).first
+  
+end
+
