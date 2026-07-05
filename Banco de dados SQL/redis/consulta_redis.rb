@@ -22,7 +22,7 @@ id_cliente = 20
 
 # teste com redis
 
-redis start = Time.now 
+redis_start = Time.now 
 
 # Execultando o redis
 
@@ -43,6 +43,11 @@ query_time.times do
 
   else
     client_cache = JSON.parse(client_cache)
+    puts "deu ruim man"
   end
 
 end
+
+redis_end = Time.now
+
+puts "Redis: #{((redis_end - redis_start) * 1000).round(2)}ms"
