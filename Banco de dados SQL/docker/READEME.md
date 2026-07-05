@@ -57,3 +57,10 @@
 ---
 
 ## Recursos fundamentais do `Docker`
+
+> Aqui irei aborda recursos importante para fazer o `Docker` funcionar, que fazem parte do mesmo.
+
+- `Dockerfile`:
+
+    - É um arquivo de definição, onde é possível preparar o ambiente a partir de um script de execução. É um arquivo de texte que contém instruções, comandos e passos que ao invés de serem execultado manualmente, o `Docker` o execulta atra´veis do comando `docker build` e encapsula cada camada dentro da imagem.
+
