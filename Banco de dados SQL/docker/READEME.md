@@ -38,3 +38,5 @@
 
 ---
 
+> Todo esse proceso acaba sendo mais custoso, não só em termos de consumo de banda, de processamento, mas de tempo também. Tempo de configuração, de manutenção e de processamento. O container é entendido pela máquina como um processo, que fica encapsulado, de modo que seus processos interno não interfiram em outros processos também não inferfiram em seu funcionamento. Ao invés de subir vários sistemas operacionais, podemos subir apenas processos que vão simular o sistema operacionais.
+
