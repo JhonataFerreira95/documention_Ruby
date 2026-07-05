@@ -4,7 +4,7 @@
 
 1. [Conceitos Docker](#conceitos-docker)
 2. [Diferenças de Docker e Máquina virtual](#diferenças-entre-docker-e-máquina-virtual)
-3. [Aplicações práticas]()
+3. [Vantagens de utilizar o Docker](#vantagens-de-utilizar-o-docker)
 4. [Docker vs Máquina virtual]()
 5. [Segunraças de containers]()
 
@@ -40,3 +40,10 @@
 
 > Todo esse proceso acaba sendo mais custoso, não só em termos de consumo de banda, de processamento, mas de tempo também. Tempo de configuração, de manutenção e de processamento. O container é entendido pela máquina como um processo, que fica encapsulado, de modo que seus processos interno não interfiram em outros processos também não inferfiram em seu funcionamento. Ao invés de subir vários sistemas operacionais, podemos subir apenas processos que vão simular o sistema operacionais.
 
+---
+
+## Vantagens de utilizar o `Docker`
+
+> A principal vantagem é garantir que o ambiente de desnvolvimento seja idêntico ao de produção e que todos da equipe estejam trabalhando com o mesmo ambiente.Eliminando os casos de incompatibilidade entre ambientes que ocasiona aquele velho e conhecido problema: "Na minha máquina funciona", porque nesse caso, todos estão utilizando "a mesma máquina",  um ambiente idêntico.
+
+- 
