@@ -20,6 +20,29 @@ redis_connection = Redis.new(
 query_time = 1000
 id_cliente = 20
 
-## teste com redis
+# teste com redis
 
 redis start = Time.now 
+
+# Execultando o redis
+
+query_time.times do
+
+    client_cache = redis_connection.get(id_cliente.to_s)
+
+  if client_cache.nil?
+
+    client = pg_connection.exec_params(
+      'SELECT * FROM clients WHERE id = $1 LIMIT 1',
+      [id_cliente]
+    ).first
+
+    redis_connection.set(id_cliente.to_s, client.to_json)
+
+    client_cache = client
+
+  else
+    client_cache = JSON.parse(client_cache)
+  end
+
+end
