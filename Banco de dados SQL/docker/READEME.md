@@ -66,6 +66,8 @@
 
     - Entendo como esse arquivo funciona, precisamos respeitar a ordem correta de formatação para que o `build` seja feito de forma correta.
 
+---
+
 - `Docker Hub`:
 
     - É um repositório público da `Docker`, onde estão disponibilizadas imagens de contêiners criados por várias empresas. É como se fosse um `github` de imagens `Docker`.
@@ -74,5 +76,11 @@
 
     - Se você fizer o login no `Docker hub`, no seu terminal, e se executar um `docker push nome_da_imagem` você sobre no `Docker hub`. Logo em seguida, qualquer pessoa que acessar o endereço da sua imagem, poderá baixá-la.
 
-    
+---
+
+- `Docker Compose`:
+
+    - É um orquestrador de container da `Docker`. Através de um arquivos chamado `docker-compose`(escrita em `YAML`), semelhante ao `dockerfile`, nós podemos gerenciar o comportamento dos containers. Ele facilita e agiliza o gerencimaneto de multiplos containers, realizando o isolamento de um grupo de containers, separando-aos por tipo de projeto, por exemplo. Imagine uma situação em que precisássemos executar vários containers de uma única vez e cada um com propósito distinto. Seria bastante trabalhoso executar o comando de subir um container (`docker run`) várias vezes e incluir os parâmetros para cada um isoladamente e manualmente.
+
+    - Podemos inserir nesse aquivo o comportamento que determinados containers terão dependendo de saída da aplicação. Por exemplo, em caso de erro no banco de dados, o comportamente a ser adotado é reiniciá-lo ou subir outro bando de dados( que pode estar em outro container).
 
