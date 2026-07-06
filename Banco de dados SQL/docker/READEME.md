@@ -88,3 +88,9 @@
 
 ## `Docker` vs `kubernetes`
 
+> É bastante comum que se confunda `Docker` com `Kubernetes`, porém as duas plataforma possuem propósiotos diferentes.
+
+- `Docker`:
+
+    - É uma plataforma que constroí, executa e distribui containers. Faz o encapsulamento de apliacações e as isola de outros ambientes, tornando o processo de configuração e deploy muito mais simples e rápidos.
+
