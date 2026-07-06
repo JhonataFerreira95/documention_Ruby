@@ -110,3 +110,11 @@
 - Utilize imagens confíaveis:
 
     - Como vimos, conseguimos baixar variados tipos de imagens de diversas empresas diferentes através do `DockerHub` ou de outros desenvolvedores, e uma das funcionalidades básicas dos containers, é justamente essa: criar a partir de imagens existentes. Só de ler isso você já pode imaginar o que pode acontecer; Baixar uma imagem com software maliciosos ou imagem mal condifuradas que podem prejudicar o funcionamento do seu container ou da sua arquitetura como um todo, reduzindo o desempenho ou apresentando comportamentos inesperados. Para diminuir esse risco, além de baixar imagens confiáveis, que venham do `DockerHub`, ou de desenvolvedores confiáveis, precisamos utilizar o recurso do `Docker` que é o `content trust`, que possibilita a criação de assinaturas digitais para os dados que são recebidos e enviados, o que permite a verificação de integridade das imagens. Quando esse recurso é habilitado, ao tentar baixar uma imagem não assinada, uma mensagem de erro é exibida, indicando que aquele conteúdo náo é confiável.
+
+---
+
+- Atualize constatemente e corretamente seus containers:
+
+    - É importante revisar o `Dockerfile` periodicamente para identificar possíveis atualizações necessárias, pois muitas delas são fundamentais para correção de falhas de seguranças ou de funcionamento de determinadas dependências.
+
+---
