@@ -94,3 +94,8 @@
 
     - É uma plataforma que constroí, executa e distribui containers. Faz o encapsulamento de apliacações e as isola de outros ambientes, tornando o processo de configuração e deploy muito mais simples e rápidos.
 
+- `Kubernetes`:
+
+    - É uma plataforma de orquestração de containers, que trabalha junto com o `Docker`. Ele é utilizado para criar e gerenciar `clusters` de containers. Além disso, realiza o controle de como e onde certos containers serão executados, permitindo o agrupamento de containers para que sejam executados e monitorados através de um único painel de controle, viabilizando uma orquestração escalonável de aplicativos em nuvem. Da mesma forma, torna possível o agrupamento de recursos de container por permissão de acesso.
+
+--- 
