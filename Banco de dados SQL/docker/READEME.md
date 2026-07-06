@@ -102,3 +102,11 @@
 --- 
 
 ## Segurança de containers 
+
+> Considerando que é cada vez mais comum utilizar ambientes com um ou múltiplos containers, pois eles trazem diversas vantagens tanto na arquitetura quanto no desempenho das aplicações, precisamos destacar alguns cuidados que devemos nos atentar ao utilizar containers na nossa estrutura.
+
+---
+
+- Utilize imagens confíaveis:
+
+    - Como vimos
