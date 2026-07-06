@@ -7,6 +7,7 @@
 3. [Vantagens de utilizar o Docker](#vantagens-de-utilizar-o-docker)
 4. [Recursos fundamentais do Docker](#recursos-fundamentais-do-docker)
 5. [Docker vs Kubernets](#docker-vs-kubernetes)
+6. [Segurança de containers](#segurança-de-containers)
 
 ---
 
@@ -99,3 +100,5 @@
     - É uma plataforma de orquestração de containers, que trabalha junto com o `Docker`. Ele é utilizado para criar e gerenciar `clusters` de containers. Além disso, realiza o controle de como e onde certos containers serão executados, permitindo o agrupamento de containers para que sejam executados e monitorados através de um único painel de controle, viabilizando uma orquestração escalonável de aplicativos em nuvem. Da mesma forma, torna possível o agrupamento de recursos de container por permissão de acesso.
 
 --- 
+
+## Segurança de containers 
