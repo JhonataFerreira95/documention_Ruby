@@ -118,3 +118,9 @@
     - É importante revisar o `Dockerfile` periodicamente para identificar possíveis atualizações necessárias, pois muitas delas são fundamentais para correção de falhas de seguranças ou de funcionamento de determinadas dependências.
 
 ---
+
+- Cuidado com os previlégios de usuário de execução de containers:
+
+    - É importante considerar que em todo sistema, não somente quando trabalhamos com `Docker`, precisamos manter o menor privilégio possível para os usuários e para as dependências que são utilizadas. No `Docker`, existe uma configuração chamada: `Modo Privilegiado`, que vem desabilitada por padrão, que permite o acesso root à recursos da máquina host. Então assegure-se que essa configuração não está habilitada. Rodar processos como superusuário ou em modo root pode viabilizar a exploração de vulnerabilidades por parte de um invasor que tente um acesso de dentro do container para fora, tendo acesso ao host, por isso, nunca devemos executar processos como root ou em modo privilegiado e garantir que os níveis de acesso estão sendo concedidos de forma consciente. 
+
+--- 
