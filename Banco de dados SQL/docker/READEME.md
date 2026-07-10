@@ -182,4 +182,14 @@
 
     ---
 
-        
+    - Reiniciar um container:
+
+        ```bash
+
+            docker restart idcontainer
+
+        ```
+
+    ---
+
+    
