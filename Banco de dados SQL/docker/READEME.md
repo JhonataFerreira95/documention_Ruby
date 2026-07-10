@@ -132,7 +132,7 @@
 
 ---
 
-> Quando uso a nomeclatura `idcontainer` significa que é o nome do seu container.
+> Quando uso a nomeclatura `idcontainer` ou `nomedaimagem` significa que é o nome do seu container ou da sua imagem.
 
 - Comandos de execução do docker:
 
@@ -271,6 +271,16 @@
         ```bash
 
             curl localhost:3000
+
+        ```
+
+    ---
+
+    - Cria uma imagem do `docker` no mesmo local que o arquivo `dockerfile` se encontra:
+
+        ```bash
+
+            docker build -t nomedaimagem
 
         ```
 
