@@ -297,3 +297,9 @@
     ---
 
 - `Dockerfile`:
+
+> O arquivo `docker` file é onde ficam a nossa depedências do projeto, versões e porta que serão utilizada para construri o ambiente.
+
+---
+
+- 
