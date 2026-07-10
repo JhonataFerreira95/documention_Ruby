@@ -302,4 +302,68 @@
 
 ---
 
-- 
+- Especificar a versão que vamos utilizar do framework em nosso projeto:
+
+    ```dockerfile
+
+        FROM framework
+
+    ```
+
+---
+
+- Indicar o diretório ond estão os arquivos da aplicação:
+
+    ```dockerfile
+
+        WORKDIR /path/aplication
+
+    ```
+
+---
+
+- Copiar as depedências do projeto:
+
+    ```dockerfile
+
+        COPY depedências
+
+    ```
+
+---
+
+- Indicar o que o `docker` tem que instalar:
+
+    ```dockerfile
+
+        RUN 
+
+    ```
+
+---
+
+- Copiar todos os arquivos do diretório:
+
+    ```dockerfile
+
+        COPY . .
+
+    ```
+
+---
+
+- Inidicar a definição da porta que será utilizada:
+
+    ```dockerfile
+
+        EXPOSE porta_desejada
+
+    ```
+
+- Comandos que ele precisará executar para rodar:
+
+    ```dockerfile
+
+        CMD ["npm", "run", "dev"]
+
+    ```
