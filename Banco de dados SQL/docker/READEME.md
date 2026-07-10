@@ -285,3 +285,11 @@
         ```
 
     ---
+
+    - Criar um container a partir da imagem:
+
+        ```bash
+
+            docker run nomedaimagem
+
+        ```
