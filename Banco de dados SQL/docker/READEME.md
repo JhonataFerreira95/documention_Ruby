@@ -192,7 +192,7 @@
 
     ---
 
-    - Listar os containers que foram criados(em execução ou não)
+    - Listar os containers que foram criados(em execução ou não):
 
         ```bash
 
@@ -202,7 +202,7 @@
 
     ---
 
-    - Listar containers que estão em execução
+    - Listar containers que estão em execução:
 
         ```bash
 
@@ -212,5 +212,14 @@
 
     ---
 
-        
+    - Verificar os logs de execuçãi do container:
 
+        ```bash
+
+            docker logs idcontainer
+
+        ```
+
+    ---
+
+    - 
