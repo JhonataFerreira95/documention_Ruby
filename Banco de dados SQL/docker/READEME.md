@@ -129,3 +129,46 @@
 ## Comandos do `Docker`
 
 > Aqui irei mostra como criar uma imagem docker, como definir as proriedades e como subir a imagem `docker`.
+
+- Comandos de execução do docker:
+
+    - Para parar um container:
+
+        ```bash
+
+            docker stop idcontainer
+
+        ```
+
+    ---
+
+    - Interrompe a  abprutamente a execução de um container:
+
+        ```bash
+
+            docker kill idcontainer
+
+        ```
+
+    ---
+
+    - Subir um container:
+
+        ```bash
+
+            docker start idcontainer
+
+        ```
+
+    ---
+
+    - Dar pausa na execução
+
+        ```bash
+
+            docker pause incontainer
+
+        ```
+
+    ---
+
