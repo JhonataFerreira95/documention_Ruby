@@ -222,4 +222,14 @@
 
     ---
 
+    - Excluir um container(não exclui o container em execução):
+
+        ```bash
+
+            docker rm -f idcontainer
+
+        ```
+
+    ---
+
     - 
