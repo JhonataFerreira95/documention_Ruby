@@ -162,7 +162,7 @@
 
     ---
 
-    - Dar pausa na execução
+    - Dar pausa na execução:
 
         ```bash
 
@@ -172,3 +172,14 @@
 
     ---
 
+    - Reabilitar um container pausado:
+
+        ```bash
+
+            docker upouse idcontainer
+
+        ```
+
+    ---
+
+        
