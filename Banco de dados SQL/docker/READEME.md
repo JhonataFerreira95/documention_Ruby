@@ -192,4 +192,13 @@
 
     ---
 
-    
+    - Listar os containers que foram criados(em execução ou não)
+
+        ```bash
+
+            docker ps -a
+
+        ```
+
+    ---
+
