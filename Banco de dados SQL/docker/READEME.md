@@ -241,3 +241,15 @@
         ```
 
     ---
+
+    - Listar todas as imagens existentes na máquina, com `nome`, `id`, `data de criação` e `tamanho`:
+
+        ```bash
+            
+            docker images
+
+        ```
+
+    ---
+
+    
