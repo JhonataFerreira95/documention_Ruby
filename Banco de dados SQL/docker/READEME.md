@@ -374,5 +374,9 @@
 
 --- 
 
-- O `dockerfile` é responsável por criar a imagem e o `docker-compose` é resposável para definir serviços(banco de dadosm versão da linguagem e entre outras depedências).
+> O `dockerfile` é responsável por criar a imagem e o `docker-compose` é resposável para definir serviços(banco de dadosm versão da linguagem e entre outras depedências).
+
+---
+
+- Explicando o `docker-compose`
 
