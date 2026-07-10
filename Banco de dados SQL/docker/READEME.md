@@ -130,6 +130,10 @@
 
 > Aqui irei mostra como criar uma imagem docker, como definir as proriedades e como subir a imagem `docker`.
 
+---
+
+> Quando uso a nomeclatura `idcontainer` significa que é o nome do seu container.
+
 - Comandos de execução do docker:
 
     - Para parar um container:
@@ -252,4 +256,12 @@
 
     ---
 
-    
+    - Acessar o modo interativo do container, ou seja, inicia o terminal para que seja possível interagir com ele:
+
+        ```bash
+
+            docker exec -it idcontainer bash
+
+        ```
+
+    ---
