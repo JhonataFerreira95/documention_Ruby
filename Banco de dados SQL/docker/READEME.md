@@ -265,3 +265,13 @@
         ```
 
     ---
+
+    - Acessar uma `url` dentro do container
+
+        ```bash
+
+            curl localhost:3000
+
+        ```
+
+    ---
