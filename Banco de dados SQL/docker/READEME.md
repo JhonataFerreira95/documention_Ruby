@@ -202,3 +202,15 @@
 
     ---
 
+    - Listar containers que estão em execução
+
+        ```bash
+
+            docker ps
+
+        ```
+
+    ---
+
+        
+
