@@ -367,3 +367,12 @@
         CMD ["npm", "run", "dev"]
 
     ```
+
+- `Docker-compose`:
+
+> O `Docker-compose` orquestra e rodar os múltiplos container feito a partir do `dockerfile` que cria um container específico.
+
+--- 
+
+- O `dockerfile` é responsável por criar a imagem e o `docker-compose` é resposável para definir serviços(banco de dadosm versão da linguagem e entre outras depedências).
+
