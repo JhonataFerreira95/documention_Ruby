@@ -232,4 +232,12 @@
 
     ---
 
-    - 
+    - Construir um container baseado em instruções inseridas no `docker-compose`:
+
+        ```bash
+
+            docker-compose build
+
+        ```
+
+    ---
