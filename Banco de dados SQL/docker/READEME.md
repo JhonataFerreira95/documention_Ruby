@@ -293,3 +293,7 @@
             docker run nomedaimagem
 
         ```
+
+    ---
+
+- `Dockerfile`:
