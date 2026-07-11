@@ -380,3 +380,42 @@
 
 - Explicando o `docker-compose`
 
+    - A esturura do `docker-compose.yml`
+
+        ```yaml
+            version: '3'
+
+            services:
+            web: 
+                build: .
+
+                image: node:16
+                depends_on: 
+                - db
+
+                ports:
+                - "3000:3000"
+
+                environment:
+                DATABASE_URL: "postgres://postgres:postgres@db:5432/onebitjobs_development"
+                NODE_ENV: "development"
+
+                networks:
+                - api-sequelize
+
+            db:
+                image: postgres
+                environment:
+                POSTGRES_PASSWORD: "postgres"
+                ports:
+                - "49555:5432"
+
+                networks:
+                - api-sequelize
+
+            networks:
+            api-sequelize:
+                driver: bridge
+
+        ```
+
