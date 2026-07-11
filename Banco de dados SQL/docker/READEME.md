@@ -434,4 +434,14 @@
 
             - Cria uma rede virtual isolada chamada de `api`, usando o driver `bridge`. Isso permite que os contêines criados aqui conversem entre si usando os próprios nomes como endereço. (Aplicação acha o banco de dados chamados por `db`).
 
+        ---
+
+        - `build`:
+
+            - Diz ao `docker` para procurar um arqquivo `dockerfile`.
+
+        ---
+
+        
+
 
