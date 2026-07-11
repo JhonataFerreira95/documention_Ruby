@@ -383,6 +383,7 @@
     - A esturura do `docker-compose.yml`
 
         ```yaml
+
             version: '3'
 
             services:
@@ -418,4 +419,14 @@
                 driver: bridge
 
         ```
+
+    ---
+
+    - Decompondo a estrutura:
+
+        - `version`:
+
+            - Define a versão do formado do arquivo `docker compose` que está sendo usada.
+
+    ---
 
