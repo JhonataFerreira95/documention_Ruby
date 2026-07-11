@@ -390,33 +390,33 @@
             web: 
                 build: .
 
-                image: node:16
+                image: xxxxx
                 depends_on: 
-                - db
+                - xxxx
 
                 ports:
-                - "3000:3000"
+                - "xxxxx:xxxxx"
 
                 environment:
-                DATABASE_URL: "postgres://postgres:postgres@db:5432/onebitjobs_development"
-                NODE_ENV: "development"
+                DATABASE_URL: "xxxxxxx"
+                NODE_ENV: "xxxxx"
 
                 networks:
-                - api-sequelize
+                - xxxxx
 
             db:
-                image: postgres
+                image: xxxx
                 environment:
-                POSTGRES_PASSWORD: "postgres"
+                POSTGRES_PASSWORD: "xxxxx"
                 ports:
-                - "49555:5432"
+                - "xxxx:xxxx"
 
                 networks:
-                - api-sequelize
+                - xxxxx
 
             networks:
             api-sequelize:
-                driver: bridge
+                driver: xxxx
 
         ```
 
@@ -428,5 +428,10 @@
 
             - Define a versão do formado do arquivo `docker compose` que está sendo usada.
 
-    ---
+        ---
+
+        - `networks: api-sequelize: driver: bridge`:
+
+            - Cria uma rede virtual isolada chamada de `api`, usando o driver `bridge`. Isso permite que os contêines criados aqui conversem entre si usando os próprios nomes como endereço. (Aplicação acha o banco de dados chamados por `db`).
+
 
