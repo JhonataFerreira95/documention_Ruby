@@ -390,7 +390,6 @@
             web: 
                 build: .
 
-                image: xxxxx
                 depends_on: 
                 - xxxx
 
@@ -436,12 +435,14 @@
 
         ---
 
-        - `build`:
+        - `build .`:
 
             - Diz ao `docker` para procurar um arqquivo `dockerfile`.
 
         ---
 
-        
+        - `depends_on: -db`:
+
+            - Garante a ordem de inicialização. O contêiner do banco de dados(`db`) será iniciado antes do contêiner `web`.
 
 
