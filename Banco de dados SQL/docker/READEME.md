@@ -312,7 +312,7 @@
 
 ---
 
-- Indicar o diretório ond estão os arquivos da aplicação:
+- Indicar o diretório onde estão os arquivos da aplicação:
 
     ```dockerfile
 
