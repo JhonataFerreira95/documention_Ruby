@@ -457,8 +457,17 @@
 
             - Variáveis de ambiente que o o `framework` vai ler via `process.env`.
 
+                - `DATABSE_URL`:
+
+                    - A rota de conexão com o banco. Repare no trecho `@db:`; 
+                    O `Docker` substitui o nome do `db` pelo `IP` reeal do contêiner do banco automaticamente graças à rede compartilhada.
+
         ---
 
-        
+        - `networks:`
 
+            - Conecta este contêiner à rede virtual que foi criada no final do arquivo.
+
+        ---
+        
 
