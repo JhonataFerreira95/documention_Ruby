@@ -21,7 +21,7 @@
 
     ---
 
-    - `Develop`:
+    - `develop`:
 
         - Onde o códido para a próxima versão é acumulado e testado.
 
@@ -29,8 +29,14 @@
 
 - E três branchs temporárias criados conforme a necessidade:
 
-    - `Feature`:
+    - `feature`:
 
         - Para implementar novas funcionalidades. Sempre ramifica da `develop`.
+
+    ---
+
+    - `release`:
+
+        - Para preparar um nova lançamento. É onde ocorrem ajustes finais e geração de `tags` antes de ir para a `main`, e `develop`.
 
     ---
