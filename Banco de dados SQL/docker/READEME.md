@@ -445,4 +445,12 @@
 
             - Garante a ordem de inicialização. O contêiner do banco de dados(`db`) será iniciado antes do contêiner `web`.
 
+        --- 
+
+        - `ports: `:
+            
+            - Mapemaneto de portas. Libera o acesso à aplicação.
+
+        ---
+
 
