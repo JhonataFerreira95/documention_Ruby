@@ -27,4 +27,10 @@
 
     ---
 
-    
+- E três branchs temporárias criados conforme a necessidade:
+
+    - `Feature`:
+
+        - Para implementar novas funcionalidades. Sempre ramifica da `develop`.
+
+    ---
