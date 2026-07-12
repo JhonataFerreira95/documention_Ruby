@@ -474,8 +474,8 @@
 
             - Baixa a imagem oficial e pronta do `PostgresSQL` direto do `Docker Hub`(não precisa de `Dockerfile` próprio).
 
-        ---
+---
 
-        - 
+
         
 
