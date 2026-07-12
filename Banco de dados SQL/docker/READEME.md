@@ -453,4 +453,12 @@
 
         ---
 
+        - `environment`:
+
+            - Variáveis de ambiente que o o `framework` vai ler via `process.env`.
+
+        ---
+
+        
+
 
