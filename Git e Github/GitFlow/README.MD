@@ -40,3 +40,9 @@
         - Para preparar um nova lançamento. É onde ocorrem ajustes finais e geração de `tags` antes de ir para a `main`, e `develop`.
 
     ---
+
+    - `hotfix`:
+
+        - Para correções urgentes direito na produção. Ramifica da `main` e é integrado na `main` e na `develop`1.
+        
+---
