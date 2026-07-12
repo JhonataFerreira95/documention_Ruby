@@ -469,5 +469,13 @@
             - Conecta este contêiner à rede virtual que foi criada no final do arquivo.
 
         ---
+
+        - `image: postgres`:
+
+            - Baixa a imagem oficial e pronta do `PostgresSQL` direto do `Docker Hub`(não precisa de `Dockerfile` próprio).
+
+        ---
+
+        - 
         
 
