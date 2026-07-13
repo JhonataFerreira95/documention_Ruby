@@ -5,6 +5,7 @@
 1. [O que é GitFlow?](#o-que-é-gitflow)
 2. [Fluxo de trabalho](#fluxo-de-trabalho)
 3. [Ramificações](#trabalhando-com-ramificações)
+4. [Instalando o GitFLow](#instalando-o-gitflow)
 
 ---
 
@@ -61,10 +62,12 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
 
 ---
 
-- No `GitFlow`, funciona dessa forma, mas um pouco complexa e organizada e ajuda demais a visualizar melhor as tarefas que estão sendo realizadas.
+- No `GitFlow`, funciona dessa forma, mas um pouco complexa e organizada e ajuda demais a visualizar melhor as tarefas que estão sendo realizadas;
 
-    - Veja na imagem abaixo cada tipo de atividade realizada, é criada uma `branch` de desenvolvimento. Após a atividade ser realizada e revisada, é devolvida para a `branch` principal;
+    - Veja na imagem abaixo cada tipo de atividade realizada, é criada uma `branch` de desenvolvimento. Após a atividade ser realizada e revisada, é devolvida para a `branch` principal.
 
         ![fluxo](/Banco%20de%20dados%20SQL/Assets/gitflow.png)
 
 --- 
+
+## Instalando o `GitFlow`
