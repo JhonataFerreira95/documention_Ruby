@@ -15,6 +15,11 @@
 
 ## Fluxo de trabalho
 
+> Fluxo de trabalho com `git`, uma estratpegia criada para melhorar a organização das `branches` dentro do repositório permitindo mais fluidez ao processo de novas `features`
+e `releases`. É uma solução que permite um gerenciamento mais simples e rápido de equipes e projetos maiores, pois há uma grande quantidade de informações sendo enviadas ao repositório a todo tempo.
+
+---
+
 - O fluxo baseia-se em duas `branchs` principais que duram por todos projeto:
 
     - `main`:
