@@ -60,3 +60,11 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
 > Não é correto, do ponto de vista das boas práticas de utilização do `git`, que os `commits` sejam realizados na branch ``main/master`. Com certeza se tornará uma bagunça! O ideal então é que cada um deles crie `branches` para cada atualização nova que for desenvolver. Depois que for finalizada a tarefa, é feiot um `merge` na `brach` principal, na `main/master`.
 
 ---
+
+- No `GitFlow`, funciona dessa forma, mas um pouco complexa e organizada e ajuda demais a visualizar melhor as tarefas que estão sendo realizadas.
+
+    - Veja na imagem abaixo cada tipo de atividade realizada, é criada uma `branch` de desenvolvimento. Após a atividade ser realizada e revisada, é devolvida para a `branch` principal;
+
+        ![fluxo](/Banco%20de%20dados%20SQL/Assets/gitflow.png)
+
+--- 
