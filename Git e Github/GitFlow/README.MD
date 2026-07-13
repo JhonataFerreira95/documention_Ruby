@@ -4,6 +4,7 @@
 
 1. [O que é GitFlow?](#o-que-é-gitflow)
 2. [Fluxo de trabalho](#fluxo-de-trabalho)
+3. [Ramificações](#trabalhando-com-ramificações)
 
 ---
 
@@ -52,4 +53,10 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
 
         - Para correções urgentes direito na produção. Ramifica da `main` e é integrado na `main` e na `develop`1.
         
+---
+
+## Trabalhando com ramificações 
+
+> Não é correto, do ponto de vista das boas práticas de utilização do `git`, que os `commits` sejam realizados na branch ``main/master`. Com certeza se tornará uma bagunça! O ideal então é que cada um deles crie `branches` para cada atualização nova que for desenvolver. Depois que for finalizada a tarefa, é feiot um `merge` na `brach` principal, na `main/master`.
+
 ---
