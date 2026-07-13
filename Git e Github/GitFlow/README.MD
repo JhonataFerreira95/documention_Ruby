@@ -2,8 +2,8 @@
 
 ## índice
 
-1. [O que é GitFlow?]
-
+1. [O que é GitFlow?](#o-que-é-gitflow)
+2. [Fluxo de trabalho](#fluxo-de-trabalho)
 
 ---
 
@@ -12,6 +12,8 @@
 > É um modelo de ramificação para o `git` criado por **Vicente Drissen** em 2010. Ele organiza o cilco de vida do desenvolvimento em `branches` com funções específicas, separando o código de produção `main`, do ambiente de desenvolvimento `develop` e gerenciando lancçamentos e correções com segunraça.
 
 ---
+
+## Fluxo de trabalho
 
 - O fluxo baseia-se em duas `branchs` principais que duram por todos projeto:
 
