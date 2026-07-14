@@ -111,3 +111,23 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
     - Isso é uma extensão do `git init`, não altera nada no conteúdo do repositório, apenas configura os nomes das `branches`(**`feature/, release/, hotfix/, etc`**). Ele já cria a `develop` automaticamente da main, então normalmente você não precisa criar a `develop` na mão com `git branch develop`(mas não tem problema se você já criou antes).
 
 ---
+
+- `feature` para desenvolver novas funcionalidades:
+
+    - Nasce da `develop` e volta pra `develop`:
+
+        ```bash
+
+            git flow feature start nome-da-feature
+
+        ```
+
+        - Após a criação, trabalhe nessa `breach` até finalizar a `feature`, após isso utilize comando:
+
+        ```bash
+
+            git flow feature finish nome-da-feature
+
+        ```
+
+---
