@@ -180,5 +180,15 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
 
             - Apgar a `branch` `release/1.0.0`.
 
-            
+        - Depois lembre de enviar as `tags`:
+
+            ```bash
+
+                git push origin --tags
+
+            ```
+
+---
+
+
 
