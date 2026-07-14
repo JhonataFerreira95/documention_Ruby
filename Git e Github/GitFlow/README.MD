@@ -151,3 +151,34 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
             ```
 
 ---
+
+- `release` para preparar uma versão de produção:
+
+    - Nasce da `develop` e, ao terminar, faz `merge` tanto na `main` quanto na `develop`, além de criar uma `tag` de versão:
+
+        ```bash
+
+            git flow release start 1.0.0
+
+        ```
+
+        - Ajuste finais nesse `branch` como versionamento, changelog, correções pequenas de bugs.
+
+        ```bash
+
+            git flow release finish 1.0.0
+
+        ```
+
+        - Isso vai:
+
+            - Mesclar a `release` na `main`.
+
+            - Criar uma `tag`(ex: 1.0.0).
+
+            - Mesclar de volta na `develop`.
+
+            - Apgar a `branch` `release/1.0.0`.
+
+            
+
