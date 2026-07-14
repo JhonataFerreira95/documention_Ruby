@@ -71,3 +71,21 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
 --- 
 
 ## Instalando o `GitFlow`
+
+> Aqui irei aborda como fazer a instalção do `GitFlow` no `Windows`.
+
+---
+
+- Teste para ver se o `GitFLow` já está instalado:
+
+    ```bash
+
+        git flow version
+
+    ```
+
+    - Se estiver instalado a saída vai ser algo como:
+    
+    ![flow](/Banco%20de%20dados%20SQL/Assets/gitflow%20install.png)
+
+---
