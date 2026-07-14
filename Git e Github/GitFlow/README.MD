@@ -99,3 +99,15 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
     ```
 
 ---
+
+- Inicializando um projeto com `GitFlow`:
+
+    ```bash
+
+        git flow init
+
+    ```
+
+    - Isso é uma extensão do `git init`, não altera nada no conteúdo do repositório, apenas configura os nomes das `branches`(**`feature/, release/, hotfix/, etc`**). Ele já cria a `develop` automaticamente da main, então normalmente você não precisa criar a `develop` na mão com `git branch develop`(mas não tem problema se você já criou antes).
+
+---
