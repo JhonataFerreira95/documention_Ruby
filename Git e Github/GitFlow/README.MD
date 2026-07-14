@@ -86,6 +86,16 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
 
     - Se estiver instalado a saída vai ser algo como:
     
-    ![flow](/Banco%20de%20dados%20SQL/Assets/gitflow%20install.png)
+        ![flow](/Banco%20de%20dados%20SQL/Assets/gitflow%20install.png)
+
+---
+
+- Caso o `GitFLow` não esteja instalado, use o comando:
+
+    ```bash
+
+        curl -L https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh | bash -s -- install stable
+
+    ```
 
 ---
