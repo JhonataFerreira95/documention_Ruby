@@ -124,10 +124,30 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
 
         - Após a criação, trabalhe nessa `breach` até finalizar a `feature`, após isso utilize comando:
 
-        ```bash
+            ```bash
 
-            git flow feature finish nome-da-feature
+                git flow feature finish nome-da-feature
 
-        ```
+            ```
+
+        - Faz o `merge` de volta na `develop`, apaga a `brach` `feature/nome-da-feature` e retorna para `develop`.
+
+        ---
+
+        - Se quiser subir a `feature` pro repositório remoto antes de terminar(pra trabalhar em equipe):
+
+            ```bash
+
+                git flow feature publish nome-da-feature
+
+            ```
+
+        - E outra pessoa pode puxar com:
+
+            ```bash
+
+                git flow feature pull origin nome-da-feature
+
+            ```
 
 ---
