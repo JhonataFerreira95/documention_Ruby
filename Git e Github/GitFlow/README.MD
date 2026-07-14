@@ -190,5 +190,26 @@ e `releases`. É uma solução que permite um gerenciamento mais simples e rápi
 
 ---
 
+- `Hotfix` para correções urgentes em produção:
+
+    - Nasce da `main`(não da `develop`!), porque corrige algo que já está em produção;
+
+        ```bash
+
+            git flow hotfix start 1.0.1
+
+        ```
+
+        - Corrija o bug urgente.
+
+        ```bash
+
+            git flow hotfix finish 1.0.1
+
+        ```
+
+        - Mescla na `main` e na `develop`, cria a `tag` `1.0.1` e apaga a branch
+
+---
 
 
