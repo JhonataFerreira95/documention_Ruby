@@ -36,7 +36,7 @@
 
     - Aqui usei o `Date.new` apenas para atribuir a data e imprimir no terminal. Observa-se que quando não defino `mês` e nem o `dia`, o `Date` puxa tudo do mês/dia 01;
 
-    ![date](/Banco%20de%20dados%20SQL/Assets/date.png)
+        ![date](/Banco%20de%20dados%20SQL/Assets/date.png)
 
     ---
 
@@ -54,4 +54,33 @@
 
         - Aqui podemos recuperar o tipo da `Classe`, o `ano`, o `dia` e o `mês` separadamente; 
 
-        ![date_month](/Banco%20de%20dados%20SQL/Assets/recuperando_dia_mes_ano.png)
+            ![date_month](/Banco%20de%20dados%20SQL/Assets/recuperando_dia_mes_ano.png)
+
+    ---
+
+    - Utilizando o `wday`;
+
+        ```ruby
+
+            # data.wday
+
+            # 0 - domingo
+            # 1- segunda
+            # 3 - terça
+            # 4 - quarta
+            # 5 - sexta
+            #  6 - sábado
+
+            puts birthday.monday?
+            puts birthday.tuesday?
+            puts birthday.wednesday?
+            puts birthday.thursday?
+            puts birthday.friday?
+
+        ```
+
+        - Aqui utilizamos o `wday` para saber o dia da semana de 0..6 podemos saber, cada número representa um dia da semana, caso queira algo mais específico temos as famosa verificações com cada dia da semana como `.monday?`, para saber se aquela data é segunda-feira.
+
+            ![wday](/Banco%20de%20dados%20SQL/Assets/wday.png)
+
+    ---
