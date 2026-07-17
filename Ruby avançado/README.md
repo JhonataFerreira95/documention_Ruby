@@ -14,4 +14,6 @@
 
 ---
 
-## Objeto `Date`    
+## Objeto `Date` 
+
+> Irei aborda o módulo `date` que é nativo do ruby, assim podemos manipular datas livremente para nosssos objetivos.
