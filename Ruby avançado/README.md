@@ -2,8 +2,9 @@
 
 ## índice 
 
-1. [Introdução ao `ruby` avançado]
+1. [Introdução ao `ruby` avançado](#introdução)
 2. [Conhecendo o objeto Date](#objeto-date)
+3. [Conhecendo o objeto Time](#objeto-time)
 
 
 ---
@@ -84,3 +85,5 @@
             ![wday](/Banco%20de%20dados%20SQL/Assets/wday.png)
 
     ---
+
+## Objeto `time`
