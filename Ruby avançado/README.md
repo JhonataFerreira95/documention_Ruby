@@ -37,3 +37,21 @@
     - Aqui usei o `Date.new` apenas para atribuir a data e imprimir no terminal. Observa-se que quando não defino `mês` e nem o `dia`, o `Date` puxa tudo do mês/dia 01;
 
     ![date](/Banco%20de%20dados%20SQL/Assets/date.png)
+
+    ---
+
+    - Podemos utilizar uma variável para guarda os dados do `Date` atribuindo a mesma com `chomp` ou diretamente;
+
+        ```ruby
+
+            birthday = Date.new(2001, 8, 28)
+            puts birthday.class # Recuperando tipo da classe
+            puts birthday.year # Recuperando ano
+            puts birthday.day # Recuperando dia
+            puts birthday.month # Recuperando mês
+
+        ```
+
+        - Aqui podemos recuperar o tipo da `Classe`, o `ano`, o `dia` e o `mês` separadamente; 
+
+        ![date_month](/Banco%20de%20dados%20SQL/Assets/recuperando_dia_mes_ano.png)
