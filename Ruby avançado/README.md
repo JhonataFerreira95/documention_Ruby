@@ -200,3 +200,6 @@
 ---
 
 ## Formtação de tempo
+
+> É importante quando tratamos dados com `date` ou `time` a formatação dos mesmo para facilitar a leitura e o próprio tratamento dos dados para algo maus sucinto. Irei utilziar dados de referência e irei utilizar uma tabela, sinta-se a vontado para recorrer a mesma quando achar necessário.
+
