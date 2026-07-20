@@ -90,4 +90,18 @@
 
 > Irei aborda o objeto `time`, isso nos permite manipular o tempo livremente, como hora, minuto e segundo.
 
+- Manipulando a hora:
+
+    ```ruby
+
+        puts Time.new 
+
+        puts Time.now # Para saber o tempo de agora
+
+    ```
     
+    - Aqui estamos usando o `time` para ver o tempo real.
+
+---
+
+- Ver qualquer tempo/data usando o `time`:
