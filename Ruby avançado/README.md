@@ -105,3 +105,17 @@
 ---
 
 - Ver qualquer tempo/data usando o `time`:
+
+    ```ruby
+
+        puts Time.new(2023)
+
+        puts Time.new(2023, 5, 12, 18, 43, 51) # Usando ano, mês, dia, hora, minuito e segundo
+
+    ```
+
+    - Aqui utilizei o `Time` para setar o ano, mês, dia, hora, minuto e segundo.
+
+---
+
+-
