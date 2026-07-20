@@ -194,6 +194,6 @@
 
     ```
 
-    - Podemos fazer comparações utilizando o `time`, tanto com data quanto com hora mesmo.
+    - Podemos fazer comparações utilizando o `time`, tanto com data quanto com hora mesmo. Aqui fiza a comparação se `birthday` é maior que `idependence_day`.
 
 ---

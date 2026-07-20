@@ -6,3 +6,9 @@ idependence_day = Time.new(1822, 9, 7)
 # comparações
 
 puts birthday > idependence_day
+puts summer >= winter
+puts idependence_day > winter
+
+puts birthday == winter
+
+puts summer.between?(birthday, winter)
