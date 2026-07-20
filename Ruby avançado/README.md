@@ -182,3 +182,18 @@
     - Irei usar essas variáveis para utilizar de exemplo
 
 ---
+
+- Comparações:
+
+    ```ruby
+        
+        birthday = Time.new(2001, 8, 28)
+        idependence_day = Time.new(1822, 9, 7)
+
+        puts birthday > idependence_day
+
+    ```
+
+    - Podemos fazer comparações utilizando o `time`, tanto com data quanto com hora mesmo.
+
+---
