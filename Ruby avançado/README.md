@@ -6,6 +6,7 @@
 2. [Conhecendo o objeto Date](#objeto-date)
 3. [Conhecendo o objeto Time](#objeto-time)
 4. [Comparação entre tempos](#compoaração-de-tempos)
+5. [Formatação de tempo](#formtação-de-tempo)
 
 
 ---
@@ -197,3 +198,5 @@
     - Podemos fazer comparações utilizando o `time`, tanto com data quanto com hora mesmo. Aqui fiza a comparação se `birthday` é maior que `idependence_day`.
 
 ---
+
+## Formtação de tempo
