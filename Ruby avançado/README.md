@@ -219,3 +219,22 @@
     ```
 
     - Nessa tabela podemos observar várias formas de formatação para ser utilizado tanto com `time` quanto com `date`.
+
+---
+
+- Formatando com `strf`:
+
+    ```ruby
+
+        someday = Time.new(2025, 3, 31)
+
+        puts someday
+        # puts someday.to_s
+
+        puts someday.strftime("%Y-%m-%d")
+
+    ```
+
+    - Aqui utilizei uma das práticas da tabela `%` como o `%Y` que define o ano por dígitos, `%m` que define o mês por dias e `%d` que define o dia do mês por número. Após isso utilizei o método `strftime` para fazer a transformação de `data/time` em `string`.
+
+---

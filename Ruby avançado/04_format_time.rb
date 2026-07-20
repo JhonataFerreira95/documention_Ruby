@@ -12,3 +12,10 @@
 %Y # ano em quatro dígitos
 
 =end
+
+someday = Time.new(2025, 3, 31)
+
+puts someday
+# puts someday.to_s
+
+puts someday.strftime("%Y-%m-%d")
