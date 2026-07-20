@@ -5,6 +5,7 @@
 1. [Introdução ao `ruby` avançado](#introdução)
 2. [Conhecendo o objeto Date](#objeto-date)
 3. [Conhecendo o objeto Time](#objeto-time)
+4. [Comparação entre tempos](#compoaração-de-tempos)
 
 
 ---
@@ -162,3 +163,5 @@
     - Aqui utilizei a soma da data inicial com 30 dias e com a 24 horas extras, dando um total de 31 dias.
 
 ---
+
+## Compoaração de tempos
