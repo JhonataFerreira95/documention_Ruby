@@ -132,9 +132,33 @@
         puts some_time.min
         puts some_time.sec
 
+        puts some_time.wday
+
 
     ```
 
     - Aqui atribuir os valores do `time` a uma variável para poder manipular a mesma, separar como fiz com o objeto `date`, tamném recuperei a hora, minuito e segundo.
+
+---
+
+- Fazendo a adição e subtração com `time`:
+
+    ```ruby 
+
+        # Adição e subtração
+
+        start_of_year = Time.new(2024)
+        puts start_of_year
+
+        # 60 segundos em minuto
+        # 60 mintos em uma hora
+        # 24 horas em um dia
+        # 30 dias
+
+        puts start_of_year + (60*60*24*30)
+
+    ```
+
+    - Aqui utilizei a soma da data inicial com 30 dias e com a 24 horas extras, dando um total de 31 dias.
 
 ---
