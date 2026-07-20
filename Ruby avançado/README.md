@@ -118,4 +118,23 @@
 
 ---
 
--
+- Atribuindo o `time` a uma variável:
+
+    ```ruby 
+         
+        some_time = Time.new(2023, 5, 12, 18, 43, 51) # Atribuindo a uma várivel 
+
+        puts some_time.year
+        puts some_time.month
+        puts some_time.day
+
+        puts some_time.hour
+        puts some_time.min
+        puts some_time.sec
+
+
+    ```
+
+    - Aqui atribuir os valores do `time` a uma variável para poder manipular a mesma, separar como fiz com o objeto `date`, tamném recuperei a hora, minuito e segundo.
+
+---
