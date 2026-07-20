@@ -165,3 +165,6 @@
 ---
 
 ## Compoaração de tempos
+
+> Aqui irei continuar utilizando o `Time` mas para realizar comparação de tempos.
+
