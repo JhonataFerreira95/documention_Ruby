@@ -203,3 +203,19 @@
 
 > É importante quando tratamos dados com `date` ou `time` a formatação dos mesmo para facilitar a leitura e o próprio tratamento dos dados para algo maus sucinto. Irei utilziar dados de referência e irei utilizar uma tabela, sinta-se a vontado para recorrer a mesma quando achar necessário.
 
+- Referência formatação:
+
+    ```ruby
+
+        %b # nome do mês abreviada(jan)
+        %B # nome do mês completo(january)
+        %d # dia do mês (1..31)
+        %j # dia do ano (1.366)
+        %m # mês como um número (1..12)
+        %w # dia da semana como número (0..6)
+        %y # ano em dois dígitos
+        %Y # ano em quatro dígitos
+                 
+    ```
+
+    - Nessa tabela podemos observar várias formas de formatação para ser utilizado tanto com `time` quanto com `date`.
