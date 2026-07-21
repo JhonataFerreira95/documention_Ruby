@@ -9,3 +9,7 @@ data_envio (no formato "YYYY-MM-DD") e tempo_entrega_dias (um inteiro representa
 A função deve retornar a data estimada de entrega no formato "YYYY-MM-DD", levando em consideração os dias úteis.
 
 =end
+
+def calcular_data_entrega(data_envio, tempo_entrega_dias)
+    
+end
