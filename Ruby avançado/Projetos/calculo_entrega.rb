@@ -16,6 +16,14 @@ def calcular_data_entrega(data_envio, tempo_entrega_dias)
 
 end
 
-puts "Digite a data que do envio no formato ANO/MÊS/DIA: "
-data_envio.gets.chomp
-Time.new(data_envio)
+
+puts "Digite a data do envio no formato ANO/MÊS/DIA: "
+data = gets.chomp
+
+corte = data.split("/")
+
+ano = corte[0]
+mes = corte[1]
+dia = corte[2]
+
+puts ano, mes, dia
