@@ -17,13 +17,22 @@ def calcular_data_entrega(data_envio, tempo_entrega_dias)
 end
 
 
+puts "!===================================Bem vindo ao calculador de entregas===================================!"
+
+sleep 2
+
 puts "Digite a data do envio no formato ANO/MÊS/DIA: "
 data = gets.chomp
-
 corte = data.split("/")
+data_envio_pacote = corte[0].to_i, corte[1].to_i, corte[2].to_i
 
-ano = corte[0]
-mes = corte[1]
-dia = corte[2]
+sleep 1
 
-puts ano, mes, dia
+puts "Digite em quantos dias deseja que a entrega seja feita: "
+data_entrega = gets.chomp.to_i
+
+calcular_data_entrega(data_envio_pacote, data_entrega)
+
+
+
+
