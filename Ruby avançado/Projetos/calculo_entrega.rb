@@ -12,4 +12,10 @@ A função deve retornar a data estimada de entrega no formato "YYYY-MM-DD", lev
 
 def calcular_data_entrega(data_envio, tempo_entrega_dias)
     
+    
+
 end
+
+puts "Digite a data que do envio no formato ANO/MÊS/DIA: "
+data_envio.gets.chomp
+Time.new(data_envio)
