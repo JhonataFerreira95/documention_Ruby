@@ -11,7 +11,8 @@ A função deve retornar a data estimada de entrega no formato "YYYY-MM-DD", lev
 =end
 
 def calcular_data_entrega(data_envio, tempo_entrega_dias)
-    
+    tempo_total = 1 + tempo_entrega_dias
+
     
 
 end
@@ -23,6 +24,22 @@ sleep 2
 
 puts "Digite a data do envio no formato ANO/MÊS/DIA: "
 data = gets.chomp
+
+def saber_dia(dia)
+
+    dia.monday?
+    dia.thuesday?
+    dia.wednesday?
+    dia.thuesday?
+    dia.friday?
+    dia.saturday?
+    dia.sunday?
+
+    return dia
+end
+
+saber_dia(data)
+
 corte = data.split("/")
 data_envio_pacote = corte[0].to_i, corte[1].to_i, corte[2].to_i
 
