@@ -22,8 +22,8 @@ puts "!===================================Bem vindo ao calculador de entregas===
 
 sleep 2
 
-puts "Digite a data do envio no formato ANO/MÊS/DIA: "
-data = gets.chomp
+puts "Digite a data do envio no formato ANO, MÊS, DIA: "
+data = gets.chomp.to_i
 
 def saber_dia(dia)
 
@@ -36,19 +36,19 @@ def saber_dia(dia)
     domingo = dia.sunday?
 
     if segunda == true
-        return se1
-    elsif dia.tuesday? == true
-        return dia.tuesday
-    elsif dia.wednesday? == true
-        return dia.wednesday
-    elsif dia.thursday? == true
-        return dia.thuesday
-    elsif dia.friday? == true
-        return dia.friday?
-    elsif dia.saturday? == true
-        return dia.saturday?
-    else
-        return dia.monday?
+        return segunda
+    elsif terca == true
+        return terca
+    elsif quarta == true
+        return quarta
+    elsif quinta == true
+        return quinta
+    elsif sexta == true
+        return sexta
+    elsif sabado == true
+        return sabado
+    elsif domingo == true
+        return domingo
     end
 
 end
@@ -56,7 +56,7 @@ end
 saber_dia(data)
 
 corte = data.split("/")
-data_envio_pacote = corte[0].to_i, corte[1].to_i, corte[2].to_i
+data_envio_pacote = corte[0], corte[1], corte[2]
 
 sleep 1
 
