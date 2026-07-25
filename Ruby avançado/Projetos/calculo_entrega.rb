@@ -35,7 +35,16 @@ def saber_dia(dia)
     dia.saturday?
     dia.sunday?
 
-    return dia
+    if dia.monday == true
+    
+    elsif dia.thuesday? == true
+    elsif dia.wednesday? == true
+    elsif dia.thuesday == true
+    elsif dia.friday? == true
+    elsif dia.saturday? == true
+    else
+    end
+
 end
 
 saber_dia(data)
