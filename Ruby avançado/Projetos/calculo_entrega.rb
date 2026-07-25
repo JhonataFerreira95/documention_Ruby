@@ -27,13 +27,21 @@ data = gets.chomp
 
 def saber_dia(dia)
 
-    if dia.monday? == true
-        return dia.monday?
-    elsif dia.thuesday? == true
-        return dia.thuesday?
+    segunda = dia.monday?
+    terca = dia.thuesday?
+    quarta = dia.wednesday?
+    quinta = dia.thuesday?
+    sexta = dia.friday?
+    sabado = dia.saturday?
+    domingo = dia.sunday?
+
+    if segunda == true
+        return se1
+    elsif dia.tuesday? == true
+        return dia.tuesday
     elsif dia.wednesday? == true
-        return dia.wednesday?
-    elsif dia.thuesday == true
+        return dia.wednesday
+    elsif dia.thursday? == true
         return dia.thuesday
     elsif dia.friday? == true
         return dia.friday?
