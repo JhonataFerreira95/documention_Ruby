@@ -23,40 +23,42 @@ puts "!===================================Bem vindo ao calculador de entregas===
 sleep 2
 
 puts "Digite a data do envio no formato ANO, MÊS, DIA: "
-data = gets.chomp.to_i
+entrada = gets.chomp
+
+corte = entrada.split(",")
+data_envio_pacote = corte[0].to_i, corte[1].to_i, corte[2].to_i
+
+data = Time.new(corte[0], corte[1], corte[3])
 
 def saber_dia(dia)
 
     segunda = dia.monday?
-    terca = dia.thuesday?
+    terca = dia.tuesday?
     quarta = dia.wednesday?
-    quinta = dia.thuesday?
+    quinta = dia.thursday?
     sexta = dia.friday?
     sabado = dia.saturday?
     domingo = dia.sunday?
 
     if segunda == true
-        return segunda
+        return puts "Hoje é domingo? #{segunda}"
     elsif terca == true
-        return terca
+        return puts "Hoje é domingo? #{t}"
     elsif quarta == true
-        return quarta
+        return puts "Hoje é domingo? #{domingo}"
     elsif quinta == true
-        return quinta
+        return puts "Hoje é domingo? #{domingo}"
     elsif sexta == true
-        return sexta
+        return puts "Hoje é domingo? #{domingo}"
     elsif sabado == true
-        return sabado
+        return puts "Hoje é domingo? #{domingo}"
     elsif domingo == true
-        return domingo
+        return puts "Hoje é domingo? #{domingo}"
     end
 
 end
 
-saber_dia(data)
-
-corte = data.split("/")
-data_envio_pacote = corte[0], corte[1], corte[2]
+puts saber_dia(data)
 
 sleep 1
 
