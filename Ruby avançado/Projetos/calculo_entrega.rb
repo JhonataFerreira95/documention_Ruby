@@ -26,9 +26,11 @@ puts "Digite a data do envio no formato ANO, MÊS, DIA: "
 entrada = gets.chomp
 
 corte = entrada.split(",")
-data_envio_pacote = corte[0].to_i, corte[1].to_i, corte[2].to_i
+ano = corte[0]
+mes = corte[1]
+dia = corte[2]
 
-data = Time.new(corte[0], corte[1], corte[3])
+data = Time.new(ano, mes, dia)
 
 def saber_dia(dia)
 
@@ -41,19 +43,19 @@ def saber_dia(dia)
     domingo = dia.sunday?
 
     if segunda == true
-        return puts "Hoje é domingo? #{segunda}"
+         puts "Esse dia é segunda"
     elsif terca == true
-        return puts "Hoje é domingo? #{t}"
+         puts "Esse dia é terca"
     elsif quarta == true
-        return puts "Hoje é domingo? #{domingo}"
+         puts "Esse dia é quarta"
     elsif quinta == true
-        return puts "Hoje é domingo? #{domingo}"
+         puts "Esse dia é quinta"
     elsif sexta == true
-        return puts "Hoje é domingo? #{domingo}"
+         puts "Esse dia é sexta"
     elsif sabado == true
-        return puts "Hoje é domingo? #{domingo}"
+         puts "Esse dia é sabado"
     elsif domingo == true
-        return puts "Hoje é domingo? #{domingo}"
+        puts "Esse dia é domingo"
     end
 
 end
