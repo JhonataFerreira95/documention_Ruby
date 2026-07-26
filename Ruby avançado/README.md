@@ -7,7 +7,7 @@
 3. [Conhecendo o objeto Time](#objeto-time)
 4. [Comparação entre tempos](#compoaração-de-tempos)
 5. [Formatação de tempo](#formtação-de-tempo)
-
+6. [Expressões regulares com `ruby`](#expressões-regulares-com-ruby)
 
 ---
 
@@ -238,3 +238,6 @@
     - Aqui utilizei uma das práticas da tabela `%` como o `%Y` que define o ano por dígitos, `%m` que define o mês por dias e `%d` que define o dia do mês por número. Após isso utilizei o método `strftime` para fazer a transformação de `data/time` em `string`.
 
 ---
+
+## Expressões regulares com `Ruby`
+
