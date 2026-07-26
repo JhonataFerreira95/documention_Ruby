@@ -43,13 +43,13 @@ def calcular_data_entrega(data_envio, tempo_entrega_envios)
 
      if (segunda == true or terca == true) or (quarta == true or quinta == true) or  sexta == true
           semana_entrega = $data_atual + tempo_entrega_envios
-          puts semana_entrega
+          return semana_entrega
      elsif sabado == true
           sabado_entrega = $data_atual + 1 + tempo_entrega_envios
-          puts sabado_entrega
+          return sabado_entrega
      else
           domingo_entrega = $data_atual + 2 + tempo_entrega_envios
-          puts domingo_entrega
+          return domingo_entrega
      end
 
 end
@@ -59,9 +59,7 @@ sleep 1
 puts "Digite em quantos data_envios deseja que a entrega seja feita: "
 dias_da_entraga= gets.chomp.to_i
 
-calcular_data_entrega(data, dias_da_entraga)
-
-puts ""
+puts "A sua entrega de #{dias_da_entraga} dias úteis será entregue com o prazo máximo até #{calcular_data_entrega(data, dias_da_entraga)}"
 
 
 
