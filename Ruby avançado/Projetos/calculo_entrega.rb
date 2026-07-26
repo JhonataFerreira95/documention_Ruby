@@ -11,9 +11,12 @@ A função deve retornar a data estimada de entrega no formato "YYYY-MM-DD", lev
 =end
 
 def calcular_data_entrega(data_envio, tempo_entrega_dias)
-    tempo_total = 1 + tempo_entrega_dias
-
     
+     if data_envio == sabado
+
+     else
+                 
+     end
 
 end
 
