@@ -26,7 +26,7 @@ data_envio = corte[2]
 
 data = Time.new(ano, mes, data_envio)
 
-def calcular_data_entrega(data_envio, tempo_entrega_data_envios)
+def calcular_data_entrega(data_envio, tempo_entrega_envios)
 
      $segunda = data_envio.monday?
      $terca = data_envio.tuesday?
@@ -35,11 +35,13 @@ def calcular_data_entrega(data_envio, tempo_entrega_data_envios)
      $sexta = data_envio.friday?
      $sabado = data_envio.saturday?
      $domingo = data_envio.sunday?
-    
-     if data_envio == $sexta
+
+
+
+     if ($segunda == true or $terca == true) or ($quarta == true or $quinta == true) or  $sexta == true
           puts "é o sexo"
      else
-          puts "f"       
+          puts "f"
      end
 
 end
@@ -47,9 +49,9 @@ end
 sleep 1
 
 puts "Digite em quantos data_envios deseja que a entrega seja feita: "
-data_entrega = gets.chomp.to_i
+dias_da_entraga= gets.chomp.to_i
 
-calcular_data_entrega(data, data_entrega)
+calcular_data_entrega(data, dias_da_entraga)
 
 
 
