@@ -10,7 +10,7 @@ A função deve retornar a data estimada de entrega no formato "YYYY-MM-DD", lev
 
 =end
 
-$segunda = $terca = $quarta = $quinta = $sexta = $sabado = $domingo = 0
+require 'date'
 
 puts "!===================================Bem vindo ao calculador de entregas===================================!"
 
@@ -20,28 +20,34 @@ puts "Digite a data do envio no formato ANO, MÊS, data_envio: "
 entrada = gets.chomp
 
 corte = entrada.split(",")
-ano = corte[0]
-mes = corte[1]
-data_envio = corte[2]
+$ano = corte[0]
+$mes = corte[1]
+$data_envio = corte[2]
 
-data = Time.new(ano, mes, data_envio)
+data = Time.new($ano, $mes, $data_envio)
 
 def calcular_data_entrega(data_envio, tempo_entrega_envios)
 
-     $segunda = data_envio.monday?
-     $terca = data_envio.tuesday?
-     $quarta = data_envio.wednesday?
-     $quinta = data_envio.thursday?
-     $sexta = data_envio.friday?
-     $sabado = data_envio.saturday?
-     $domingo = data_envio.sunday?
+     segunda = data_envio.monday?
+     terca = data_envio.tuesday?
+     quarta = data_envio.wednesday?
+     quinta = data_envio.thursday?
+     sexta = data_envio.friday?
+     sabado = data_envio.saturday?
+     domingo = data_envio.sunday?
+
+     Date.new(ano,)
 
 
-
-     if ($segunda == true or $terca == true) or ($quarta == true or $quinta == true) or  $sexta == true
-          puts "é o sexo"
+     if (segunda == true or terca == true) or (quarta == true or quinta == true) or  sexta == true
+          semana_entrega = Date.today + tempo_entrega_envios
+          puts semana_entrega
+     elsif sabado == true
+          sabado_entrega = Date.today + 2 + tempo_entrega_envios
+          puts sabado_entrega
      else
-          puts "f"
+          domingo_entrega = Date.today + 1 + tempo_entrega_envios
+          puts domingo_entrega
      end
 
 end
@@ -52,6 +58,9 @@ puts "Digite em quantos data_envios deseja que a entrega seja feita: "
 dias_da_entraga= gets.chomp.to_i
 
 calcular_data_entrega(data, dias_da_entraga)
+
+
+
 
 
 
