@@ -241,3 +241,4 @@
 
 ## Expressões regulares com `Ruby`
 
+> Expressão regulares é termo dado a busca por padrões textuais em um determinado dado de texto. Posso verificar se existe uma determinada frase começa por uma letra X e termina pela mesma letra x.
