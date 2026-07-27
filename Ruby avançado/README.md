@@ -267,6 +267,19 @@
 
     ```
 
-    - Aqui utilizei o `start_with?` para verificar se no inicio da `string` começa com `A`, que de fato começa.
+    - Aqui utilizei o `start_with?` para verificar se no inicio da `string` começa com `A`, que de fato começa, vale ressaltar que se for uma letra minúscula ou maiscúla com o `start_with` ambas tem diferenças.
+---
+
+- Usando o `end_with`:
+
+    ```ruby
+
+        phrase = "Bleach the calamity"
+
+        p phrase.end_with?("j")
+
+    ```
+
+    - Usei o `end_with` para verificar a `string` se a mesma terminava com `j` minúsculo.
 
 ---
