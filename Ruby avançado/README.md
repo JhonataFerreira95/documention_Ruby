@@ -274,12 +274,12 @@
 
     ```ruby
 
-        phrase = "Bleach the calamity"
+        phrase = "Bleach the calamity!"
 
-        p phrase.end_with?("j")
+        p phrase.end_with?("calamity")
 
     ```
 
-    - Usei o `end_with` para verificar a `string` se a mesma terminava com `j` minúsculo.
+    - Usei o `end_with` para verificar a `string` se a mesma terminava com `calamity` mas vai resultar em `false` no terminal, já que não incluimos a `!` no final da frase.
 
 ---
