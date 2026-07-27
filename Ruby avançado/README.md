@@ -243,7 +243,7 @@
 
 > Expressão regulares é termo dado a busca por padrões textuais em um determinado dado de texto. Posso verificar se existe uma determinada frase começa por uma letra X e termina pela mesma letra x.
 
-- Expressão regular:
+- Usanso o `include?`:
 
     ```ruby
 
@@ -254,3 +254,19 @@
     ```
 
     - Aqui usei o `include?` para verificar a `string`, assim percorrendo a mesma atrás da palavra `cala`.
+
+---
+
+- Usando o `start_with`:
+
+    ```ruby
+
+        phrase = "Bleach the calamity"
+
+        p phrase.start_with?("A")
+
+    ```
+
+    - Aqui utilizei o `start_with?` para verificar se no inicio da `string` começa com `A`, que de fato começa.
+
+---
