@@ -242,3 +242,15 @@
 ## Expressões regulares com `Ruby`
 
 > Expressão regulares é termo dado a busca por padrões textuais em um determinado dado de texto. Posso verificar se existe uma determinada frase começa por uma letra X e termina pela mesma letra x.
+
+- Expressão regular:
+
+    ```ruby
+
+        phrase = "Bleach the calamity"
+
+        p phrase.include?("cala")
+
+    ```
+
+    - Aqui usei o `include?` para verificar a `string`, assim percorrendo a mesma atrás da palavra `cala`.
