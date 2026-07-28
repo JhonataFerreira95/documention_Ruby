@@ -8,6 +8,7 @@
 4. [Comparação entre tempos](#compoaração-de-tempos)
 5. [Formatação de tempo](#formtação-de-tempo)
 6. [Expressões regulares com `ruby`](#expressões-regulares-com-ruby)
+7. [Método scam](#metódo-scan)
 
 ---
 
@@ -363,3 +364,5 @@
     - Aqui usamos o `pattern` para detectar se existe uma palavra em determinado texto, basta usar o `pattern = /palavra_deseja/` e após isso criar uma condição ou loop dependendo da sua situação para verificar o padrão das palavras. 
 
 ---
+
+## Metódo `Scan`
