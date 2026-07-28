@@ -329,3 +329,13 @@
     - Observa-se que utilizei o `=~` isso faz com que eu tente obter um a primeira ocorrência dessa lentra na minha `string`, que no caso é a posição 0. Funciona da mesma forma como percorrer um `array`.
 
     ---
+
+    ```ruby
+
+      p phrase =~ /a/  
+
+    ```
+
+    - Aqui estou buscando a 1° ocorrência da letra `a` minúscula.
+
+    ---

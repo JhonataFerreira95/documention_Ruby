@@ -18,4 +18,7 @@ p phrase.end_with?("calamity")
 # \\Z: Corresponde ao final da string, ou ao final da linha se a opção multiline estiver habilitada.
 
 p /T/.class # regexp
+
+# 1° ocorrência da letra B
+
 p phrase =~ /B/ # verificando a ocorrência na string
