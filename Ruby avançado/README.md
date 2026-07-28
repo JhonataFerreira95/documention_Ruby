@@ -310,4 +310,22 @@
 
 - Utilizando as expressões regulares:
 
-    
+    ```ruby
+
+        p /T/.class
+
+    ```
+
+    - Se executar esse código acima vai receber em terminal um `regexp`, é uma sequência de caracteres que forma um padrão de busca.
+
+    ---
+
+    ```ruby
+
+        p phrase =~ /B/
+
+    ```
+
+    - Observa-se que utilizei o `=~` isso faz com que eu tente obter um a primeira ocorrência dessa lentra na minha `string`, que no caso é a posição 0. Funciona da mesma forma como percorrer um `array`.
+
+    ---

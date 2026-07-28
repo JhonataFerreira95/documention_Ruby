@@ -16,3 +16,6 @@ p phrase.end_with?("calamity")
 # \\B: Corresponde a qualquer posição que não seja uma fronteira de palavra.
 # \\A: Corresponde ao início da string.
 # \\Z: Corresponde ao final da string, ou ao final da linha se a opção multiline estiver habilitada.
+
+p /T/.class # regexp
+p phrase =~ /B/ # verificando a ocorrência na string
