@@ -375,4 +375,14 @@
 
         string = "A linguagem ruby é poderosa e versátil. Ruby é divertido de aprender"
 
+        pattern = /Ruby/
+
+        results = string.scan(pattern)
+
+        puts results
+
     ```
+
+    - Aqui eu não quis busca apenas a 1° ocorrência como no método das expressões e sim todas as vezes que a palavra `ruby` aparece, para isso manipulei uma `string` através do `pattern` novamente e definir que todos os resultado da `string` sejam retornado mas para isso usei o método `scan` para analisar e retorna esses resultados.
+
+---
