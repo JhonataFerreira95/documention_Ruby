@@ -366,3 +366,5 @@
 ---
 
 ## Metódo `Scan`
+
+> O método `scan` é literalmente utilizado para escanear `string`, `int`, `boolean`, `array` e etc...
