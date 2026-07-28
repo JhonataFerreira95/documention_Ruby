@@ -305,3 +305,9 @@
     - \\A: Corresponde ao início da string.
 
     - \\Z: Corresponde ao final da string, ou ao final da linha se a opção multiline estiver habilitada.
+
+---
+
+- Utilizando as expressões regulares:
+
+    
