@@ -22,3 +22,7 @@ p /T/.class # regexp
 # 1° ocorrência da letra B
 
 p phrase =~ /B/ # verificando a ocorrência na string
+
+# 1° ocorrência da letra a
+
+p phrase =~ /a/  

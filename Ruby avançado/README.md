@@ -339,3 +339,9 @@
     - Aqui estou buscando a 1° ocorrência da letra `a` minúscula.
 
     ---
+
+    - Vale ressaltar que não buscamos apenas por letra mas por palvaras completas ou qualquer tipo que esteja presente em uma string.
+
+---
+
+- Padrão:
