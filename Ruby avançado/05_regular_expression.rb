@@ -26,3 +26,15 @@ p phrase =~ /B/ # verificando a ocorrência na string
 # 1° ocorrência da letra a
 
 p phrase =~ /a/  
+
+# Padrão
+
+string = "Olá, mundo!"
+
+pattern = /mundo/
+
+if string =~ pattern
+  puts "A string contém a palavra 'mundo'."
+else
+  puts "A string não contém a palavra 'mundo'."
+end

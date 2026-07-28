@@ -332,11 +332,11 @@
 
     ```ruby
 
-      p phrase =~ /a/  
+      p phrase =~ /cala/  
 
     ```
 
-    - Aqui estou buscando a 1° ocorrência da letra `a` minúscula.
+    - Aqui estou buscando a 1° ocorrência da palavra `cala` minúscula.
 
     ---
 
@@ -344,4 +344,22 @@
 
 ---
 
-- Padrão:
+- Utilizando pattern:
+
+    ```Ruby
+
+        string = "Olá, mundo!"
+
+        pattern = /mundo/
+
+        if string =~ pattern
+            puts "A string contém a palavra 'mundo'."
+        else
+            puts "A string não contém a palavra 'mundo'."
+        end
+
+    ```
+
+    - Aqui usamos o `pattern` para detectar se existe uma palavra em determinado texto, basta usar o `pattern = /palavra_deseja/` e após isso criar uma condição ou loop dependendo da sua situação para verificar o padrão das palavras. 
+
+---
