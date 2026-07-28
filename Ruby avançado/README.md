@@ -379,10 +379,27 @@
 
         results = string.scan(pattern)
 
-        puts results
+        puts "O padrão 'ruby' foi encontrado #{results.length} vezes na string."
+        puts "As ocorrências encontradas foram: #{results.join(',')}
 
     ```
 
     - Aqui eu não quis busca apenas a 1° ocorrência como no método das expressões e sim todas as vezes que a palavra `ruby` aparece, para isso manipulei uma `string` através do `pattern` novamente e definir que todos os resultado da `string` sejam retornado mas para isso usei o método `scan` para analisar e retorna esses resultados.
+
+---
+
+- Extraíndo todos os dígitos de uma string com `scan`:
+
+    ```ruby
+
+        string2 = "A OpenAI lançou o GPT-3 e o GPT-4 em 20202."
+
+        number = string2.scan(/\d+/)
+
+        puts "Os números inteiros encontrados na string são: #{numeros.join(', ')}"
+
+    ```
+
+    - Aqui estou extraíndo da `string` os número utilizando o `scan` com enfâse no `/\d+/` já que o mesmo corresponde a qualquer dígito de 0 a 9.
 
 ---
