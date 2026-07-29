@@ -8,7 +8,8 @@
 4. [Comparação entre tempos](#compoaração-de-tempos)
 5. [Formatação de tempo](#formtação-de-tempo)
 6. [Expressões regulares com `ruby`](#expressões-regulares-com-ruby)
-7. [Método scam](#metódo-scan)
+7. [Método scan](#metódo-scan)
+8. [Extração de números](#extração-de-número-detro-das-expressões-regulares)
 
 ---
 
@@ -403,3 +404,7 @@
     - Aqui estou extraíndo da `string` os número utilizando o `scan` com enfâse no `/\d+/` já que o mesmo corresponde a qualquer dígito de 0 a 9.
 
 ---
+
+## Extração de número detro das expressões regulares
+
+> Aqui irei aborda com extrair número dentro das expressões regulares, de uma forma detalhada. 
