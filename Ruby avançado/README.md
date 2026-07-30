@@ -457,4 +457,20 @@
 
     ```ruby
 
+        strings = [ "Sosuke aizen", "Olá, aizen Sosuke", "O capitão aizen jamais faria isso"]
+
+        strings.each do |string|
+            if string =~ /\ASosuke.*aizen\z/
+            puts "#{string} corresponde ao padrão"
+            else
+            puts "#{string} não corresponde ao padrão"
+            end
+        end
+
+    ```
+
+    - Aqui criei um `array` com determinadas frases, iremos anlisar o padrão dentro dessa mesma `string` utilizando o `/\A` para iniciar a verificação da `string`, após usamos o `.*` para verificar se a frase terminar com determinada palavra, assim verificando se possuí um padrão. Para fazer a verificação completa da `string` abri um loop para percorrer a `string` com `.each` para verificar e validar com uma condicional se `if string =~ /\ASosuke.*aizen\z/` para obeter a primeira ocorrência da `string` e com isso aplicar a nossa regra de verificação do inicio e final da mesma com `/\ASosuke.*aizen\z/`.
+
+---
+
 
