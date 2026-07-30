@@ -453,4 +453,8 @@
 
 > Para que utilizamos `âncora`? Serve para avaliar o que começa COM e o que termina COM dentro de uma determinada`string`.
 
+- Veirificação de `string`:
+
+    ```ruby
+
 
