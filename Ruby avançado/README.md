@@ -96,6 +96,8 @@
 
 > Irei aborda o objeto `time`, isso nos permite manipular o tempo livremente, como hora, minuto e segundo.
 
+---
+
 - Manipulando a hora:
 
     ```ruby
@@ -173,6 +175,8 @@
 
 > Aqui irei continuar utilizando o `time` mas para realizar comparação de tempos.
 
+---
+
 - Aqui estou implementado o `time` para realizar os teste com variáveis, como não passei nenhum parâmentro como hora, minuto e segundo, por default será atribuído 0.000:
 
     ```ruby
@@ -206,6 +210,8 @@
 ## Formtação de tempo
 
 > É importante quando tratamos dados com `date` ou `time` a formatação dos mesmo para facilitar a leitura e o próprio tratamento dos dados para algo maus sucinto. Irei utilziar dados de referência e irei utilizar uma tabela, sinta-se a vontado para recorrer a mesma quando achar necessário.
+
+---
 
 - Referência formatação:
 
@@ -246,6 +252,8 @@
 ## Expressões regulares com `Ruby`
 
 > Expressão regulares é termo dado a busca por padrões textuais em um determinado dado de texto. Posso verificar se existe uma determinada frase começa por uma letra X e termina pela mesma letra x.
+
+---
 
 - Usanso o `include?`:
 
@@ -372,6 +380,8 @@
 
 > O método `scan` é literalmente utilizado para escanear `string`, `int`, `boolean`, `array` e etc...
 
+---
+
 - Utilizando o `scan`:
 
     ```ruby
@@ -410,6 +420,8 @@
 ## Extração de número detro das expressões regulares
 
 > Aqui irei aborda com extrair número dentro das expressões regulares, de uma forma detalhada. 
+
+---
 
 - para coletar números inteiros de 0..9 utilizamos o /\d+/. Para coletar números inteiros de 0..9 utilizamos o /-?\d+/
     
@@ -454,6 +466,8 @@
 
 > Para que utilizamos `âncora`? Serve para avaliar o que começa COM e o que termina COM dentro de uma determinada`string`.
 
+---
+
 - Veirificação de `string`:
 
     ```ruby
@@ -495,6 +509,12 @@
 ---
 
 ## Miscelânea
+
+> A `miscelânea` em `Ruby` refere-se a regras gerais de sintaxe, como o uso de quebras de linha para terminar expressões, operadores no fim da linha e ponto e vírgula.
+
+---
+
+
 
 
 
