@@ -431,3 +431,17 @@
 ---
 
 - Extraindo e somando todos os números inteiros de uma `string` com `scan`:
+
+    ```ruby
+
+        string2 = "Aizen tem 1 hogyoku, tem 300 anos e 4 selos muken"
+
+        numbers = string2.scan(/\d+/).map(&:to_i)
+        sum = numbers.sum
+
+        puts "Os números encontrados são #{numbers.join(',')}"
+        puts "A soma de todos os números é: #{sum}"
+
+    ```
+
+    - Aqui utilizei o método `scan` com o `/\d+/` para coletar todos os números da `string`, após isso passei um `.map` com a condição `&:to_i` para percorrer a `string` e transforma todos os caracaters de números em inteiros e após isso usei o métodos `sum` para soma os itens do meu `map`.
