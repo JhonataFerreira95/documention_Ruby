@@ -489,5 +489,6 @@
 
     ```
 
+    - Aqui verifquei o padrão que termina com 3.2, para usei expressões regulares para validar o inicio da `string` com `=~` após usei o a verficação da expressão `/^Ruby.*3\.2$/` para veirifcar o padrão se inicia com `Ruby` e termina com `3.2`, para percorrer a `string` usei um `each` para validar a verificação da expressão regular usei uma condiconal. 
 
 
