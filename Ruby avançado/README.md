@@ -411,8 +411,16 @@
 
 - para coletar números inteiros de 0..9 utilizamos o /\d+/; 
     
-    - corresponde a um ou mais digítos. Pode encontrar qualquer sequência contínua de dígitos:
+    - corresponde a um ou mais digítos. Pode encontrar qualquer sequência contínua de dígitos.
 
+        - Extraindo números inteiros e decímais:
+
+            ```ruby
+
+
+            ```
+
+---
 
 - para coletar números inteiros de 0..9 utilizamos o /-?\d+/;
 
