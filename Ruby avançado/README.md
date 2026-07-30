@@ -417,8 +417,16 @@
 
             ```ruby
 
+                string = "A temperatura é 25° graus celsius e o preço é 19.99."
+
+                numeros_int = string.scan(/-?\d+/)
+                numeros_float = string.scan(/-?\d+\.\d+/)
+
+                puts "números inteiros encontratos #{numeros_int.join(',')}"
 
             ```
+
+            - Aqui utilizei as expressões regulares para encontra os números inteiro e decimais. Como já mencionei antes o `\d+/` é responsável pelos dígitos de 1 à 9, sendo assim capaz de encontra todos os dígitos utilizando o método `scan`.
 
 ---
 
