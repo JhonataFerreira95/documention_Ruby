@@ -10,3 +10,13 @@ numeros_float = string.scan(/-?\d+\.\d+/)
 
 puts "números inteiros encontratos #{numeros_int.join(',')}"
 puts "números decimais encontratos #{numeros_float.join(',')}"
+
+# 2 - Extraindo e somando todos os números inteiros de uma string com scan
+
+string2 = "Aizen tem 1 hogyoku, tem 300 anos e 4 selos muken"
+
+numbers = string2.scan(/\d+/).map(&:to_i)
+sum = numbers.sum
+
+puts "Os números encontrados são #{numbers.join(',')}"
+puts "A soma de todos os números é: #{sum}"

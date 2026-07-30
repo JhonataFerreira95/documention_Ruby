@@ -409,7 +409,7 @@
 
 > Aqui irei aborda com extrair número dentro das expressões regulares, de uma forma detalhada. 
 
-- para coletar números inteiros de 0..9 utilizamos o /\d+/; 
+- para coletar números inteiros de 0..9 utilizamos o /\d+/. Para coletar números inteiros de 0..9 utilizamos o /-?\d+/
     
     - corresponde a um ou mais digítos. Pode encontrar qualquer sequência contínua de dígitos.
 
@@ -430,6 +430,4 @@
 
 ---
 
-- para coletar números inteiros de 0..9 utilizamos o /-?\d+/;
-
-    - corresponde a um hífin opcional. Seguido por um ou mais dígitos numéricos de 0..9.
+- Extraindo e somando todos os números inteiros de uma `string` com `scan`:
