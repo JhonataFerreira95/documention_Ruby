@@ -1,0 +1,1 @@
+# Exemplo de exclusão de caracteres usando expressões regulares
