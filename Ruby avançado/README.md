@@ -10,6 +10,7 @@
 6. [Expressões regulares com `ruby`](#expressões-regulares-com-ruby)
 7. [Método scan](#metódo-scan)
 8. [Extração de números](#extração-de-número-detro-das-expressões-regulares)
+9. [Utizando âncora](#utilizando-âncora)
 
 ---
 
@@ -445,3 +446,9 @@
     ```
 
     - Aqui utilizei o método `scan` com o `/\d+/` para coletar todos os números da `string`, após isso passei um `.map` com a condição `&:to_i` para percorrer a `string` e transforma todos os caracaters de números em inteiros e após isso usei o métodos `sum` para soma os itens do meu `map`.
+
+---
+
+## Utilizando âncora
+
+
