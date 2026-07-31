@@ -518,8 +518,19 @@
 
     ```ruby
 
+        strings = ["apple", "cd", "cherry", "dt", "grape", "fig"]
+
+        strings.each do |string|
+        if string =~ /^[^aeiou]+$/
+            puts "#{string} contém apenas consoantes"
+        else
+            puts "#{string} contém vogais"
+        end 
+        end
 
     ```
+
+    - Utilzei um `array` para armazenar as `strings` assim podendo analisar onde se encontram vogais e consoantes. Para isso pecorrir o mesmo com um `each`, dentro do loop utilizei uma condicional para verificar a ocorrência `=~` se há falta de vogais no `if`, caso não tenha imprimos as ocorrências com vogais no `else`.
 
 
 
