@@ -546,7 +546,7 @@
 
             puts "Usando sub: "
             puts "String original: #{strings2}"
-            puts "String modificada: #{novo_string_gsub}"
+            puts "String modificada: #{novo_string_sub}"
 
         ```
 
@@ -559,9 +559,19 @@
 
         ```ruby
 
+            strings2 = "A linguagem Ruby é fácil de aprender e Ruby é divertida."
 
+            novo_string_gsub = strings2.gsub(/Ruby/, 'Python')
+
+            puts "Usando gsub: "
+            puts "String original: #{strings2}"
+            puts "String modificada: #{novo_string_gsub}"
 
         ```
+
+        - O `gsub`, toda vez que ele encontra a palavra que foi definida para substituição no escopo, ela será trocada pela palavra desejada. 
+
+---
 
 
 

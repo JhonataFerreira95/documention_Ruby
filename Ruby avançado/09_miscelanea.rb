@@ -15,8 +15,13 @@ end
 strings2 = "A linguagem Ruby é fácil de aprender e Ruby é divertida."
 
 novo_string_sub = strings2.sub(/Ruby/, 'Python')
-novo_string_gsub = strings2.sub(/Ruby/, 'Python')
+novo_string_gsub = strings2.gsub(/Ruby/, 'Python')
 
 puts "Usando sub: "
+puts "String original: #{strings2}"
+puts "String modificada: #{novo_string_sub}"
+
+
+puts "Usando gsub: "
 puts "String original: #{strings2}"
 puts "String modificada: #{novo_string_gsub}"
