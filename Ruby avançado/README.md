@@ -532,6 +532,15 @@
 
     - Utilzei um `array` para armazenar as `strings` assim podendo analisar onde se encontram vogais e consoantes. Para isso pecorrir o mesmo com um `each`, dentro do loop utilizei uma condicional para verificar a ocorrência `=~` se há falta de vogais no `if`, caso não tenha imprimos as ocorrências com vogais no `else`.
 
+---
+
+- Exemplos de uso do `sub` e o `gsub` em `Ruby` para substituir partes de uma string:
+
+    ```ruby
+
+
+    ```
+
 
 
 

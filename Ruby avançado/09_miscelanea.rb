@@ -9,3 +9,5 @@ strings.each do |string|
     puts "#{string} contém vogais"
   end 
 end
+
+# Exemplos de uso do sub e o gsub em Ruby para substituir partes de uma string
