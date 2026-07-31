@@ -536,10 +536,32 @@
 
 - Exemplos de uso do `sub` e o `gsub` em `Ruby` para substituir partes de uma string:
 
-    ```ruby
+    - Usando o `sub`:
+
+        ```ruby
+
+            strings2 = "A linguagem Ruby é fácil de aprender e Ruby é divertida."
+
+            novo_string_sub = strings2.sub(/Ruby/, 'Python')
+
+            puts "Usando sub: "
+            puts "String original: #{strings2}"
+            puts "String modificada: #{novo_string_gsub}"
+
+        ```
+
+        - O `sub` pega a primeira ocorrência na `string` e substituir pela palavra desejada definida no escopo do `sub`, que no caso foi `python`
+    
+
+    ---
+
+    - Usando o `gsub`
+
+        ```ruby
 
 
-    ```
+
+        ```
 
 
 
