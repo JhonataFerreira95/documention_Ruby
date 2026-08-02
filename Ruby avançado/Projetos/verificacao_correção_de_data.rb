@@ -16,18 +16,20 @@ while true
   puts "Digite a data no formato DIA/MÊS/ANO: "
   usuario_entrada = gets.chomp
 
-  if usuario_entrada.length == 10 or usuario_entrada.length == 10
-    corte = usuario_entrada.split("/")
-    dia = corte[0].to_i
-    mes = corte[1].to_i
-    ano = corte[2].to_i
+
+
+  if usuario_entrada =~ /\A(\d{2})\/(\d{2})\/(\d{4})\z/
+    
+    dia, mes, ano = usuario_entrada.scan(/\d+/)
+
+    nova_data = "#{ano}-#{mes}-#{dia}"
 
     puts "A data digitada está correta? [S/N]: "
     opcao = gets.chomp.upcase
 
     if opcao.include?("S")
 
-      puts "A data é #{ano}/#{mes}/#{dia}"
+      puts "A data no formato 'dd/mm/aaaa' é válida e convertida para o formato 'aaaa-mm-dd': #{nova_data}"
       sleep 2
 
       break
