@@ -16,10 +16,16 @@ while true
   puts "Digite a data no formato DIA/MÊS/ANO: "
   usuario_entrada = gets.chomp
 
-  corte = usuario_entrada.split("/")~
-  dia = corte[0].to_i
-  mes = corte[1].to_i
-  ano = corte[2].to_i
+  if usuario_entrada == true
+    corte = usuario_entrada.split("/")
+    dia = corte[0].to_i
+    mes = corte[1].to_i
+    ano = corte[2].to_i
+
+  else
+    puts "Digite um valor que corresponda a DIA/MÊS/ANO."
+    next
+  end
 
 end
 
