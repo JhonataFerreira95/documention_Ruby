@@ -13,8 +13,13 @@ sleep 1
 
 while true
 
-  puts "Digite a data no formato DIA, MÊS, ANO: "
+  puts "Digite a data no formato DIA/MÊS/ANO: "
   usuario_entrada = gets.chomp
+
+  corte = usuario_entrada.split("/")~
+  dia = corte[0].to_i
+  mes = corte[1].to_i
+  ano = corte[2].to_i
 
 end
 
