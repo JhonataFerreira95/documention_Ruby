@@ -13,8 +13,8 @@ sleep 1
 
 while true
 
-  puts "Digite a data no formato [dd/mm/aaaa]: "
+  puts "Digite a data no formato DIA, MÊS, ANO: "
+  usuario_entrada = gets.chomp
 
-  
 end
 
