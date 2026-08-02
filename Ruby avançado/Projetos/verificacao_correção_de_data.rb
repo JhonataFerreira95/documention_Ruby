@@ -17,10 +17,27 @@ while true
   usuario_entrada = gets.chomp
 
   if usuario_entrada.length == 10
+    
     corte = usuario_entrada.split("/")
     dia = corte[0].to_i
     mes = corte[1].to_i
     ano = corte[2].to_i
+
+    puts "A data digitada está correta? [S/N]: "
+    opcao = gets.chomp
+
+    if opcao.include?(S)
+
+      puts "A data é #{ano}/#{mes}/#{dia}"
+      sleep 2
+
+      break
+    else
+
+      puts "Digite a data correta novamente..."
+      next
+
+    end
 
   else
 
