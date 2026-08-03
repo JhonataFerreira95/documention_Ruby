@@ -576,7 +576,7 @@
 
 ## Introdução a testes
 
-> Os teste em `Ruby` são fundamentais, já que os mesmo analisam e verificam a nossa lógica para ver se estamos aderente ao que precisamos ter como resultado final.
+> Os teste em `Ruby` são fundamentais, já que os mesmo analisam e verificam a nossa lógica para ver se estamos aderente ao que precisamos ter como resultado final. Como o `Ruby` possuí um módulo nativo para teste o `mine-test`, irei aborda nesse capítulo como trabalhar com o mesmo. 
 
 
 
