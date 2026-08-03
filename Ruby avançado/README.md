@@ -12,6 +12,7 @@
 8. [Extração de números](#extração-de-número-detro-das-expressões-regulares)
 9. [Utizando âncora](#utilizando-âncora)
 10. [Miscelânea](#miscelânea)
+11. [Introdução a testes](#introdução-a-testes)
 
 ---
 
@@ -572,6 +573,10 @@
         - O `gsub`, toda vez que ele encontra a palavra que foi definida para substituição no escopo, ela será trocada pela palavra desejada. 
 
 ---
+
+## Introdução a testes
+
+> Os teste em `Ruby` são fundamentais, já que os mesmo analisam e verificam a nossa lógica para ver se estamos aderente ao que precisamos ter como resultado final.
 
 
 
