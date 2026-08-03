@@ -576,7 +576,29 @@
 
 ## Introdução a testes
 
-> Os teste em `Ruby` são fundamentais, já que os mesmo analisam e verificam a nossa lógica para ver se estamos aderente ao que precisamos ter como resultado final. Como o `Ruby` possuí um módulo nativo para teste o `mine-test`, irei aborda nesse capítulo como trabalhar com o mesmo. 
+> Os teste em `Ruby` são fundamentais, já que os mesmo analisam e verificam a nossa lógica para ver se estamos aderente ao que precisamos ter como resultado final. Como o `Ruby` possuí um módulo nativo para teste o `minitest`, irei aborda nesse capítulo como trabalhar com o mesmo. 
+
+---
+
+- Criando uma método para aplicar o `minitest`:
+
+    ```ruby
+
+        require "minitest/autorun"
+
+        def sum(a, b)
+        a + b
+        end
+
+        class TestingMathematics < Minitest::Test
+            def test_sum_method
+            assert_equal(5, sum(3, 2))
+            end
+        end
+
+    ```
+
+    - 
 
 
 
