@@ -660,9 +660,21 @@
 
     ```ruby
 
+        def palindromo?(palavra)
+            palavra.downcase == palavra.downcase.reverse
+        end
 
+        class TestPalindromo < Minitest::Test
+        def test_palindromo
+            assert_equal(true, palindromo?('ovo'))
+            assert_equal(true, palindromo?('Ame a ema'))
+            assert_equal(false, palindromo?('ola'))
+        end
+        end
 
     ```
+
+    - Aqui crei um método para verificar se a palavra é palindroma e retorna `true` ou `false`. Após ser criado fiz uma `classe TestPalindromo` que herdou os métodos do `minitest`, dentro da `classe` criei um método para testa se as palavras são palindromos ou não. Aqui fiz 3 teste, 2 para funcionar 2 um para falhar. Passei o resultados no `assert_equal` e após passei os parâmetros.
 
 ---
 
