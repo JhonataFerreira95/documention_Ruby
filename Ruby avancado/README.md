@@ -623,6 +623,37 @@
 
             - **`S`** → foi pulado (skip).
 
+        ---
+
+- Causando erro de propósito no teste:
+
+    ```ruby
+
+        require "minitest/autorun"
+
+        def sum(a, b)
+        a + b
+        end
+
+        class TestingMathematics < Minitest::Test
+            def test_sum_method
+            assert_equal(5, sum(3, 2))
+            end
+
+            def test_sum_method_again
+            assert_equal(7, sum(4, 2))
+            end
+        end
+
+    ```
+
+    - Como pode ver, usei mais uma vez o `assert_equal` mas para causar um erro no teste, como pode ser visto abaixo:
+
+
+        ![minitest_failure](/Banco%20de%20dados%20SQL/Assets/miniteste_failure.png)
+
+        - Observa-se que antes do `finished` tem um sequência de `F.`, significa que um teste passou e outro falhou. Falhou porque o resultado que usamos foi `7` mas a nossa função retornou um `6`. Usamos os teste para evitar que o usuário reporte ou veja esses tipos de erros em nossa aplicação. Por isso temos toda uma triagem de teste em software para garantir que ele vai funcionar perfeiamente antes de ser lançado mas como sabemos isso é quase impossível um software ser perfeito, por isso corrigimos muitos erros ou bug via atualização. 
+
 ---
 
 
