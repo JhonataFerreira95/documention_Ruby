@@ -598,9 +598,9 @@
 
     ```
 
-    - Aqui criei um exemplo de um método simple de soma para utilizamos o `minitest`. No começo do código para utilizar o `minitest` importei ele. Para utilização do `minitest` precisamos herda da `classe Miniteste` para podermos herda os métodos de teste do módulo `minitest`.
+    - Aqui criei um exemplo de um método simple de soma para utilizamos o `minitest`. No começo do código para utilizar o `minitest` importei ele. Para utilização do `minitest` precisamos herda da `classe Minitest` para podermos herda os métodos de teste do módulo `minitest`.
 
-    - No exemplo acima, herdei a para a minha `classe` a `classe minitest` para utilizar os métodos de testing, assim podendo realizar os teste no meu método de soma. Dentro da minha `classe`, criei um método `test_sum_method`. Dentro desse método chamei o `assert_equal`, passei o resultado e após isso a operação, que no caso foi como resultado o `5` e meu método `sum(3, 2)`.
+    - No exemplo acima, herdei a para a minha `classe TestingMathematics` à `classe minitest` para utilizar os métodos de testing, assim podendo realizar os teste no meu método de soma. Dentro da minha `classe`, criei um método `test_sum_method`. Dentro desse método chamei o `assert_equal`, passei o resultado e após isso a operação, que no caso foi como resultado o `5` e meu método `sum(3, 2)`.
 
         - **`assert_equal`**
 
@@ -609,7 +609,9 @@
 
     - Resultado:
 
-    
+        ![minitest](/Banco%20de%20dados%20SQL/Assets/minitest.png)
+
+        - Observa-se que o resultado do teste foi `1 runs`, `1 assertions`, `0 failures` `0 errors` e `0 skips`. Sendo que foi rodado 1 teste, 1 acerto, 0 falhas, 0 erros e 0 skipados. O `.` no inicio significa que existia apenas um teste no arquivo. 
 
 
 
