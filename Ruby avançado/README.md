@@ -592,7 +592,7 @@
 
         class TestingMathematics < Minitest::Test
             def test_sum_method
-            assert_equal(5, sum(3, 2))
+                assert_equal(5, sum(3, 2))
             end
         end
 
@@ -600,9 +600,16 @@
 
     - Aqui criei um exemplo de um método simple de soma para utilizamos o `minitest`. No começo do código para utilizar o `minitest` importei ele. Para utilização do `minitest` precisamos herda da `classe Miniteste` para podermos herda os métodos de teste do módulo `minitest`.
 
-    - 
+    - No exemplo acima, herdei a para a minha `classe` a `classe minitest` para utilizar os métodos de testing, assim podendo realizar os teste no meu método de soma. Dentro da minha `classe`, criei um método `test_sum_method`. Dentro desse método chamei o `assert_equal`, passei o resultado e após isso a operação, que no caso foi como resultado o `5` e meu método `sum(3, 2)`.
 
+        - **`assert_equal`**
 
+            - Serve para eu passar o resultado e após passo a operação, o objetivo do `assert_equal` é verificar se o resultado que passei vai ser o mesmo resultado que estou passando na operação.
+        ---
+
+    - Resultado:
+
+    
 
 
 
