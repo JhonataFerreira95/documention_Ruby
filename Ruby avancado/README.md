@@ -13,6 +13,7 @@
 9. [Utizando âncora](#utilizando-âncora)
 10. [Miscelânea](#miscelânea)
 11. [Introdução a testes](#introdução-a-testes)
+12. [Testando uma classe](#testando-uma-classe)
 
 ---
 
@@ -677,5 +678,7 @@
     - Aqui crei um método para verificar se a palavra é palindroma e retorna `true` ou `false`. Após ser criado fiz uma `classe TestPalindromo` que herdou os métodos do `minitest`, dentro da `classe` criei um método para testa se as palavras são palindromos ou não. Aqui fiz 3 teste, 2 para funcionar 2 um para falhar. Passei o resultados no `assert_equal` e após passei os parâmetros.
 
 ---
+
+## Testando uma Classe
 
 
