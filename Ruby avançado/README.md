@@ -598,6 +598,8 @@
 
     ```
 
+    - Aqui criei um exemplo de um método simple de soma para utilizamos o `minitest`. No começo do código para utilizar o `minitest` importei ele. Para utilização do `minitest` precisamos herda da `classe Miniteste` para podermos herda os métodos de teste do módulo `minitest`.
+
     - 
 
 
