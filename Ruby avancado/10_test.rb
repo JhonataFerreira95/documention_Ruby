@@ -13,3 +13,15 @@ class TestingMathematics < Minitest::Test
       assert_equal(7, sum(4, 2))
     end
 end
+
+def palindromo?(palavra)
+    palavra.downcase == palavra.downcase.reverse
+end
+
+class TestPalindromo < Minitest::Test
+  def test_palindromo
+    assert_equal(true, palindromo?('ovo'))
+    assert_equal(true, palindromo?('Ame a ema'))
+    assert_equal(false, palindromo?('ola'))
+  end
+end
