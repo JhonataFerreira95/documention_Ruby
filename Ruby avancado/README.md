@@ -14,6 +14,7 @@
 10. [Miscelânea](#miscelânea)
 11. [Introdução a testes](#introdução-a-testes)
 12. [Testando uma classe](#testando-uma-classe)
+13. [Usando Setup e TearDown](#usando-setup-e-teardown)
 
 ---
 
@@ -761,4 +762,6 @@
     - Observa-se que funcionou tudo perfeitamente, caso deseje ocassionar um erro basta em qualquer um dos nossos `assert_equal` o resultado esperado e após executa-lô.
 
 ---
+
+## Usando Setup e TearDown
 
