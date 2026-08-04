@@ -701,12 +701,14 @@
         end
 
         def apresentar
-            "Olá, sou #{nome} e tenho #{idade anos}"
+            "Olá, sou #{nome} e tenho #{idade} anos"
         end
 
         end
 
     ```
+
+    - Aqui criei uma `classe` chamada `pessoa` com 2 atríbutos, nome e idade. Ambos com `attr_acccessor`(permisão de leitura e eecrita). Dentro dessa `classe` criei um método para apresentar e consumir os abríbutos dela que foram nome e idade.
 
 ---
 
