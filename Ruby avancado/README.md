@@ -708,3 +708,7 @@
 
     ```
 
+---
+
+- Fazendo o primeiro caso de teste para a `classe`:
+
