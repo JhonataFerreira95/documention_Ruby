@@ -752,5 +752,9 @@
 
     ```
 
-    
+    - Observa-se que utilizei um método diferente, chamado `setup`, o que ele faz? O método setup é um método especial em teste unitários, que é executado antes de cada caso de teste em uma `classe` de teste. Dito isso, criei a `classe` para o teste da nossa `classe pessoa`, dentro do método `setup` definir a nossa `instância` para a nossa `classe`. Criei um método com um `assert_equal` e com `setup` que está chamando a nossa `instância` para testa a nossa `classe`, passando o resultado e após chamando o nossos atríbutos. Após a chamada da nossos atríbutos chamei o nosso método presente em nossa `classe` para testa-lo no `assert_equal`, passando o resultado e após chamando o método para ser execultado.
+
+        ![teste](/Banco%20de%20dados%20SQL/Assets/setup.png)
+
+---
 
