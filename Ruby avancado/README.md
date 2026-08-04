@@ -681,4 +681,6 @@
 
 ## Testando uma Classe
 
+> Nesse capítulo irei aborda como testa uma `classe` em si, já que no capítulo anterior fizemos isso com métodos. Nessa partei irei demonstrar como testa instâncias de uma `classe` ou objetos de uma `classe`.
+
 
