@@ -683,4 +683,28 @@
 
 > Nesse capítulo irei aborda como testa uma `classe` em si, já que no capítulo anterior fizemos isso com métodos. Nessa partei irei demonstrar como testa instâncias de uma `classe` ou objetos de uma `classe`.
 
+---
+
+- Criando a `classe` para o teste:
+
+    ```ruby
+
+        require 'minitest/autorun'
+
+        class Pessoa
+
+        attr_accessor :nome, :idade
+
+        def initialize(nome, idade)
+            @nome = nome
+            @idade = idade 
+        end
+
+        def apresentar
+            "Olá, sou #{nome} e tenho #{idade anos}"
+        end
+
+        end
+
+    ```
 
