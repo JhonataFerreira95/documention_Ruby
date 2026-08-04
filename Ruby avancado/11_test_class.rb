@@ -10,7 +10,7 @@ class Pessoa
   end
 
   def apresentar
-    "Olá, sou #{nome} e tenho #{idade anos}"
+    "Olá, sou #{nome} e tenho #{idade} anos"
   end
 
 end
@@ -29,6 +29,10 @@ que é executado antes de cada caso de teste em uma classe de teste.
   def test_initialize
     assert_equal("João", @p1.nome)
     assert_equal(30, @p1.idade)
+  end
+
+  def test_apresentar
+    assert_equal("Olá, sou João e tenho 30 anos", @p1.apresentar)
   end
 
 end
