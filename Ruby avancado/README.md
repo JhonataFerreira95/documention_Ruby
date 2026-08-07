@@ -831,3 +831,9 @@
             - O método tem como função fazer a soma do hash do nosso objeto `@items` e múltoplicar a sua quantidade de itens pelo o preço do produto dentro do nossa chave `product`. 
 
         ---
+
+        - Método `clear`
+
+            - Serve para limpar o nosso hash do objeto `@items`.
+
+        ---
