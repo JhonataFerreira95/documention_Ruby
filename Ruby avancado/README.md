@@ -820,3 +820,10 @@
 
         ---
 
+        - Método `item_count`:
+
+            - Esse método tem a função de fazer o somatório de todos os valores dos itens que se encontram no hash.
+
+        ---
+
+        
