@@ -826,4 +826,8 @@
 
         ---
 
-        
+        - Método `def total_price`:
+
+            - O método tem como função fazer a soma do hash do nosso objeto `@items` e múltoplicar a sua quantidade de itens pelo o preço do produto dentro do nossa chave `product`. 
+
+        ---
