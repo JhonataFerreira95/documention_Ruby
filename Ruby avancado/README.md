@@ -814,3 +814,9 @@
 
         ---
 
+        - Método `remove_item`:
+
+            - E método server para retirar itens do nosso hash. Ele funciona da seguinte forma, chama o nosso objeto `@items` e usa o `.delete` para remover o item que foi passado em `product`.
+
+        ---
+
