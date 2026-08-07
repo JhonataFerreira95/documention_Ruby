@@ -806,5 +806,11 @@
 
     ```
 
-    
+    - A `classe` `ShopppingCart` foi criada, irei depurarar a mesma para explicar o que cada método faz.
+
+        - Método `add_item`:
+
+            - Esse método pega o nosso obejto `@items` e adiciona itens na chave `product` do hash, o `quantity` serve para dizer q à quantidade dos itens da chave.
+
+        ---
 
