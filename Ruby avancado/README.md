@@ -767,3 +767,12 @@
 
 > O método `teardown` em programação Ruby é um `hook` de ciclo de vida executado automaticamente após a conclusão de cada teste individual em um `framework` de `testes automatizados`. Ele serve primordialmente para limpar o ambiente de execução. Isso garante o isolamento entre os testes e evita o vazamento de dados de teste (`test data leakage`). Vamos passar a utilizar mais o `setup` no exemplo que irei abordar, fazendo a junção de ambos os métodos. 
 
+---
+
+- Exemplo do carrinho de compra:
+
+    ```ruby
+
+
+    ```
+
