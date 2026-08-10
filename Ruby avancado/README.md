@@ -883,3 +883,7 @@
             - Em nosso método `setup` vamos instância a nossa `classe` antes dos teste unitários.
 
         ---
+
+        - Método `teardown`:
+
+            - É a primeira ver que utilizo o `teardown`, geralmente vem após o `setup` para finalizar os teste unitários e limpando os parâmetros da nossa `classe`.
