@@ -50,4 +50,11 @@ class TestShoppingCart < Minitest::Test
       assert_equal(0, @cart.item_count, "Falha ao remover item")
     end
 
+    def test_total_price
+      @cart.add_item('Headphones', 1)
+      @cart.add_item('Book', 2)
+      # 1*30 + 2*10 = 50
+      assert_equal(50, @cart.total_price, "Calculo incorreto")
+    end
+
 end
