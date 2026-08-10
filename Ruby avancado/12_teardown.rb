@@ -28,3 +28,7 @@ class ShoppingCart
   end
 
 end
+
+class TestShoppingCart < Minitest::Test
+    
+end

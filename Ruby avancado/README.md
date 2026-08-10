@@ -837,3 +837,8 @@
             - Serve para limpar o nosso hash do objeto `@items`.
 
         --- 
+
+---
+
+- Irei criar a `classe TestShoppingCart` para realizar os teste em nossa `classe ShoppingCart`, utilizando o `minitest`.
+ 
