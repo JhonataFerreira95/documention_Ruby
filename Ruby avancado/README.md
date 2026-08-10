@@ -901,3 +901,9 @@
             - Nesse método, testamos o comportamento do método `remove_item`. Primeiro, preparamos o cenário chamando `@cart.add_item('mouse', 2)` a partir do objeto `@cart`. Em seguida, chamamos `@cart.remove_item('mouse')` para excluir essa chave do `Hash`. Por fim, usamos o `assert_equal` para verificar se o retorno de `@cart`.`item_count` passou a ser `0`, confirmando que o item foi removido com sucesso.
 
         ---
+
+        - Méotodo `test_total_price`:
+
+            - Nesse método irei testa a soma de todas as chaves de nosso `hash` e a multiplicação dos itens do mesmo. Aqui iniciei passando em nosso objeto `@cart.add_item` os seu parãmetros e após passei novamente, fazendo assim um total de 2 itens em chaves diferentes. O calculo é simples, basta multiplicar a quanitdade do item que foi adicionado à quantidade referente na chave do mesmo, fazendo isso para ambos os caso e no final somar o final de ambas multiplicação. Sabendo disto, usei um `assert_equal` e passei para o mesmo um valor de `50` como resultado e após chamei meu objeto `@cart` e na instaciação do `total_price`, sendo assim o resultado como `50`.
+
+        ---
