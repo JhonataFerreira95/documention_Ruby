@@ -877,3 +877,9 @@
     ```
 
     - Aqui irei depurrar a `classe TestShoppingCart` de forma que fique mais fácil entender o que cada método faz. 
+
+        - Método `setup`:
+
+            - Em nosso método `setup` vamos instância a nossa `classe` antes dos teste unitários.
+
+        ---
