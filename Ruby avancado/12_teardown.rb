@@ -30,5 +30,18 @@ class ShoppingCart
 end
 
 class TestShoppingCart < Minitest::Test
-    
+
+    def setup 
+      @cart = ShoppingCart.new
+    end
+
+    def teardown
+      @cart.clear
+    end
+
+    def test_add_item
+      @cart.add_item('laptop', 1)
+      assert_equal(1, @cart.item_acount, "Falha ao adicionar item ao carrinho")
+    end
+
 end
