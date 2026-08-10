@@ -887,3 +887,11 @@
         - Método `teardown`:
 
             - É a primeira ver que utilizo o `teardown`, geralmente vem após cada método de teste índividual.
+
+        ---
+
+        - Método `test_add_item`:
+
+            - Nesse método, testamos o comportamento de `add_item` chamando-o a partir do objeto `@cart` (que é a instância da classe ShoppingCart criada no `setup`). Passamos os parâmetros `laptop` e `1` para o método e, por fim, usamos o `assert_equal` para confirmar se a contagem total de itens no carrinho passou a ser `1`.
+
+        ---
