@@ -895,3 +895,9 @@
             - Nesse método, testamos o comportamento de `add_item` chamando-o a partir do objeto `@cart` (que é a instância da classe ShoppingCart criada no `setup`). Passamos os parâmetros `laptop` e `1` para o método e, por fim, usamos o `assert_equal` para confirmar se a contagem total de itens no carrinho passou a ser `1`.
 
         ---
+
+        - Método `test_remove_item`:
+
+            - Nesse método, testamos o comportamento do método `remove_item`. Primeiro, preparamos o cenário chamando `@cart.add_item('mouse', 2)` a partir do objeto `@cart`. Em seguida, chamamos `@cart.remove_item('mouse')` para excluir essa chave do `Hash`. Por fim, usamos o `assert_equal` para verificar se o retorno de `@cart`.`item_count` passou a ser `0`, confirmando que o item foi removido com sucesso.
+
+        ---
