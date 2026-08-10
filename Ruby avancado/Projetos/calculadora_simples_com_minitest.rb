@@ -13,3 +13,17 @@ Escreva testes para cada um desses métodos usando o Minitest.
 Certifique-se de testar diferentes cenários, incluindo números positivos, negativos e a divisão por zero.
 
 =end
+
+
+class Calculator_simple
+
+  attr_accessor subtraction:, multiplication:, division:
+
+
+  def initialize(subtraction, multiplication, division)
+    @subtraction = subtraction
+    @multiplication =  multiplication
+    @division = division
+  end
+    
+end
