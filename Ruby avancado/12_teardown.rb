@@ -41,7 +41,7 @@ class TestShoppingCart < Minitest::Test
 
     def test_add_item
       @cart.add_item('laptop', 1)
-      assert_equal(1, @cart.item_acount, "Falha ao adicionar item ao carrinho")
+      assert_equal(1, @cart.item_count, "Falha ao adicionar item ao carrinho")
     end
 
 end
