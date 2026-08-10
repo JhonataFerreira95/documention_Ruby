@@ -880,10 +880,10 @@
 
         - Método `setup`:
 
-            - Em nosso método `setup` vamos instância a nossa `classe` antes dos teste unitários.
+            - O `Minitest` executa o `setup` antes de cada método de teste. Ele garante que cada teste comece com uma instância nova da `classe @cart`, isolando um teste do outro.
 
         ---
 
         - Método `teardown`:
 
-            - É a primeira ver que utilizo o `teardown`, geralmente vem após o `setup` para finalizar os teste unitários e limpando os parâmetros da nossa `classe`.
+            - É a primeira ver que utilizo o `teardown`, geralmente vem após cada método de teste índividual.
