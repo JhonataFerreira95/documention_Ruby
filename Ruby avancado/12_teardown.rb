@@ -44,4 +44,10 @@ class TestShoppingCart < Minitest::Test
       assert_equal(1, @cart.item_count, "Falha ao adicionar item ao carrinho")
     end
 
+    def test_remove_item
+      @cart.add_item('mouse', 2)
+      @cart.remove_item('mouse')
+      assert_equal(0, @cart.item_count, "Falha ao remover item")
+    end
+
 end

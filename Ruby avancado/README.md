@@ -841,4 +841,28 @@
 ---
 
 - Irei criar a `classe TestShoppingCart` para realizar os teste em nossa `classe ShoppingCart`, utilizando o `minitest`.
- 
+
+    ```ruby
+
+        class TestShoppingCart < Minitest::Test
+
+            def setup 
+            @cart = ShoppingCart.new
+            end
+
+            def teardown
+            @cart.clear
+            end
+
+            def test_add_item
+            @cart.add_item('laptop', 1)
+            assert_equal(1, @cart.item_count, "Falha ao adicionar item ao carrinho")
+            end
+
+            def test_remove_item
+            
+            end
+
+        end
+
+    ```
