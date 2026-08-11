@@ -32,5 +32,10 @@ class CalculatorSimple
   def calculation_mult
     @user_entrada1 * @user_entrada2
   end
+
+  def calculation_div
+    @user_entrada1 / @user_entrada2
+  end
     
 end
+
