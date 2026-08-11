@@ -15,15 +15,17 @@ Certifique-se de testar diferentes cenários, incluindo números positivos, nega
 =end
 
 
-class Calculator_simple
+class CalculatorSimple
 
-  attr_accessor subtraction:, multiplication:, division:
+  attr_accessor user_entrada:
 
 
-  def initialize(subtraction, multiplication, division)
-    @subtraction = subtraction
-    @multiplication =  multiplication
-    @division = division
+  def initialize(user_entrada)
+    @user_entrada = user_entrada
+  end
+
+  def calculation_sub
+    @user_entrada - calculation_sub
   end
     
 end
