@@ -17,7 +17,7 @@ Certifique-se de testar diferentes cenários, incluindo números positivos, nega
 
 class CalculatorSimple
 
-  attr_accessor user_entrada1:, user_entrada2:
+  attr_accessor :user_entrada1, :user_entrada2
 
 
   def initialize(user_entrada1, user_entrada2)
@@ -26,7 +26,7 @@ class CalculatorSimple
   end
 
   def calculation_sub
-    @user_entrada - @user_entrada2
+    @user_entrada1 - @user_entrada2
   end
 
   def calculation_mult
@@ -39,3 +39,8 @@ class CalculatorSimple
     
 end
 
+teste = CalculatorSimple.new(20, 5)
+
+puts teste.calculation_sub
+puts teste.calculation_mult
+puts teste.calculation_div
