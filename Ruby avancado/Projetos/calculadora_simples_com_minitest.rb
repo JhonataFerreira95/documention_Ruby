@@ -17,15 +17,20 @@ Certifique-se de testar diferentes cenários, incluindo números positivos, nega
 
 class CalculatorSimple
 
-  attr_accessor user_entrada:
+  attr_accessor user_entrada1:, user_entrada2:
 
 
-  def initialize(user_entrada)
-    @user_entrada = user_entrada
+  def initialize(user_entrada1, user_entrada2)
+    @user_entrada1 = user_entrada1
+    @user_entrada2 = user_entrada2
   end
 
   def calculation_sub
-    @user_entrada - calculation_sub
+    @user_entrada - @user_entrada2
+  end
+
+  def calculation_mult
+    @user_entrada1 * @user_entrada2
   end
     
 end
