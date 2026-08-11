@@ -39,8 +39,6 @@ class CalculatorSimple
     
 end
 
-teste = CalculatorSimple.new(20, 5)
-
-puts teste.calculation_sub
-puts teste.calculation_mult
-puts teste.calculation_div
+class TestCalculationSimple
+    
+end
