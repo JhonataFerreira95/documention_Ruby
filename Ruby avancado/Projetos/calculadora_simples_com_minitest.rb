@@ -14,7 +14,7 @@ Certifique-se de testar diferentes cenários, incluindo números positivos, nega
 
 =end
 
-require 'miniteste/autorun'
+require 'minitest/autorun'
 
 
 class CalculatorSimple
@@ -44,11 +44,16 @@ end
 class TestCalculationSimple < Minitest::Test
     
   def setup
-    @calculator = CalculatorSimple.new
+    @calculator = CalculatorSimple.new(20, 60)
   end
 
   def teardown
     @calculator = nil
+  end
+
+  def test_calculation_sub
+    @calculator.calculation_sub
+    assert_equal(40, "O resultado da subtração de #{@user_entrada1} - #{@user_entrada2} é #{}")
   end
 
 end
