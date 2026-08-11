@@ -14,6 +14,8 @@ Certifique-se de testar diferentes cenários, incluindo números positivos, nega
 
 =end
 
+require 'miniteste/autorun'
+
 
 class CalculatorSimple
 
@@ -39,6 +41,14 @@ class CalculatorSimple
     
 end
 
-class TestCalculationSimple
+class TestCalculationSimple < Minitest::Test
     
+  def setup
+    @calculator = CalculatorSimple.new
+  end
+
+  def teardown
+    @calculator = nil
+  end
+
 end
