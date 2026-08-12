@@ -60,7 +60,7 @@ class TestCalculationSimple < Minitest::Test
   end
 
   def test_calculation_div
-    
+    assert_equal(3, @calculator.calculation_div, "Erro no cáculo, tente novamente definir o parâmetro")
   end
 
 end
