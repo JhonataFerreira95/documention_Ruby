@@ -44,7 +44,7 @@ end
 class TestCalculationSimple < Minitest::Test
     
   def setup
-    @calculator = CalculatorSimple.new(60, 20)
+    @calculator = CalculatorSimple.new(5, -3)
   end
 
   def teardown
@@ -52,7 +52,7 @@ class TestCalculationSimple < Minitest::Test
   end
 
   def test_calculation_sub
-    assert_equal(40, @calculator.calculation_sub, "Erro no cálculo, tente novamente definir o parâmetro")
+    assert_equal(8, @calculator.calculation_sub, "Erro no cálculo, tente novamente definir o parâmetro")
   end
 
   def test_calculation_mult
