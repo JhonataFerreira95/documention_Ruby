@@ -52,11 +52,11 @@ class TestCalculationSimple < Minitest::Test
   end
 
   def test_calculation_sub
-    assert_equal(40, @calculator.calculation_sub, "Erro no calculo, tente novamente definir o parametro")
+    assert_equal(40, @calculator.calculation_sub, "Erro no calculo, tente novamente definir o parâmetro")
   end
 
   def test_calculation_mult
-    
+    assert_equal(1200, @calculator.calculation_mult, "Erro no calculo, tente novamente definir o parâmetro")
   end
 
 end
