@@ -1,7 +1,7 @@
 # Documentação Ruby
 
 ## Dependências 
-
+## gg
 ### Ruby version 3.4.6
 
 ### Gems 
