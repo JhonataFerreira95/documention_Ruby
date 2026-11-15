@@ -3,6 +3,7 @@
 ## Dependências 
 
 ### Ruby version 3.4.6
+
 ### Gems 
 
   - Faker, Roo, Byebug Securerandom, RubyLSP, Pg, ActiveRecord, MongoDB, Redis e json foram utlizadas. 
