@@ -1,6 +1,6 @@
 # Git e GitHub
 
-### Índice
+## Índice
 
 1. [Introdução](#introdução)
 2. [Conceitos](#conceitos)
