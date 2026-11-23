@@ -1,6 +1,6 @@
 # Documentação Ruby — POO (Programação Orientada a Objetos)
 
-## Índice
+### Índice
 
 1. [Introdução](#introdução)
 2. [Classes e Objetos](#classes-e-objetos)
